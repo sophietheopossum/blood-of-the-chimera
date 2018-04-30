@@ -1,7 +1,7 @@
 # prototype99
 An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone. I have chosen to rename this fork as i may choose to add additional packages over time. This way I need only submit one overlay which will help prevent layman from becoming overly cluttered.
 
-## Add the Overlay
+## Add the Overlay using layman
 Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` and  `app-portage/layman` packages installed. (there are other methods, however layman allows you to keep your packages organised. Compare it to ubuntu's ppas if you must)
 
 Add the overlay:
@@ -11,6 +11,34 @@ Add the overlay:
 Sync overlay:
 
     # layman -S
+
+## Add the Overlay Manually ##
+
+Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` package installed. please note this is a more complex process that many may view as having no true benefit.
+
+Next, create a custom `/etc/portage/repos.conf` entry for the **gentoo-snappy** overlay, so Portage knows what to do. Make sure that `/etc/portage/repos.conf` exists, and is a directory. Then, use your text editor without line wrapping:
+
+    # nano -w /etc/portage/repos.conf/gentoo-snappy.conf
+
+and put the following text in the file:
+
+```
+[gentoo-snappy]
+ 
+# An unofficial overlay that supports the installation of the "Snappy" backbone.
+# Maintainer: Clayton "kefnab" Dobbs (clayton.dobbs@gosecur.us)
+# Upstream Maintainer: Zygmunt "zyga" Krynicki (me@zygoon.pl)
+ 
+location = /usr/local/portage/gentoo-snappy
+sync-type = git
+sync-uri = https://github.com/zyga/gentoo-snappy.git
+priority = 50
+auto-sync = yes
+```
+
+Then run:
+
+    # emaint sync --repo gentoo-snappy
 
 ## Packages
 ### `app-emulation/snapd`
