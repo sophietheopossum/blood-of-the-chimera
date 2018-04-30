@@ -1,12 +1,12 @@
-# prototype99
-An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone. I have chosen to rename this fork as i may choose to add additional packages over time. This way I need only submit one overlay which will help prevent layman from becoming overly cluttered.
+# gentoo-snappy
+An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone.
 
 ## Add the Overlay using layman
 Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` and  `app-portage/layman` packages installed. (there are other methods, however layman allows you to keep your packages organised. Compare it to ubuntu's ppas if you must)
 
 Add the overlay:
 
-    # layman -o https://raw.githubusercontent.com/prototype99/prototype99/master/repositories.xml -f -a prototype99
+    # layman -o https://raw.githubusercontent.com/gentoomaniac/gentoo-snappy/master/gentoo-snappy.xml -f -a gentoo-snappy
 
 Sync overlay:
 
@@ -56,4 +56,4 @@ Provides sandbox type isolation of individual snap packages.  This is a dependen
     # systemctl enable --now snapd.service
 ## FAQ
 ### why isn't there an option without systemd?
-good question, with openrc being the more popular init system, you  would think it would be an available option. sadly this is not a mistake, snappy is designed in such a way that systemd is required. obviously much like funtoo has proven with their solution with gnome, it is theoretically possible. so possible in fact, that early ubuntu (which used upstart) even used a modified version of systemd to run snappy. however to this best of my knowledge there is no updated version of that, hence no openrc compatible ebuilds. feel free to contribute and make this otherwise however i have no interest myself in doing so (i personally use systemd).
+good question, with openrc being the more popular init system, you  would think it would be an available option. sadly this is not a mistake, snappy is designed in such a way that systemd is required. obviously much like funtoo has proven with their solution with gnome, it is theoretically possible. so possible in fact, that early ubuntu (which used upstart) even used a modified version of systemd to run snappy. however to this best of my knowledge there is no updated version of that, hence no openrc compatible ebuilds. feel free to contribute and make this otherwise.
