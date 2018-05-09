@@ -63,10 +63,10 @@ src_install() {
 	doexe "$GOPATH/bin/snapd"
 	cd "src/${EGO_PN}" || die
 	# Install systemd units
-	#systemd_dounit debian/snapd.{service,socket}
-	#systemd_dounit debian/snapd.refresh.{service,timer}
+	systemd_dounit debian/snapd.{service,socket}
+	systemd_dounit debian/snapd.refresh.{service,timer}
 	# Work around https://github.com/zyga/snapd-gentoo/issues/1
-	#sed -i -e 's/RandomizedDelaySec=/#RandomizedDelaySec=/' debian/snapd.refresh.timer
+	sed -i -e 's/RandomizedDelaySec=/#RandomizedDelaySec=/' debian/snapd.refresh.timer
 	# NOTE: the two "frameworks" units should be dropped upstream soon
 	#systemd_dounit debian/snapd.frameworks.target
 	#systemd_dounit debian/snapd.frameworks-pre.target
@@ -75,15 +75,15 @@ src_install() {
 	echo 'PATH=$PATH:/snap/bin' > ${D}/etc/profile.d/snapd.sh
 }
 
-#pkg_postinst() {
-#	systemctl enable snapd.socket
-#	systemctl enable snapd.refresh.timer
-#}
+pkg_postinst() {
+	systemctl enable snapd.socket
+	systemctl enable snapd.refresh.timer
+}
 
 # added package post-removal instructions for tidying up added services
-#pkg_postrm() {
-#	systemctl disable snapd.service
-#	systemctl stop snapd.service
-#	systemctl disable snapd.socket
-#	systemctl disable snapd.refresh.timer
-#}
+pkg_postrm() {
+	systemctl disable snapd.service
+	systemctl stop snapd.service
+	systemctl disable snapd.socket
+	systemctl disable snapd.refresh.timer
+}
