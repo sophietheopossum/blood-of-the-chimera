@@ -1,5 +1,5 @@
 # prototype99
-An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone. I have chosen to rename this fork as i may choose to add additional packages over time. This way I need only submit one overlay which will help prevent layman from becoming overly cluttered.
+An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone. I have chosen to rename this fork as i may choose to add additional packages over time. This way I need only submit one overlay which will help prevent layman from becoming overly cluttered once i finally get the overlay included.
 
 ## Add the Overlay using layman
 Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` and  `app-portage/layman` packages installed. (there are other methods, however layman allows you to keep your packages organised. Compare it to ubuntu's ppas if you must)
