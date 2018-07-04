@@ -1,0 +1,240 @@
+From 7cd3af7160b801a844335b221683cc0ab6ebbfd7 Mon Sep 17 00:00:00 2001
+From: Lang Hames <lhames@gmail.com>
+Date: Sun, 3 Sep 2017 00:50:42 +0000
+Subject: [PATCH 2/3] [ORC] Add an Error return to the
+ JITCompileCallbackManager::grow method.
+
+Calling grow may result in an error if, for example, this is a callback
+manager for a remote target. We need to be able to return this error to the
+callee.
+
+
+
+git-svn-id: https://llvm.org/svn/llvm-project/llvm/trunk@312429 91177308-0d34-0410-b5e6-96231b3b80d8
+---
+ .../BuildingAJIT/Chapter4/KaleidoscopeJIT.h   |  2 +-
+ .../BuildingAJIT/Chapter5/KaleidoscopeJIT.h   |  2 +-
+ .../Orc/CompileOnDemandLayer.h                | 29 +++++++++--------
+ .../ExecutionEngine/Orc/IndirectionUtils.h    | 32 +++++++++++--------
+ .../Orc/OrcRemoteTargetClient.h               | 10 +++---
+ lib/ExecutionEngine/Orc/OrcCBindingsStack.h   | 15 +++++----
+ .../Orc/CompileOnDemandLayerTest.cpp          |  2 +-
+ 7 files changed, 52 insertions(+), 40 deletions(-)
+
+diff --git a/examples/Kaleidoscope/BuildingAJIT/Chapter4/KaleidoscopeJIT.h b/examples/Kaleidoscope/BuildingAJIT/Chapter4/KaleidoscopeJIT.h
+index d10e4748f1a..841ea74fb98 100644
+--- a/examples/Kaleidoscope/BuildingAJIT/Chapter4/KaleidoscopeJIT.h
++++ b/examples/Kaleidoscope/BuildingAJIT/Chapter4/KaleidoscopeJIT.h
+@@ -135,7 +135,7 @@ public:
+   Error addFunctionAST(std::unique_ptr<FunctionAST> FnAST) {
+     // Create a CompileCallback - this is the re-entry point into the compiler
+     // for functions that haven't been compiled yet.
+-    auto CCInfo = CompileCallbackMgr->getCompileCallback();
++    auto CCInfo = cantFail(CompileCallbackMgr->getCompileCallback());
+ 
+     // Create an indirect stub. This serves as the functions "canonical
+     // definition" - an unchanging (constant address) entry point to the
+diff --git a/examples/Kaleidoscope/BuildingAJIT/Chapter5/KaleidoscopeJIT.h b/examples/Kaleidoscope/BuildingAJIT/Chapter5/KaleidoscopeJIT.h
+index 7ea535b3af5..d3183140d23 100644
+--- a/examples/Kaleidoscope/BuildingAJIT/Chapter5/KaleidoscopeJIT.h
++++ b/examples/Kaleidoscope/BuildingAJIT/Chapter5/KaleidoscopeJIT.h
+@@ -164,7 +164,7 @@ public:
+   Error addFunctionAST(std::unique_ptr<FunctionAST> FnAST) {
+     // Create a CompileCallback - this is the re-entry point into the compiler
+     // for functions that haven't been compiled yet.
+-    auto CCInfo = CompileCallbackMgr->getCompileCallback();
++    auto CCInfo = cantFail(CompileCallbackMgr->getCompileCallback());
+ 
+     // Create an indirect stub. This serves as the functions "canonical
+     // definition" - an unchanging (constant address) entry point to the
+diff --git a/include/llvm/ExecutionEngine/Orc/CompileOnDemandLayer.h b/include/llvm/ExecutionEngine/Orc/CompileOnDemandLayer.h
+index 27b5457fc8f..cbe9ff5d6ec 100644
+--- a/include/llvm/ExecutionEngine/Orc/CompileOnDemandLayer.h
++++ b/include/llvm/ExecutionEngine/Orc/CompileOnDemandLayer.h
+@@ -349,19 +349,22 @@ private:
+         // Create a callback, associate it with the stub for the function,
+         // and set the compile action to compile the partition containing the
+         // function.
+-        auto CCInfo = CompileCallbackMgr.getCompileCallback();
+-        StubInits[MangledName] =
+-          std::make_pair(CCInfo.getAddress(),
+-                         JITSymbolFlags::fromGlobalValue(F));
+-        CCInfo.setCompileAction([this, &LD, LMId, &F]() -> JITTargetAddress {
+-            if (auto FnImplAddrOrErr = this->extractAndCompile(LD, LMId, F))
+-              return *FnImplAddrOrErr;
+-            else {
+-              // FIXME: Report error, return to 'abort' or something similar.
+-              consumeError(FnImplAddrOrErr.takeError());
+-              return 0;
+-            }
+-          });
++        if (auto CCInfoOrErr = CompileCallbackMgr.getCompileCallback()) {
++          auto &CCInfo = *CCInfoOrErr;
++          StubInits[MangledName] =
++            std::make_pair(CCInfo.getAddress(),
++                           JITSymbolFlags::fromGlobalValue(F));
++          CCInfo.setCompileAction([this, &LD, LMId, &F]() -> JITTargetAddress {
++              if (auto FnImplAddrOrErr = this->extractAndCompile(LD, LMId, F))
++                return *FnImplAddrOrErr;
++              else {
++                // FIXME: Report error, return to 'abort' or something similar.
++                consumeError(FnImplAddrOrErr.takeError());
++                return 0;
++              }
++            });
++        } else
++          return CCInfoOrErr.takeError();
+       }
+ 
+       if (auto Err = LD.StubsMgr->createStubs(StubInits))
+diff --git a/include/llvm/ExecutionEngine/Orc/IndirectionUtils.h b/include/llvm/ExecutionEngine/Orc/IndirectionUtils.h
+index e038093d762..029b86a6d2c 100644
+--- a/include/llvm/ExecutionEngine/Orc/IndirectionUtils.h
++++ b/include/llvm/ExecutionEngine/Orc/IndirectionUtils.h
+@@ -105,10 +105,13 @@ public:
+   }
+ 
+   /// @brief Reserve a compile callback.
+-  CompileCallbackInfo getCompileCallback() {
+-    JITTargetAddress TrampolineAddr = getAvailableTrampolineAddr();
+-    auto &Compile = this->ActiveTrampolines[TrampolineAddr];
+-    return CompileCallbackInfo(TrampolineAddr, Compile);
++  Expected<CompileCallbackInfo> getCompileCallback() {
++    if (auto TrampolineAddrOrErr = getAvailableTrampolineAddr()) {
++      const auto &TrampolineAddr = *TrampolineAddrOrErr;
++      auto &Compile = this->ActiveTrampolines[TrampolineAddr];
++      return CompileCallbackInfo(TrampolineAddr, Compile);
++    } else
++      return TrampolineAddrOrErr.takeError();
+   }
+ 
+   /// @brief Get a CompileCallbackInfo for an existing callback.
+@@ -138,9 +141,10 @@ protected:
+   std::vector<JITTargetAddress> AvailableTrampolines;
+ 
+ private:
+-  JITTargetAddress getAvailableTrampolineAddr() {
++  Expected<JITTargetAddress> getAvailableTrampolineAddr() {
+     if (this->AvailableTrampolines.empty())
+-      grow();
++      if (auto Err = grow())
++        return std::move(Err);
+     assert(!this->AvailableTrampolines.empty() &&
+            "Failed to grow available trampolines.");
+     JITTargetAddress TrampolineAddr = this->AvailableTrampolines.back();
+@@ -149,7 +153,7 @@ private:
+   }
+ 
+   // Create new trampolines - to be implemented in subclasses.
+-  virtual void grow() = 0;
++  virtual Error grow() = 0;
+ 
+   virtual void anchor();
+ };
+@@ -188,7 +192,7 @@ private:
+             reinterpret_cast<uintptr_t>(TrampolineId)));
+   }
+ 
+-  void grow() override {
++  Error grow() override {
+     assert(this->AvailableTrampolines.empty() && "Growing prematurely?");
+ 
+     std::error_code EC;
+@@ -196,7 +200,8 @@ private:
+         sys::OwningMemoryBlock(sys::Memory::allocateMappedMemory(
+             sys::Process::getPageSize(), nullptr,
+             sys::Memory::MF_READ | sys::Memory::MF_WRITE, EC));
+-    assert(!EC && "Failed to allocate trampoline block");
++    if (EC)
++      return errorCodeToError(EC);
+ 
+     unsigned NumTrampolines =
+         (sys::Process::getPageSize() - TargetT::PointerSize) /
+@@ -211,12 +216,13 @@ private:
+           static_cast<JITTargetAddress>(reinterpret_cast<uintptr_t>(
+               TrampolineMem + (I * TargetT::TrampolineSize))));
+ 
+-    EC = sys::Memory::protectMappedMemory(TrampolineBlock.getMemoryBlock(),
+-                                          sys::Memory::MF_READ |
+-                                              sys::Memory::MF_EXEC);
+-    assert(!EC && "Failed to mprotect trampoline block");
++    if (auto EC = sys::Memory::protectMappedMemory(
++                    TrampolineBlock.getMemoryBlock(),
++                    sys::Memory::MF_READ | sys::Memory::MF_EXEC))
++      return errorCodeToError(EC);
+ 
+     TrampolineBlocks.push_back(std::move(TrampolineBlock));
++    return Error::success();
+   }
+ 
+   sys::OwningMemoryBlock ResolverBlock;
+diff --git a/include/llvm/ExecutionEngine/Orc/OrcRemoteTargetClient.h b/include/llvm/ExecutionEngine/Orc/OrcRemoteTargetClient.h
+index c602f1d542f..d6837671848 100644
+--- a/include/llvm/ExecutionEngine/Orc/OrcRemoteTargetClient.h
++++ b/include/llvm/ExecutionEngine/Orc/OrcRemoteTargetClient.h
+@@ -543,19 +543,19 @@ public:
+         : JITCompileCallbackManager(ErrorHandlerAddress), Remote(Remote) {}
+ 
+   private:
+-    void grow() override {
++    Error grow() override {
+       JITTargetAddress BlockAddr = 0;
+       uint32_t NumTrampolines = 0;
+       if (auto TrampolineInfoOrErr = Remote.emitTrampolineBlock())
+         std::tie(BlockAddr, NumTrampolines) = *TrampolineInfoOrErr;
+-      else {
+-        // FIXME: Return error.
+-        llvm_unreachable("Failed to create trampolines");
+-      }
++      else
++        return TrampolineInfoOrErr.takeError();
+ 
+       uint32_t TrampolineSize = Remote.getTrampolineSize();
+       for (unsigned I = 0; I < NumTrampolines; ++I)
+         this->AvailableTrampolines.push_back(BlockAddr + (I * TrampolineSize));
++
++      return Error::success();
+     }
+ 
+     OrcRemoteTargetClient &Remote;
+diff --git a/lib/ExecutionEngine/Orc/OrcCBindingsStack.h b/lib/ExecutionEngine/Orc/OrcCBindingsStack.h
+index e38decf94f3..ecb4c207b5d 100644
+--- a/lib/ExecutionEngine/Orc/OrcCBindingsStack.h
++++ b/lib/ExecutionEngine/Orc/OrcCBindingsStack.h
+@@ -145,12 +145,15 @@ public:
+   createLazyCompileCallback(JITTargetAddress &RetAddr,
+                             LLVMOrcLazyCompileCallbackFn Callback,
+                             void *CallbackCtx) {
+-    auto CCInfo = CCMgr->getCompileCallback();
+-    CCInfo.setCompileAction([=]() -> JITTargetAddress {
+-      return Callback(wrap(this), CallbackCtx);
+-    });
+-    RetAddr = CCInfo.getAddress();
+-    return LLVMOrcErrSuccess;
++    if (auto CCInfoOrErr = CCMgr->getCompileCallback()) {
++      auto &CCInfo = *CCInfoOrErr;
++      CCInfo.setCompileAction([=]() -> JITTargetAddress {
++          return Callback(wrap(this), CallbackCtx);
++        });
++      RetAddr = CCInfo.getAddress();
++      return LLVMOrcErrSuccess;
++    } else
++      return mapError(CCInfoOrErr.takeError());
+   }
+ 
+   LLVMOrcErrorCode createIndirectStub(StringRef StubName,
+diff --git a/unittests/ExecutionEngine/Orc/CompileOnDemandLayerTest.cpp b/unittests/ExecutionEngine/Orc/CompileOnDemandLayerTest.cpp
+index 844746f28c0..24258ec2979 100644
+--- a/unittests/ExecutionEngine/Orc/CompileOnDemandLayerTest.cpp
++++ b/unittests/ExecutionEngine/Orc/CompileOnDemandLayerTest.cpp
+@@ -21,7 +21,7 @@ public:
+   DummyCallbackManager() : JITCompileCallbackManager(0) {}
+ 
+ public:
+-  void grow() override { llvm_unreachable("not implemented"); }
++  Error grow() override { llvm_unreachable("not implemented"); }
+ };
+ 
+ class DummyStubsManager : public orc::IndirectStubsManager {
+-- 
+2.17.0
