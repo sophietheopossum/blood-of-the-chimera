@@ -15,6 +15,7 @@ DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="https://llvm.org/"
 SRC_URI="https://releases.llvm.org/${PV/_//}/${P/_/}.src.tar.xz
 	https://dev.gentoo.org/~mgorny/dist/llvm/llvm-5.0.1-patchset.tar.bz2
+	https://bugs.gentoo.org/attachment.cgi?id=530358
 	!doc? ( https://dev.gentoo.org/~mgorny/dist/llvm/${P}-manpages.tar.bz2 )"
 
 # Keep in sync with CMakeLists.txt
