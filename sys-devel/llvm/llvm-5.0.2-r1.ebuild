@@ -15,7 +15,6 @@ DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="https://llvm.org/"
 SRC_URI="https://releases.llvm.org/${PV/_//}/${P/_/}.src.tar.xz
 	https://dev.gentoo.org/~mgorny/dist/llvm/llvm-5.0.1-patchset.tar.bz2
-	https://bugs.gentoo.org/attachment.cgi?id=530358
 	!doc? ( https://dev.gentoo.org/~mgorny/dist/llvm/${P}-manpages.tar.bz2 )"
 
 # Keep in sync with CMakeLists.txt
@@ -84,8 +83,11 @@ src_prepare() {
 	# Copy the new binary file (we don't support git binary patches)
 	cp {"${WORKDIR}/llvm-5.0.1-patchset",.}/test/tools/llvm-symbolizer/Inputs/print_context.o || die
   
-  # Apply patches for gcc8
-	eapply "${WORKDIR}/patches.tar.bz2"
+ 	# Apply patches for gcc8
+	# https://bugs.gentoo.org/655140
+	eapply "${FILESDIR}"/5.0.2/0001-Fix-two-three-more-issues-with-unchecked-Error.patch
+	eapply "${FILESDIR}"/5.0.2/0002-ORC-Add-an-Error-return-to-the-JITCompileCallbackMan.patch
+	eapply "${FILESDIR}"/5.0.2/0003-ORC-Refactor-OrcRemoteTarget-code-to-expose-its-RPC-.patch
 
 	# Fix appending -Wl,-rpath-link on non-Linux (-> FreeBSD).
 	eapply "${FILESDIR}"/6.0.9999/0001-cmake-Append-Wl-rpath-link-conditionally-to-GNULD.patch
