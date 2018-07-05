@@ -5,7 +5,7 @@
 EAPI=6
 
 inherit golang-vcs-snapshot
-#inherit systemd
+inherit systemd
 
 EGO_PN=github.com/snapcore/snapd
 EGO_SRC=github.com/snapcore/snapd/...
