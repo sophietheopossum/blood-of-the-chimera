@@ -69,7 +69,7 @@ src_install() {
 	systemd_dounit data/systemd/snapd.{service,socket}
 	systemd_dounit data/systemd/snapd.refresh.{service,timer}
 	# Work around https://github.com/zyga/snapd-gentoo/issues/1
-	sed -i -e 's/RandomizedDelaySec=/#RandomizedDelaySec=/' debian/snapd.refresh.timer
+	sed -i -e 's/RandomizedDelaySec=/#RandomizedDelaySec=/' data/systemd/snapd.refresh.timer
 	# NOTE: the two "frameworks" units should be dropped upstream soon
 	#systemd_dounit debian/snapd.frameworks.target
 	#systemd_dounit debian/snapd.frameworks-pre.target
