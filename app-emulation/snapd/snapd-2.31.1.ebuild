@@ -30,7 +30,8 @@ RDEPEND="sys-fs/squashfs-tools:*"
 # Not sure if the runtime dependencies need to be duplicated in the build dependencies, but added them to be safe
 DEPEND="${RDEPEND}
 	dev-vcs/git
-	dev-vcs/bzr"
+	dev-vcs/bzr
+	app-arch/dpkg"
 # Original ebuild had blank list of IUSE, so line was removed
 
 # TODO: package all the upstream dependencies
@@ -62,7 +63,7 @@ src_compile() {
 	make
 	popd
 	# ensure executable path is absolute
-	#epatch ${FILESDIR}/exec.patch
+	eapply "${FILESDIR}"/exec.patch
 	# go install -v -work -x ${EGO_BUILD_FLAGS} "${EGO_PN}/cmd/snapd" || die
 }
 
