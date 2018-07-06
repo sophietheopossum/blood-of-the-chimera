@@ -62,7 +62,7 @@ src_compile() {
 	make
 	popd
 	# ensure executable path is absolute
-	epatch ${FILESDIR}/autogen.patch
+	epatch ${FILESDIR}/exec.patch
 	# go install -v -work -x ${EGO_BUILD_FLAGS} "${EGO_PN}/cmd/snapd" || die
 }
 
