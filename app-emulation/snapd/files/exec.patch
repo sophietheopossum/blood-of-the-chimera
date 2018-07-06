@@ -1,0 +1,13 @@
+diff --git a/home/seirra/Downloads/snapd-2.31.1/data/systemd/snapd.service.in b/home/seirra/Downloads/snapd-2.31.1/data/systemd/snapd.service.in
+index cb00c9e..04ff7c8 100644
+--- a/home/seirra/Downloads/snapd-2.31.1/data/systemd/snapd.service.in
++++ b/home/seirra/Downloads/snapd-2.31.1/data/systemd/snapd.service.in
+@@ -7,7 +7,7 @@ Requires=snapd.socket
+ # (https://bugs.launchpad.net/snapd/+bug/1709536)
+ #Nice=-5
+ OOMScoreAdjust=-900
+-ExecStart=@libexecdir@/snapd/snapd
++ExecStart=/usr/lib64/snapd
+ EnvironmentFile=-@SNAPD_ENVIRONMENT_FILE@
+ Restart=always
+ Type=notify
