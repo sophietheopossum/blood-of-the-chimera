@@ -53,7 +53,7 @@ src_compile() {
 	go install -v "${EGO_PN}/cmd/snapd" || die
 	go install -v "${EGO_PN}/cmd/snap" || die
 	# apply patch for gentoo to set executable path
-	epatch ${FILESDIR}/autogen.patch
+	eapply "${FILESDIR}"/autogen.patch
 	pushd cmd
 	./autogen.sh
 	make
@@ -62,7 +62,7 @@ src_compile() {
 	make
 	popd
 	# ensure executable path is absolute
-	epatch ${FILESDIR}/exec.patch
+	#epatch ${FILESDIR}/exec.patch
 	# go install -v -work -x ${EGO_BUILD_FLAGS} "${EGO_PN}/cmd/snapd" || die
 }
 
