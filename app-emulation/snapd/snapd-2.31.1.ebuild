@@ -51,6 +51,15 @@ src_compile() {
 	cd src/${EGO_PN} && ./get-deps.sh
 	go install -v "${EGO_PN}/cmd/snapd" || die
 	go install -v "${EGO_PN}/cmd/snap" || die
+	# apply patch for gentoo to set executable path
+	epatch ${FILESDIR}/autogen.patch
+	pushd cmd
+	./autogen.sh
+	make
+	popd
+	pushd "data/systemd/" || die
+	make
+	popd
 	# go install -v -work -x ${EGO_BUILD_FLAGS} "${EGO_PN}/cmd/snapd" || die
 }
 
