@@ -62,9 +62,12 @@ src_install() {
 	exeinto /usr/lib/snapd/
 	doexe "$GOPATH/bin/snapd"
 	cd "src/${EGO_PN}" || die
+	# rename systemd units
+	mv data/systemd/snapd.service.in data/systemd/snapd.service
+	mv data/systemd/snapd.refresh.service.in data/systemd/snapd.refresh.service
 	# Install systemd units
-	systemd_dounit data/systemd/snapd.{service.in,socket}
-	systemd_dounit data/systemd/snapd.refresh.{service.in,timer}
+	systemd_dounit data/systemd/snapd.{service,socket}
+	systemd_dounit data/systemd/snapd.refresh.{service,timer}
 	# Work around https://github.com/zyga/snapd-gentoo/issues/1
 	sed -i -e 's/RandomizedDelaySec=/#RandomizedDelaySec=/' debian/snapd.refresh.timer
 	# NOTE: the two "frameworks" units should be dropped upstream soon
