@@ -37,7 +37,7 @@ RDEPEND="
 		!steamruntime? (
 			>=games-util/steam-client-meta-0-r20141204[steamruntime?]
 			)
-     steamruntimepreferhostlibraries (
+    		steamruntimepreferhostlibraries? (
 			>=games-util/steam-client-meta-0-r20141204[steamruntime?]
 			)
 		amd64? (
