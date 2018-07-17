@@ -21,4 +21,4 @@ diff -Naur a/steam b/steam
 +
  function show_message()
  {
-  style=$1
+ 	style=$1
