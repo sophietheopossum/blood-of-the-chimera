@@ -42,14 +42,16 @@ Then run:
 
 ## Packages
 ### `app-emulation/snapd`
-PARTIALlY BROKEN
+BROKEN
 2.31.1 installs correctly, if it can be confirmed functional it will be marked stable and the rest will be marked testing so only a functional version is installed.
 Based off of Docker being available within this portage category, I have placed snapd (the guts of snappy) here as well.  Installation of this package will draw in `sys-apps/snap-confine` as a dependency.
 
 ### `sys-apps/snap-confine`
+BROKEN
 Provides sandbox type isolation of individual snap packages.  This is a dependency of `snapd` proper. Although newer versions seem to no longer require snap-confine due to a merge, it is still required for the older versions which i see no real reason to remove, gentoo is about choice after all, if you want an older version feel free. 
 
 ### `sys-devel/llvm`
+Built with gcc8 compatibility patches.
 Low Level Virtual Machine (LLVM) is:
 	1. A compilation strategy designed to enable effective program optimization across the entire lifetime of a program. LLVM supports effective optimization at compile time, link-time (particularly interprocedural), run-time and offline (i.e., after software is installed), while remaining transparent to developers and maintaining compatibility with existing build scripts.
 	2. A virtual instruction set - LLVM is a low-level object code representation that uses simple RISC-like instructions, but provides rich, language-independent, type information and dataflow (SSA) information about operands. This combination enables sophisticated transformations on object code, while remaining light-weight enough to be attached to the executable. This combination is key to allowing link-time, run-time, and offline transformations.
