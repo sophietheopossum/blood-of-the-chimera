@@ -43,8 +43,12 @@ Then run:
 ## Packages
 ### `app-emulation/snapd`
 BROKEN
-2.31.1 installs correctly, if it can be confirmed functional it will be marked stable and the rest will be marked testing so only a functional version is installed.
+2.31.1 installs correctly, however it does not function.
 Based off of Docker being available within this portage category, I have placed snapd (the guts of snappy) here as well.  Installation of this package will draw in `sys-apps/snap-confine` as a dependency.
+
+### `games-util/steam-launcher`
+BROKEN
+currently in development, an attempt to add a new use flag
 
 ### `sys-apps/snap-confine`
 BROKEN
