@@ -77,5 +77,5 @@ based off of the bobwya build, now uses the jit build option to improve performa
 
     # systemctl enable --now snapd.service
 ## FAQ
-### why isn't there an option without systemd?
+### why isn't there snapd without systemd?
 good question, with openrc being the more popular init system, you  would think it would be an available option. sadly this is not a mistake, snappy is designed in such a way that systemd is required. obviously much like funtoo has proven with their solution with gnome, it is theoretically possible. so possible in fact, that early ubuntu (which used upstart) even used a modified version of systemd to run snappy. however to this best of my knowledge there is no updated version of that, hence no openrc compatible ebuilds. feel free to contribute and make this otherwise however i have no interest myself in doing so (i personally use systemd).
