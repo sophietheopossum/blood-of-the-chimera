@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 # shellcheck disable=SC2034
-EAPI=6
+firefox cairo-qtEAPI=6
 VIRTUALX_REQUIRED="pgo"
 WANT_AUTOCONF="2.1"
 MOZ_ESR=""
@@ -20,7 +20,7 @@ MOZ_PV="${PV}"
 PATCH="${PN}-61.0-patches-01"
 MOZ_HTTP_URI="https://archive.mozilla.org/pub/${PN}/releases"
 
-#MOZCONFIG_OPTIONAL_QT5=1 (requires qt flag)
+#MOZCONFIG_OPTIONAL_QT5=1 (requires qt5 flag)
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT=1
 
@@ -39,7 +39,7 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist egl eme-free +gmp-autoupdate hardened hwaccel jack jit kde qt5 +screenshot selinux test"
+IUSE="bindist egl eme-free +gmp-autoupdate hardened hwaccel jack jit kde +screenshot selinux test"
 RESTRICT="!bindist? ( bindist )"
 
 SDIR="release"
