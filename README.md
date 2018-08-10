@@ -6,7 +6,7 @@ Gentoo's currently preferred Overlay system is through using a git sync.  What f
 
 Add the overlay:
 
-    # layman -o https://raw.githubusercontent.com/prototype99/prototype99/master/repositories.xml -f -a prototype99
+    # sudo layman -a prototype99
 
 Sync overlay:
 
@@ -44,7 +44,7 @@ Then run:
 ### `app-emulation/snapd`
 BROKEN
 2.31.1 installs correctly, however it does not function.
-Based off of Docker being available within this portage category, I have placed snapd (the guts of snappy) here as well.  Installation of this package will draw in `sys-apps/snap-confine` as a dependency.
+Based off of Docker being available within this portage category, snapd is there as well.  Installation of older versions will draw in `sys-apps/snap-confine` as a dependency. post installation make sure to run the command `systemctl enable --now snapd.service`
 
 ### `games-util/steam-launcher`
 BROKEN
@@ -69,13 +69,6 @@ Low Level Virtual Machine (LLVM) is:
 ### `www-client/firefox`
 based off of the bobwya build, now uses the jit build option to improve performance.
 
-## Installation
-
-    # emerge -av app-emulation/snapd
-
-## Post-installation
-
-    # systemctl enable --now snapd.service
 ## FAQ
 ### why isn't there snapd without systemd?
 good question, with openrc being the more popular init system, you  would think it would be an available option. sadly this is not a mistake, snappy is designed in such a way that systemd is required. obviously much like funtoo has proven with their solution with gnome, it is theoretically possible. so possible in fact, that early ubuntu (which used upstart) even used a modified version of systemd to run snappy. however to this best of my knowledge there is no updated version of that, hence no openrc compatible ebuilds. feel free to contribute and make this otherwise however i have no interest myself in doing so (i personally use systemd).
