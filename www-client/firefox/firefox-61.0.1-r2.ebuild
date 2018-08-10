@@ -40,7 +40,7 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist egl eme-free +gmp-autoupdate hardened hwaccel jack kde +screenshot selinux test"
+IUSE="bindist egl eme-free +gmp-autoupdate hardened hwaccel jack jit kde +screenshot selinux test"
 RESTRICT="!bindist? ( bindist )"
 
 SDIR="release"
