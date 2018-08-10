@@ -20,10 +20,9 @@ MOZ_PV="${PV}"
 PATCH="${PN}-61.0-patches-01"
 MOZ_HTTP_URI="https://archive.mozilla.org/pub/${PN}/releases"
 
-MOZCONFIG_OPTIONAL_QT5=1
+#MOZCONFIG_OPTIONAL_QT5=1 (requires qt flag)
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT=1
-MOZCONFIG_OPTIONAL_GTK3=1
 
 
 # Mercurial repository for Mozilla Firefox patches to provide better KDE Integration (developed by Wolfgang Rosenauer for OpenSUSE)
