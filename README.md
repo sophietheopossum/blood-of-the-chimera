@@ -50,6 +50,10 @@ Based off of Docker being available within this portage category, I have placed 
 BROKEN
 currently in development, an attempt to add a new use flag
 
+### `kde-apps/dolphin`
+BROKEN
+currently in development, an attempt to patch in ability to run as admin through sudo until administrative access is properly implemented
+
 ### `sys-apps/snap-confine`
 BROKEN
 Provides sandbox type isolation of individual snap packages.  This is a dependency of `snapd` proper. Although newer versions seem to no longer require snap-confine due to a merge, it is still required for the older versions which i see no real reason to remove, gentoo is about choice after all, if you want an older version feel free. 
