@@ -31,4 +31,4 @@ diff --git a/testing/mozbase/mozsystemmonitor/mozsystemmonitor/resourcemonitor.p
  
  
  def _collect(pipe, poll_interval):
-"""Collects system metrics.
+     """Collects system metrics.
