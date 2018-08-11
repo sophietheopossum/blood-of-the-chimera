@@ -283,7 +283,7 @@ src_install() {
 
 	# Add our default prefs for firefox
 	local pkg_default_pref_dir="dist/bin/browser/defaults/preferences"
-	cp "${FILESDIR}"/gentoo-default-prefs.js-2 \
+	cp "${FILESDIR}"/gentoo-default-prefs.js-1 \
 		"${BUILD_OBJ_DIR}/${pkg_default_pref_dir}/all-gentoo.js" \
 		|| die "cp failed"
 
