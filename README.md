@@ -67,7 +67,7 @@ Low Level Virtual Machine (LLVM) is:
 4. LLVM does not imply things that you would expect from a high-level virtual machine. It does not require garbage collection or run-time code generation (In fact, LLVM makes a great static compiler!). Note that optional LLVM components can be used to build high-level virtual machines and other systems that need these services.
 
 ### `www-client/firefox`
-based off of the bobwya build, now uses the jit build option to improve performance.
+based off of the bobwya build, now uses the jit build option to improve performance. also has cleaned up files, extra performance related prefs set and patch files borrowed from the pg_overlay (which in turn borrowed them from other distros)
 
 ## FAQ
 ### why isn't there snapd without systemd?
