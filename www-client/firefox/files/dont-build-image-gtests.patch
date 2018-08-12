@@ -20,4 +20,4 @@ index 2e34a6ce8fa2..6a9d1b63d169 100644
 -    DIRS += ['test/gtest']
  
  if CONFIG['FUZZING']:
-DIRS += ['test/fuzzing']
+     DIRS += ['test/fuzzing']
