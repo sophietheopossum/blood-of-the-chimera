@@ -161,7 +161,8 @@ src_prepare() {
 	PATCHES+=(
 		"${FILESDIR}/bug_1461221.patch"
 		"${FILESDIR}/${PN}-61.0-mozHunspell.patch"
-    "${FILESDIR}/dont-build-image-gtests.patch"
+    		"${FILESDIR}/dont-build-image-gtests.patch"
+		"${FILESDIR}/allow-js-preference-files-to-set-locked-prefs.patch"
 	)
 
 	# Enable gnomebreakpad
