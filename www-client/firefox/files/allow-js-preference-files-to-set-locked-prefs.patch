@@ -67,4 +67,4 @@ index 8d8b9a6125e4..797c330f9f0a 100644
 -            let mut is_locked = false;
              let mut has_attrs = false;
              if self.kind == PrefValueKind::Default {
-let ok = loop {
+                 let ok = loop {
