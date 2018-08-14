@@ -53,6 +53,8 @@ currently in development, an attempt to add a new use flag
 ### `kde-apps/dolphin`
 BROKEN
 currently in development, an attempt to patch in ability to run as admin through sudo until administrative access is properly implemented
+### `sci-geosciences/josm`
+mirror of the rindeal ebuild, version is bumped.
 
 ### `sys-apps/snap-confine`
 BROKEN
