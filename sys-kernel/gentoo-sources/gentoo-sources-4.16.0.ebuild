@@ -15,7 +15,7 @@ HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches"
 IUSE="experimental"
 
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
-SRC_URI="${KERNEL_URI} https://dev.gentoo.org/~mpagano/genpatches/tarballs/ ${ARCH_URI}"
+SRC_URI="${KERNEL_URI} https://dev.gentoo.org/~mpagano/genpatches/tarballs/genpatches-${KV_MAJOR}.${KV_MINOR}-${K_GENPATCHES_VER}.${i}.tar.xz ${ARCH_URI}"
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
