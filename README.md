@@ -70,7 +70,7 @@ Low Level Virtual Machine (LLVM) is:
 4. LLVM does not imply things that you would expect from a high-level virtual machine. It does not require garbage collection or run-time code generation (In fact, LLVM makes a great static compiler!). Note that optional LLVM components can be used to build high-level virtual machines and other systems that need these services.
 
 
-### `sys-devel/llvm`
+### `sys-kernel/gentoo-sources`
 older builds of gentoo sources. 4.16.0 is one of the few versions not to exhibit the following bug that affects certain btrfs systems without initramfs: https://bugzilla.kernel.org/show_bug.cgi?id=89721
 
 ### `www-client/firefox`
