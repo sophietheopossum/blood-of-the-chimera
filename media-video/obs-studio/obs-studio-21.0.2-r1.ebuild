@@ -25,7 +25,7 @@ IUSE="+alsa fdk imagemagick jack nvenc pulseaudio truetype v4l"
 
 COMMON_DEPEND="
 	>=dev-libs/jansson-2.5
- 	dev-libs/python:3.5
+ 	dev-lang/python:3.5m
 	dev-qt/qtcore:5
 	dev-qt/qtdeclarative:5
 	dev-qt/qtgui:5
