@@ -59,6 +59,9 @@ currently in development, an attempt to add a new use flag
 ### `kde-apps/dolphin`
 a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to.
 
+### `media-video/obs-studio`
+includes a required dependency that is missing from the official ebuild.
+
 ### `sci-geosciences/josm`
 mirror of the rindeal ebuild, version is bumped.
 
