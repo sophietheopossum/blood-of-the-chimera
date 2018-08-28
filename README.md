@@ -58,7 +58,7 @@ currently in development, an attempt to add a new use flag
 
 ### `kde-apps/dolphin`
 BROKEN
-currently in development, an attempt to patch in ability to run as admin through sudo until administrative access is properly implemented
+currently in development, an attempt to patch in ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to.
 
 ### `sci-geosciences/josm`
 mirror of the rindeal ebuild, version is bumped.
