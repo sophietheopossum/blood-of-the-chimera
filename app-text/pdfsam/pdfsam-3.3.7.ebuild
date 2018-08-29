@@ -8,7 +8,7 @@ inherit java-pkg-2 eutils java-ant-2
 
 DESCRIPTION="A free open source tool to split and merge pdf documents"
 HOMEPAGE="http://www.pdfsam.org/"
-SRC_URI="https://sourceforge.net/projects/${PN}/files/v${PV}/v${PV}.zip"
+SRC_URI="https://sourceforge.net/projects/${PN}/files/v${PV}/v${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1.4"
 KEYWORDS="~amd64 ~x86"
@@ -34,11 +34,6 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	mkdir "${S}"
 	cd "${S}"
-	for zip in "${WORKDIR}"/*.zip
-	do
-	    unzip -oq ${zip} || die "unpacking ${zip} failed"
-	done
-
 	for bldprop in emp4j jcmdline pdfsam-console pdfsam-cover pdfsam-decrypt pdfsam-encrypt \
 	    pdfsam-langpack-br1 pdfsam-merge pdfsam-mix pdfsam-rotate pdfsam-setviewer pdfsam-split \
 	    pdfsam-unpack pdfsam-maine-br1
