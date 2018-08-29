@@ -46,6 +46,10 @@ BROKEN
 2.31.1+ installs correctly, however it does not function. newer builds are thanks to https://github.com/JamesB192/JamesB192-overlay
 Based off of Docker being available within this portage category, snapd is there as well.  Installation of older versions will draw in `sys-apps/snap-confine` as a dependency. post installation make sure to run the command `systemctl enable --now snapd.service`
 
+### `app-text/pdfsam`
+BROKEN
+work in progress. software that allows the manipulation of pdf files.
+
 ### `app-emulation/wine-staging`
 Based off of the bobwya ebuild. Includes a patch to make the steam browser work without any extra effort on the user's end.
 
