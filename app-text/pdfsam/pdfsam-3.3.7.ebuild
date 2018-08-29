@@ -8,7 +8,7 @@ inherit java-pkg-2 eutils java-ant-2
 
 DESCRIPTION="A free open source tool to split and merge pdf documents"
 HOMEPAGE="http://www.pdfsam.org/"
-SRC_URI="https://sourceforge.net/projects/${PN}/files/v${Pv}/v${Pv}.zip"
+SRC_URI="https://sourceforge.net/projects/${PN}/files/v${PV}/v${PV}.zip"
 LICENSE="GPL-2"
 SLOT="1.4"
 KEYWORDS="~amd64 ~x86"
