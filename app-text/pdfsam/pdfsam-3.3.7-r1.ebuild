@@ -43,10 +43,6 @@ src_unpack() {
 	java-pkg_jarfrom bcprov
 	java-pkg_jarfrom jgoodies-looks-2.0
 }
-
-src_compile() {
-}
-
 src_install() {
 	insinto /usr/share/${PN}-${SLOT}/lib
 	doins build/pdfsam-maine-br1/release/dist/pdfsam-enhanced/*.xml || die "config install failed"
