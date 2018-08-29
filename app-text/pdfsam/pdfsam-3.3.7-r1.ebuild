@@ -4,7 +4,7 @@
 
 EAPI=1
 JAVA_PKG_IUSE="doc"
-inherit java-pkg-2 eutils java-ant-2
+inherit java-pkg-2 eutils
 
 DESCRIPTION="A free open source tool to split and merge pdf documents"
 HOMEPAGE="http://www.pdfsam.org/"
@@ -18,7 +18,6 @@ S="${WORKDIR}/pdfsam"
 
 COMMON_DEP="dev-java/dom4j:1
 	dev-java/log4j
-	dev-java/itext
 	dev-java/jaxen:1.1
 	dev-java/bcmail
 	dev-java/bcprov
@@ -35,7 +34,6 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	mkdir "${S}"
 	cd "${S}"
-	java-pkg_jarfrom itext
 	java-pkg_jarfrom dom4j-1
 	java-pkg_jarfrom log4j
 	java-pkg_jarfrom jaxen-1.1
