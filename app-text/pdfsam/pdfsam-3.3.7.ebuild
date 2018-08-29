@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,7 @@ inherit java-pkg-2 eutils java-ant-2
 
 DESCRIPTION="A free open source tool to split and merge pdf documents"
 HOMEPAGE="http://www.pdfsam.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-out-src.zip"
+SRC_URI="https://sourceforge.net/projects/${PN}/files/v${P}/v${P}.zip"
 LICENSE="GPL-2"
 SLOT="1.4"
 KEYWORDS="~amd64 ~x86"
@@ -23,9 +23,9 @@ COMMON_DEP="dev-java/dom4j:1
 	dev-java/bcmail
 	dev-java/bcprov
 	dev-java/jgoodies-looks:2.0"
-RDEPEND=">=virtual/jre-1.5
+RDEPEND=">=virtual/jre-1.8
 	${COMMON_DEP}"
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.8
 	sys-devel/gettext
 	app-arch/unzip
 	${COMMON_DEP}"
