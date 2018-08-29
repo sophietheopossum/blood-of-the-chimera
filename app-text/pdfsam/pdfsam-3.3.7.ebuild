@@ -8,7 +8,7 @@ inherit java-pkg-2 eutils java-ant-2
 
 DESCRIPTION="A free open source tool to split and merge pdf documents"
 HOMEPAGE="http://www.pdfsam.org/"
-SRC_URI="https://sourceforge.net/projects/${PN}/files/v${PV}/v${PV}.tar.gz"
+SRC_URI="https://github.com/torakiki/${PN}/archive/v${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1.4"
 KEYWORDS="~amd64 ~x86"
@@ -22,7 +22,8 @@ COMMON_DEP="dev-java/dom4j:1
 	dev-java/jaxen:1.1
 	dev-java/bcmail
 	dev-java/bcprov
-	dev-java/jgoodies-looks:2.0"
+	dev-java/jgoodies-looks:2.0
+	dev-java/maven-bin"
 RDEPEND=">=virtual/jre-1.8
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.8
@@ -34,41 +35,6 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	mkdir "${S}"
 	cd "${S}"
-	for bldprop in emp4j jcmdline pdfsam-console pdfsam-cover pdfsam-decrypt pdfsam-encrypt \
-	    pdfsam-langpack-br1 pdfsam-merge pdfsam-mix pdfsam-rotate pdfsam-setviewer pdfsam-split \
-	    pdfsam-unpack pdfsam-maine-br1
-	do
-	    echo > ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam.deploy.dir=${S}/deploy" >> ${S}/${bldprop}/ant/build.properties
-	    echo "template.dir=${S}/template-enhanced-1" >> ${S}/${bldprop}/ant/build.properties
-	    echo "workspace.dir=${S}" >> ${S}/${bldprop}/ant/build.properties
-	    echo "build.dir=${S}/build" >> ${S}/${bldprop}/ant/build.properties
-	    echo "libs.dir=${S}" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam.version=enhanced" >> ${S}/${bldprop}/ant/build.properties
-	    echo "itext.jar.name=iText" >> ${S}/${bldprop}/ant/build.properties
-	    echo "log4j.jar.name=log4j" >> ${S}/${bldprop}/ant/build.properties
-	    echo "dom4j.jar.name=dom4j" >> ${S}/${bldprop}/ant/build.properties
-	    echo "jaxen.jar.name=jaxen" >> ${S}/${bldprop}/ant/build.properties
-	    echo "bcmail.jar.name=bcmail" >> ${S}/${bldprop}/ant/build.properties
-	    echo "bcprov.jar.name=bcprov" >> ${S}/${bldprop}/ant/build.properties
-	    echo "looks.jar.name=looks" >> ${S}/${bldprop}/ant/build.properties
-	    echo "jcmdline.jar.name=pdfsam-jcmdline" >> ${S}/${bldprop}/ant/build.properties
-	    echo "emp4j.jar.name=emp4j" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam.jar.name=pdfsam" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-console.jar.name=pdfsam-console" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-split.jar.name=pdfsam-split" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-merge.jar.name=pdfsam-merge" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-cover.jar.name=pdfsam-cover" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-encrypt.jar.name=pdfsam-encrypt" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-decrypt.jar.name=pdfsam-decrypt" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-mix.jar.name=pdfsam-mix" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-unpack.jar.name=pdfsam-unpack" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-langpack.jar.name=pdfsam-langpack" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-setviewer.jar.name=pdfsam-setviewer" >> ${S}/${bldprop}/ant/build.properties
-	    echo "pdfsam-rotate.jar.name=pdfsam-rotate" >> ${S}/${bldprop}/ant/build.properties
-
-	done
-
 	java-pkg_jarfrom itext
 	java-pkg_jarfrom dom4j-1
 	java-pkg_jarfrom log4j
@@ -79,9 +45,6 @@ src_unpack() {
 }
 
 src_compile() {
-	eant ${antflags} -buildfile pdfsam-maine-br1/ant/build.xml || die "build failed"
-
-	use doc && eant ${antflags} -buildfile pdfsam-maine-br1/ant/build.xml javadoc
 }
 
 src_install() {
