@@ -19,7 +19,6 @@ S="${WORKDIR}/pdfsam"
 COMMON_DEP="dev-java/dom4j:1
 	dev-java/log4j
 	dev-java/jaxen:1.1
-	dev-java/bcmail
 	dev-java/bcprov
 	dev-java/jgoodies-looks:2.0
 	dev-java/maven-bin"
@@ -37,7 +36,6 @@ src_unpack() {
 	java-pkg_jarfrom dom4j-1
 	java-pkg_jarfrom log4j
 	java-pkg_jarfrom jaxen-1.1
-	java-pkg_jarfrom bcmail
 	java-pkg_jarfrom bcprov
 	java-pkg_jarfrom jgoodies-looks-2.0
 }
