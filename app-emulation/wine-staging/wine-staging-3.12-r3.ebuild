@@ -78,7 +78,7 @@ REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 	elibc_glibc? ( threads )
 	osmesa? ( opengl )
 	test? ( abi_x86_32 )
-  vkd3d? ( vulkan )" #286560 osmesa-opengl  #551124 X-truetype
+ 	vkd3d? ( vulkan )" #286560 osmesa-opengl  #551124 X-truetype
 
 # FIXME: the test suite is unsuitable for us; many tests require net access
 # or fail due to Xvfb's opengl limitations.
@@ -98,7 +98,7 @@ COMMON_DEPEND="
 	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
 	capi? ( net-libs/libcapi[${MULTILIB_USEDEP}] )
 	cups? ( net-print/cups:=[${MULTILIB_USEDEP}] )
-  ffmpeg? (
+  	ffmpeg? (
 	 	libav? ( media-video/libav:=[${MULTILIB_USEDEP}] )
 	 	!libav? ( media-video/ffmpeg:=[${MULTILIB_USEDEP}] )
 	)
@@ -553,7 +553,7 @@ multilib_src_configure() {
 		"$(use_with lcms cms)"
 		"$(use_with cups)"
 		"$(use_with ncurses curses)"
-    "$(use_with ffmpeg)"
+    		"$(use_with ffmpeg)"
 		"$(use_with fontconfig)"
 		"$(use_with ssl gnutls)"
 		"$(use_enable gecko mshtml)"
