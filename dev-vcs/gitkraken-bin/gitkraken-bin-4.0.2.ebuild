@@ -10,7 +10,7 @@ RESTRICT="mirror"
 KEYWORDS="~amd64"
 SLOT="0"
 LICENSE="gitkraken-EULA"
-RDEPEND="dev-util/electron-bin:1.8
+RDEPEND="dev-util/electron
   gnome-base/libgnome-keyring
   net-misc/curl
   net-libs/gnutls"
