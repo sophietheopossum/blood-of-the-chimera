@@ -56,6 +56,10 @@ Based off of the bobwya ebuild. Includes a patch to make the steam browser work 
 ### `dev-libs/glib`
 The GLib library of C routines
 
+### `dev-vcs/gitkraken-bin`
+WORK IN PROGRESS
+gitkraken ebuild based off of the anomen and chaoslab overlay ebuilds. anomen is used as the base as it was closer to the layout of an official ebuild. added in from the chaoslab ebuild: newer copyright date. personal edits: copied most up to date description from website, got rid of electron slot variable as it is unneeded.
+
 ### `games-util/steam-launcher`
 BROKEN
 currently in development, an attempt to add a new use flag
