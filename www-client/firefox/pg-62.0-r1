@@ -1,5 +1,6 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# please note this is not a 'real' ebuild it is simply modified to more closely match my ebuild so that i can compare the differences easier. once this ebuild is dropped from pg_overlay i may very well delete this file
 
 EAPI=6
 VIRTUALX_REQUIRED="pgo"
