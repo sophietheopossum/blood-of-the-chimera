@@ -4,6 +4,9 @@
 <use>
 	<flag name="bindist">Disable official Firefox branding (icons, name) which 
 		are not binary-redistributable according to upstream.</flag>
+	<flag name="clang">Build with clang instead of gcc
+		see https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Compiling_Firefox_With_Clang_On_Linux
+		for more info</flag>
 	<flag name="custom-optimization">Build with user-specified compiler optimizations
 		(-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)</flag>
 	<flag name="egl">Enable EGL as the GL provider (unsupported).</flag>
