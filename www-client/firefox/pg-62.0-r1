@@ -101,8 +101,7 @@ CDEPEND="
 RDEPEND="${CDEPEND}
 	jack? ( virtual/jack )
 	pulseaudio? ( || ( media-sound/pulseaudio
-		>=media-sound/apulse-0.1.9 ) )
-	selinux? ( sec-policy/selinux-mozilla )"
+		>=media-sound/apulse-0.1.9 ) )"
 
 DEPEND="${CDEPEND}
 	app-arch/zip
