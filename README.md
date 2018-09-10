@@ -90,7 +90,7 @@ Low Level Virtual Machine (LLVM) is:
 older builds of gentoo sources. 4.16.0 is one of the few versions not to exhibit the following bug that affects certain btrfs systems without initramfs: https://bugzilla.kernel.org/show_bug.cgi?id=89721
 
 ### `www-client/firefox`
-based off of the bobwya build, now uses the jit build option to improve performance. also has cleaned up files, extra performance related prefs set and patch files borrowed from the pg_overlay (which in turn borrowed them from other distros)
+firefox ebuild created using the bobwya and pg_overlay ebuilds. this ebuild contains various extra use flags and extra patches designed to improve performance and give greater choice. from bobwya: base ebuild. from pg_overlay: JIT use flag (improves performance), python compatibility, various fedora and debian patches, dbus use flag, debug use flag, clang use flag, neon use flag, pulseaudio use flag, startup notification use flag, system library use flags, wifi use flag, CDEPEND values, patch series concept. extra edits: more prefs set to improve performance, removed mercurial code because it appears to fetch a blank repository.
 
 ## FAQ
 ### why isn't there snapd without systemd?
