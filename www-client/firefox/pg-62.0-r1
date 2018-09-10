@@ -44,9 +44,9 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist dbus debug eme-free +gmp-autoupdate hardened hwaccel jack neon
+IUSE="bindist clang dbus debug eme-free +gmp-autoupdate hardened hwaccel jack jit kde neon
 	pulseaudio +screenshot selinux startup-notification system-harfbuzz system-icu
-	system-jpeg system-libevent system-sqlite system-libvpx test wifi clang jit kde"
+	system-jpeg system-libevent system-sqlite system-libvpx test wifi"
 RESTRICT="!bindist? ( bindist )"
 
 PATCH_URIS=( https://dev.gentoo.org/~{anarchy,axs,polynomial-c}/mozilla/patchsets/${PATCH}.tar.xz )
