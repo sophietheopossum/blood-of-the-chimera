@@ -36,8 +36,9 @@ MOZCONFIG_OPTIONAL_JIT=1
 inherit autotools check-reqs flag-o-matic gnome2-utils llvm  mozlinguas-v2 pax-utils toolchain-funcs xdg-utils \
 		mozcoreconf-v6 eutils
 
-DESCRIPTION="Firefox Web Browser"
-HOMEPAGE="https://www.mozilla.com/firefox"
+DESCRIPTION="Firefox Web Browser, with SUSE patchset, to provide better KDE integration"
+HOMEPAGE="https://www.mozilla.com/firefox
+	https://www.rosenauer.org/hg/mozilla"
 
 KEYWORDS="~amd64 ~x86"
 
