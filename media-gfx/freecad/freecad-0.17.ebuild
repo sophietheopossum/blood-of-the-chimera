@@ -12,13 +12,8 @@ inherit cmake-utils eutils fdo-mime fortran-2 python-single-r1
 DESCRIPTION="QT based Computer Aided Design application"
 HOMEPAGE="http://www.freecadweb.org/"
 
-if [[ ${PV} == *99999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/FreeCAD/FreeCAD.git"
-else
 	SRC_URI="https://github.com/FreeCAD/FreeCAD/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-fi
 
 LICENSE="GPL-2"
 SLOT="0"
