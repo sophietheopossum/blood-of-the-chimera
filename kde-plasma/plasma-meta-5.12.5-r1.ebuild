@@ -12,7 +12,7 @@ LICENSE="metapackage"
 SLOT="5"
 KEYWORDS="amd64 ~arm x86"
 IUSE="bluetooth crypt +display-manager grub gtk +handbook legacy-systray
-networkmanager pam plymouth pulseaudio +sddm sdk +wallpapers"
+networkmanager pam plymouth powerdevil pulseaudio +sddm sdk +wallpapers"
 
 RDEPEND="
 	$(add_plasma_dep breeze)
