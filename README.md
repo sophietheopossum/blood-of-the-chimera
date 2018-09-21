@@ -16,9 +16,9 @@ Sync overlay:
 
 Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` package installed. please note this is a more complex process that many may view as having no true benefit.
 
-Next, create a custom `/etc/portage/repos.conf` entry for the **gentoo-snappy** overlay, so Portage knows what to do. Make sure that `/etc/portage/repos.conf` exists, and is a directory. Then, use your text editor without line wrapping:
+Next, create a custom `/etc/portage/repos.conf` entry for the **prototype99** overlay, so Portage knows what to do. Make sure that `/etc/portage/repos.conf` exists, and is a directory. Then, use your text editor without line wrapping:
 
-    # nano -w /etc/portage/repos.conf/gentoo-snappy.conf
+    # nano -w /etc/portage/repos.conf/prototype99.conf
 
 and put the following text in the file:
 
@@ -26,19 +26,19 @@ and put the following text in the file:
 [gentoo-snappy]
  
 # An unofficial overlay that supports the installation of the "Snappy" backbone.
-# Maintainer: Clayton "kefnab" Dobbs (clayton.dobbs@gosecur.us)
-# Upstream Maintainer: Zygmunt "zyga" Krynicki (me@zygoon.pl)
+# Maintainer: Seirra Blake (general@sarifria.x10.bz)
+# Upstream Maintainer: Clayton "kefnab" Dobbs (clayton.dobbs@gosecur.us)/Zygmunt "zyga" Krynicki (me@zygoon.pl)
  
-location = /usr/local/portage/gentoo-snappy
+location = /usr/local/portage/prototype99
 sync-type = git
-sync-uri = https://github.com/zyga/gentoo-snappy.git
+sync-uri = https://github.com/prototype99/prototype99.git
 priority = 50
 auto-sync = yes
 ```
 
 Then run:
 
-    # emaint sync --repo gentoo-snappy
+    # emaint sync --repo prototype99
 
 ## Packages
 ### `app-emulation/snapd`
@@ -46,12 +46,12 @@ BROKEN
 2.31.1+ installs correctly, however it does not function. newer builds are thanks to https://github.com/JamesB192/JamesB192-overlay
 Based off of Docker being available within this portage category, snapd is there as well.  Installation of older versions will draw in `sys-apps/snap-confine` as a dependency. post installation make sure to run the command `systemctl enable --now snapd.service`
 
+### `app-emulation/wine-staging`
+Based off of the bobwya ebuild. Includes a patch to make the steam browser work without any extra effort on the user's end.
+
 ### `app-text/pdfsam`
 BROKEN
 work in progress. software that allows the manipulation of pdf files.
-
-### `app-emulation/wine-staging`
-Based off of the bobwya ebuild. Includes a patch to make the steam browser work without any extra effort on the user's end.
 
 ### `dev-libs/glib`
 The GLib library of C routines
