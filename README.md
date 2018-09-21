@@ -67,6 +67,9 @@ currently in development, an attempt to add a new use flag
 ### `kde-apps/dolphin`
 a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to.
 
+### `kde-plasma/plasma-meta`
+a modified version of the official ebuild with the ability to disable or enable powerdevil as needed with an aptly named use flag. on a desktop pc power management software does not always make sense.
+
 ### `media-video/obs-studio`
 includes a required dependency that is missing from the official ebuild.
 
