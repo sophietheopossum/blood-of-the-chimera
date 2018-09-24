@@ -53,6 +53,9 @@ Based off of the bobwya ebuild. Includes a patch to make the steam browser work 
 BROKEN
 work in progress. software that allows the manipulation of pdf files.
 
+### `dev-lang/rust`
+includes missing libunwind dependency
+
 ### `dev-libs/glib`
 The GLib library of C routines
 
