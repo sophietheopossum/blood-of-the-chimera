@@ -1,4 +1,3 @@
  03-default_look_and_feel.patch
  04-use_system_jmapviewer.patch
  09-no-java-8.patch
- base64.patch
