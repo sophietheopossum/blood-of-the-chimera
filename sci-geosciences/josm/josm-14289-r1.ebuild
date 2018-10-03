@@ -41,6 +41,7 @@ SLOT="0"
 ESVN_REPO_URI="https://josm.openstreetmap.de/svn/trunk@${PV}"
 
 KEYWORDS="~amd64"
+J="9"
 
 CDEPEND_A=(
 	"dev-java/commons-compress:0"
@@ -53,7 +54,7 @@ CDEPEND_A=(
 	"dev-java/signpost:0"
 )
 DEPEND_A=( "${CDEPEND_A[@]}"
-	">=virtual/jdk-9"
+	">=virtual/jdk-${J}"
 	"dev-java/javacc:0"
 	"dev-java/ant-contrib:0"
 	"app-text/xmlstarlet" # required for build files patching
@@ -61,7 +62,7 @@ DEPEND_A=( "${CDEPEND_A[@]}"
 	"dev-perl/TermReadKey"
 )
 RDEPEND_A=( "${CDEPEND_A[@]}"
-	">=virtual/jre-9"
+	">=virtual/jre-${J}"
 	"noto? ( media-fonts/noto )"
 	"!noto? ( media-fonts/droid )"
 )
@@ -91,8 +92,8 @@ src_prepare-locales() {
 }
 
 src_prepare() {
-	for i in $(cat "${FILESDIR/series"); do eapply "${FILESDIR}/$i"; done
 	use noto && for i in $(cat "${FILESDIR}/noto"); do eapply "${FILESDIR}/$i"; done
+	for i in $(cat "${FILESDIR}/series"); do eapply "${FILESDIR}/$i"; done
 
 	xdg_src_prepare
 
