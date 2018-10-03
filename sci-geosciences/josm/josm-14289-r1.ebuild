@@ -62,7 +62,7 @@ DEPEND_A=( "${CDEPEND_A[@]}"
 	"dev-perl/TermReadKey"
 )
 RDEPEND_A=( "${CDEPEND_A[@]}"
-	">=virtual/jre-${J}"
+	"dev-java/oracle-jre-bin:${J}"
 	"noto? ( media-fonts/noto )"
 	"!noto? ( media-fonts/droid )"
 )
