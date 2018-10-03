@@ -62,8 +62,8 @@ DEPEND_A=( "${CDEPEND_A[@]}"
 )
 RDEPEND_A=( "${CDEPEND_A[@]}"
 	">=virtual/jre-9"
-	noto? ( media-fonts/noto )
-	!noto? ( media-fonts/droid )
+	"noto? ( media-fonts/noto )"
+	"!noto? ( media-fonts/droid )"
 )
 
 RESTRICT+=" mirror"
