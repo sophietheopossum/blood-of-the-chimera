@@ -35,6 +35,7 @@ inherit subversion
 DESCRIPTION="Java-based editor for the OpenStreetMap project"
 HOMEPAGE="https://josm.openstreetmap.de/"
 LICENSE="GPL-2"
+IUSE="noto"
 
 SLOT="0"
 ESVN_REPO_URI="https://josm.openstreetmap.de/svn/trunk@${PV}"
@@ -61,7 +62,8 @@ DEPEND_A=( "${CDEPEND_A[@]}"
 )
 RDEPEND_A=( "${CDEPEND_A[@]}"
 	">=virtual/jre-9"
-	"media-fonts/droid"
+	noto? ( media-fonts/noto )
+	!noto? ( media-fonts/droid )
 )
 
 RESTRICT+=" mirror"
@@ -89,51 +91,48 @@ src_prepare-locales() {
 }
 
 src_prepare() {
-	eapply "${DEBIAN_DIR}/patches"/00-build.patch
-	eapply "${DEBIAN_DIR}/patches"/04-use_system_jmapviewer.patch
-	eapply "${DEBIAN_DIR}/patches"/05-fix_version.patch
-	eapply "${DEBIAN_DIR}/patches"/06-move_data_out_of_jar.patch
-	eapply "${DEBIAN_DIR}/patches"/07-use_system_fonts.patch
-	eapply "${DEBIAN_DIR}/patches"/08-use_noto_font.patch
+	for i in $(cat "${FILESDIR/series"); do eapply "${FILESDIR}/$i"; done
+	use noto && for i in $(cat "${FILESDIR}/noto"); do eapply "${FILESDIR}/$i"; done
 
 	xdg_src_prepare
 
 	src_prepare-locales
 
 	## fix debian paths
-	local xmlstarlet=(
-		xmlstarlet ed --inplace
-		-d "project/target[@name='init-properties']/path[@id='classpath']/fileset"
-		build.xml
-	)
-	echo "${xmlstarlet[@]}"
-	"${xmlstarlet[@]}" || die
-	local p f
-	for p in ${EANT_GENTOO_CLASSPATH} ; do
-		for f in $(java-pkg_getjars "${p}" | tr ':' ' ') ; do
-			local base_xpath="project/target[@name='init-properties']/path[@id='classpath']"
-			local xmlstarlet=(
-				xmlstarlet ed --inplace
-				-s "${base_xpath}" -t elem -n "pathelement"
-				-i "${base_xpath}/pathelement[last()]" -t attr -n location -v "${f}"
-				build.xml
-			)
-			echo "${xmlstarlet[@]}"
-			"${xmlstarlet[@]}" || die
-		done
-	done
-	rsed -e "s,/usr/share/java/ant-contrib.jar,$(java-pkg_getjars --build-only ant-contrib),g" \
-		-i -- build.xml i18n/build.xml || die
-	rsed -e "s,/usr/share/java/gettext-ant-tasks.jar,$(java-pkg_getjars --build-only gettext-ant-tasks),g" \
-		-i -- i18n/build.xml || die
+	##local xmlstarlet=(
+	##	xmlstarlet ed --inplace
+	##	-d "project/target[@name='init-properties']/path[@id='classpath']/fileset"
+	##	build.xml
+	##)
+	##echo "${xmlstarlet[@]}"
+	##"${xmlstarlet[@]}" || die
+	##local p f
+	##for p in ${EANT_GENTOO_CLASSPATH} ; do
+	##	for f in $(java-pkg_getjars "${p}" | tr ':' ' ') ; do
+	##		local base_xpath="project/target[@name='init-properties']/path[@id='classpath']"
+	##		local xmlstarlet=(
+	##			xmlstarlet ed --inplace
+	##			-s "${base_xpath}" -t elem -n "pathelement"
+	##			-i "${base_xpath}/pathelement[last()]" -t attr -n location -v "${f}"
+	##			build.xml
+	##		)
+	##		echo "${xmlstarlet[@]}"
+	##		"${xmlstarlet[@]}" || die
+	##	done
+	##done
+	##rsed -e "s,/usr/share/java/ant-contrib.jar,$(java-pkg_getjars --build-only ant-contrib),g" \
+	##	-i -- build.xml i18n/build.xml || die
+	##rsed -e "s,/usr/share/java/gettext-ant-tasks.jar,$(java-pkg_getjars --build-only gettext-ant-tasks),g" \
+	##	-i -- i18n/build.xml || die
 
 	## print stats for EPSG compilation
 	rsed -e "s|printStats *= *false|printStats = true|" \
 		-i -- scripts/BuildProjectionDefinitions.java || die
-
+	if use noto ; then
 	## fix font path
 	rsed -e 's,/usr/share/fonts/truetype/noto,/usr/share/fonts/noto,g' \
 		-i -- src/org/openstreetmap/josm/tools/FontsManager.java || die
+	fi
 
 	## change default look and feel to GTK
 	rsed -e 's|"javax.swing.plaf.metal.MetalLookAndFeel"|"com.sun.java.swing.plaf.gtk.GTKLookAndFeel"|' \
@@ -156,7 +155,7 @@ src_prepare() {
 			Revision: \${version.entry.commit.revision}
 			Is-Local-Build: true
 			Build-Date: \${build.tstamp}
-			Build-Name: rindeal-ebuild
+			Build-Name: prototype99-ebuild
 			Ebuild-Version: ${PVR}
 			_EOF_
 		)" build.xml || die
