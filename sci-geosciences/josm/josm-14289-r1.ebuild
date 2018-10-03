@@ -54,7 +54,7 @@ CDEPEND_A=(
 	"dev-java/signpost:0"
 )
 DEPEND_A=( "${CDEPEND_A[@]}"
-	">=virtual/jdk-${J}"
+	">=dev-java/oracle-jdk-bin:${J}"
 	"dev-java/javacc:0"
 	"dev-java/ant-contrib:0"
 	"app-text/xmlstarlet" # required for build files patching
