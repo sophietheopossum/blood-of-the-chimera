@@ -98,33 +98,6 @@ src_prepare() {
 
 	src_prepare-locales
 
-	## fix debian paths
-	##local xmlstarlet=(
-	##	xmlstarlet ed --inplace
-	##	-d "project/target[@name='init-properties']/path[@id='classpath']/fileset"
-	##	build.xml
-	##)
-	##echo "${xmlstarlet[@]}"
-	##"${xmlstarlet[@]}" || die
-	##local p f
-	##for p in ${EANT_GENTOO_CLASSPATH} ; do
-	##	for f in $(java-pkg_getjars "${p}" | tr ':' ' ') ; do
-	##		local base_xpath="project/target[@name='init-properties']/path[@id='classpath']"
-	##		local xmlstarlet=(
-	##			xmlstarlet ed --inplace
-	##			-s "${base_xpath}" -t elem -n "pathelement"
-	##			-i "${base_xpath}/pathelement[last()]" -t attr -n location -v "${f}"
-	##			build.xml
-	##		)
-	##		echo "${xmlstarlet[@]}"
-	##		"${xmlstarlet[@]}" || die
-	##	done
-	##done
-	##rsed -e "s,/usr/share/java/ant-contrib.jar,$(java-pkg_getjars --build-only ant-contrib),g" \
-	##	-i -- build.xml i18n/build.xml || die
-	##rsed -e "s,/usr/share/java/gettext-ant-tasks.jar,$(java-pkg_getjars --build-only gettext-ant-tasks),g" \
-	##	-i -- i18n/build.xml || die
-
 	## print stats for EPSG compilation
 	rsed -e "s|printStats *= *false|printStats = true|" \
 		-i -- scripts/BuildProjectionDefinitions.java || die
