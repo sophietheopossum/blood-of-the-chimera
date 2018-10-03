@@ -29,7 +29,7 @@ inherit java-ant-2
 inherit xdg
 ## functions: make_desktop_entry, doicon, newicon
 inherit desktop
-## functions: 
+## functions: ESVN_REPO_URI
 inherit subversion
 
 DESCRIPTION="Java-based editor for the OpenStreetMap project"
