@@ -77,6 +77,7 @@ a modified version of the official ebuild with the ability to disable or enable 
 includes a required dependency that is missing from the official ebuild.
 
 ### `sci-geosciences/josm`
+BROKEN
 mirror of the rindeal ebuild, version is bumped.
 
 ### `sys-apps/snap-confine`
