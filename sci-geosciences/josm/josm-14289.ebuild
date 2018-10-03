@@ -38,9 +38,9 @@ SLOT="0"
 MY_P="${PN}_0.0.svn${PV}"
 # Upstream doesn't provide versioned tarballs
 SRC_URI_A=(
-	## josm 0.0.svn13878+dfsg-1
-	"http://snapshot.debian.org/archive/debian/20180531T100916Z/pool/main/j/josm/josm_0.0.svn13878%2Bdfsg-1.debian.tar.xz"
-	"http://snapshot.debian.org/archive/debian/20180531T100916Z/pool/main/j/josm/josm_0.0.svn13878%2Bdfsg.orig.tar.gz"
+	## josm 0.0.svn14289+dfsg-1
+	"http://snapshot.debian.org/archive/debian/20181003T085407Z/pool/main/j/josm/josm_0.0.svn14289%2Bdfsg-1.debian.tar.xz"
+	"http://snapshot.debian.org/archive/debian/20181003T085407Z/pool/main/j/josm/josm_0.0.svn14289%2Bdfsg.orig.tar.gz"
 )
 
 KEYWORDS="~amd64"
