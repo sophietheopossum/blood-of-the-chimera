@@ -68,7 +68,7 @@ BROKEN
 currently in development, an attempt to add a new use flag
 
 ### `kde-apps/dolphin`
-a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to.
+a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to. it also has an audiocd useflag enabling you to manage the dependencies for opening cds as a directory with a simple useflag.
 
 ### `kde-plasma/plasma-meta`
 a modified version of the official ebuild with the ability to disable or enable powerdevil as needed with an aptly named use flag. on a desktop pc power management software does not always make sense.
