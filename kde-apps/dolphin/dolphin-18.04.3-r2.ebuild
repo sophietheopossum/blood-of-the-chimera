@@ -11,7 +11,7 @@ inherit kde5
 DESCRIPTION="Plasma filemanager focusing on usability"
 HOMEPAGE="https://www.kde.org/applications/system/dolphin https://userbase.kde.org/Dolphin"
 KEYWORDS="amd64 x86"
-IUSE="semantic-desktop thumbnail"
+IUSE="semantic-desktop thumbnail audiocd"
 
 DEPEND="
 	$(add_frameworks_dep kbookmarks)
@@ -54,6 +54,9 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	$(add_kdeapps_dep kio-extras)
+	audiocd? (
+		$(add_kdeapps_dep libkcddb)
+	)
 	thumbnail? (
 		$(add_kdeapps_dep ffmpegthumbs)
 		$(add_kdeapps_dep thumbnailers)
@@ -63,7 +66,7 @@ RDEPEND="${DEPEND}
 RESTRICT+=" test"
 
 PATCHES=(
-  "${FILESDIR}"/0001-Revert-Disallow-executing-Dolphin-as-root-on-Linux.patch
+ 	"${FILESDIR}"/0001-Revert-Disallow-executing-Dolphin-as-root-on-Linux.patch
 	"${FILESDIR}"/${PN}-18.04.1-flto.patch
 	"${FILESDIR}"/${P}-memleak-{1,2}.patch
 )
