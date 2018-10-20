@@ -183,13 +183,13 @@ src_prepare() {
 	eapply "${WORKDIR}/firefox"
 
 	# Enable gnomebreakpad
-	if use debug ; then
+	if use debug; then
 		sed -i -e "s:GNOME_DISABLE_CRASH_DIALOG=1:GNOME_DISABLE_CRASH_DIALOG=0:g" \
 			"${S}"/build/unix/run-mozilla.sh || die "sed failed!"
 	fi
 
 	# Drop -Wl,--as-needed related manipulation for ia64 as it causes ld sefgaults, bug #582432
-	if use ia64 ; then
+	if use ia64; then
 		sed -i \
 		-e '/^OS_LIBS += no_as_needed/d' \
 		-e '/^OS_LIBS += as_needed/d' \
@@ -313,7 +313,7 @@ src_configure() {
 
 	mozconfig_use_enable debug
 	mozconfig_use_enable debug tests
-	if ! use debug ; then
+	if ! use debug; then
 		mozconfig_annotate 'disabled by Gentoo' --disable-debug-symbols
 	else
 		mozconfig_annotate 'enabled by Gentoo' --enable-debug-symbols
