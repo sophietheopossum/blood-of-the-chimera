@@ -266,6 +266,10 @@ src_configure() {
 	####################################
 
 	mozconfig_init
+	
+	# enable JACK, bug 600002
+	mozconfig_use_enable jack
+	
 	# common config components
 	mozconfig_annotate 'system_libs' \
 		--with-system-zlib \
@@ -374,9 +378,6 @@ src_configure() {
 	mozconfig_use_enable dbus
 
 	mozconfig_use_enable wifi necko-wifi
-
-	# enable JACK, bug 600002
-	mozconfig_use_enable jack
 
 	# Enable/Disable eme support
 	use eme-free && mozconfig_annotate '+eme-free' --disable-eme
