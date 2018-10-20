@@ -96,7 +96,6 @@ CDEPEND="
 	selinux? ( sec-policy/selinux-mozilla )"
 
 RDEPEND="${CDEPEND}
-	jack? ( virtual/jack )
 	kde? ( kde-misc/kmozillahelper:=  )
 	pulseaudio? ( || ( media-sound/pulseaudio
 		>=media-sound/apulse-0.1.9 ) )"
