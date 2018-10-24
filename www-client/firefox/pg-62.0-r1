@@ -1,6 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# please note this is not a 'real' ebuild it is simply modified to more closely match my ebuild so that i can compare the differences easier. once this ebuild is dropped from pg_overlay i may very well delete this file
+# please note this is not a 'real' ebuild it is simply modified to more closely match my ebuild so that i can compare the differences easier. once this ebuild is dropped from pg_overlay i may very well delete this file, i am deleting pieces as i go, so i know what i have/have not implemented
 
 EAPI=6
 VIRTUALX_REQUIRED="pgo"
@@ -269,11 +267,6 @@ src_configure() {
 	
 	# enable JACK, bug 600002
 	mozconfig_use_enable jack
-	
-	# common config components
-	mozconfig_annotate 'system_libs' \
-		--with-system-zlib \
-		--with-system-bz2
 
 	# Must pass release in order to properly select linker
 	mozconfig_annotate 'Enable by Gentoo' --enable-release
