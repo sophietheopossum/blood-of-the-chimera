@@ -19,7 +19,6 @@ MOZ_LANGS=( "ach" "af" "an" "ar" "as" "ast" "az" "bg" "bn-BD" "bn-IN" "br" "bs" 
 PATCH="${PN}-62.0-patches-01"
 MOZ_HTTP_URI="https://archive.mozilla.org/pub/${PN}/releases"
 
-#MOZCONFIG_OPTIONAL_QT5=1 (requires qt5 flag)
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT=1
 
@@ -28,7 +27,7 @@ MOZCONFIG_OPTIONAL_JIT=1
 EHG_REPO_URI="https://www.rosenauer.org/hg/mozilla"
 
 inherit autotools check-reqs flag-o-matic gnome2-utils llvm  mozlinguas-v2 pax-utils toolchain-funcs xdg-utils \
-	mercurial mozconfig-v6.60
+	mercurial mozcoreconf-v6
 
 DESCRIPTION="Firefox Web Browser, with SUSE patchset, to provide better KDE integration"
 HOMEPAGE="https://www.mozilla.com/firefox
@@ -38,7 +37,7 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist clang dbus debug egl eme-free +gmp-autoupdate hardened hwaccel jack jit kde neon pulseaudio screenshot selinux startup-notification system-harfbuzz system-icu system-jpeg system-libevent system-sqlite system-libvpx test wifi"
+IUSE="bindist clang dbus debug egl eme-free gconf +gmp-autoupdate hardened hwaccel jack jit kde neon pie pulseaudio screenshot selinux startup-notification system-bz2 system-ffi system-harfbuzz system-hunspell system-icu system-jpeg system-libevent system-libvpx system-nspr system-nss system-pixman system-sqlite system-zlib test wifi"
 RESTRICT="!bindist? ( bindist )"
 
 SDIR="release"
@@ -49,12 +48,12 @@ SRC_URI="${SRC_URI}
 	${MOZ_HTTP_URI}/${MOZ_PV}/source/firefox-${MOZ_PV}.source.tar.xz
 	${PATCH_URIS[@]}"
 
-ASM_DEPEND=">=dev-lang/yasm-1.1"
+ASMGL_DEPEND=">=dev-lang/yasm-1.1
+	virtual/opengl"
+ELIBC=">=virtual/cargo-0.25.0
+	>=virtual/rust-1.24.0"
 
 CDEPEND="
-	>=dev-libs/nss-3.38
-	>=dev-libs/nspr-4.19
-	>=app-text/hunspell-1.5.4:=
 	dev-libs/atk
 	dev-libs/expat
 	>=x11-libs/cairo-1.10[X]
@@ -62,7 +61,6 @@ CDEPEND="
 	>=x11-libs/gtk+-3.4.0:3
 	x11-libs/gdk-pixbuf
 	>=x11-libs/pango-1.22.0
-	>=media-libs/libpng-1.6.34:0=[apng]
 	>=media-libs/mesa-10.2:*
 	media-libs/fontconfig
 	>=media-libs/freetype-2.4.10
@@ -71,10 +69,7 @@ CDEPEND="
 	dbus? ( >=sys-apps/dbus-0.60
 		>=dev-libs/dbus-glib-0.72 )
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
-	>=x11-libs/pixman-0.19.2
 	>=dev-libs/glib-2.26:2
-	>=sys-libs/zlib-1.2.3
-	>=virtual/libffi-3.0.10
 	virtual/ffmpeg
 	x11-libs/libX11
 	x11-libs/libXcomposite
@@ -83,41 +78,41 @@ CDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXrender
 	x11-libs/libXt
+	pulseaudio? ( || ( media-sound/pulseaudio
+		>=media-sound/apulse-0.1.9 ) )
+	system-ffi? ( >=virtual/libffi-3.0.10 )
+	system-harfbuzz? ( >=media-libs/harfbuzz-1.4.2:0= >=media-gfx/graphite2-1.3.9-r1 )
+	system-hunspell? ( >=app-text/hunspell-1.5.4:= )
 	system-icu? ( >=dev-libs/icu-60.2:= )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-libevent? ( >=dev-libs/libevent-2.0:0= )
-	system-sqlite? ( >=dev-db/sqlite-3.24.0:3[secure-delete,debug=] )
 	system-libvpx? ( >=media-libs/libvpx-1.5.0:0=[postproc] )
-	system-harfbuzz? ( >=media-libs/harfbuzz-1.4.2:0= >=media-gfx/graphite2-1.3.9-r1 )
-	wifi? ( kernel_linux? ( >=sys-apps/dbus-0.60
-			>=dev-libs/dbus-glib-0.72
-			net-misc/networkmanager ) )
+	system-nspr? ( >=dev-libs/nspr-4.19 )
+	system-nss? ( >=dev-libs/nss-3.38 )
+	system-pixman? ( >=x11-libs/pixman-0.19.2 )
+	system-png? ( >=media-libs/libpng-1.6.34:0=[apng] )
+	system-sqlite? ( >=dev-db/sqlite-3.24.0:3[secure-delete,debug=] )
+	system-zlib? ( >=sys-libs/zlib-1.2.3 )
+	wifi? ( kernel_linux? ( net-misc/networkmanager ) )
 	jack? ( virtual/jack )
 	selinux? ( sec-policy/selinux-mozilla )"
 
 RDEPEND="${CDEPEND}
 	kde? ( kde-misc/kmozillahelper:=  )
-	pulseaudio? ( || ( media-sound/pulseaudio
-		>=media-sound/apulse-0.1.9 ) )"
 
 DEPEND="${CDEPEND}
 	app-arch/zip
 	app-arch/unzip
-	>=sys-devel/binutils-2.16.1
+	>=sys-devel/binutils-2.30
 	sys-apps/findutils
-	pulseaudio? ( media-sound/pulseaudio )
-	elibc_glibc? ( || (
-		( >=dev-lang/rust-1.24.0[-extended(-)] >=dev-util/cargo-0.25.0 )
-		>=dev-lang/rust-1.24.0[extended]
-		( >=dev-lang/rust-bin-1.24.0 >=dev-util/cargo-0.25.0 )
-	) )
-	elibc_musl? ( || ( >=dev-lang/rust-1.24.0
-		>=dev-util/cargo-0.25.0
-	) )
-	>=sys-devel/llvm-4.0.1
-	>=sys-devel/clang-4.0.1
-	amd64? ( ${ASM_DEPEND} virtual/opengl )
-	x86? ( ${ASM_DEPEND} virtual/opengl )"
+	elibc_glibc? (${ELIBC})
+	elibc_musl? (${ELIBC})
+	clang? (
+		>=sys-devel/llvm-4.0.1[gold]
+		>=sys-devel/lld-4.0.1
+	)
+	amd64? ( ${ASMGL_DEPEND} )
+	x86? ( ${ASMGL_DEPEND} )"
 	
 REQUIRED_USE="wifi? ( dbus )"
 
@@ -260,25 +255,6 @@ src_prepare() {
 	sed '/^MOZ_DEV_EDITION=1/d' \
 		-i "${S}"/browser/branding/aurora/configure.sh || die "sed failed"
 
-	# Allow user to apply any additional patches without modifying ebuild
-	eapply_user
-
-	# Patch for Clang
-	use clang && eapply "${FILESDIR}/${PN}-clang.patch"
-
-	# OpenSUSE-KDE patchset
-	use kde && for i in $(cat "${FILESDIR}/opensuse-kde-$(get_major_version)/series"); do eapply "${FILESDIR}/opensuse-kde-$(get_major_version)/$i"; done
-
-	# Privacy-esr patches
-	for i in $(cat "${FILESDIR}/privacy-patchset-$(get_major_version)/series"); do eapply "${FILESDIR}/privacy-patchset-$(get_major_version)/$i"; done
-	rm -fr browser/extensions/{activity-stream,aushelper,followonsearch,formautofill,onboarding,pdfjs,pocket,webcompat,webcompat-reporter} || die
-
-	# Debian patches
-	for i in $(cat "${FILESDIR}/debian-patchset-$(get_major_version)/series"); do eapply "${FILESDIR}/debian-patchset-$(get_major_version)/$i"; done
-
-	# Fedora patches
-	for i in $(cat "${FILESDIR}/fedora-patchset-$(get_major_version)/series"); do eapply "${FILESDIR}/fedora-patchset-$(get_major_version)/$i"; done
-
 	# Autotools configure is now called old-configure.in
 	# This works because there is still a configure.in that happens to be for the
 	# shell wrapper configure script
@@ -290,7 +266,6 @@ src_prepare() {
 }
 
 src_configure() {
-	MEXTENSIONS="default"
 	# Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
 	# Note: These are for Gentoo Linux use ONLY. For your own distribution, please
 	# get your own set of keys.
@@ -303,14 +278,76 @@ src_configure() {
 	####################################
 
 	mozconfig_init
-	mozconfig_config
+	#remnants of mozconfig_config imported
+	if use clang && ! tc-is-clang ; then
+		# Force clang
+		einfo "Enforcing the use of clang due to USE=clang ..."
+		CC=${CHOST}-clang
+		CXX=${CHOST}-clang++
+		strip-unsupported-flags
+	elif ! use clang && ! tc-is-gcc ; then
+		# Force gcc
+		einfo "Enforcing the use of gcc due to USE=-clang ..."
+		CC=${CHOST}-gcc
+		CXX=${CHOST}-g++
+		strip-unsupported-flags
+	fi
+	
+	# common config components
+	mozconfig_use_with system-zlib
+	mozconfig_use_with system-bz2
+	
+	# Must pass release in order to properly select linker
+	mozconfig_annotate 'Enable by Gentoo' --enable-release
+	
+	# Avoid auto-magic on linker
+	# This is upstream's default
+	mozconfig_use_enable clang --enable-linker=lld
+	if ! use clang && tc-ld-is-gold ; then
+		mozconfig_annotate "linker is set to gold" --enable-linker=gold
+	else
+		mozconfig_annotate "linker is set to bfd" --enable-linker=bfd
+	fi
+	
+	mozconfig_use_enable !bindist official-branding
+	mozconfig_use_with bindist branding browser/branding/aurora
+	mozconfig_use_enable pie
+	mozconfig_use_enable debug
+	mozconfig_use_enable debug tests
+	mozconfig_use_enable debug debug-symbols
+	mozconfig_use_enable debug crashreporter
+	mozconfig_use_enable startup-notification
+	mozconfig_use_enable wifi necko-wifi
+	mozconfig_use_enable dbus
+	mozconfig_use_enable jit ion
+	mozconfig_use_with system-nspr
+	mozconfig_use_with system-nspr nspr-prefix "${SYSROOT}${EPREFIX}"/usr
+	mozconfig_use_with system-nss
+	mozconfig_use_with system-nss nss-prefix "${SYSROOT}${EPREFIX}"/usr
+	mozconfig_annotate '' --x-includes="${SYSROOT}${EPREFIX}"/usr/include --x-libraries="${SYSROOT}${EPREFIX}"/usr/$(get_libdir)
+	mozconfig_use_with system-libevent "${SYSROOT}${EPREFIX}"/usr
+	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
+	mozconfig_use_enable system-hunspell
+	mozconfig_use_with system-png
+	mozconfig_use_enable system-ffi
+	mozconfig_use_enable gconf
+	mozconfig_annotate '' --with-intl-api
+	mozconfig_use_enable system-pixman
 
 	# enable JACK, bug 600002
 	mozconfig_use_enable jack
 
+	# Must pass --enable-gold if using ld.gold
+	if tc-ld-is-gold ; then
+		mozconfig_annotate 'tc-ld-is-gold=true' --enable-gold
+	else
+		mozconfig_annotate 'tc-ld-is-gold=false' --disable-gold
+	fi
+	
 	# Enable/Disable eme support
-	use eme-free && mozconfig_annotate '+eme-free' --disable-eme
-
+	mozconfig_use_enable !eme-free eme
+	
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
 
@@ -320,11 +357,23 @@ src_configure() {
 		mozconfig_use_enable hardened hardening
 	fi
 
+	# Modifications to better support ARM, bug 553364
+	mozconfig_use_with neon fpu neon
+	mozconfig_use_with neon thumb yes
+	mozconfig_use_with neon thumb-interwork no
+	if [[ ${CHOST} == armv* ]] ; then
+		mozconfig_annotate '' --with-float-abi=hard
+		if ! use system-libvpx ; then
+			sed -i -e "s|softfp|hard|" \
+				"${S}"/media/libvpx/moz.build
+		fi
+	fi
+
 	# Setup api key for location services
 	echo -n "${_google_api_key}" > "${S}"/google-api-key
 	mozconfig_annotate '' --with-google-api-keyfile="${S}/google-api-key"
 
-	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
+	mozconfig_annotate '' --enable-extensions="default"
 
 	echo "mk_add_options MOZ_OBJDIR=${BUILD_OBJ_DIR}" >> "${S}/.mozconfig"
 	echo "mk_add_options XARGS=/usr/bin/xargs" >> "${S}/.mozconfig"
