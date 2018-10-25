@@ -409,11 +409,6 @@ src_configure() {
 	echo "mk_add_options MOZ_OBJDIR=${BUILD_OBJ_DIR}" >> "${S}/.mozconfig"
 	echo "mk_add_options XARGS=/usr/bin/xargs" >> "${S}/.mozconfig"
 
-	# Default mozilla_five_home, system-hunspell no longer valid option
-	sed '/with-default-mozilla-five-home=/d' -i "${S}/.mozconfig"
-	sed '/enable-system-hunspell/d' -i "${S}/.mozconfig"
-	sed '/disable-stylo/d' -i "${S}/.mozconfig"
-
 	# Finalize and report settings
 	mozconfig_final
 
@@ -442,8 +437,8 @@ src_install() {
 	mozconfig_install_prefs \
 		"${BUILD_OBJ_DIR}/${pkg_default_pref_dir}/all-gentoo.js"
     
-  # Add extra prefs designed to improve performance
-  cat "${FILESDIR}"/61.0.2-extra-prefs.js-1 >> \
+  	# Add extra prefs designed to improve performance
+  	cat "${FILESDIR}"/61.0.2-extra-prefs.js-1 >> \
 	"${BUILD_OBJ_DIR}/${pkg_default_pref_dir}/all-gentoo.js" \
 	|| die "cat failed"
 
