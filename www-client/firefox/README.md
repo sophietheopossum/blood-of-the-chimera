@@ -36,8 +36,18 @@ ebuild steps:
 34. don't switch to dev edition when using aurora branding
 35. autotools configure
 36. set google location api key
-37. to be removed: mozconfig_init
+37. mozconfig_init (calls mozcoreconf to set things up)
 38. use flag actions
 39. set linker
 40. enable official branding if not redistributing
 41. more useflags and miscellaneous configuration
+42. workaround for big endian
+43. set host and target
+44. select default target toolkit
+45. set audio backend (also addresses gentoo bug 600002)
+46. more useflags
+47. disable elf-hack where relevant
+48. check for gold linker
+49. enable/disable eme
+50. add alpha workaround
+51. add arm neon workarounds (addresses gentoo bug 553364)
