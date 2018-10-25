@@ -132,7 +132,7 @@ pkg_setup() {
 
 	# Avoid PGO profiling problems due to enviroment leakage
 	# These should *always* be cleaned up anyway
-	unset DBUS_SESSION_BUS_ADDRESS \
+	unset -v DBUS_SESSION_BUS_ADDRESS \
 		DISPLAY \
 		ORBIT_SOCKETDIR \
 		SESSION_MANAGER \
@@ -377,13 +377,6 @@ src_configure() {
 		mozconfig_annotate 'elf-hack is broken on arm' --disable-elf-hack
 	fi
 
-	# Must pass --enable-gold if using ld.gold
-	if tc-ld-is-gold ; then
-		mozconfig_annotate 'tc-ld-is-gold=true' --enable-gold
-	else
-		mozconfig_annotate 'tc-ld-is-gold=false' --disable-gold
-	fi
-	
 	# Disable built-in ccache support to avoid sandbox violation, #665420
 	# Use FEATURES=ccache instead!
 	mozconfig_annotate '' --without-ccache
@@ -516,7 +509,7 @@ src_install() {
 	DESTDIR="${D}" ./mach install
 
 	# Install language packs
-	mozlinguas_src_install
+	MOZ_INSTALL_L10N_XPIFILE="1" mozlinguas_src_install
 
 	local size sizes icon_path icon name
 	if use bindist; then
