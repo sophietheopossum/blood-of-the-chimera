@@ -24,6 +24,7 @@ ebuild steps:
 22. unpack source code
 23. unpack language packs
 24. unpack kde patches
+25. allow user patches
 25. declare gentoo patches directory
 26. declare kde patches directory
 27. declare extra patches
@@ -47,8 +48,9 @@ ebuild steps:
 45. set audio backend (also addresses gentoo bug 600002)
 46. more useflags
 47. disable elf-hack where relevant
-48. check for gold linker
+49. ensure the correct ccache is used
 49. enable/disable eme
+50. apply more use flags and configuration
 50. add alpha workaround
 51. improve hardened support
 52. add arm neon workarounds (addresses gentoo bug 553364)
