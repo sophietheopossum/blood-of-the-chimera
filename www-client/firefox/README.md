@@ -28,3 +28,16 @@ ebuild steps:
 26. declare kde patches directory
 27. declare extra patches
 28. debug
+29. workaround for ia64 (gentoo bug 582432)
+30. enable plugins directory
+31. workaround for gentoo bug 372817
+32. don't exit when system has missing libraries
+33. having no files to remove doesn't cause an error
+34. don't switch to dev edition when using aurora branding
+35. autotools configure
+36. set google location api key
+37. to be removed: mozconfig_init
+38. use flag actions
+39. set linker
+40. enable official branding if not redistributing
+41. more useflags and miscellaneous configuration
