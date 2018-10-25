@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="alsa bindist clang dbus debug egl eme-free gconf +gmp-autoupdate hardened hwaccel jack jit kde neon pie pulseaudio screenshot selinux startup-notification system-bz2 system-ffi system-harfbuzz system-hunspell system-icu system-jpeg system-libevent system-libvpx system-nspr system-nss system-pixman system-sqlite system-zlib test wifi"
+IUSE="alsa bindist clang dbus debug egl eme-free gconf +gmp-autoupdate hardened hwaccel jack jit kde neon pie pulseaudio screenshot selinux startup-notification system-bz2 system-ffi system-graphite2 system-harfbuzz system-hunspell system-icu system-jpeg system-libevent system-libvpx system-nspr system-nss system-pixman system-sqlite system-zlib test wifi"
 RESTRICT="!bindist? ( bindist )"
 
 # Patch version
