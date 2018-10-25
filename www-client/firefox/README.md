@@ -36,7 +36,7 @@ ebuild steps:
 34. don't switch to dev edition when using aurora branding
 35. autotools configure
 36. set google location api key
-37. mozconfig_init (calls mozcoreconf to set things up)
+37. mozconfig_init (calls mozcoreconf)
 38. use flag actions
 39. set linker
 40. enable official branding if not redistributing
@@ -50,4 +50,19 @@ ebuild steps:
 48. check for gold linker
 49. enable/disable eme
 50. add alpha workaround
-51. add arm neon workarounds (addresses gentoo bug 553364)
+51. improve hardened support
+52. add arm neon workarounds (addresses gentoo bug 553364)
+53. set up location services
+54. set default location
+55. mozconfig_final (calls mozcoreconf)
+56. gentoo workaround
+57. build
+58. add gentoo default prefs
+59. add extra prefs for performance
+60. add use flag related prefs
+61. install
+62. install language packs
+63. set up icon/desktop file
+64. add startup notification workaround (addresses gentoo bug 237317)
+65. firefox hardened workaround
+66. add apulse support
