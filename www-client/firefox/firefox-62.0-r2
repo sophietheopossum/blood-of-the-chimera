@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="alsa bindist clang dbus debug egl eme-free gconf +gmp-autoupdate hardened hwaccel jack jit kde neon pie pulseaudio screenshot selinux startup-notification system-bz2 system-ffi system-graphite2 system-harfbuzz system-hunspell system-icu system-jpeg system-libevent system-libvpx system-nspr system-nss system-pixman system-sqlite system-zlib test wifi"
+IUSE="accessibility alsa bindist clang dbus debug egl eme-free gconf +gmp-autoupdate hardened hwaccel jack jit kde neon pie pulseaudio screenshot selinux startup-notification system-bz2 system-ffi system-graphite2 system-harfbuzz system-hunspell system-icu system-jpeg system-libevent system-libvpx system-nspr system-nss system-pixman system-sqlite system-zlib test wifi"
 RESTRICT="!bindist? ( bindist )"
 
 # Patch version
@@ -179,6 +179,9 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Allow user to apply any additional patches without modifying ebuild
+	eapply_user
+	
 	# Default to gentoo patchset
 	local PATCHES=( "${WORKDIR}/${PN}" )
 	if use kde; then
@@ -203,10 +206,12 @@ src_prepare() {
 	fi
 
 	PATCHES+=(
-		"${FILESDIR}/bug_1461221.patch"
-		"${FILESDIR}/${PN}-61.0-mozHunspell.patch"
+		#pg-overlay patches
     		"${FILESDIR}/dont-build-image-gtests.patch"
 		"${FILESDIR}/allow-js-preference-files-to-set-locked-prefs.patch"
+		"${FILESDIR}/clang.patch"
+		#bobwya patches
+		"${FILESDIR}/gentoo-654316.patch"
 	)
 
 	# Enable gnomebreakpad
@@ -309,9 +314,12 @@ src_configure() {
 	mozconfig_use_with bindist branding browser/branding/aurora
 	mozconfig_use_enable pie
 	mozconfig_use_enable debug
+	mozconfig_use_enable debug dmd
 	mozconfig_use_enable debug tests
+	mozconfig_use_enable debug ipdl-tests
 	mozconfig_use_enable debug debug-symbols
 	mozconfig_use_enable debug crashreporter
+	mozconfig_use_enable debug rust-debug
 	mozconfig_use_enable startup-notification
 	mozconfig_use_enable wifi necko-wifi
 	mozconfig_use_enable dbus
@@ -376,8 +384,21 @@ src_configure() {
 		mozconfig_annotate 'tc-ld-is-gold=false' --disable-gold
 	fi
 	
+	# Disable built-in ccache support to avoid sandbox violation, #665420
+	# Use FEATURES=ccache instead!
+	mozconfig_annotate '' --without-ccache
+	sed -i -e 's/ccache_stats = None/return None/' \
+		python/mozbuild/mozbuild/controller/building.py || \
+		die "Failed to disable ccache stats call"
+	
 	# Enable/Disable eme support
 	mozconfig_use_enable !eme-free eme
+	
+	mozconfig_use_enable accessibility
+	mozconfig_annotate '' --disable-gtest-in-build
+	mozconfig_annotate '' --disable-jprof
+	mozconfig_annotate '' --disable-profiling
+	mozconfig_annotate '' --enable-rust-simd
 	
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
@@ -441,6 +462,24 @@ src_install() {
   	cat "${FILESDIR}"/61.0.2-extra-prefs.js-1 >> \
 	"${BUILD_OBJ_DIR}/${pkg_default_pref_dir}/all-gentoo.js" \
 	|| die "cat failed"
+	
+	# set dictionary path, to use system hunspell
+	echo "pref(\"spellchecker.dictionary_path\", \"${EPREFIX}/usr/share/myspell\");" \
+		>>"${BUILD_OBJ_DIR}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
+
+	# force the graphite pref if system-harfbuzz is enabled, since the pref cant disable it
+	if use system-harfbuzz ; then
+		echo "sticky_pref(\"gfx.font_rendering.graphite.enabled\",true);" \
+			>>"${BUILD_OBJ_DIR}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
+	fi
+
+	# force cairo as the canvas renderer on platforms without skia support
+	if [[ $(tc-endian) == "big" ]] ; then
+		echo "sticky_pref(\"gfx.canvas.azure.backends\",\"cairo\");" \
+			>>"${BUILD_OBJ_DIR}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
+		echo "sticky_pref(\"gfx.content.azure.backends\",\"cairo\");" \
+			>>"${BUILD_OBJ_DIR}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
+	fi
 
 	# Augment this with hwaccel prefs
 	if use hwaccel; then
