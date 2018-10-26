@@ -97,8 +97,8 @@ DEPEND="${CDEPEND}
 	app-arch/unzip
 	>=sys-devel/binutils-2.30
 	sys-apps/findutils
-	elibc_glibc? (${ELIBC})
-	elibc_musl? (${ELIBC})
+	elibc_glibc? ( ${ELIBC} )
+	elibc_musl? ( ${ELIBC} )
 	clang? (
 		>=sys-devel/llvm-4.0.1[gold]
 		>=sys-devel/lld-4.0.1
