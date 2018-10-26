@@ -63,25 +63,6 @@ CDEPEND="
 		>=dev-libs/dbus-glib-0.72 )
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	>=dev-libs/glib-2.26:2
-	virtual/ffmpegac_help="$ac_help
-  --with-arch=[[type|toolchain-default]]
-                           Use specific CPU features (-march=type). Resets
-                           thumb, fpu, float-abi, etc. defaults when set"
-ac_help="$ac_help
-  --with-thumb[[=yes|no|toolchain-default]]
-                          Use Thumb instruction set (-mthumb)"
-ac_help="$ac_help
-  --with-thumb-interwork[[=yes|no|toolchain-default]]
-                           Use Thumb/ARM instuctions interwork (-mthumb-interwork)"
-ac_help="$ac_help
-  --with-fpu=[[type|toolchain-default]]
-                           Use specific FPU type (-mfpu=type)"
-ac_help="$ac_help
-  --with-float-abi=[[type|toolchain-default]]
-                           Use specific arm float ABI (-mfloat-abi=type)"
-ac_help="$ac_help
-  --with-soft-float[[=yes|no|toolchain-default]]
-                           Use soft float library (-msoft-float)"
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
