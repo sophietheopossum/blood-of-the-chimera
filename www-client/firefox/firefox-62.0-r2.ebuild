@@ -90,7 +90,7 @@ CDEPEND="
 	selinux? ( sec-policy/selinux-mozilla )"
 
 RDEPEND="${CDEPEND}
-	kde? ( kde-misc/kmozillahelper:=  )
+	kde? ( kde-misc/kmozillahelper:=  )"
 
 DEPEND="${CDEPEND}
 	app-arch/zip
