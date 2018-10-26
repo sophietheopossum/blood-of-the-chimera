@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="accessibility alsa bindist clang dbus debug egl eme-free gconf +gmp-autoupdate hardened hwaccel jack jit kde neon pie pulseaudio screenshot selinux startup-notification system-bz2 system-ffi system-graphite2 system-harfbuzz system-hunspell system-icu system-jpeg system-libevent system-libvpx system-nspr system-nss system-pixman system-sqlite system-zlib test wifi"
+IUSE="accessibility alsa artifact bindist clang cups dbus debug egl eme-free ffmpeg gconf +gmp-autoupdate hardened hwaccel jack jemalloc jit kde neon pie privacy pulseaudio raw screenshot selinux startup-notification system-bz2 system-ffi system-graphite2 system-harfbuzz system-hunspell system-icu system-jpeg system-libevent system-libvpx system-nspr system-nss system-pixman system-sqlite system-zlib test wifi wmf X"
 RESTRICT="!bindist? ( bindist )"
 
 # Patch version
@@ -63,7 +63,25 @@ CDEPEND="
 		>=dev-libs/dbus-glib-0.72 )
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	>=dev-libs/glib-2.26:2
-	virtual/ffmpeg
+	virtual/ffmpegac_help="$ac_help
+  --with-arch=[[type|toolchain-default]]
+                           Use specific CPU features (-march=type). Resets
+                           thumb, fpu, float-abi, etc. defaults when set"
+ac_help="$ac_help
+  --with-thumb[[=yes|no|toolchain-default]]
+                          Use Thumb instruction set (-mthumb)"
+ac_help="$ac_help
+  --with-thumb-interwork[[=yes|no|toolchain-default]]
+                           Use Thumb/ARM instuctions interwork (-mthumb-interwork)"
+ac_help="$ac_help
+  --with-fpu=[[type|toolchain-default]]
+                           Use specific FPU type (-mfpu=type)"
+ac_help="$ac_help
+  --with-float-abi=[[type|toolchain-default]]
+                           Use specific arm float ABI (-mfloat-abi=type)"
+ac_help="$ac_help
+  --with-soft-float[[=yes|no|toolchain-default]]
+                           Use soft float library (-msoft-float)"
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
@@ -74,7 +92,6 @@ CDEPEND="
 	pulseaudio? ( || ( media-sound/pulseaudio
 		>=media-sound/apulse-0.1.9 ) )
 	system-ffi? ( >=virtual/libffi-3.0.10 )
-	system-graphite2? ( >=media-gfx/graphite2-1.3.9-r1 )
 	system-harfbuzz? ( >=media-libs/harfbuzz-1.4.2:0= )
 	system-hunspell? ( >=app-text/hunspell-1.5.4:= )
 	system-icu? ( >=dev-libs/icu-60.2:= )
@@ -306,6 +323,7 @@ src_configure() {
 		mozconfig_annotate "forcing ld=lld due to USE=clang" --enable-linker=lld
 	elif tc-ld-is-gold ; then
 		mozconfig_annotate "linker is set to gold" --enable-linker=gold
+		mozconfig_annotate "linker is set to gold" --enable-gold
 	else
 		mozconfig_annotate "linker is set to bfd" --enable-linker=bfd
 	fi
@@ -320,6 +338,22 @@ src_configure() {
 	mozconfig_use_enable debug debug-symbols
 	mozconfig_use_enable debug crashreporter
 	mozconfig_use_enable debug rust-debug
+	mozconfig_use_enable debug rust-tests
+	mozconfig_use_enable debug debug-js-modules
+	mozconfig_use_enable debug logrefcnt
+	mozconfig_use_enable debug address-sanitizer
+	mozconfig_use_enable debug address-sanitizer-reporter
+	mozconfig_use_enable debug memory-sanitizer
+	mozconfig_use_enable debug dump-painting
+	mozconfig_use_enable debug thread-sanitizer
+	mozconfig_use_enable debug signed-overflow-sanitizer
+	mozconfig_use_enable debug unsigned-overflow-sanitizer
+	mozconfig_use_enable debug dtrace
+	mozconfig_use_enable debug coverage
+	mozconfig_use_enable debug gc-trace
+	mozconfig_use_enable debug trace-logging
+	mozconfig_use_enable debug fuzzing
+	mozconfig_use_enable !debug install-strip
 	mozconfig_use_enable startup-notification
 	mozconfig_use_enable wifi necko-wifi
 	mozconfig_use_enable dbus
@@ -338,6 +372,22 @@ src_configure() {
 	mozconfig_use_enable gconf
 	mozconfig_annotate '' --with-intl-api
 	mozconfig_use_enable system-pixman
+	mozconfig_use_enable jemalloc
+	mozconfig_use_enable wmf
+	mozconfig_use_enable raw
+	mozconfig_use_enable cups printing
+	mozconfig_use_enable ffmpeg
+	mozconfig_use_enable replace-malloc
+	mozconfig_use_enable !privacy cookies
+	mozconfig_annotate '' --disable-mortar
+	mozconfig_annotate '' --enable-pipeline-operator
+	mozconfig_annotate '' --enable-hardware-aec-ns
+	mozconfig_annotate '' --enable-bundled-fonts
+	mozconfig_use_with X x
+	mozconfig_use_enable artifact artifact-builds
+	if use artifact && use debug; then
+		mozconfig_annotate '' --enable-artifact-build-symbols
+	fi
 	
 	# skia has no support for big-endian platforms
 	if [[ $(tc-endian) == "big" ]]; then
@@ -353,7 +403,7 @@ src_configure() {
 	mozconfig_annotate '' --target="${CHOST}"
 	mozconfig_annotate '' --host="${CBUILD:-${CHOST}}"
 	
-	mozconfig_annotate 'default toolkit' --enable-default-toolkit
+	mozconfig_annotate 'default toolkit' --enable-default-toolkit=cairo-gtk3
 	
 	# enable JACK, bug 600002
 	mozconfig_use_enable jack
@@ -368,10 +418,9 @@ src_configure() {
 	mozconfig_use_with system-icu
 	mozconfig_use_with system-libvpx
 	mozconfig_use_with system-harfbuzz
-	mozconfig_use_with system-graphite2
 	
 	if use clang ; then
-		# https://bugzilla.mozilla.org/show_bug.cgi?id=1423822
+		# https://bugzilla.mozilla.org/show_bug.cgi?id=1423822 fixed in firefox 63
 		mozconfig_annotate 'elf-hack is broken when using Clang' --disable-elf-hack
 	elif use arm ; then
 		mozconfig_annotate 'elf-hack is broken on arm' --disable-elf-hack
@@ -391,7 +440,17 @@ src_configure() {
 	mozconfig_annotate '' --disable-gtest-in-build
 	mozconfig_annotate '' --disable-jprof
 	mozconfig_annotate '' --disable-profiling
+	mozconfig_annotate '' --disable-callgrind
 	mozconfig_annotate '' --enable-rust-simd
+	mozconfig_annotate '' --disable-vtune
+	mozconfig_annotate '' --disable-instruments
+	mozconfig_annotate '' --disable-perf
+	mozconfig_annotate '' --disable-valgrind
+	mozconfig_annotate '' --disable-verify-mar
+	mozconfig_annotate '' --disable-updater
+	mozconfig_annotate '' --disable-parental-controls
+	mozconfig_annotate '' --disable-maintenance-service
+	mozconfig_annotate '' --disable-mobile-optimize
 	
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
