@@ -1,4 +1,5 @@
 current included gecko media plugins: openh264(used for x264 in case of nothing else), widevine(used for digital rights management)
+use ./configure --help to view all available options
 ebuild steps:
 1. metadata
 2. declare python compatibility
