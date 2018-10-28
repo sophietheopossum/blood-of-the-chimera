@@ -304,7 +304,6 @@ src_configure() {
 		mozconfig_annotate "forcing ld=lld due to USE=clang" --enable-linker=lld
 	elif tc-ld-is-gold ; then
 		mozconfig_annotate "linker is set to gold" --enable-linker=gold
-		mozconfig_annotate "linker is set to gold" --enable-gold
 	else
 		mozconfig_annotate "linker is set to bfd" --enable-linker=bfd
 	fi
