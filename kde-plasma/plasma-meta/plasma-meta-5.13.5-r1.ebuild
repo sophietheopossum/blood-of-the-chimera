@@ -68,7 +68,7 @@ RDEPEND="
 		$(add_plasma_dep breeze-plymouth)
 		$(add_plasma_dep plymouth-kcm)
 	)
-  powerdevil? ( $(add_plasma_dep powerdevil) )
+	powerdevil? ( $(add_plasma_dep powerdevil) )
 	pulseaudio? ( $(add_plasma_dep plasma-pa) )
 	sdk? ( $(add_plasma_dep plasma-sdk) )
 	wallpapers? ( $(add_plasma_dep plasma-workspace-wallpapers) )
