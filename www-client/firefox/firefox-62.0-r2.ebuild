@@ -211,6 +211,8 @@ src_prepare() {
 		#bobwya patches
 		"${FILESDIR}/gentoo-654316.patch"
 	)
+	#apply the patches
+	eapply ${PATCHES}
 
 	# Enable gnomebreakpad
 	if use debug; then
