@@ -43,7 +43,7 @@ RDEPEND="
 	$(add_plasma_dep systemsettings)
 	$(add_plasma_dep user-manager)
 	bluetooth? ( $(add_plasma_dep bluedevil) )
-  browser-integration? ( $(add_plasma_dep plasma-browser-integration) )
+	browser-integration? ( $(add_plasma_dep plasma-browser-integration) )
 	crypt? ( $(add_plasma_dep plasma-vault) )
 	display-manager? (
 		sddm? (
