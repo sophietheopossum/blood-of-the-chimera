@@ -181,20 +181,16 @@ src_prepare() {
 	eapply_user
 	
 	# Default to gentoo patchset
-	local PATCHES=( "${WORKDIR}/${PN}" )
+	eapply "${WORKDIR}/${PN}"
 	if use kde; then
 		sed -i -e 's:@BINPATH@/defaults/pref/kde.js:@RESPATH@/browser/@PREF_DIR@/kde.js:' \
 			"${EHG_CHECKOUT_DIR}/firefox-kde.patch" || die "sed failed"
 		# Gecko/toolkit OpenSUSE KDE integration patchset
-		PATCHES+=(
-			"${EHG_CHECKOUT_DIR}/mozilla-kde.patch"
-			"${EHG_CHECKOUT_DIR}/mozilla-nongnome-proxies.patch"
-		)
+			eapply "${EHG_CHECKOUT_DIR}/mozilla-kde.patch"
+			eapply "${EHG_CHECKOUT_DIR}/mozilla-nongnome-proxies.patch"
 		# Firefox OpenSUSE KDE integration patchset
-		PATCHES+=(
-			"${EHG_CHECKOUT_DIR}/${PN}-branded-icons.patch"
-			"${EHG_CHECKOUT_DIR}/${PN}-kde.patch"
-		)
+			eapply "${EHG_CHECKOUT_DIR}/${PN}-branded-icons.patch"
+			eapply "${EHG_CHECKOUT_DIR}/${PN}-kde.patch"
 		# Uncomment the next line to enable KDE support debugging (additional console output)...
 		#PATCHES+=( "${FILESDIR}/${PN}-kde-debug.patch" )
 		# Uncomment the following patch line to force Plasma/Qt file dialog for Firefox...
@@ -202,17 +198,12 @@ src_prepare() {
 		# ... _OR_ install the patch file as a User patch (/etc/portage/patches/www-client/firefox/)
 		# ... _OR_ add to your user .xinitrc: "xprop -root -f KDE_FULL_SESSION 8s -set KDE_FULL_SESSION true"
 	fi
-
-	PATCHES+=(
 		#pg-overlay patches
-    		"${FILESDIR}/dont-build-image-gtests.patch"
-		"${FILESDIR}/allow-js-preference-files-to-set-locked-prefs.patch"
-		"${FILESDIR}/clang.patch"
+    		eapply "${FILESDIR}/dont-build-image-gtests.patch"
+		eapply "${FILESDIR}/allow-js-preference-files-to-set-locked-prefs.patch"
+		eapply "${FILESDIR}/clang.patch"
 		#bobwya patches
-		"${FILESDIR}/gentoo-654316.patch"
-	)
-	#apply the patches
-	eapply ${PATCHES}
+		eapply "${FILESDIR}/gentoo-654316.patch"
 
 	# Enable gnomebreakpad
 	if use debug; then
