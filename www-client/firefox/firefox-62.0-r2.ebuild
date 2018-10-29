@@ -116,7 +116,7 @@ QA_PRESTRIPPED="usr/lib*/${PN}/firefox"
 BUILD_OBJ_DIR="${S}/ff"
 
 # allow GMP_PLUGIN_LIST to be set in an eclass or
-${EPREFIX}# overridden in the enviromnent (advanced hackers only)
+# overridden in the enviromnent (advanced hackers only)
 if [[ -z $GMP_PLUGIN_LIST ]]; then
 	GMP_PLUGIN_LIST=( gmp-gmpopenh264 gmp-widevinecdm )
 fi
