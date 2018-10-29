@@ -343,7 +343,7 @@ src_configure() {
 	mozconfig_use_with system-nss
 	mozconfig_use_with system-nss nss-prefix "${SYSROOT}${EPREFIX}"/usr
 	mozconfig_annotate '' --x-includes="${SYSROOT}${EPREFIX}"/usr/include --x-libraries="${SYSROOT}${EPREFIX}"/usr/$(get_libdir)
-	mozconfig_use_with system-libevent "${SYSROOT}${EPREFIX}"/usr
+	mozconfig_use_with system-libevent
 	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_use_enable system-hunspell
