@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="accessibility alsa artifact bindist clang cups dbus debug egl eme-free ffmpeg gconf +gmp-autoupdate hardened hwaccel jack jemalloc jit kde neon pie privacy pulseaudio raw screenshot selinux startup-notification system-bz2 system-ffi system-harfbuzz system-hunspell system-icu system-jpeg system-libevent system-libvpx system-nspr system-nss system-pixman system-png system-sqlite system-zlib test wifi wmf X"
+IUSE="accessibility alsa artifact bindist clang cups dbus debug egl eme-free ffmpeg gconf +gmp-autoupdate hardened hwaccel jack jemalloc jit kde neon pie privacy pulseaudio raw screenshot selinux startup-notification system-bz2 system-ffi system-graphite2 system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-nspr system-nss system-pixman system-png system-sqlite system-zlib test wifi wmf X"
 RESTRICT="!bindist? ( bindist )"
 
 # Patch version
@@ -73,8 +73,8 @@ CDEPEND="
 	pulseaudio? ( || ( media-sound/pulseaudio
 		>=media-sound/apulse-0.1.9 ) )
 	system-ffi? ( >=virtual/libffi-3.0.10 )
+	system-graphite2? ( >=media-gfx/graphite2-1.3.9-r1 )
 	system-harfbuzz? ( >=media-libs/harfbuzz-1.4.2:0= )
-	system-hunspell? ( >=app-text/hunspell-1.5.4:= )
 	system-icu? ( >=dev-libs/icu-60.2:= )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-libevent? ( >=dev-libs/libevent-2.0:0= )
@@ -116,7 +116,7 @@ QA_PRESTRIPPED="usr/lib*/${PN}/firefox"
 BUILD_OBJ_DIR="${S}/ff"
 
 # allow GMP_PLUGIN_LIST to be set in an eclass or
-# overridden in the enviromnent (advanced hackers only)
+${EPREFIX}# overridden in the enviromnent (advanced hackers only)
 if [[ -z $GMP_PLUGIN_LIST ]]; then
 	GMP_PLUGIN_LIST=( gmp-gmpopenh264 gmp-widevinecdm )
 fi
@@ -346,7 +346,6 @@ src_configure() {
 	mozconfig_use_with system-libevent
 	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
-	mozconfig_use_enable system-hunspell
 	mozconfig_use_with system-png
 	mozconfig_use_enable system-ffi
 	mozconfig_use_enable gconf
@@ -398,6 +397,7 @@ src_configure() {
 	mozconfig_use_with system-icu
 	mozconfig_use_with system-libvpx
 	mozconfig_use_with system-harfbuzz
+	mozconfig_use_with system-graphite2
 	
 	if use clang ; then
 		# https://bugzilla.mozilla.org/show_bug.cgi?id=1423822 fixed in firefox 63
