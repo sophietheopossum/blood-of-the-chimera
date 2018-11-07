@@ -31,6 +31,7 @@ RDEPEND="
 	x11-libs/libXdmcp
 	x11-libs/libXext
 	x11-libs/libXinerama
+	dev-libs/apr
 	dev-libs/libgcrypt
 	dev-libs/libgpg-error
 	dev-libs/openssl
