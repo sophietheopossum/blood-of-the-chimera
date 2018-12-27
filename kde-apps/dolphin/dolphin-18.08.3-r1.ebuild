@@ -66,7 +66,7 @@ RDEPEND="${DEPEND}
 RESTRICT+=" test"
 
 PATCHES=(
- 	"${FILESDIR}"/0001-Revert-Disallow-executing-Dolphin-as-root-on-Linux.patch
+ 	"${FILESDIR}"/root.patch
 	"${FILESDIR}/${P}-kcrash-init.patch"
 )
 
