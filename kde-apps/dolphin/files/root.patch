@@ -1,5 +1,5 @@
---- /home/seirra/dolphin-18.08.3/src/main.cpp	2018-11-02 15:09:31.000000000 +0000
-+++ /home/seirra/dolphin-18.08.3-patched/src/main.cpp	2018-12-27 19:38:21.507929398 +0000
+--- a/src/main.cpp	2018-11-02 15:09:31.000000000 +0000
++++ b/src/main.cpp	2018-12-27 19:38:21.507929398 +0000
 @@ -42,18 +42,6 @@
  
  extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
