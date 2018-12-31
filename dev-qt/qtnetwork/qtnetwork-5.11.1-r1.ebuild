@@ -20,7 +20,7 @@ DEPEND="
 	libproxy? ( net-libs/libproxy )
 	networkmanager? ( ~dev-qt/qtdbus-${PV} )
 	ssl? (
-		!libressl? ( >=dev-libs/openssl-1.1:0/1.1[bindist=] )
+		!libressl? ( dev-libs/openssl:0/1.1[bindist=] )
 		libressl? ( dev-libs/libressl:0= )
 	)
 "
