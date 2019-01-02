@@ -60,7 +60,8 @@ includes missing libunwind dependency
 The GLib library of C routines
 
 ### `dev-qt/qtnetwork`
-fixed dependency version of the libressl ebuild
+MASKED
+fixed dependency version of the libressl ebuild. currently masked by removing the .ebuild extension as it has been accepted upstream into ::libressl, but kept for future reference/as a backup.
 
 ### `dev-vcs/gitkraken-bin`
 WORK IN PROGRESS
