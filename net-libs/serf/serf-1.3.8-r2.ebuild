@@ -29,6 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.8-tests.patch"
 	epatch "${FILESDIR}/${PN}-1.3.8-static-lib.patch"
 	epatch "${FILESDIR}/${PN}-1.3.8-openssl.patch"
+	epatch "${FILESDIR}/openssl-1.1.x_r1750819.patch"
 
 	# https://code.google.com/p/serf/issues/detail?id=133
 	sed -e "/env.Append(CCFLAGS=\['-O2'\])/d" -i SConstruct
