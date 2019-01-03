@@ -1,7 +1,7 @@
 # Copyright 2008-2018 Arfrever Frehtes Taifersar Arahesis and others
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="7"
 
 inherit eutils scons-utils toolchain-funcs flag-o-matic
 
@@ -24,11 +24,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/scons-2.3.0"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.3.2-disable_linking_against_unneeded_libraries.patch"
-	epatch "${FILESDIR}/${PN}-1.3.8-scons_variables.patch"
-	epatch "${FILESDIR}/${PN}-1.3.8-tests.patch"
-	epatch "${FILESDIR}/${PN}-1.3.8-static-lib.patch"
-	epatch "${FILESDIR}/${PN}-1.3.8-openssl.patch"
+	eapply "${FILESDIR}/${PN}-1.3.2-disable_linking_against_unneeded_libraries.patch"
+	eapply "${FILESDIR}/${PN}-1.3.8-scons_variables.patch"
+	eapply "${FILESDIR}/${PN}-1.3.8-tests.patch"
+	eapply "${FILESDIR}/${PN}-1.3.8-static-lib.patch"
+	eapply "${FILESDIR}/${PN}-1.3.8-openssl.patch"
+	eapply "${FILESDIR}/openssl-1.1.x_r1750819.patch"
 
 	# https://code.google.com/p/serf/issues/detail?id=133
 	sed -e "/env.Append(CCFLAGS=\['-O2'\])/d" -i SConstruct
