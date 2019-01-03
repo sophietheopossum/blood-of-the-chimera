@@ -80,6 +80,9 @@ a modified version of the official ebuild with the ability to disable or enable 
 ### `media-video/obs-studio`
 includes a required dependency that is missing from the official ebuild.
 
+### `net-libs/serf`
+includes the ubuntu patch that adds openssl-1.1 compatibility
+
 ### `sci-geosciences/josm`
 BROKEN
 mirror of the rindeal ebuild, version is bumped.
