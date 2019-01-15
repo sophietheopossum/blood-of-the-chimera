@@ -22,7 +22,7 @@ fi
 src_prepare() {
 	toolchain_src_prepare
 
-	if use clang then
+	if use clang ; then
 		epatch "${FILESDIR}"/lld.patch
 	fi
 }
