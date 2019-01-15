@@ -99,6 +99,8 @@ Low Level Virtual Machine (LLVM) is:
 	3. A compiler infrastructure - LLVM is also a collection of source code that implements the language and compilation strategy. The primary components of the LLVM infrastructure are a GCC-based C and C++ front-end, a link-time optimization framework with a growing set of global and interprocedural analyses and transformations, static back-ends for many popular (and some obscure) architectures, a back-end which emits portable C code, and a Just-In-Time compilers for several architectures.
 4. LLVM does not imply things that you would expect from a high-level virtual machine. It does not require garbage collection or run-time code generation (In fact, LLVM makes a great static compiler!). Note that optional LLVM components can be used to build high-level virtual machines and other systems that need these services.
 
+### `sys-devel/gcc`
+Has additional clang use flag that adds the lld patch seen at https://gcc.gnu.org/ml/gcc-patches/2018-10/msg01240.html
 
 ### `sys-kernel/gentoo-sources`
 older builds of gentoo sources. 4.16.0 is one of the few versions not to exhibit the following bug that affects certain btrfs systems without initramfs: https://bugzilla.kernel.org/show_bug.cgi?id=89721
