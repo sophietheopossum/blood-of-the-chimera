@@ -1,5 +1,5 @@
---- uwac/protocols/xdg-shell.xml.old   2016-02-26 18:53:45.000000000 +0100
-+++ uwac/protocols/xdg-shell.xml       2016-04-08 17:49:50.673026765 +0200
+--- a/src/3rdparty/protocol/xdg-shell.xml   2016-02-26 18:53:45.000000000 +0100
++++ b/src/3rdparty/protocol/xdg-shell.xml   2016-04-08 17:49:50.673026765 +0200
 @@ -339,24 +339,32 @@
          0x0000 - 0x0FFF: xdg-shell core values, documented below.
          0x1000 - 0x1FFF: GNOME
