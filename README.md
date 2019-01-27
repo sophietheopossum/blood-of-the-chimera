@@ -63,6 +63,9 @@ The GLib library of C routines
 MASKED
 fixed dependency version of the libressl ebuild. currently masked by removing the .ebuild extension as it has been accepted upstream into ::libressl, but kept for future reference/as a backup.
 
+### `dev-qt/qtwayland`
+includes a patch designed to remove an error
+
 ### `dev-vcs/gitkraken-bin`
 WORK IN PROGRESS
 gitkraken ebuild based off of the anomen and chaoslab overlay ebuilds. anomen is used as the base as it was closer to the layout of an official ebuild. added in from the chaoslab ebuild: newer copyright date, runtime dependencies, metadata.xml (with updated authors). personal edits: copied most up to date description from website, got rid of electron slot variable as it is unneeded.
