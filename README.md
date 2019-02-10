@@ -59,9 +59,12 @@ includes missing libunwind dependency
 ### `dev-libs/glib`
 The GLib library of C routines
 
+### `dev-libs/properties-cpp`
+elementary overlay's ebuild with a build error fixed and some improvements in ebuild writing
+
 ### `dev-qt/qtnetwork`
-MASKED
-fixed dependency version of the libressl ebuild. currently masked by removing the .ebuild extension as it has been accepted upstream into ::libressl, but kept for future reference/as a backup.
+ARCHIVED
+fixed dependency version of the libressl ebuild. archived due to presence in upstream overlay
 
 ### `dev-qt/qtwayland`
 includes a patch designed to remove an error
