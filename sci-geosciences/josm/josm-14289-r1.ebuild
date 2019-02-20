@@ -41,7 +41,7 @@ SLOT="0"
 ESVN_REPO_URI="https://josm.openstreetmap.de/svn/trunk@${PV}"
 
 KEYWORDS="~amd64"
-J="9"
+J="1.8"
 
 CDEPEND_A=(
 	"dev-java/commons-compress:0"
@@ -54,7 +54,7 @@ CDEPEND_A=(
 	"dev-java/signpost:0"
 )
 DEPEND_A=( "${CDEPEND_A[@]}"
-	"dev-java/oracle-jdk-bin:${J}"
+	">=virtual/jdk-${J}"
 	"dev-java/javacc:0"
 	"dev-java/ant-contrib:0"
 	"app-text/xmlstarlet" # required for build files patching
@@ -62,7 +62,7 @@ DEPEND_A=( "${CDEPEND_A[@]}"
 	"dev-perl/TermReadKey"
 )
 RDEPEND_A=( "${CDEPEND_A[@]}"
-	"dev-java/oracle-jre-bin:${J}"
+	">=virtual/jre-${J}"
 	"noto? ( media-fonts/noto )"
 	"!noto? ( media-fonts/droid )"
 )
@@ -92,8 +92,13 @@ src_prepare-locales() {
 }
 
 src_prepare() {
-	use noto && for i in $(cat "${FILESDIR}/noto"); do eapply "${FILESDIR}/$i"; done
-	for i in $(cat "${FILESDIR}/series"); do eapply "${FILESDIR}/$i"; done
+	eapply "${FILESDIR}/patches"/03-default_look_and_feel.patch
+	eapply "${FILESDIR}/patches"/04-use_system_jmapviewer.patch
+	eapply "${FILESDIR}/patches"/30gettext_i18n.patch
+	eapply "${FILESDIR}/patches"/09-no-java-8.patch
+	eapply "${FILESDIR}/patches"/base64.patch
+	use noto && eapply "${FILESDIR}/patches"/08-use_noto_font.patch
+	use noto && eapply "${FILESDIR}/patches"/07-use_system_fonts.patch
 
 	xdg_src_prepare
 
