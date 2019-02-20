@@ -83,6 +83,9 @@ a modified version of the official ebuild with the ability to run as admin throu
 ### `kde-plasma/plasma-meta`
 a modified version of the official ebuild with the ability to disable or enable powerdevil as needed with an aptly named use flag. on a desktop pc power management software does not always make sense.
 
+### `media-libs/x264`
+includes a patch to allow lto, credits to gentoolto
+
 ### `media-video/obs-studio`
 includes a required dependency that is missing from the official ebuild.
 
