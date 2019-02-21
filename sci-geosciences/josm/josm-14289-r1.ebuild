@@ -95,7 +95,6 @@ src_prepare() {
 	eapply "${FILESDIR}"/03-default_look_and_feel.patch
 	eapply "${FILESDIR}"/04-use_system_jmapviewer.patch
 	eapply "${FILESDIR}"/09-no-java-8.patch
-	eapply "${FILESDIR}"/base64.patch
 	use noto && eapply "${FILESDIR}"/08-use_noto_font.patch
 	use noto && eapply "${FILESDIR}"/07-use_system_fonts.patch
 
