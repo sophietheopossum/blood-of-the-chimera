@@ -73,7 +73,7 @@ RESTRICT+=" mirror"
 inherit arrays
 
 S="${WORKDIR}/${MY_P//_/-}"
-DEBIAN_DIR="${WORKDIR}/debian"
+PATCH_DIR="${WORKDIR}/debian/patches"
 
 L10N_LOCALES=(
 	af am ar ast az be bg bn br bs ca ca@valencia cs cy da de de_DE el en_AU en_CA en_GB eo es et
@@ -96,12 +96,12 @@ src_prepare-locales() {
 }
 
 src_prepare() {
-	eapply "${DEBIAN_DIR}/patches"/00-build.patch
-	eapply "${DEBIAN_DIR}/patches"/04-use_system_jmapviewer.patch
-	eapply "${DEBIAN_DIR}/patches"/05-fix_version.patch
-	eapply "${DEBIAN_DIR}/patches"/06-move_data_out_of_jar.patch
-	eapply "${DEBIAN_DIR}/patches"/07-use_system_fonts.patch
-	eapply "${DEBIAN_DIR}/patches"/08-use_noto_font.patch
+	eapply "${PATCH_DIR}"/00-build.patch
+	eapply "${PATCH_DIR}"/04-use_system_jmapviewer.patch
+	eapply "${PATCH_DIR}"/05-fix_version.patch
+	eapply "${PATCH_DIR}"/06-move_data_out_of_jar.patch
+	eapply "${PATCH_DIR}"/07-use_system_fonts.patch
+	eapply "${PATCH_DIR}"/08-use_noto_font.patch
 
 	xdg_src_prepare
 
