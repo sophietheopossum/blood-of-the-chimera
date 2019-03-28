@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<use>
 		<flag name="thumbnail">Enables thumbnail generation</flag>
-		<flag name="audiocd">Enables opening audio cds as a directory</flag>
+		<flag name="cdda">Enables opening audio cds as a directory</flag>
 	</use>
 	<maintainer type="project">
 		<email>kde@gentoo.org</email>
