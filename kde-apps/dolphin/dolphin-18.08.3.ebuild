@@ -54,7 +54,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	$(add_kdeapps_dep kio-extras)
-	audiocd? (
+	cdda? (
 		$(add_kdeapps_dep libkcddb)
 	)
 	thumbnail? (
