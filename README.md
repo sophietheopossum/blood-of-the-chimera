@@ -44,7 +44,7 @@ Then run:
 ### `app-emulation/snapd`
 BROKEN
 2.31.1+ installs correctly, however it does not function. newer builds are thanks to https://github.com/JamesB192/JamesB192-overlay
-Based off of Docker being available within this portage category, snapd is there as well.  Installation of older versions will draw in `sys-apps/snap-confine` as a dependency. post installation make sure to run the command `systemctl enable --now snapd.service`
+Based off of Docker being available within this portage category, snapd is there as well.  Installation of older versions will draw in `sys-apps/snap-confine` as a dependency. post installation make sure to run the command `systemctl enable --now snapd.service`. 2.38+ has an apparmor useflag.
 
 ### `app-emulation/wine-staging`
 Based off of the bobwya ebuild. Includes a patch to make the steam browser work without any extra effort on the user's end.
@@ -116,6 +116,9 @@ Has additional clang use flag that adds the lld patch seen at https://gcc.gnu.or
 
 ### `sys-kernel/gentoo-sources`
 older builds of gentoo sources. 4.16.0 is one of the few versions not to exhibit the following bug that affects certain btrfs systems without initramfs: https://bugzilla.kernel.org/show_bug.cgi?id=89721
+
+### `virtual/linux-sources`
+virtual package designed to accomodate almost all kernel ebuilds present in overlays
 
 ### `www-client/firefox`
 firefox ebuild created using the bobwya and pg_overlay ebuilds. this ebuild contains various extra use flags and extra patches designed to improve performance and give greater choice. please refer to the readme.md kept with the ebuilds for more specific detail.
