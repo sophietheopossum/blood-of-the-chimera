@@ -51,7 +51,7 @@ src_configure() {
 	cat <<EOF > "${MY_S}/cmd/version_generated.go"
 package cmd
 func init() {
-        Version = "{$PV}"
+        Version = "${PV}"
 }
 EOF
 	echo "${PV}" > "${MY_S}/cmd/VERSION"
