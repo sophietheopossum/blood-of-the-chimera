@@ -7,7 +7,7 @@ MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 SRC_URI="https://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.xz"
 KEYWORDS="amd64 ~arm ~arm64 ppc ppc64 -sparc x86 ~x86-fbsd"
-inherit autotools flag-o-matic toolchain-funcs virtualx xdg
+inherit autotools flag-o-matic virtualx xdg
 
 DESCRIPTION="Media player and framework with support for most multimedia files and streaming"
 HOMEPAGE="https://www.videolan.org/vlc/"
@@ -15,7 +15,7 @@ HOMEPAGE="https://www.videolan.org/vlc/"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5-9" # vlc - vlccore
 
-IUSE="a52 alsa altivec aom archive aribsub bidi bluray cddb chromaprint chromecast
+IUSE="10bit a52 alsa altivec aom archive aribsub bidi bluray cddb chromaprint chromecast
 	dav1d dbus dc1394 debug directx dts +dvbpsi dvd +encode faad fdk +ffmpeg flac
 	fluidsynth fontconfig +gcrypt gme gnome-keyring gstreamer ieee1394 jack jpeg kate
 	libass libav libcaca libnotify +libsamplerate libtar libtiger linsys lirc live lua
@@ -23,9 +23,10 @@ IUSE="a52 alsa altivec aom archive aribsub bidi bluray cddb chromaprint chromeca
 	neon nfs ogg omxil opencv optimisememory opus png postproc projectm pulseaudio +qt5
 	rdp run-as-root samba sdl-image sftp shout sid skins soxr speex srt ssl
 	svg taglib theora tremor truetype twolame udev upnp vaapi v4l vdpau vnc vorbis vpx
-	wayland wma-fixed +X x264 x265 xml zeroconf zvbi cpu_flags_x86_mmx cpu_flags_x86_sse
+	wayland wma-fixed +X x264 x265 xml zeroconf zvbi cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_arm_neon
 "
 REQUIRED_USE="
+	10bit? ( x264 )
 	chromecast? ( encode )
 	directx? ( ffmpeg )
 	fontconfig? ( truetype )
@@ -216,6 +217,7 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.1.0-fix-libtremor-libs.patch # build system
+	"${FILESDIR}"/gentoo593460.patch
 	"${FILESDIR}"/${PN}-2.2.8-freerdp-2.patch # bug 590164
 	"${FILESDIR}"/${P}-libvpx-1.8.0.patch # bug 677606
 	"${FILESDIR}"/${P}-fdk-aac-2.0.0.patch # bug 672290
@@ -270,6 +272,7 @@ src_configure() {
 		--enable-screen
 		--enable-vcd
 		--enable-vlc
+		$(use_enable 10bit x26410b)
 		$(use_enable a52)
 		$(use_enable alsa)
 		$(use_enable altivec)
@@ -285,6 +288,7 @@ src_configure() {
 		$(use_enable chromecast microdns)
 		$(use_enable cpu_flags_x86_mmx mmx)
 		$(use_enable cpu_flags_x86_sse sse)
+		$(use_enable cpu_flags_arm_neon neon)
 		$(use_enable dav1d)
 		$(use_enable dbus)
 		$(use_enable dbus kwallet)
@@ -410,13 +414,6 @@ src_configure() {
 		--disable-wasapi
 	)
 	# ^ We don't have these disabled libraries in the Portage tree yet.
-
-	if use x264 && has_version ">=media-libs/x264-0.0.20190214"; then
-		myeconfargs+=( --enable-x26410b )
-	else
-		myeconfargs+=( --disable-x26410b )
-	fi
-
 	# Compatibility fix for Samba 4.
 	use samba && append-cppflags "-I/usr/include/samba-4.0"
 
@@ -449,7 +446,7 @@ src_configure() {
 		)
 	fi
 
-	econf "${myeconfargs[@]}"
+	econf ${myeconfargs[@]}
 
 	# _FORTIFY_SOURCE is set to 2 in config.h, which is also the default value on Gentoo.
 	# Other values may break the build (bug 523144), so definition should not be removed.
