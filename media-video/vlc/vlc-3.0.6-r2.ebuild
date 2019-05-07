@@ -16,14 +16,14 @@ HOMEPAGE="https://www.videolan.org/vlc/"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5-9" # vlc - vlccore
 
-IUSE="10bit a52 alsa altivec aom archive aribsub arm64 bidi bluray cddb chromaprint chromecast
+IUSE="+10bit a52 alsa altivec aom archive aribsub arm64 bidi bluray cddb chromaprint chromecast
 	dav1d dbus dc1394 debug directx dts +dvbpsi dvd +encode faad fdk +ffmpeg flac
 	fluidsynth fontconfig +gcrypt gme gnome-keyring gstreamer ieee1394 jack jpeg kate
 	libass libav libcaca libnotify libplacebo +libsamplerate libtar libtiger linsys lirc live lua
 	macosx-notifications macosx-qtkit mad matroska modplug mp3 mpeg mtp musepack ncurses
 	neon nfs ogg omxil opencv optimisememory opus png postproc projectm pulseaudio +qt5
 	rdp realrtsp run-as-root samba schroedinger screen sdl-image sftp shine shout sid skins soxr spatialaudio speex srt ssl
-	svg taglib theora tremor truetype twolame udev upnp vaapi v4l vdpau vlc vnc vorbis vpx
+	svg taglib theora tremor truetype twolame udev upnp vaapi v4l vdpau +vlc vnc vorbis vpx
 	wayland wma-fixed +X x264 x265 xml zeroconf zvbi cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_arm_neon
 "
 REQUIRED_USE="
