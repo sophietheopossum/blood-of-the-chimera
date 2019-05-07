@@ -3,24 +3,19 @@
 
 EAPI=7
 
-inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs
+inherit flag-o-matic multilib-minimal
 
 DESCRIPTION="A free library for encoding X264/AVC streams"
 HOMEPAGE="https://www.videolan.org/developers/x264.html"
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="git://git.videolan.org/x264.git"
-else
-	MY_P="x264-snapshot-$(ver_cut 3)-2245"
-	SRC_URI="https://download.videolan.org/pub/videolan/x264/snapshots/${MY_P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-	S="${WORKDIR}/${MY_P}"
-fi
+MY_P="x264-snapshot-$(ver_cut 3)-2245"
+SRC_URI="https://download.videolan.org/pub/videolan/x264/snapshots/${MY_P}.tar.bz2"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+S="${WORKDIR}/${MY_P}"
 
 SLOT="0/157" # SONAME
 
 LICENSE="GPL-2"
-IUSE="altivec +interlaced opencl pic static-libs cpu_flags_x86_sse +threads"
+IUSE="+10bit altivec +interlaced lto opencl pic static-libs cpu_flags_x86_sse +threads"
 
 ASM_DEP=">=dev-lang/nasm-2.13"
 DEPEND="abi_x86_32? ( ${ASM_DEP} )
@@ -32,7 +27,7 @@ RDEPEND="opencl? ( >=virtual/opencl-0-r3[${MULTILIB_USEDEP}] )
 
 DOCS="AUTHORS doc/*.txt"
 
-PATCHES="${FILESDIR}/lto.patch"
+PATCHES="lto? ( ${FILESDIR}/lto.patch )"
 
 multilib_src_configure() {
 	tc-export CC
@@ -54,7 +49,9 @@ multilib_src_configure() {
 		--enable-pic \
 		--enable-shared \
 		--host="${CHOST}" \
+		$(usex 10bit "" "--bit-depth=8") \
 		$(usex interlaced "" "--disable-interlaced") \
+		$(usex lto "--enable-lto" "") \
 		$(usex opencl "" "--disable-opencl") \
 		$(usex static-libs "--enable-static" "") \
 		$(usex threads "" "--disable-thread") \
