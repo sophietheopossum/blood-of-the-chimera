@@ -5,6 +5,7 @@ EAPI=7
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
+OGG=">=media-libs/libogg-1"
 SRC_URI="https://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.xz"
 KEYWORDS="amd64 ~arm ~arm64 ppc ppc64 -sparc x86 ~x86-fbsd"
 inherit autotools flag-o-matic virtualx xdg
@@ -15,14 +16,14 @@ HOMEPAGE="https://www.videolan.org/vlc/"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5-9" # vlc - vlccore
 
-IUSE="10bit a52 alsa altivec aom archive aribsub bidi bluray cddb chromaprint chromecast
+IUSE="10bit a52 alsa altivec aom archive aribsub arm64 bidi bluray cddb chromaprint chromecast
 	dav1d dbus dc1394 debug directx dts +dvbpsi dvd +encode faad fdk +ffmpeg flac
 	fluidsynth fontconfig +gcrypt gme gnome-keyring gstreamer ieee1394 jack jpeg kate
-	libass libav libcaca libnotify +libsamplerate libtar libtiger linsys lirc live lua
+	libass libav libcaca libnotify libplacebo +libsamplerate libtar libtiger linsys lirc live lua
 	macosx-notifications macosx-qtkit mad matroska modplug mp3 mpeg mtp musepack ncurses
 	neon nfs ogg omxil opencv optimisememory opus png postproc projectm pulseaudio +qt5
-	rdp run-as-root samba sdl-image sftp shout sid skins soxr speex srt ssl
-	svg taglib theora tremor truetype twolame udev upnp vaapi v4l vdpau vnc vorbis vpx
+	rdp realrtsp run-as-root samba schroedinger screen sdl-image sftp shine shout sid skins soxr spatialaudio speex srt ssl
+	svg taglib theora tremor truetype twolame udev upnp vaapi v4l vdpau vlc vnc vorbis vpx
 	wayland wma-fixed +X x264 x265 xml zeroconf zvbi cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_arm_neon
 "
 REQUIRED_USE="
@@ -47,97 +48,98 @@ BDEPEND="
 "
 RDEPEND="
 	net-dns/libidn:=
-	sys-libs/zlib[minizip]
+	>=sys-libs/zlib-1.2.5.1-r2[minizip]
 	virtual/libintl
 	virtual/opengl
-	a52? ( media-libs/a52dec )
-	alsa? ( media-libs/alsa-lib )
+	a52? ( >=media-libs/a52dec-0.7.4-r3 )
+	alsa? ( >=media-libs/alsa-lib-1.0.24 )
 	aom? ( media-libs/libaom:= )
 	archive? ( app-arch/libarchive:= )
 	aribsub? ( media-libs/aribb24 )
 	bidi? (
-		dev-libs/fribidi
+		>=dev-libs/fribidi-0.10.4
 		media-libs/freetype:2[harfbuzz]
 		media-libs/harfbuzz
 		virtual/ttf-fonts
 	)
-	bluray? ( media-libs/libbluray:= )
-	cddb? ( media-libs/libcddb )
-	chromaprint? ( media-libs/chromaprint:= )
+	bluray? ( >=media-libs/libbluray-0.6.2:= )
+	cddb? ( >=media-libs/libcddb-1.2 )
+	chromaprint? ( >=media-libs/chromaprint-0.6:= )
 	chromecast? (
 		>=dev-libs/protobuf-2.5.0:=
 		>=net-libs/libmicrodns-0.0.9:=
 	)
 	dav1d? ( media-libs/dav1d )
-	dbus? ( sys-apps/dbus )
+	dbus? ( >=sys-apps/dbus-1.6 )
 	dc1394? (
-		media-libs/libdc1394:2
-		sys-libs/libraw1394
+		>=media-libs/libdc1394-2.1:2
+		>=sys-libs/libraw1394-2.0.1
 	)
-	dts? ( media-libs/libdca )
+	dts? ( >=media-libs/libdca-0.0.5 )
 	dvbpsi? ( >=media-libs/libdvbpsi-1.2.0:= )
 	dvd? (
 		>=media-libs/libdvdnav-4.9
 		>=media-libs/libdvdread-4.9
 	)
-	faad? ( media-libs/faad2 )
+	faad? ( >=media-libs/faad2-2.6.1 )
 	fdk? ( <media-libs/fdk-aac-2.0.0:= )
 	ffmpeg? (
 		!libav? ( >=media-video/ffmpeg-3.1.3:0=[vaapi?,vdpau?] )
 		libav? ( >=media-video/libav-12.2:0=[vaapi?,vdpau?] )
 	)
 	flac? (
-		media-libs/flac
-		media-libs/libogg
+		>=media-libs/flac-1.1.2
+		${OGG}
 	)
-	fluidsynth? ( media-sound/fluidsynth:= )
+	fluidsynth? ( >=media-sound/fluidsynth-1.1.2:= )
 	fontconfig? ( media-libs/fontconfig:1.0 )
 	gcrypt? (
-		dev-libs/libgcrypt:0=
+		>=dev-libs/libgcrypt-1.6.0:0=
 		dev-libs/libgpg-error
 	)
 	gme? ( media-libs/game-music-emu )
 	gnome-keyring? ( app-crypt/libsecret )
 	gstreamer? ( >=media-libs/gst-plugins-base-1.4.5:1.0 )
 	ieee1394? (
-		sys-libs/libavc1394
-		sys-libs/libraw1394
+		>=sys-libs/libavc1394-0.5.3
+		>=sys-libs/libraw1394-2.0.1
 	)
 	jack? ( virtual/jack )
 	jpeg? ( virtual/jpeg:0 )
-	kate? ( media-libs/libkate )
+	kate? ( >=media-libs/libkate-0.3 )
 	libass? (
 		media-libs/fontconfig:1.0
-		media-libs/libass:=
+		>=media-libs/libass-0.9.8:=
 	)
-	libcaca? ( media-libs/libcaca )
+	libcaca? ( >=media-libs/libcaca-0.99_beta14 )
 	libnotify? (
 		dev-libs/glib:2
 		x11-libs/gdk-pixbuf:2
 		x11-libs/gtk+:3
 		x11-libs/libnotify
 	)
+	libplacebo? ( media-libs/libplacebo )
 	libsamplerate? ( media-libs/libsamplerate )
-	libtar? ( dev-libs/libtar )
-	libtiger? ( media-libs/libtiger )
+	libtar? ( >=dev-libs/libtar-1.2.11-r3 )
+	libtiger? ( >=media-libs/libtiger-0.3.1 )
 	linsys? ( media-libs/zvbi )
 	lirc? ( app-misc/lirc )
-	live? ( media-plugins/live:= )
+	live? ( >=media-plugins/live-2011.12.23:= )
 	lua? ( >=dev-lang/lua-5.1:0= )
 	mad? ( media-libs/libmad )
 	matroska? (
-		dev-libs/libebml:=
-		media-libs/libmatroska:=
+		>=dev-libs/libebml-1:=
+		>=media-libs/libmatroska-1:=
 	)
-	modplug? ( media-libs/libmodplug )
+	modplug? ( >=media-libs/libmodplug-0.8.4:0 )
 	mp3? ( media-sound/mpg123 )
-	mpeg? ( media-libs/libmpeg2 )
-	mtp? ( media-libs/libmtp:= )
-	musepack? ( media-sound/musepack-tools )
+	mpeg? ( >=media-libs/libmpeg2-0.3.2 )
+	mtp? ( >=media-libs/libmtp-1:= )
+	musepack? ( >=media-sound/musepack-tools-444 )
 	ncurses? ( sys-libs/ncurses:0=[unicode] )
 	nfs? ( >=net-fs/libnfs-0.10.0:= )
-	ogg? ( media-libs/libogg )
-	opencv? ( media-libs/opencv:= )
+	ogg? ( ${OGG} )
+	opencv? ( >media-libs/opencv-2:= )
 	opus? ( >=media-libs/opus-1.0.3 )
 	png? ( media-libs/libpng:0= )
 	postproc? ( libav? ( media-libs/libpostproc ) )
@@ -145,7 +147,7 @@ RDEPEND="
 		media-fonts/dejavu
 		media-libs/libprojectm
 	)
-	pulseaudio? ( media-sound/pulseaudio )
+	pulseaudio? ( >=media-sound/pulseaudio-1 )
 	qt5? (
 		dev-qt/qtcore:5
 		dev-qt/qtgui:5
@@ -158,9 +160,11 @@ RDEPEND="
 	)
 	rdp? ( >=net-misc/freerdp-2.0.0_rc0:=[client] )
 	samba? ( >=net-fs/samba-4.0.0:0[client,-debug(-)] )
-	sdl-image? ( media-libs/sdl-image )
+	schroedinger? ( >=media-libs/schroedinger-1.0.10:0 )
+	sdl-image? ( >=media-libs/sdl-image-1.2.10 )
 	sftp? ( net-libs/libssh2 )
-	shout? ( media-libs/libshout )
+	shine? ( media-sound/shine )
+	shout? ( >=media-libs/libshout-2.1 )
 	sid? ( media-libs/libsidplay:2 )
 	skins? (
 		x11-libs/libXext
@@ -168,18 +172,19 @@ RDEPEND="
 		x11-libs/libXpm
 	)
 	soxr? ( media-libs/soxr )
+	spatialaudio? ( media-libs/libspatialaudio )
 	speex? (
 		>=media-libs/speex-1.2.0
 		media-libs/speexdsp
 	)
 	srt? ( net-libs/srt )
-	ssl? ( net-libs/gnutls:= )
+	ssl? ( >=net-libs/gnutls-3.2.0:= )
 	svg? (
-		gnome-base/librsvg:2
-		x11-libs/cairo
+		>=gnome-base/librsvg-2.9:2
+		>=x11-libs/cairo-1.13.1
 	)
 	taglib? ( >=media-libs/taglib-1.9 )
-	theora? ( media-libs/libtheora )
+	theora? ( >=media-libs/libtheora-1.0_beta3 )
 	tremor? ( media-libs/tremor )
 	truetype? (
 		media-libs/freetype:2
@@ -187,13 +192,13 @@ RDEPEND="
 		!fontconfig? ( media-fonts/dejavu )
 	)
 	twolame? ( media-sound/twolame )
-	udev? ( virtual/udev )
+	udev? ( >=virtual/udev-142 )
 	upnp? ( net-libs/libupnp:= )
 	v4l? ( media-libs/libv4l:= )
 	vaapi? ( x11-libs/libva:=[drm,wayland?,X?] )
-	vdpau? ( x11-libs/libvdpau )
-	vnc? ( net-libs/libvncserver )
-	vorbis? ( media-libs/libvorbis )
+	vdpau? ( >=x11-libs/libvdpau-0.6 )
+	vnc? ( >=net-libs/libvncserver-0.9.9 )
+	vorbis? ( >=media-libs/libvorbis-1.1 )
 	vpx? ( media-libs/libvpx:= )
 	wayland? (
 		>=dev-libs/wayland-1.15
@@ -201,15 +206,15 @@ RDEPEND="
 	)
 	X? (
 		x11-libs/libX11
-		x11-libs/libxcb
-		x11-libs/xcb-util
-		x11-libs/xcb-util-keysyms
+		>=x11-libs/libxcb-1.6
+		>=x11-libs/xcb-util-0.3.4
+		>=x11-libs/xcb-util-keysyms-0.3.4
 	)
 	x264? ( >=media-libs/x264-0.0.20160712:0=[10bit?] )
 	x265? ( media-libs/x265:= )
-	xml? ( dev-libs/libxml2:2 )
-	zeroconf? ( net-dns/avahi[dbus] )
-	zvbi? ( media-libs/zvbi )
+	xml? ( >=dev-libs/libxml2-2.5:2 )
+	zeroconf? ( >=net-dns/avahi-0.6[dbus] )
+	zvbi? ( >=media-libs/zvbi-0.2.28 )
 "
 DEPEND="${RDEPEND}
 	X? ( x11-base/xorg-proto )
@@ -229,16 +234,18 @@ DOCS=( AUTHORS THANKS NEWS README doc/fortunes.txt )
 
 S="${WORKDIR}/${MY_P}"
 
+
+pkg_setup() {
+	# If qtchooser is installed, it may break the build, because moc,rcc and uic binaries for wrong qt version may be used.
+	# Setting QT_SELECT environment variable will enforce correct binaries.
+	use qt5 && export QT_SELECT=qt5
+}
+
 src_prepare() {
 	xdg_src_prepare # bug 608256
 
 	has_version '>=net-libs/libupnp-1.8.0' && \
 		eapply "${FILESDIR}"/${PN}-2.2.8-libupnp-slot-1.8.patch
-
-	# Bootstrap when we are on a git checkout.
-	if [[ ${PV} = *9999 ]] ; then
-		./bootstrap
-	fi
 
 	# Make it build with libtool 1.5
 	rm m4/lt* m4/libtool.m4 || die
@@ -269,9 +276,7 @@ src_configure() {
 		--disable-rpath
 		--disable-update-check
 		--enable-fast-install
-		--enable-screen
 		--enable-vcd
-		--enable-vlc
 		$(use_enable 10bit x26410b)
 		$(use_enable a52)
 		$(use_enable alsa)
@@ -279,6 +284,7 @@ src_configure() {
 		$(use_enable aom)
 		$(use_enable archive)
 		$(use_enable aribsub)
+		$(use_enable arm64)
 		$(use_enable bidi fribidi)
 		$(use_enable bidi harfbuzz)
 		$(use_enable bluray)
@@ -322,6 +328,7 @@ src_configure() {
 		$(use_enable libass)
 		$(use_enable libcaca caca)
 		$(use_enable libnotify notify)
+		$(use_enable libplacebo)
 		$(use_enable libsamplerate samplerate)
 		$(use_enable libtar)
 		$(use_enable libtiger tiger)
@@ -352,8 +359,11 @@ src_configure() {
 		$(use_enable pulseaudio pulse)
 		$(use_enable qt5 qt)
 		$(use_enable rdp freerdp)
+		$(use_enable realrtsp)
 		$(use_enable run-as-root)
 		$(use_enable samba smbclient)
+		$(use_enable schroedinger)
+		$(use_enable screen)
 		$(use_enable sdl-image)
 		$(use_enable sftp)
 		$(use_enable shout)
@@ -374,6 +384,7 @@ src_configure() {
 		$(use_enable v4l v4l2)
 		$(use_enable vaapi libva)
 		$(use_enable vdpau)
+		$(use_enable vlc)
 		$(use_enable vnc)
 		$(use_enable vorbis)
 		$(use_enable vpx)
@@ -398,7 +409,6 @@ src_configure() {
 		--disable-goom
 		--disable-kai
 		--disable-kva
-		--disable-libplacebo
 		--disable-maintainer-mode
 		--disable-merge-ffmpeg
 		--disable-mfx
@@ -406,10 +416,7 @@ src_configure() {
 		--disable-opensles
 		--disable-oss
 		--disable-rpi-omxil
-		--disable-schroedinger
-		--disable-shine
 		--disable-sndio
-		--disable-spatialaudio
 		--disable-vsxu
 		--disable-wasapi
 	)
