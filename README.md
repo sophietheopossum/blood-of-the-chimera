@@ -120,6 +120,9 @@ older builds of gentoo sources. 4.16.0 is one of the few versions not to exhibit
 ### `virtual/linux-sources`
 virtual package designed to accomodate almost all kernel ebuilds present in overlays
 
+### `virtual/wine`
+virtual package modified to accomodate those who may want steam's proton to provide their wine
+
 ### `www-client/firefox`
 firefox ebuild created using the bobwya and pg_overlay ebuilds. this ebuild contains various extra use flags and extra patches designed to improve performance and give greater choice. please refer to the readme.md kept with the ebuilds for more specific detail.
 
