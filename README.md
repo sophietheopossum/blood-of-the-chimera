@@ -78,7 +78,7 @@ firestorm ebuilds with a functional url and better depends
 
 ### `games-util/steam-launcher`
 ARCHIVED
-an attempt to add a new use flag. devleopment halted as steam for linux actually uses system libraries if they are newer.
+an attempt to add a new use flag. development halted as steam for linux actually uses system libraries if they are newer.
 
 ### `kde-apps/dolphin`
 a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to. credits to https://forum.kde.org/viewtopic.php?f=224&t=141836&start=30 for the patch in 18.08.3+. it also has an audiocd useflag enabling you to manage the dependencies for opening cds as a directory with a simple useflag.
@@ -128,6 +128,6 @@ firefox ebuild created using the bobwya and pg_overlay ebuilds. this ebuild cont
 
 ## FAQ
 ### why isn't there snapd without systemd?
-good question, with openrc being the more popular init system, you  would think it would be an available option. sadly this is not a mistake, snappy is designed in such a way that systemd is required. obviously much like funtoo has proven with their solution with gnome, it is theoretically possible. so possible in fact, that early ubuntu (which used upstart) even used a modified version of systemd to run snappy. however to this best of my knowledge there is no updated version of that, hence no openrc compatible ebuilds. feel free to contribute and make this otherwise however i have no interest myself in doing so (i personally use systemd).
+good question, with openrc being the more popular init system, you  would think it would be an available option. sadly this is not a mistake, snappy is designed in such a way that systemd is required. obviously much like funtoo has proven with their solution with gnome, it is theoretically possible. so possible in fact, that early ubuntu (which used upstart) even used a modified version of systemd to run snappy. however to the best of my knowledge there is no updated version of that, hence no openrc compatible ebuilds. feel free to contribute and make this otherwise however i have no interest myself in doing so (i personally use systemd).
 ### why are there ebuilds without file extensions?
 these are in production or archived, and thus not considered stable enough for real use.
