@@ -27,7 +27,9 @@ RDEPEND="opencl? ( >=virtual/opencl-0-r3[${MULTILIB_USEDEP}] )
 
 DOCS="AUTHORS doc/*.txt"
 
-PATCHES="lto? ( ${FILESDIR}/lto.patch )"
+src_prepare() {
+lto && eapply "${FILESDIR}/lto.patch"
+}
 
 multilib_src_configure() {
 	tc-export CC
