@@ -9,6 +9,12 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="abi_x86_32 abi_x86_64 d3d9 proton staging"
 
+REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )"
+
+# Note, the ordering here is intentional, to take advantage of the short-circuit
+# logic of portage, to enforce wine-vanilla as default for new users.  The idea
+# behind this is that some USE flags may pull in 3rd-party patchsets, so default
+# of vanilla prevents that.
 RDEPEND="
 	proton? ( games-util/steam-launcher )
 	staging? ( || (
@@ -24,5 +30,6 @@ RDEPEND="
 		app-emulation/wine-staging[abi_x86_32=,abi_x86_64=]
 		app-emulation/wine-d3d9[abi_x86_32=,abi_x86_64=]
 		app-emulation/wine-any[abi_x86_32=,abi_x86_64=]
+		games-util/steam-launcher
 	)
 	!app-emulation/wine:0"
