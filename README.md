@@ -65,6 +65,12 @@ The GLib library of C routines
 ### `dev-libs/properties-cpp`
 elementary overlay's ebuild with a build error fixed and some improvements in ebuild writing
 
+### `dev-python/pycups`
+includes extra python3_7 compatibility
+
+### `dev-python/pyGPG`
+includes extra python3_7 compatibility
+
 ### `dev-qt/qtnetwork`
 ARCHIVED
 fixed dependency version of the libressl ebuild. archived due to presence in upstream overlay
@@ -89,11 +95,17 @@ a modified version of the official ebuild with the ability to run as admin throu
 ### `kde-plasma/plasma-meta`
 a modified version of the official ebuild with the ability to disable or enable powerdevil as needed with an aptly named use flag. on a desktop pc power management software does not always make sense.
 
+### `media-gfx/scour`
+includes a patch designed to remove an error
+
 ### `media-libs/x264`
 includes a patch to allow lto, credits to gentoolto
 
 ### `media-video/obs-studio`
 includes a required dependency that is missing from the official ebuild.
+
+### `net-libs/libtorrent-rasterbar`
+includes the ubuntu patch that adds openssl-1.1 compatibility
 
 ### `net-libs/serf`
 includes the ubuntu patch that adds openssl-1.1 compatibility
@@ -101,6 +113,9 @@ includes the ubuntu patch that adds openssl-1.1 compatibility
 ### `sci-geosciences/josm`
 BROKEN
 mirror of the rindeal ebuild, version is bumped.
+
+### `sys-apps/kmod`
+::libressl ebuild modified to only apply patch if you enable the use flag
 
 ### `sys-apps/snap-confine`
 BROKEN
