@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python{2_7,3_5,3_6,3_7} pypy )
+PYTHON_COMPAT=( py{thon{2_7,3_{5,6,7}},py} )
 inherit distutils-r1
 
 DESCRIPTION="Python bindings for the CUPS API"
