@@ -7,14 +7,9 @@ PYTHON_COMPAT=( python{2_7,3_{4,5,6,7}} )
 
 inherit bash-completion-r1 multilib python-r1
 
-if [[ ${PV} == 9999* ]]; then
-	EGIT_REPO_URI="https://git.kernel.org/pub/scm/utils/kernel/${PN}/${PN}.git"
-	inherit autotools git-r3
-else
-	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-	inherit libtool
-fi
+SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+inherit libtool
 
 DESCRIPTION="library and tools for managing linux kernel modules"
 HOMEPAGE="https://git.kernel.org/?p=utils/kernel/kmod/kmod.git"
@@ -49,21 +44,15 @@ DEPEND="${RDEPEND}
 		virtual/pkgconfig
 		)
 	zlib? ( virtual/pkgconfig )"
-if [[ ${PV} == 9999* ]]; then
-	DEPEND="${DEPEND}
-		dev-libs/libxslt"
-fi
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 DOCS="NEWS README TODO"
 
-PATCHES=(
-	"${FILESDIR}/${P}-libressl.patch" # bug 677960
-)
-
 src_prepare() {
 	default
+	
+	libressl && eapply "${FILESDIR}/${P}-libressl.patch" # bug 677960
 
 	if [[ ! -e configure ]] ; then
 		if use doc; then
