@@ -98,6 +98,9 @@ a modified version of the official ebuild with the ability to disable or enable 
 ### `media-gfx/scour`
 includes a patch designed to remove an error
 
+### `media-libs/gexiv2`
+includes extra python3_7 compatibility
+
 ### `media-libs/x264`
 includes a patch to allow lto, credits to gentoolto
 
