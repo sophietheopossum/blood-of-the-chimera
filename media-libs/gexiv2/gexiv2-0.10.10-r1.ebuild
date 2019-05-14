@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python2_7 python3_{5,6} )
+PYTHON_COMPAT=( python{2_7,3_{5,6,7}} )
 
 inherit meson python-r1 vala xdg-utils
 
