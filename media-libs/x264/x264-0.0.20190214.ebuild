@@ -28,7 +28,8 @@ RDEPEND="opencl? ( >=virtual/opencl-0-r3[${MULTILIB_USEDEP}] )
 DOCS="AUTHORS doc/*.txt"
 
 src_prepare() {
-lto && eapply "${FILESDIR}/lto.patch"
+	lto && eapply "${FILESDIR}/lto.patch"
+	eapply_user
 }
 
 multilib_src_configure() {
