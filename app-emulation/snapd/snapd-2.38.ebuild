@@ -37,7 +37,7 @@ EGO_PN="github.com/snapcore/${PN}"
 
 RDEPEND="!sys-apps/snap-confine
 	sys-libs/libseccomp[static-libs]
-	sys-apps/apparmor
+	apparmor? ( sys-apps/apparmor )
 	dev-libs/glib
 	sys-fs/squashfs-tools:*"
 DEPEND="${RDEPEND}
