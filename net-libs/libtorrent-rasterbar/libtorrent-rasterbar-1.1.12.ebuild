@@ -24,7 +24,7 @@ IUSE="debug +dht doc examples libressl python +ssl static-libs test"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
-	dev-libs/boost:=[threads]
+	dev-libs/boost:0/1.65.0=[threads]
 	virtual/libiconv
 	examples? ( !net-p2p/mldonkey )
 	python? (
