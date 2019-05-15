@@ -108,7 +108,7 @@ includes a patch to allow lto, credits to gentoolto
 includes a required dependency that is missing from the official ebuild.
 
 ### `net-libs/libtorrent-rasterbar`
-includes the ubuntu patch that adds openssl-1.1 compatibility
+includes extra python3_7 compatibility and more detailed dependencies
 
 ### `net-libs/serf`
 includes the ubuntu patch that adds openssl-1.1 compatibility
