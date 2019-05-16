@@ -29,7 +29,9 @@ CONFIG_CHECK="	CGROUPS \
 		BLK_DEV_LOOP \
 		SECCOMP \
 		SECCOMP_FILTER \
-		apparmor? ( SECURITY_APPARMOR )"
+		~SECURITY_APPARMOR "
+		
+ERROR_SECURITY_APPARMOR="apparmor isn't turned on in the kernel! this is fine if USE=-apparmor"
 
 export GOPATH="${S}/${PN}"
 
