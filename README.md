@@ -44,7 +44,7 @@ Then run:
 ### `app-emulation/snapd`
 BROKEN
 2.31.1+ installs correctly, however it does not function. newer builds are thanks to https://github.com/JamesB192/JamesB192-overlay
-Based off of Docker being available within this portage category, snapd is there as well.  Installation of older versions will draw in `sys-apps/snap-confine` as a dependency. post installation make sure to run the command `systemctl enable --now snapd.service`. 2.38+ has an apparmor useflag.
+Based off of Docker being available within this portage category, snapd is there as well.  Installation of older versions will draw in `sys-apps/snap-confine` as a dependency. post installation make sure to run the command `systemctl enable --now snapd.service`. note that you must have apparmor
 
 ### `app-admin/system-config-printer`
 includes extra python3_7 compatibility
