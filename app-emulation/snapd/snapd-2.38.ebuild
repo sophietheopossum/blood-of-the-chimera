@@ -12,7 +12,7 @@ SRC_URI="https://github.com/snapcore/${PN}/releases/download/${PV}/${PN}_${PV}.v
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="apparmor"
+IUSE=""
 RESTRICT="primaryuri"
 
 MY_S="${S}/src/github.com/snapcore/${PN}"
@@ -29,9 +29,9 @@ CONFIG_CHECK="	CGROUPS \
 		BLK_DEV_LOOP \
 		SECCOMP \
 		SECCOMP_FILTER \
-		~SECURITY_APPARMOR "
+		SECURITY_APPARMOR"
 		
-ERROR_SECURITY_APPARMOR="apparmor isn't turned on in the kernel! this is fine if USE=-apparmor"
+ERROR_SECURITY_APPARMOR="apparmor isn't turned on in the kernel!"
 
 export GOPATH="${S}/${PN}"
 
@@ -39,7 +39,7 @@ EGO_PN="github.com/snapcore/${PN}"
 
 RDEPEND="!sys-apps/snap-confine
 	sys-libs/libseccomp[static-libs]
-	apparmor? ( sys-apps/apparmor )
+	sys-apps/apparmor
 	dev-libs/glib
 	sys-fs/squashfs-tools:*"
 DEPEND="${RDEPEND}
@@ -65,8 +65,7 @@ EOF
 	test -f configure.ac	# Sanity check, are we in the right directory?
 	rm -f config.status
 	autoreconf -i -f	# Regenerate the build system
-	econf --enable-maintainer-mode --disable-silent-rules
-  use apparmor && econf --enable-apparmor
+	econf --enable-maintainer-mode --disable-silent-rules --enable-apparmor
 }
 
 src_compile() {
@@ -77,7 +76,7 @@ src_compile() {
 	emake -C "${C}"
 
 	# Generate snapd-apparmor systemd unit
-	use apparmor && emake -C "${MY_S}/data/systemd"
+	emake -C "${MY_S}/data/systemd"
 
 	export GOPATH="${S}/"
 	VX="-v -x" # or "-v -x" for verbosity
@@ -95,12 +94,10 @@ src_compile() {
 	done
 
 	# Generate apparmor profile
-  if use apparmor; then
 	sed -e 's,[@]LIBEXECDIR[@],/usr/lib64/snapd,g' \
 		-e 's,[@]SNAP_MOUNT_DIR[@],/snap,' \
 		"${C}/snap-confine/snap-confine.apparmor.in" \
 		> "${C}/snap-confine/usr.lib.snapd.snap-confine.real"
-  fi
 }
 
 src_install() {
@@ -117,7 +114,7 @@ src_install() {
 	systemd_dounit \
 		"${DS}/snapd.service" \
 		"${DS}/snapd.socket" \
-		use apparmor && "${DS}/snapd.apparmor.service"
+		"${DS}/snapd.apparmor.service"
 
 	cd "${MY_S}"
 	dodir  \
@@ -125,7 +122,7 @@ src_install() {
 		"/usr/lib/snapd" \
 		"/usr/share/dbus-1/services" \
 		"/usr/share/polkit-1/actions" \
-    "/var/lib/snapd"
+		"/var/lib/snapd"
 
 	exeinto "/usr/lib/${PN}"
 	doexe \
@@ -147,13 +144,13 @@ src_install() {
 	doexe "${S}/bin"/snap-exec
 	doexe "${S}/bin"/snap-update-ns
 	doexe "${S}/bin"/snap-seccomp ### missing libseccomp
-	use apparmor && doexe "${MY_S}/cmd/snapd-apparmor/snapd-apparmor"
+	doexe "${MY_S}/cmd/snapd-apparmor/snapd-apparmor"
 
 	insinto "/usr/lib/snapd/"
 	doins "${MY_S}/data/info"
 	insinto "/etc/profile.d/"
 	doins data/env/snapd.sh
-	use apparmor && insinto "/etc/apparmor.d"
+	insinto "/etc/apparmor.d"
 	doins "${C}/snap-confine/usr.lib.snapd.snap-confine.real"
 
 	dodoc	"${MY_S}/packaging/ubuntu-14.04"/copyright \
@@ -176,7 +173,12 @@ pkg_postinst() {
 	    apparmor_parser -r /etc/apparmor.d/usr.lib.snapd.snap-confine.real
 		einfo "Enable snapd, snapd.socket and snapd.apparmor service, then reload the apparmor service to start using snapd"
 	else 
-		einfo "Enable snapd, snapd.socket and snapd.apparmor service to start using snapd"
+		einfo ""
+		einfo "Apparmor needs to be enabled and configred as the default security"
+		einfo "Ensure /etc/default/grub is updated to include:"
+		einfo "GRUB_CMDLINE_LINIX_DEFAULT=\"apparmor=1 security=apparmor\""
+		einfo "Then update grub, enable snapd, snapd.socket and snapd.apparmor and reboot"
+		einfo ""
 	fi
 }
 
