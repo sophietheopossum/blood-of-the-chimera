@@ -69,8 +69,7 @@ src_prepare() {
 	sed -i -e "/print/d" tools/install.py || die
 
 	# proper libdir, hat tip @ryanpcmcquen https://github.com/iojs/io.js/issues/504
-	local LIBDIR
-	LIBDIR=$(get_libdir)
+	local LIBDIR=$(get_libdir)
 	sed -i \
 		-e "s|lib/|${LIBDIR}/|g" \
 		-e 's|share/doc/node/|share/doc/'"${PF}"'/|g' \
@@ -104,7 +103,6 @@ src_prepare() {
 	default
 }
 
-# shellcheck disable=SC2191
 src_configure() {
 	local myconf=( --shared-cares --shared-http-parser --shared-libuv --shared-nghttp2 --shared-zlib )
 	use debug && myconf+=( --debug )
@@ -112,8 +110,8 @@ src_configure() {
 	use inspector || myconf+=( --without-inspector )
 	use npm || myconf+=( --without-npm )
 	use snapshot && myconf+=( --with-snapshot )
-	use ssl && use bundled-ssl || myconf+=( --shared-openssl )
-	use ssl || myconf+=( --without-ssl )
+	use ssl && use !bundled-ssl && myconf+=( --shared-openssl )
+	use ssl && use bundled-ssl || myconf+=( --without-ssl )
 
 	local myarch=""
 	case ${ABI} in
@@ -126,13 +124,12 @@ src_configure() {
 		*) myarch="${ABI}";;
 	esac
 
-	# shellcheck disable=SC2046
 	GYP_DEFINES="linux_use_gold_flags=0
 		linux_use_bundled_binutils=0
 		linux_use_bundled_gold=0" \
 	"${PYTHON}" configure \
 		--prefix="${EPREFIX}"/usr \
-		--dest-cpu="${myarch}" \
+		--dest-cpu=${myarch} \
 		$(use_with systemtap dtrace) \
 		"${myconf[@]}" || die
 }
@@ -152,7 +149,7 @@ src_install() {
 	local LIBDIR npm_config tmp_npm_completion_file
 	LIBDIR="${ED}/usr/$(get_libdir)"
 	emake install DESTDIR="${D}"
-	pax-mark -m "${ED}"/usr/bin/node
+	pax-mark -m "${ED}"usr/bin/node
 
 	# set up a symlink structure that node-gyp expects..
 	dodir /usr/include/node/deps/{v8,uv}
@@ -163,7 +160,6 @@ src_install() {
 
 	if use doc; then
 		# Patch docs to make them offline readable
-		# shellcheck disable=SC2013
 		for i in $(grep -rl 'fonts.googleapis.com' "${S}"/out/doc/api/*); do
 			sed -i '/fonts.googleapis.com/ d' "$i";
 		done
@@ -194,7 +190,6 @@ src_install() {
 
 		local find_exp="-or -name"
 		local find_name=()
-		# shellcheck disable=SC2206
 		for match in "AUTHORS*" "CHANGELOG*" "CONTRIBUT*" "README*" \
 			".travis.yml" ".eslint*" ".wercker.yml" ".npmignore" \
 			"*.md" "*.markdown" "*.bat" "*.cmd"; do
