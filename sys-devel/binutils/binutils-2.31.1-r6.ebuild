@@ -13,41 +13,13 @@ LICENSE="GPL-3+"
 IUSE="+cxx default-gold doc +gold multitarget +nls +plugins static-libs test"
 REQUIRED_USE="cxx? ( gold plugins ) default-gold? ( gold )"
 
-# Variables that can be set here:
-# PATCH_VER          - the patchset version
-#                      Default: empty, no patching
-# PATCH_BINUTILS_VER - the binutils version in the patchset name
-#                    - Default: PV
-# PATCH_DEV          - Use download URI https://dev.gentoo.org/~{PATCH_DEV}/distfiles/...
-#                      for the patchsets
-#                      Default: dilfridge :)
-
 PATCH_VER=7
 PATCH_DEV=dilfridge
 
-case ${PV} in
-	9999)
-		EGIT_REPO_URI="https://sourceware.org/git/binutils-gdb.git"
-		inherit git-r3
-		S=${WORKDIR}/binutils
-		EGIT_CHECKOUT_DIR=${S}
-		SLOT=${PV}
-		;;
-	*.9999)
-		EGIT_REPO_URI="https://sourceware.org/git/binutils-gdb.git"
-		inherit git-r3
-		S=${WORKDIR}/binutils
-		EGIT_CHECKOUT_DIR=${S}
-		EGIT_BRANCH=$(get_version_component_range 1-2)
-		EGIT_BRANCH="binutils-${EGIT_BRANCH/./_}-branch"
-		SLOT=$(get_version_component_range 1-2)
-		;;
-	*)
 		SRC_URI="mirror://gnu/binutils/binutils-${PV}.tar.xz"
 		SLOT=$(get_version_component_range 1-2)
 		KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 m68k ~mips ppc ppc64 s390 sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 		;;
-esac
 
 #
 # The Gentoo patchset
@@ -106,6 +78,7 @@ src_prepare() {
 		einfo "Applying binutils-${PATCH_BINUTILS_VER} patchset ${PATCH_VER}"
 		eapply "${WORKDIR}/patch"/*.patch
 	fi
+	use gold && eapply "${FILESDIR}/${PN}-2.29.1-nogoldtest.patch"
 
 	# This check should probably go somewhere else, like pkg_pretend.
 	if [[ ${CTARGET} == *-uclibc* ]] ; then
