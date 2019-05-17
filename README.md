@@ -125,7 +125,10 @@ mirror of the rindeal ebuild, version is bumped.
 
 ### `sys-apps/snap-confine`
 BROKEN
-Provides sandbox type isolation of individual snap packages.  This is a dependency of `snapd` proper. Although newer versions seem to no longer require snap-confine due to a merge, it is still required for the older versions which i see no real reason to remove, gentoo is about choice after all, if you want an older version feel free. 
+Provides sandbox type isolation of individual snap packages.  This is a dependency of `snapd` proper. Although newer versions seem to no longer require snap-confine due to a merge, it is still required for the older versions which i see no real reason to remove, gentoo is about choice after all, if you want an older version feel free.
+
+### `sys-devel/binutils`
+Has additional patch to fix problems with gold
 
 ### `sys-devel/llvm`
 Built with gcc8 compatibility patches.
