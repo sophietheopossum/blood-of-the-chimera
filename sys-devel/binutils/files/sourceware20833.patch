@@ -1,0 +1,56 @@
+diff --git a/gold/x86_64.cc b/gold/x86_64.cc
+index 9004aec..8480ae1 100644
+--- a/gold/x86_64.cc
++++ b/gold/x86_64.cc
+@@ -3441,16 +3441,20 @@ class X86_64_relocate_functions : public Relocate_functions<size, false>
+   // relocation.
+   static inline typename Base::Reloc_status
+   pcrela32_check(unsigned char* view,
+-		 typename elfcpp::Elf_types<64>::Elf_Addr value,
+-		 typename elfcpp::Elf_types<64>::Elf_Swxword addend,
+-		 typename elfcpp::Elf_types<64>::Elf_Addr address)
++		 typename elfcpp::Elf_types<size>::Elf_Addr value,
++		 typename elfcpp::Elf_types<size>::Elf_Swxword addend,
++		 typename elfcpp::Elf_types<size>::Elf_Addr address)
+   {
+     typedef typename elfcpp::Swap<32, false>::Valtype Valtype;
+     Valtype* wv = reinterpret_cast<Valtype*>(view);
+     value = value + addend - address;
+     elfcpp::Swap<32, false>::writeval(wv, value);
+-    return (Bits<32>::has_overflow(value)
+-	    ? Base::RELOC_OVERFLOW : Base::RELOC_OK);
++    if (size == 32)
++      return (Bits<32>::has_overflow32(value)
++	      ? Base::RELOC_OVERFLOW : Base::RELOC_OK);
++    else
++      return (Bits<32>::has_overflow(value)
++	      ? Base::RELOC_OVERFLOW : Base::RELOC_OK);
+   }
+ 
+   // Do a simple PC relative relocation with a Symbol_value with the
+@@ -3459,8 +3463,8 @@ class X86_64_relocate_functions : public Relocate_functions<size, false>
+   pcrela32_check(unsigned char* view,
+ 		 const Sized_relobj_file<size, false>* object,
+ 		 const Symbol_value<size>* psymval,
+-		 typename elfcpp::Elf_types<64>::Elf_Swxword addend,
+-		 typename elfcpp::Elf_types<64>::Elf_Addr address)
++		 typename elfcpp::Elf_types<size>::Elf_Swxword addend,
++		 typename elfcpp::Elf_types<size>::Elf_Addr address)
+   {
+     typedef typename elfcpp::Swap<32, false>::Valtype Valtype;
+     Valtype* wv = reinterpret_cast<Valtype*>(view);
+@@ -3476,8 +3480,12 @@ class X86_64_relocate_functions : public Relocate_functions<size, false>
+       }
+     value -= address;
+     elfcpp::Swap<32, false>::writeval(wv, value);
+-    return (Bits<32>::has_overflow(value)
+-	    ? Base::RELOC_OVERFLOW : Base::RELOC_OK);
++    if (size == 32)
++      return (Bits<32>::has_overflow32(value)
++	      ? Base::RELOC_OVERFLOW : Base::RELOC_OK);
++    else
++      return (Bits<32>::has_overflow(value)
++	      ? Base::RELOC_OVERFLOW : Base::RELOC_OK);
+   }
+ };
+ 
