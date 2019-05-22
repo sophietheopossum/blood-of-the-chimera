@@ -1,4 +1,4 @@
-# Copyright 2017-2018 Jan Chren (rindeal)
+# Copyright 2017-2019 Jan Chren (rindeal)
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -72,9 +72,9 @@ RESTRICT+=" mirror"
 inherit arrays
 
 L10N_LOCALES=(
-	af am ar ast az be bg bn br bs ca ca@valencia cs cy da de de_DE el en_AU en_CA en_GB eo es et
+	af am ar ast az be bg bn br bs ca ca-ES cs cy da de de-DE el en-AU en-CA en-GB eo es et
 	eu fa fi fil fo fr ga gl he hi hr ht hu hy ia id is it ja ka km ko ku ky lb lo lt lv mk mr ms
-	nb nds nl nn oc pa pl pt pt_BR rm ro ru sk sl sq sr sv ta te th tr ug uk ur vi wae zh_CN zh_TW
+	nb nds nl nn oc pa pl pt pt-BR rm ro ru sk sl sq sr sv ta te th tr ug uk ur vi wae zh-CN zh-TW
 )
 inherit l10n-r1
 

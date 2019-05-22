@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # shellcheck disable=SC2034
@@ -24,7 +24,6 @@ PYTHON_COMPAT=( python3_{5,6,7} )
 #MOZCONFIG_OPTIONAL_QT5=1 (requires qt5 flag)
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT=1
-
 
 # Mercurial repository for Mozilla Firefox patches to provide better KDE Integration (developed by Wolfgang Rosenauer for OpenSUSE)
 EHG_REPO_URI="https://www.rosenauer.org/hg/mozilla"

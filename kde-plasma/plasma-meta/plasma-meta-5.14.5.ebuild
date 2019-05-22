@@ -78,7 +78,7 @@ RDEPEND="
 		>=kde-plasma/breeze-plymouth-${PV}:${SLOT}
 		>=kde-plasma/plymouth-kcm-${PV}:${SLOT}
 	)
-  powerdevil? ( >=kde-plasma/powerdevil-${PV}:${SLOT} )
+	powerdevil? ( >=kde-plasma/powerdevil-${PV}:${SLOT} )
 	pulseaudio? ( >=kde-plasma/plasma-pa-${PV}:${SLOT} )
 	sdk? ( >=kde-plasma/plasma-sdk-${PV}:${SLOT} )
 	wallpapers? ( >=kde-plasma/plasma-workspace-wallpapers-${PV}:${SLOT} )

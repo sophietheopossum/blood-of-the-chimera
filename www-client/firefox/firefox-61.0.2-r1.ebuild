@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # shellcheck disable=SC2034
@@ -24,7 +24,6 @@ MOZ_HTTP_URI="https://archive.mozilla.org/pub/${PN}/releases"
 #MOZCONFIG_OPTIONAL_QT5=1 (requires qt5 flag)
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT=1
-
 
 # Mercurial repository for Mozilla Firefox patches to provide better KDE Integration (developed by Wolfgang Rosenauer for OpenSUSE)
 EHG_REPO_URI="https://www.rosenauer.org/hg/mozilla"
@@ -292,9 +291,9 @@ src_install() {
 
 	mozconfig_install_prefs \
 		"${BUILD_OBJ_DIR}/${pkg_default_pref_dir}/all-gentoo.js"
-    
-  # Add extra prefs designed to improve performance
-  cat "${FILESDIR}"/61.0.2-extra-prefs.js-1 >> \
+
+	# Add extra prefs designed to improve performance
+	cat "${FILESDIR}"/61.0.2-extra-prefs.js-1 >> \
 	"${BUILD_OBJ_DIR}/${pkg_default_pref_dir}/all-gentoo.js" \
 	|| die "cat failed"
 

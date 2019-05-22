@@ -39,6 +39,7 @@ REQUIRED_USE="
 	ssl? ( gcrypt )
 	vaapi? ( ffmpeg X )
 	vdpau? ( ffmpeg X )
+	|| ( live realrtsp )
 "
 BDEPEND="
 	>=sys-devel/gettext-0.19.8
@@ -233,7 +234,6 @@ PATCHES=(
 DOCS=( AUTHORS THANKS NEWS README doc/fortunes.txt )
 
 S="${WORKDIR}/${MY_P}"
-
 
 pkg_setup() {
 	# If qtchooser is installed, it may break the build, because moc,rcc and uic binaries for wrong qt version may be used.

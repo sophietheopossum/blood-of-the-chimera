@@ -1,0 +1,3 @@
+gentoo:default/linux/amd64/17.0/systemd
+:mask/x86*
+:mask/amd64

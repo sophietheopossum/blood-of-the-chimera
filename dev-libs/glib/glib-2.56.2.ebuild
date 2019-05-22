@@ -1,8 +1,8 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_5,3_6,3_7} )
+PYTHON_COMPAT=( python{2_7,3_{5,6,7}} )
 GNOME2_EAUTORECONF=yes
 
 inherit autotools bash-completion-r1 epunt-cxx flag-o-matic gnome2 libtool linux-info \

@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -59,7 +58,7 @@ src_compile() {
 	go install -v "${EGO_PN}/cmd/snap-seccomp" || die
 	go install -v "${EGO_PN}/cmd/snap-repair" || die
 	#go install -v "${EGO_PN}/cmd/" || die
-	epatch ${FILESDIR}/autogen.patch
+	epatch "${FILESDIR}/autogen.patch"
 	pushd cmd
 	./autogen.sh
 	make
@@ -104,8 +103,7 @@ src_install() {
 	#dodir /etc/profile.d/
 	#echo 'PATH=$PATH:/snap/bin' > ${D}/etc/profile.d/snapd.sh
 	dodir /etc/profile.d/
-	cp etc/profile.d/apps-bin-path.sh ${D}/etc/profile.d/snapd.sh
-	
+	cp etc/profile.d/apps-bin-path.sh "${D}/etc/profile.d/snapd.sh"
 	insinto /lib/udev/rules.d
 	doins data/udev/rules.d/66-snapd-autoimport.rules
 	doins cmd/snap-confine/80-snappy-assign.rules

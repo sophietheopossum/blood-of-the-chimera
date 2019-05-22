@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -66,7 +66,7 @@ RDEPEND="${DEPEND}
 RESTRICT+=" test"
 
 PATCHES=(
- 	"${FILESDIR}"/0001-Revert-Disallow-executing-Dolphin-as-root-on-Linux.patch
+	"${FILESDIR}"/0001-Revert-Disallow-executing-Dolphin-as-root-on-Linux.patch
 	"${FILESDIR}"/${PN}-18.04.1-flto.patch
 	"${FILESDIR}"/${P}-memleak-{1,2}.patch
 )

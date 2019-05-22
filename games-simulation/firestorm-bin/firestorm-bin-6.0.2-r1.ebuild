@@ -15,9 +15,9 @@ SRC_URI="https://downloads.firestormviewer.org/linux/${MY_P}.tar.xz"
 
 RESTRICT="mirror"
 
-LICENSE="GPL-2-with-Linden-Lab-FLOSS-exception"
+LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 -*"
+KEYWORDS="-* ~amd64"
 IUSE="fmod"
 
 INST_DIR="opt/firestorm-bin"
@@ -31,17 +31,17 @@ RDEPEND="
 	x11-libs/libXdmcp
 	x11-libs/libXext
 	x11-libs/libXinerama
-  dev-libs/apr
+	dev-libs/apr
 	dev-libs/libgcrypt
 	dev-libs/libgpg-error
-	dev-libs/openssl
+	dev-libs/openssl:*
 	dev-libs/boost
 	media-libs/freetype
 	media-libs/libogg
 	media-libs/libsdl
 	media-libs/libvorbis
-	media-libs/gstreamer
-	media-plugins/gst-plugins-meta
+	media-libs/gstreamer:*
+	media-plugins/gst-plugins-meta:*
 	fmod? ( media-libs/fmod )
 	net-libs/gnutls
 	net-misc/curl

@@ -51,7 +51,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	$(add_kdeapps_dep kio-extras)
-  cdda? (
+	cdda? (
 		$(add_kdeapps_dep libkcddb)
 	)
 	thumbnail? (
@@ -63,7 +63,7 @@ RDEPEND="${DEPEND}
 RESTRICT+=" test"
 
 PATCHES=(
- 	"${FILESDIR}"/root.patch
+	"${FILESDIR}"/root.patch
 )
 
 src_configure() {

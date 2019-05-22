@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils libtool flag-o-matic gnuconfig multilib versionator
+inherit eutils libtool flag-o-matic gnuconfig multilib eapi7-ver
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="https://sourceware.org/binutils/"
@@ -17,7 +17,7 @@ PATCH_VER=7
 PATCH_DEV=dilfridge
 
 		SRC_URI="mirror://gnu/binutils/binutils-${PV}.tar.xz"
-		SLOT=$(get_version_component_range 1-2)
+		SLOT=$(ver_cut 1-2)
 		KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 m68k ~mips s390 sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 
 #

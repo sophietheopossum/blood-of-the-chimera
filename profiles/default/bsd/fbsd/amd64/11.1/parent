@@ -1,0 +1,2 @@
+gentoo:default/bsd/fbsd/amd64/11.1
+:mask/alpha+fbsd+ia64

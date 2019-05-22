@@ -1,9 +1,9 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit eutils versionator
+inherit eutils eapi7-ver
 
 REVISION=55786
 
@@ -11,13 +11,12 @@ DESCRIPTION="An open source metaverse viewer"
 HOMEPAGE="http://www.firestormviewer.org/"
 
 MY_P="Phoenix_FirestormOS-Releasex64_x86_64_${PV}.${REVISION}"
-MY_PV=$(replace_all_version_separators '-')
 SRC_URI="http://downloads.firestormviewer.org/linux/${MY_P}.tar.xz"
 RESTRICT="mirror"
 
-LICENSE="GPL-2-with-Linden-Lab-FLOSS-exception"
+LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 -*"
+KEYWORDS="-* ~amd64"
 IUSE="fmod"
 
 INST_DIR="opt/firestorm-bin"
@@ -34,14 +33,14 @@ RDEPEND="
 	dev-libs/apr
 	dev-libs/libgcrypt
 	dev-libs/libgpg-error
-	dev-libs/openssl
+	dev-libs/openssl:*
 	dev-libs/boost
 	media-libs/freetype
 	media-libs/libogg
 	media-libs/libsdl
 	media-libs/libvorbis
-	media-libs/gstreamer
-	media-plugins/gst-plugins-meta
+	media-libs/gstreamer:*
+	media-plugins/gst-plugins-meta:*
 	fmod? ( media-libs/fmod )
 	net-libs/gnutls
 	net-misc/curl

@@ -1,0 +1,4 @@
+# requires masked packages >=dev-libs/glib-2.59.2:2
+=dev-util/gdbus-codegen-2.59.2
+# requires masked packages media-libs/libplacebo >=media-libs/schroedinger-1.0.10:0 media-sound/shine media-libs/libspatialaudio
+=media-video/vlc-3.0.6-r2

@@ -1,0 +1,2 @@
+# requires masked packages >=dev-libs/glib-2.59.2:2
+=dev-util/gdbus-codegen-2.59.2

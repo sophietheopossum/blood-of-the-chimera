@@ -51,7 +51,7 @@ DOCS="NEWS README TODO"
 
 src_prepare() {
 	default
-	
+
 	libressl && eapply "${FILESDIR}/${P}-libressl.patch" # bug 677960
 
 	if [[ ! -e configure ]] ; then

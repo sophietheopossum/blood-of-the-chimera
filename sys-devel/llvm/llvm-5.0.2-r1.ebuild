@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -82,8 +82,8 @@ src_prepare() {
 	eapply "${WORKDIR}/llvm-5.0.1-patchset"
 	# Copy the new binary file (we don't support git binary patches)
 	cp {"${WORKDIR}/llvm-5.0.1-patchset",.}/test/tools/llvm-symbolizer/Inputs/print_context.o || die
-  
- 	# Apply patches for gcc8
+
+	# Apply patches for gcc8
 	# https://bugs.gentoo.org/655140
 	eapply "${FILESDIR}"/5.0.2/0001-Fix-two-three-more-issues-with-unchecked-Error.patch
 	eapply "${FILESDIR}"/5.0.2/0002-ORC-Add-an-Error-return-to-the-JITCompileCallbackMan.patch

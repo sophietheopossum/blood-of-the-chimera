@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -30,7 +30,7 @@ CONFIG_CHECK="	CGROUPS \
 		SECCOMP \
 		SECCOMP_FILTER \
 		SECURITY_APPARMOR"
-		
+
 ERROR_SECURITY_APPARMOR="apparmor isn't turned on in the kernel!"
 
 export GOPATH="${S}/${PN}"
@@ -168,11 +168,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	CMDLINE=$(cat /proc/cmdline) 
+	CMDLINE=$(cat /proc/cmdline)
 	if [[ $CMDLINE == *"apparmor=1"* ]] && [[ $CMDLINE == *"security=apparmor"* ]]; then
 	    apparmor_parser -r /etc/apparmor.d/usr.lib.snapd.snap-confine.real
 		einfo "Enable snapd, snapd.socket and snapd.apparmor service, then reload the apparmor service to start using snapd"
-	else 
+	else
 		einfo ""
 		einfo "Apparmor needs to be enabled and configred as the default security"
 		einfo "Ensure /etc/default/grub is updated to include:"

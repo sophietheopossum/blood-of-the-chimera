@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -10,10 +10,10 @@ RESTRICT="mirror"
 KEYWORDS="~amd64"
 SLOT="0"
 LICENSE="gitkraken-EULA"
-RDEPEND="dev-util/electron
-  gnome-base/libgnome-keyring
-  net-misc/curl
-  net-libs/gnutls"
+RDEPEND="dev-util/electron:*
+	gnome-base/libgnome-keyring
+	net-misc/curl
+	net-libs/gnutls"
 DEPEND="${RDEPEND}
 	dev-libs/expat
 	dev-libs/nss

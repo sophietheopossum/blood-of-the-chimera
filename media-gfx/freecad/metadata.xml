@@ -5,6 +5,9 @@
 		<email>xmw@gentoo.org</email>
 		<name>Michael Weber</name>
 	</maintainer>
+	<use>
+		<flag name="pivy">build with pivy</flag>
+	</use>
 	<upstream>
 		<remote-id type="sourceforge">free-cad</remote-id>
 		<remote-id type="github">FreeCAD/FreeCAD</remote-id>
