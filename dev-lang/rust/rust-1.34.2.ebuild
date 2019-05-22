@@ -133,7 +133,7 @@ src_prepare() {
 	# cargo when it tries to verify checksums in those files.  If we just truncate
 	# that file list, cargo won't have anything to complain about.
 	find vendor -name .cargo-checksum.json \
-		-exec sed -i.uncheck -e 's#"files":{[^}]*}/"files":{ }/' '{}' '+'
+		-exec sed -i.uncheck -e 's#"files":{[^}]*}#"files":{ }#' '{}' '+'
 
 	default
 }
