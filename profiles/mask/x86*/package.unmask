@@ -1,0 +1,6 @@
+# requires masked packages games-util/steam-launcher
+=virtual/wine-0-r7
+# requires masked packages media-libs/libplacebo >=media-libs/schroedinger-1.0.10:0 media-sound/shine media-libs/libspatialaudio
+=media-video/vlc-3.0.6-r2
+# requires masked packages dev-lang/python:3.7 dev-libs/boost
+<=net-libs/libtorrent-rasterbar-1.1.13

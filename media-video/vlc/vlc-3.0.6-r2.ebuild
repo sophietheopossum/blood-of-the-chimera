@@ -22,7 +22,7 @@ IUSE="+10bit a52 alsa altivec aom archive aribsub arm64 bidi bluray cddb chromap
 	libass libav libcaca libnotify libplacebo +libsamplerate libtar libtiger linsys lirc live lua
 	macosx-notifications macosx-qtkit mad matroska modplug mp3 mpeg mtp musepack ncurses
 	neon nfs ogg omxil opencv optimisememory opus png postproc projectm pulseaudio +qt5
-	rdp realrtsp run-as-root samba schroedinger screen sdl-image sftp shine shout sid skins soxr spatialaudio speex srt ssl
+	rdp realrtsp rtsp run-as-root samba schroedinger screen sdl-image sftp shine shout sid skins soxr spatialaudio speex srt ssl
 	svg taglib theora tremor truetype twolame udev upnp vaapi v4l vdpau +vlc vnc vorbis vpx
 	wayland wma-fixed +X x264 x265 xml zeroconf zvbi cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_arm_neon
 "
@@ -39,7 +39,7 @@ REQUIRED_USE="
 	ssl? ( gcrypt )
 	vaapi? ( ffmpeg X )
 	vdpau? ( ffmpeg X )
-	|| ( live realrtsp )
+	rtsp? ( || ( live realrtsp ) )
 "
 BDEPEND="
 	>=sys-devel/gettext-0.19.8

@@ -57,7 +57,6 @@ BROKEN
 work in progress. software that allows the manipulation of pdf files.
 
 ### `dev-lang/rust`
-includes missing libunwind dependency
 
 ### `dev-libs/glib`
 The GLib library of C routines
@@ -158,3 +157,5 @@ firefox ebuild created using the bobwya and pg_overlay ebuilds. this ebuild cont
 good question, with openrc being the more popular init system, you  would think it would be an available option. sadly this is not a mistake, snappy is designed in such a way that systemd is required. obviously much like funtoo has proven with their solution with gnome, it is theoretically possible. so possible in fact, that early ubuntu (which used upstart) even used a modified version of systemd to run snappy. however to the best of my knowledge there is no updated version of that, hence no openrc compatible ebuilds. feel free to contribute and make this otherwise however i have no interest myself in doing so (i personally use systemd). that being said, elogind may or may not help
 ### why are there ebuilds without file extensions?
 these are in production or archived, and thus not considered stable enough for real use.
+### why are some of the listed packages lacking a description?
+they have a readme in their directory
