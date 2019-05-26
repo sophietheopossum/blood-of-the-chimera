@@ -7,27 +7,32 @@ PYTHON_COMPAT=( python2_7 python3_{5,6,7} pypy )
 
 inherit check-reqs eapi7-ver estack flag-o-matic llvm multiprocessing multilib-build python-any-r1 rust-toolchain toolchain-funcs
 
-if [[ ${PV} = *beta* ]]; then
-	betaver=${PV//*beta}
-	BETA_SNAPSHOT="${betaver:0:4}-${betaver:4:2}-${betaver:6:2}"
-	MY_P="rustc-beta"
-	SLOT="beta/${PV}"
-	SRC="${BETA_SNAPSHOT}/rustc-beta-src.tar.xz"
-else
-	ABI_VER="$(ver_cut 1-2)"
-	SLOT="stable/${ABI_VER}"
-	MY_P="rustc-${PV}"
-	SRC="${MY_P}-src.tar.xz"
-	KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
-fi
+ABI_VER="$(ver_cut 1-2)"
+SLOT="stable/${ABI_VER}"
+MY_P="rustc-${PV}"
+SRC="${MY_P}-src.tar.xz"
+KEYWORDS="amd64 ~arm ~arm64 ~ppc64 x86"
 
-RUST_STAGE0_VERSION="${PV}" #Use current version for stage0
+CHOST_amd64=x86_64-unknown-linux-gnu
+CHOST_x86=i686-unknown-linux-gnu
+CHOST_arm64=aarch64-unknown-linux-gnu
+CHOST_arm=armv7-unknown-linux-gnueabihf
+
+RUST_STAGE0_VERSION="1.$(($(ver_cut 2))).1"
+RUST_STAGE0_amd64="rust-${RUST_STAGE0_VERSION}-${CHOST_amd64}"
+RUST_STAGE0_x86="rust-${RUST_STAGE0_VERSION}-${CHOST_x86}"
+RUST_STAGE0_arm64="rust-${RUST_STAGE0_VERSION}-${CHOST_arm64}"
+RUST_STAGE0_armv7="rust-${RUST_STAGE0_VERSION}-${CHOST_arm}"
 
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="https://www.rust-lang.org/"
 
 SRC_URI="https://static.rust-lang.org/dist/${SRC} -> rustc-${PV}-src.tar.xz
-		$(rust_all_arch_uris rust-${RUST_STAGE0_VERSION})"
+	amd64? ( https://static.rust-lang.org/dist/${RUST_STAGE0_amd64}.tar.xz )
+	x86? ( https://static.rust-lang.org/dist/${RUST_STAGE0_x86}.tar.xz )
+	arm64? ( https://static.rust-lang.org/dist/${RUST_STAGE0_arm64}.tar.xz )
+	arm? ( https://static.rust-lang.org/dist/${RUST_STAGE0_armv7}.tar.xz )
+"
 
 ALL_LLVM_TARGETS=( AArch64 AMDGPU ARM BPF Hexagon Lanai Mips MSP430
 	NVPTX PowerPC Sparc SystemZ WebAssembly X86 XCore )
@@ -36,7 +41,7 @@ LLVM_TARGET_USEDEPS=${ALL_LLVM_TARGETS[@]/%/?}
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
 
-IUSE="clippy cpu_flags_x86_sse2 debug doc libressl rls rustfmt system-llvm wasm ${ALL_LLVM_TARGETS[*]}"
+IUSE="clippy cpu_flags_x86_sse2 debug doc libressl rls rustfmt thumbv7neon system-llvm wasm ${ALL_LLVM_TARGETS[*]}"
 
 # Please keep the LLVM dependency block separate. Since LLVM is slotted,
 # we need to *really* make sure we're not pulling one than more slot
@@ -115,12 +120,18 @@ pkg_setup() {
 }
 
 src_prepare() {
+    use libressl && "${FILESDIR}"/1.34.0-libressl.patch # bug 684224
 	local rust_stage0_root="${WORKDIR}"/rust-stage0
 
 	local rust_stage0="rust-${RUST_STAGE0_VERSION}-$(rust_abi)"
 
 	"${WORKDIR}/${rust_stage0}"/install.sh --disable-ldconfig --destdir="${rust_stage0_root}" --prefix=/ || die
 
+	# ugly hack for https://bugs.gentoo.org/679806
+	if use ppc64; then
+		sed -i 's/getentropy/gEtEnTrOpY/g' "${rust_stage0_root}"/bin/cargo || die
+		export OPENSSL_ppccap=0
+	fi
 	if use system-llvm; then
 		rm -rf src/llvm-project/ || die
 		# We never enable emscripten.
@@ -129,17 +140,11 @@ src_prepare() {
 		eapply "${FILESDIR}"/0001-llvm-cmake-Add-additional-headers-only-if-they-exist.patch
 	fi
 
-	# The configure macro will modify some autoconf-related files, which upsets
-	# cargo when it tries to verify checksums in those files.  If we just truncate
-	# that file list, cargo won't have anything to complain about.
-	find vendor -name .cargo-checksum.json \
-		-exec sed -i.uncheck -e 's#"files":{[^}]*}#"files":{ }#' '{}' '+'
-
 	default
 }
 
 src_configure() {
-	local rust_target="" rust_targets="" arch_cflags
+	local rust_target="" rust_targets="" rust_target_name arch_cflags
 
 	# Collect rust target names to compile standard libs for all ABIs.
 	for v in $(multilib_get_enabled_abi_pairs); do
@@ -147,6 +152,9 @@ src_configure() {
 	done
 	if use wasm; then
 		rust_targets="${rust_targets},\"wasm32-unknown-unknown\""
+    fi
+	if use arm && use thumbv7neon; then
+		rust_targets="${rust_targets},\"thumbv7neon-unknown-linux-gnueabihf\""
 	fi
 	rust_targets="${rust_targets#,}"
 
@@ -163,7 +171,8 @@ src_configure() {
 
 	local rust_stage0_root="${WORKDIR}"/rust-stage0
 
-	rust_target="$(rust_abi)"
+	rust_target_name="CHOST_${ARCH}"
+	rust_target="${!rust_target_name}"
 
 	cat <<- EOF > "${S}"/config.toml
 		[llvm]
@@ -186,7 +195,7 @@ src_configure() {
 		compiler-docs = $(toml_usex doc)
 		submodules = false
 		python = "${EPYTHON}"
-		locked-deps = false
+		locked-deps = true
 		vendor = true
 		extended = ${extended}
 		tools = [${tools}]
@@ -201,9 +210,8 @@ src_configure() {
 		[rust]
 		debug = $(toml_usex debug)
 		optimize = $(toml_usex !debug)
-		codegen-units = 1
-		debug-assertions = $(toml_usex debug)
 		debuginfo = $(toml_usex debug)
+		debug-assertions = $(toml_usex debug)
 		backtrace = $(toml_usex debug)
 		default-linker = "$(tc-getCC)"
 		channel = "stable"
@@ -211,7 +219,6 @@ src_configure() {
 		codegen-tests = $(toml_usex debug)
 		dist-src = $(toml_usex debug)
 		lld = $(toml_usex wasm)
-		deny-warnings = false
 	EOF
 
 	for v in $(multilib_get_enabled_abi_pairs); do
@@ -231,7 +238,7 @@ src_configure() {
 		EOF
 		if use system-llvm; then
 			cat <<- EOF >> "${S}"/config.toml
-			    llvm-config = "$(get_llvm_prefix)/bin/llvm-config"
+				llvm-config = "$(get_llvm_prefix "${LLVM_MAX_SLOT}")/bin/llvm-config"
 			EOF
 		fi
 	done
@@ -240,6 +247,16 @@ src_configure() {
 		cat <<- EOF >> "${S}"/config.toml
 			[target.wasm32-unknown-unknown]
 			linker = "rust-lld"
+		EOF
+    fi
+
+	if use arm && use thumbv7neon; then
+		cat <<- EOF >> "${S}"/config.toml
+			[target.thumbv7neon-unknown-linux-gnueabihf]
+			cc = "$(tc-getBUILD_CC)"
+			cxx = "$(tc-getBUILD_CXX)"
+			linker = "$(tc-getCC)"
+			ar = "$(tc-getAR)"
 		EOF
 	fi
 }

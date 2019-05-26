@@ -88,11 +88,20 @@ firestorm ebuilds with a functional url and better depends
 ARCHIVED
 an attempt to add a new use flag. development halted as steam for linux actually uses system libraries if they are newer.
 
+### `gnome-base/librsvg`
+includes optional gtk3 patch from ::gentoo, expands on ::gnome-next's depend designed to prevent incompatible rust-bin configurations
+
 ### `kde-apps/dolphin`
 a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to. credits to https://forum.kde.org/viewtopic.php?f=224&t=141836&start=30 for the patch in 18.08.3+. it also has an audiocd useflag enabling you to manage the dependencies for opening cds as a directory with a simple useflag.
 
 ### `kde-plasma/plasma-meta`
 a modified version of the official ebuild with the ability to disable or enable powerdevil as needed with an aptly named use flag. on a desktop pc power management software does not always make sense.
+
+### `mail-client/thunderbird`
+based on the ::bobwya ebuild. contains some debian and mozilla/freebsd patches from ::pg-overlay, notably disabling some tests and adding more arm64 support (renamed to make more sense, all fixed in mozilla 61), based on use flags. also contains a patch to hide gtk2 behind nsplugin/NPAPI, the only thing that uses it.
+
+### `media-gfx/inkscape`
+doesn't depend on gtkspell because it gets removed from upstream inkscape
 
 ### `media-gfx/scour`
 includes a patch designed to remove an error
