@@ -6,9 +6,12 @@
 =dev-perl/HTTP-Date-6.20.0-r1::argent-main      #better in other overlay
 =dev-perl/LWP-MediaTypes                        #better in other overlay
 =dev-perl/TimeDate-2.300.0::argent-main         #better in other overlay
+=dev-qt/qtcore-5.9999                           #bad versioning
 =dev-qt/qtdbus-5.9999                           #bad versioning
 =dev-qt/qtdeclarative-5.9999                    #bad versioning
 =dev-qt/qtgui-5.9999                            #bad versioning
+=dev-qt/qtnetwork-5.9999                        #bad versioning
+=dev-qt/qttest-5.9999                           #bad versioning
 =dev-qt/qtwidgets-5.9999                        #bad versioning
 =perl-core/File-Temp-0.230.400-r1::argent-main  #better in other overlay
 =sys-devel/gcc-9.1.0::musl                      #bad versioning
