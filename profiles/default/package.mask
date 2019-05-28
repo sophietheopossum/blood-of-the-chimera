@@ -1,5 +1,15 @@
 =app-text/docbook-sgml-dtd-3.0-r3::argent-main  #better in other overlay
+=dev-perl/Authen-SASL-2.160.0-r1::argent-main   #better in other overlay
+=dev-perl/Digest-HMAC-1.30.0-r1::argent-main    #better in other overlay
+=dev-perl/File-Listing-6.40.0-r1::argent-main   #better in other overlay
+=dev-perl/HTML-Tagset-3.200.0-r1::argent-main   #better in other overlay
+=dev-perl/HTTP-Date-6.20.0-r1::argent-main      #better in other overlay
+=dev-perl/LWP-MediaTypes                        #better in other overlay
+=dev-perl/TimeDate-2.300.0::argent-main         #better in other overlay
 =dev-qt/qtdbus-5.9999                           #bad versioning
 =dev-qt/qtdeclarative-5.9999                    #bad versioning
 =dev-qt/qtgui-5.9999                            #bad versioning
 =dev-qt/qtwidgets-5.9999                        #bad versioning
+=perl-core/File-Temp-0.230.400-r1::argent-main  #better in other overlay
+=sys-devel/gcc-9.1.0::musl                      #bad versioning
+=virtual/rust-1.35.0-r666                       #bad versioning
