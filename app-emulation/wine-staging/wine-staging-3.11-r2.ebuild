@@ -28,7 +28,7 @@ STAGING_P="wine-staging-${STAGING_PV}"
 MY_PV="${MY_PV%${STAGING_REVISION}}"
 MY_P="${MY_PN}-${MY_PV}"
 
-	KEYWORDS="amd64 ~x86 ~x86-fbsd"
+	KEYWORDS="-* amd64 x86 ~x86-fbsd"
 	major_version=$( ver_cut 1 )
 	minor_version=0
 	(( version_component_count > 1 )) && minor_version=$( ver_cut 2 )
