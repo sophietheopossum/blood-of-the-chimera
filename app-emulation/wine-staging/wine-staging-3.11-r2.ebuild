@@ -28,13 +28,7 @@ STAGING_P="wine-staging-${STAGING_PV}"
 MY_PV="${MY_PV%${STAGING_REVISION}}"
 MY_P="${MY_PN}-${MY_PV}"
 
-if [[ "${MY_PV}" == "9999" ]]; then
-	#KEYWORDS=""
-	EGIT_REPO_URI="https://source.winehq.org/git/wine.git"
-	inherit git-r3
-	SRC_URI=""
-else
-	KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
+	KEYWORDS="-* amd64 ~x86 ~x86-fbsd"
 	major_version=$( ver_cut 1 )
 	minor_version=0
 	(( version_component_count > 1 )) && minor_version=$( ver_cut 2 )
@@ -48,7 +42,6 @@ else
 	else
 		SRC_URI="https://dl.winehq.org/wine/source/${major_version}.x/${MY_P}.tar.xz -> ${MY_P}.tar.xz"
 	fi
-fi
 unset -v array_components is_major_base is_stable minor_version major_version patch_version version_component_count
 
 STAGING_DIR="${WORKDIR}/${STAGING_P}"
