@@ -1,0 +1,3 @@
+gentoo:default/linux/arm
+:default/linux/arm+ppc+x86*
+:default/linux

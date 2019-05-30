@@ -1,14 +1,10 @@
 # requires masked packages >=app-emulation/wine-desktop-common-20180412 >=app-eselect/eselect-wine-1.5.4
 <=app-emulation/wine-staging-3.14-r1
-# requires masked packages >=dev-libs/glib-2.59.2:2
-=dev-util/gdbus-codegen-2.59.2
 # requires masked packages dev-python/pyside:2 dev-python/shiboken:2 dev-python/pyside-tools:2
 =media-gfx/freecad-0.17
 # requires masked packages kde-misc/kmozillahelper
 <=www-client/firefox-61.0.2-r1
 # requires masked packages games-util/steam-launcher
 =virtual/wine-0-r7
-# requires masked packages media-libs/libplacebo >=media-libs/schroedinger-1.0.10:0 media-sound/shine media-libs/libspatialaudio
-=media-video/vlc-3.0.6-r2
 # requires masked packages dev-lang/python:3.7 dev-libs/boost
 <=net-libs/libtorrent-rasterbar-1.1.13
