@@ -1,0 +1,8 @@
+=dev-perl/Authen-SASL-2.160.0-r1::argent-main   #better in other overlay
+=dev-perl/Digest-HMAC-1.30.0-r1::argent-main    #better in other overlay
+=dev-perl/File-Listing-6.40.0-r1::argent-main   #better in other overlay
+=dev-perl/HTML-Tagset-3.200.0-r1::argent-main   #better in other overlay
+=dev-perl/HTTP-Date-6.20.0-r1::argent-main      #better in other overlay
+=dev-perl/TimeDate-2.300.0::argent-main         #better in other overlay
+=perl-core/File-Temp-0.230.400-r1::argent-main  #better in other overlay
+=sys-devel/gcc-9.1.0::musl                      #better in other overlay
