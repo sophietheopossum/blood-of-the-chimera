@@ -1,2 +1,2 @@
 gentoo:default/linux/ia64/17.0/desktop/gnome/systemd
-:mask/alpha+fbsd+ia64
+:default/linux/ia64/17.0/desktop/gnome

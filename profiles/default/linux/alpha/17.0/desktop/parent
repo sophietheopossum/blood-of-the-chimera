@@ -1,2 +1,2 @@
 gentoo:default/linux/alpha/17.0/desktop
-:mask/alpha+fbsd+ia64
+:default/linux/alpha/17.0

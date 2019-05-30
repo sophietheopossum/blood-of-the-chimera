@@ -1,3 +1,2 @@
 gentoo:default/linux/amd64/17.0/desktop
-:mask/x86*
-:mask/amd64
+:default/linux/amd64/17.0

@@ -1,2 +1,2 @@
 gentoo:default/linux/powerpc/ppc64/17.0/64bit-userland/desktop/gnome/systemd
-:mask/ppc
+:default/linux/powerpc/ppc64/17.0/64bit-userland/desktop/gnome

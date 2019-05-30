@@ -1,2 +1,2 @@
 gentoo:default/linux/x86/17.0/systemd
-:mask/x86*
+:default/linux/x86/17.0
