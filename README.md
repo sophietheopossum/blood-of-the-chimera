@@ -1,5 +1,5 @@
 # prototype99
-An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone as well as other packages. if you use other overlays consider running first-install.sh or first-install-legacy.sh to add extra overlay specific configuration files as symlinks.
+An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone as well as other packages. if you use other overlays consider running first-install.sh or first-install-legacy.sh to add extra overlay specific configuration files as symlinks. profiles are designed to add to gentoo and keep repoman (a lil bit) happier. that being said, the main two profiles are default/linux/amd64/17.0/systemd (personal laptop) and default/linux/amd64/17.0/desktop/plasma/systemd (personal desktop)
 
 ## Add the Overlay using layman
 Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` and  `app-portage/layman` packages installed. (there are other methods, however layman allows you to keep your packages organised. Compare it to ubuntu's ppas if you must)
@@ -24,11 +24,11 @@ and put the following text in the file:
 
 ```
 [gentoo-snappy]
- 
+
 # An unofficial overlay that supports the installation of the "Snappy" backbone.
 # Maintainer: Seirra Blake (sophietheopossum@yandex.com)
 # Upstream Maintainer: Clayton "kefnab" Dobbs (clayton.dobbs@gosecur.us)/Zygmunt "zyga" Krynicki (me@zygoon.pl)
- 
+
 location = /usr/local/portage/prototype99
 sync-type = git
 sync-uri = https://github.com/prototype99/prototype99.git
