@@ -1,6 +1,5 @@
 # consult /usr/share/portage/config/make.conf.example for a
 # detailed example.
-NTHREADS="4"
 #source /usr/share/fetchcommandwrapper/make.conf
 #source /var/lib/layman/lto-overlay/sys-config/ltoize/files/make.conf.lto
 #these must be set before CFLAGS!
@@ -27,8 +26,7 @@ INPUT_DEVICES="keyboard mouse libinput"
 L10N="en-GB en"
 LDFLAGS="-Wl,--as-needed -Wl,--hash-style=gnu -Wl,-O1"
 #LIBS="-Wl,-no-as-needed -ljemalloc -Wl,-as-needed"
-MAKEOPTS="-j5 -l${NTHREADS}"
-#PKGDIR="${PORTDIR}/packages"
+MAKEOPTS="-l${NTHREADS}"
 PORT_LOGDIR="/var/log/portage"
 PORTAGE_COMPRESS_FLAGS="-p9"
 PORTAGE_RSYNC_EXTRA_OPTS="-l --new-compress --progress"
@@ -37,5 +35,5 @@ PORTAGE_WORKDIR_MODE="7777"
 PORTDIR="/var/db/repos/gentoo"
 PYTHON_TARGETS="pypy3 pypy python3_7 python2_7"
 PYTHON_SINGLE_TARGET="pypy3 pypy python3_7"
-USE="7zip adns adwaita-icon-theme alsa aria2 asm browser_firefox btrfs canon_printers_mx920 capi cjk clang custom-cflags custom-optimization default-gold dhcpcd dns_threaded dos faad fat firmware fluidsynth freecad_modules_assembly graphite grub hddtemp htmlthumbs hwaccel inkjar iwd jemalloc jit jumbo-build l10n_en_GB lto musicbrainz natspec netapi ntfs ocamlopt offensive office offload openmp orc pch pcre-jit pipelight pgo plymouth proton pulseaudio rar rust servicetools smp staging steamruntimepreferhostlibraries sync-plugin-portage system-bz2 system-cairo system-ffi system-harfbuzz system-icu system-jpeg system-jsoncpp system-graphite2 system-heimdal system-icu system-lcms system-ldb system-libevent system-libvpx system-llvm system-mitkrb5 system-nspr system-nss system-pixman system-png system-sqlite system-webp system-zlib threads thumbnail toolkit-scroll-bars uvm visio vmware-tools-linux vmware-tools-windows zsh-completion -cramfs -dhclient -dvbpsi -eme-free -gnutls -hangouts -mix -npm -pm-utils -ppp -ruby_targets_ruby23 -screenshot -secure-delete -sftp -ssp -suid -tcmalloc -usb_stream -webrtc-aec -wext"
+USE="7zip adns adwaita-icon-theme alsa aria2 asm browser_firefox btrfs capi cjk clang custom-cflags custom-optimization default-gold dhcpcd dns_threaded dos faad fat firmware fluidsynth freecad_modules_assembly graphite grub hddtemp htmlthumbs hwaccel inkjar iwd jemalloc jit jumbo-build l10n_en_GB lto musicbrainz natspec netapi ntfs ocamlopt offensive office offload openmp orc pch pcre-jit pipelight pgo plymouth proton pulseaudio rar rust servicetools smp staging steamruntimepreferhostlibraries sync-plugin-portage system-bz2 system-cairo system-ffi system-harfbuzz system-icu system-jpeg system-jsoncpp system-graphite2 system-heimdal system-icu system-lcms system-ldb system-libevent system-libvpx system-llvm system-mitkrb5 system-nspr system-nss system-pixman system-png system-sqlite system-webp system-zlib threads thumbnail toolkit-scroll-bars uvm visio vmware-tools-linux vmware-tools-windows zsh-completion -cramfs -dhclient -dvbpsi -eme-free -gnutls -hangouts -mix -npm -ppp -ruby_targets_ruby23 -screenshot -secure-delete -sftp -ssp -suid -tcmalloc -usb_stream -webrtc-aec -wext"
 VIDEO_CARDS="intel i915"
