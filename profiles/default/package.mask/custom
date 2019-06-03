@@ -11,6 +11,7 @@
 =dev-qt/qttest-5.9999				#bad versioning
 =dev-qt/qtwidgets-5.9999			#bad versioning
 =media-libs/x264-9999				#bad versioning
+=media-sound/pulseaudio-9999		#bad versioning
 =media-video/vlc-3.0.9999			#bad versioning
 =media-video/vlc-9999				#bad versioning
 =sys-fs/udev-9999					#bad versioning
