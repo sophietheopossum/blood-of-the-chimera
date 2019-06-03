@@ -1,5 +1,4 @@
 NTHREADS="16"
-source /var/lib/layman/lto-overlay/sys-config/ltoize/files/make.conf.lto
 #these must be set before CFLAGS!
 CCACHE_DIR="/gentoo/ccache"
 CCACHE_RECACHE="yes"
