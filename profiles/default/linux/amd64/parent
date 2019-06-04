@@ -1,4 +1,2 @@
-gentoo:default/linux/amd64
 :default/linux/x86*
 :default/linux
-:base/
