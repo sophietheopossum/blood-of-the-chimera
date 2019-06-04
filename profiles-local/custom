@@ -5,7 +5,7 @@
 =app-office/libreoffice-6.2.3.2::gnux32				#better in other overlay
 =app-text/iso-codes-3.76::pg_overlay				#better in other overlay
 =dev-libs/boost-1.70.0::gnux32						#better in other overlay
-=dev-libs/libnl-3.4.0:3::musl						#better in other overlay
+=dev-libs/libnl-3.4.0:3::musl						#adds musl specific patch, no python3_7 compatibility
 =dev-perl/Authen-SASL-2.160.0-r1::argent-main		#better in other overlay
 =dev-perl/Digest-HMAC-1.30.0-r1::argent-main		#better in other overlay
 =dev-perl/File-Listing-6.40.0-r1::argent-main		#better in other overlay
@@ -17,7 +17,7 @@
 =kde-apps/dolphin-18.12.3::gentoo					#better in other overlay
 =mail-client/thunderbird-60.6.1::gentoo				#better in other overlay
 =kde-plasma/plasma-meta-5.14.5::gentoo				#better in other overlay
-=media-fonts/alegreya-sans-2.008::gentoo			#better in other overlay
+=media-fonts/alegreya-sans-2.008::gentoo			#less use flags so less customisability
 =media-libs/alsa-lib-1.1.8::gnux32					#missing use flag
 =media-libs/libid3tag-0.15.1b-r5::rinaldus-overlay	#use flag not defined in ebuild
 =media-video/ffmpeg-3.4.5::gnux32					#better in other overlay
