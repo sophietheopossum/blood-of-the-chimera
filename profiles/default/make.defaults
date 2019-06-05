@@ -10,6 +10,7 @@ PORTAGE_BZIP2_COMMAND="bzip2 -p9"
 #CCACHE_SIZE="0"
 #also add graphite and flto
 CFLAGS="-march=native -O3 -pipe"
+CFLAGS2="-march=native -pipe"
 # WARNING: Changing your CHOST is not something that should be done lightly.
 # Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
 CHOST="x86_64-pc-linux-gnu"
