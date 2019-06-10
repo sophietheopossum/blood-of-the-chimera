@@ -116,4 +116,5 @@ video_cards_vmware
 -python_single_target_pypy
 -python_single_target_python3_7
 -system-cairo
+-systemd
 -unknown-license

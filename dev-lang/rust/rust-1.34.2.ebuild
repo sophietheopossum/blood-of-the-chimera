@@ -120,7 +120,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-    use libressl && "${FILESDIR}"/1.34.0-libressl.patch # bug 684224
+	use libressl && "${FILESDIR}"/1.34.0-libressl.patch # bug 684224
 	local rust_stage0_root="${WORKDIR}"/rust-stage0
 
 	local rust_stage0="rust-${RUST_STAGE0_VERSION}-$(rust_abi)"
@@ -152,7 +152,7 @@ src_configure() {
 	done
 	if use wasm; then
 		rust_targets="${rust_targets},\"wasm32-unknown-unknown\""
-    fi
+	fi
 	if use arm && use thumbv7neon; then
 		rust_targets="${rust_targets},\"thumbv7neon-unknown-linux-gnueabihf\""
 	fi
@@ -248,7 +248,7 @@ src_configure() {
 			[target.wasm32-unknown-unknown]
 			linker = "rust-lld"
 		EOF
-    fi
+	fi
 
 	if use arm && use thumbv7neon; then
 		cat <<- EOF >> "${S}"/config.toml

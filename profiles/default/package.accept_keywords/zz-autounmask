@@ -26,8 +26,22 @@
 # required by dev-python/setuptools-40.6.3::gentoo
 # required by dev-util/meson-0.49.2::gentoo
 # required by x11-misc/compton-6.2::miramir
-# required by compton (argument)
 =virtual/pypy-7.1.1 ~amd64
 # required by dev-python/setuptools-40.6.3::gentoo[python_targets_pypy3]
 # required by dev-python/certifi-2018.4.16::gentoo
 =virtual/pypy3-7.1.1 ~amd64
+# required by dev-libs/glib-2.61.1::gnome-next
+# required by dev-util/gdbus-codegen-666::pg_overlay
+=dev-util/glib-utils-666 ~amd64
+# required by dev-python/testtools-2.3.0::gentoo
+# required by dev-python/fixtures-3.0.0::gentoo
+=dev-python/pyrsistent-0.14.4 ~amd64
+# required by dev-libs/glib-2.61.1::gnome-next[-test]
+# required by net-libs/glib-networking-2.60.2::gnome-next
+# required by net-libs/libsoup-2.64.2::unity-gentoo
+# required by net-misc/remmina-1.2.31.3::gentoo
+=dev-util/gdbus-codegen-666 ~amd64
+# required by net-libs/glib-networking-2.60.2::gnome-next
+# required by net-libs/libsoup-2.64.2::unity-gentoo
+# required by net-misc/remmina-1.2.31.3::gentoo
+=dev-libs/glib-2.61.1 ~amd64
