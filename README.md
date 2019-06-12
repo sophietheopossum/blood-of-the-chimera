@@ -53,7 +53,7 @@ includes extra python3_7 compatibility
 Based off of the bobwya ebuild. Includes a patch to make the steam browser work without any extra effort on the user's end.
 
 ### `app-text/pdfsam`
-BROKEN
+ARCHIVED
 work in progress. software that allows the manipulation of pdf files.
 
 ### `dev-lang/rust`
@@ -89,6 +89,7 @@ ARCHIVED
 an attempt to add a new use flag. development halted as steam for linux actually uses system libraries if they are newer.
 
 ### `gnome-base/librsvg`
+ARCHIVED
 includes optional gtk3 patch from ::gentoo, expands on ::gnome-next's depend designed to prevent incompatible rust-bin configurations
 
 ### `kde-apps/dolphin`
@@ -107,6 +108,7 @@ doesn't depend on gtkspell because it gets removed from upstream inkscape
 includes a patch designed to remove an error
 
 ### `media-libs/gexiv2`
+ARCHIVED
 includes extra python3_7 compatibility
 
 ### `media-libs/x264`
