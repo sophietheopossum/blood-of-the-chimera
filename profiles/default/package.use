@@ -3,7 +3,7 @@ sys-apps/portage -xattr
 # required by net-misc/curl[threads]
 net-misc/curl -adns
 #dev-python/pypy low-memory
-#dev-util/cmake -system-jsoncpp
+dev-util/cmake -system-jsoncpp
 # required by dev-qt/qtcore-5.12.3::gentoo
 # required by media-libs/phonon-vlc-0.10.2::gentoo
 # required by media-libs/phonon-4.10.2::gentoo[vlc]

@@ -8,7 +8,13 @@ inherit linux-info
 DESCRIPTION="Virtual for Linux kernel sources"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="amd firmware +gentoo-sources intel +systemd threads-4 threads-16 +uefi"
+IUSE="amd firmware +gentoo-sources intel openrc +systemd threads-4 threads-16 +uefi"
+
+REQUIRED_USE="
+	|| ( amd intel )
+	|| ( threads-4 threads-16 )
+	|| ( openrc systemd )
+"
 
 RDEPEND="
 	firmware? ( sys-kernel/linux-firmware )
@@ -48,6 +54,7 @@ pkg_setup() {
 	if use gentoo-sources; then
 		CONFIG_CHECK="GENTOO_LINUX GENTOO_LINUX_PORTAGE"
 		use systemd && CONFIG_CHECK="GENTOO_LINUX_INIT_SYSTEMD !GENTOO_LINUX_INIT_SCRIPT"
+		use openrc && CONFIG_CHECK="GENTOO_LINUX_INIT_SYSTEMD !GENTOO_LINUX_INIT_SCRIPT"
 	fi
 		if use threads-4; then
 		CONFIG_CHECK="~!NR_CPUS"
