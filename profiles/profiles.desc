@@ -18,6 +18,8 @@ amd64			default/linux/amd64/17.0/no-multilib/hardened							stable
 amd64			default/linux/amd64/17.0/no-multilib/hardened/selinux					stable
 amd64			default/linux/amd64/17.0/selinux										stable
 amd64			default/linux/amd64/17.0/systemd										stable
+amd64			default/linux/amd64/17.0/systemd/desktop										stable
+amd64			default/linux/amd64/17.0/systemd/laptop										stable
 arm				default/linux/arm/17.0													stable
 ia64			default/linux/ia64/17.0													stable
 ia64			default/linux/ia64/17.0/desktop											stable

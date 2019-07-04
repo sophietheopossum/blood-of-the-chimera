@@ -65,6 +65,7 @@ The GLib library of C routines
 elementary overlay's ebuild with a build error fixed and some improvements in ebuild writing
 
 ### `dev-python/pycups`
+ARCHIVED
 includes extra python3_7 compatibility
 
 ### `dev-python/pyGPG`

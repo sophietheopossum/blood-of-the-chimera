@@ -1,0 +1,38 @@
+#these are all for python3_7, which is difficult but needed for certain software
+=dev-lang/python-3.7.3 ~amd64 #required by pyroton
+#required by python3_7
+=app-portage/layman-2.4.2-r2
+=dev-libs/boost-1.70.0
+=dev-libs/newt-0.52.21
+=dev-python/asn1crypto-0.24.0
+=dev-python/bcrypt-3.1.4-r1
+=dev-python/cffi-1.11.5
+=dev-python/dbus-python-1.2.8
+=dev-python/idna-2.7
+=dev-python/ply-3.11
+=dev-python/progressbar-2.5
+=dev-python/ptyprocess-0.5.2
+=dev-python/pycparser-2.18-r1
+=dev-python/pycups-1.9.73-r2
+=dev-python/PySocks-1.6.8
+=dev-python/pyxdg-0.26-r1
+=dev-python/scrypt-0.8.6
+=dev-python/urllib3-1.23
+=dev-util/boost-build-1.70.0
+=media-gfx/fontforge-20190317-r2
+=net-libs/libtorrent-rasterbar-1.1.13
+=sys-apps/kmod-26-r1
+# required by media-libs/mesa-18.2.7::gentoo
+# required by media-libs/gst-plugins-base-1.14.1::gentoo
+# required by dev-qt/qtmultimedia-5.11.1::gentoo
+# required by dev-python/PyQt5-5.10.1-r1::gentoo[multimedia]
+=dev-python/mako-1.0.7 ~amd64
+# required by dev-python/mako-1.0.7::gentoo
+# required by media-libs/mesa-18.2.7::gentoo
+# required by media-libs/gst-plugins-base-1.14.1::gentoo
+# required by dev-qt/qtmultimedia-5.11.1::gentoo
+# required by dev-python/PyQt5-5.10.1-r1::gentoo[multimedia]
+=dev-python/markupsafe-1.0 ~amd64
+# required by dev-python/testtools-2.3.0::gentoo
+# required by dev-python/fixtures-3.0.0::gentoo
+=dev-python/pyrsistent-0.14.4 ~amd64
