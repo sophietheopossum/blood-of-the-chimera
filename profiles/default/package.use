@@ -1,5 +1,6 @@
 app-text/asciidoc -python_single_target_python2_7
 dev-libs/gobject-introspection -python_single_target_python2_7
+dev-libs/libical -vala
 lxqt-base/lxqt-meta sddm sudo terminal
 sys-apps/dbus X
 sys-apps/portage -xattr
