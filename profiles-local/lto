@@ -1,3 +1,0 @@
-source /var/lib/layman/lto-overlay/sys-config/ltoize/files/make.conf.lto
-CFLAGS="${CFLAGS} ${CFLAGS2}"
-CXXFLAGS="${CFLAGS}"

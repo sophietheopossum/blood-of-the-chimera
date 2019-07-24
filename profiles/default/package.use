@@ -1,5 +1,12 @@
 app-text/asciidoc -python_single_target_python2_7
+dev-libs/gobject-introspection -python_single_target_python2_7
+lxqt-base/lxqt-meta sddm sudo terminal
+sys-apps/dbus X
 sys-apps/portage -xattr
+sys-libs/libblockdev -python_single_target_python2_7
+kde-frameworks/ki18n -python_single_target_python2_7
+sys-libs/pam cracklib
+x11-wm/fluxbox -toolbar -systray
 # required by net-misc/curl[threads]
 net-misc/curl -adns
 # required by dev-qt/qtcore-5.12.3::gentoo
@@ -21,14 +28,26 @@ net-misc/curl -adns
 >=media-libs/x264-0.0.20170701 10bit
 # required by dev-qt/qtgui-5.12.3-r1::poly-c[xcb]
 # required by dev-qt/qtmultimedia-5.12.3::gentoo
+# required by dev-qt/qtwayland-5.12.3::gentoo
+# required by kde-frameworks/kwayland-5.57.0::gentoo
+# required by kde-plasma/libkscreen-5.15.5::gentoo
+# required by lxqt-base/lxqt-config-0.14.1::gentoo[monitor]
+# required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo
 >=x11-libs/libxkbcommon-0.8.4 X
 # required by sys-auth/polkit-0.115-r3::musl[systemd]
 # required by sys-fs/udisks-2.8.1::gentoo
+# required by kde-frameworks/solid-5.57.0-r1::gentoo
+# required by lxqt-base/lxqt-panel-0.14.1::gentoo[mount]
+# required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo
 >=sys-apps/systemd-241-r1 policykit
 # required by dev-lang/spidermonkey-52.9.1_pre1::musl
 # required by sys-auth/polkit-0.115-r3::musl
 # required by sys-apps/systemd-241-r1::gentoo[policykit]
 # required by sys-process/procps-3.3.15-r1::gentoo[systemd]
+# required by sys-fs/udisks-2.8.1::gentoo
+# required by kde-frameworks/solid-5.57.0-r1::gentoo
+# required by lxqt-base/lxqt-panel-0.14.1::gentoo[mount]
+# required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo
 >=dev-lang/python-2.7.16-r101 sqlite
 # required by www-client/firefox-67.0.2::gentoo
 >=media-libs/libpng-1.6.37 apng
@@ -58,6 +77,8 @@ x11-libs/libxcb xkb
 # required by net-wireless/blueman-2.1::gentoo[pulseaudio]
 >=media-sound/pulseaudio-12.2-r1 bluetooth dbus
 # required by lxqt-base/lxqt-session-0.13.0::gentoo
+# required by lxqt-base/liblxqt-0.14.1::gentoo
+# required by lxqt-base/lxqt-config-0.14.1::gentoo
 # required by lxqt-base/lxqt-meta-0.13.0::gentoo
 >=kde-frameworks/kwindowsystem-5.57.0 X
 # required by app-admin/system-config-printer-1.5.11-r1::prototype99
@@ -74,11 +95,57 @@ x11-libs/libxcb xkb
 >=dev-qt/qtgui-5.12.3-r1 egl
 dev-libs/glib dbus
 app-text/poppler cairo qt5
-# required by x11-wm/openbox-3.6.1::gentoo
-# required by x11-misc/obconf-qt-0.14.1::gentoo
 # required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo[-minimal]
 >=x11-libs/pango-1.42.4-r1 X
 # required by app-office/libreoffice-6.2.4.2::gentoo
 >=media-libs/harfbuzz-2.3.1 icu
 # required by www-client/firefox-67.0.2::gentoo[system-libvpx]
 =media-libs/libvpx-1.7.0 postproc svc
+# required by sys-boot/plymouth-0.9.4-r1::gentoo[libkms]
+# required by sys-kernel/genkernel-next-69::gentoo[plymouth]
+# required by genkernel-next (argument)
+>=x11-libs/libdrm-2.4.97 libkms
+# required by x11-misc/xdg-utils-1.1.3-r1::gentoo
+# required by x11-misc/pcmanfm-qt-0.14.1-r1::gentoo
+# required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo[filemanager]
+>=app-text/xmlto-0.0.28-r1 text
+# required by dev-qt/qtgui-5.12.3-r1::gentoo[xcb]
+# required by dev-qt/qtwayland-5.12.3::gentoo
+# required by kde-frameworks/kwayland-5.57.0::gentoo
+# required by kde-plasma/libkscreen-5.15.5::gentoo
+# required by lxqt-base/lxqt-config-0.14.1::gentoo[monitor]
+# required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo
+>=x11-libs/libxcb-1.13.1 xkb
+# required by gnome-extra/nm-applet-1.8.20::gentoo
+>=dev-libs/glib-2.58.3 dbus
+# required by gnome-base/gnome-keyring-3.28.2::gentoo
+# required by app-crypt/libsecret-0.18.8::gentoo
+# required by app-crypt/pinentry-1.1.0-r2::gentoo[gnome-keyring]
+# required by app-crypt/gnupg-2.2.15::gentoo
+>=app-crypt/gcr-3.28.1 gtk
+# required by net-misc/networkmanager-1.16.0::gentoo[wifi]
+# required by gnome-extra/nm-applet-1.8.20::gentoo
+>=net-wireless/wpa_supplicant-2.6-r10 dbus
+# required by gnome-base/gnome-keyring-3.28.2::gentoo
+# required by app-crypt/libsecret-0.18.8::gentoo
+# required by gnome-extra/nm-applet-1.8.20::gentoo
+# required by nm-applet (argument)
+>=app-crypt/pinentry-1.1.0-r2 gnome-keyring
+# required by kde-frameworks/kcoreaddons-5.57.0::gentoo
+# required by kde-plasma/kactivitymanagerd-5.15.5::gentoo
+# required by kde-frameworks/kactivities-5.57.0::gentoo
+# required by kde-frameworks/plasma-5.57.0::gentoo
+# required by kde-apps/kate-18.12.3::gentoo[addons]
+>=dev-qt/qtcore-5.12.3 icu
+# required by media-video/vlc-3.0.6-r1::gentoo
+# required by media-libs/phonon-vlc-0.10.2::gentoo
+# required by media-libs/phonon-4.10.2::gentoo[vlc]
+# required by kde-frameworks/khtml-5.57.0::gentoo
+# required by kde-apps/kio-extras-18.12.3::gentoo[man]
+>=sys-libs/zlib-1.2.11-r2 minizip
+# required by dev-util/itstool-2.0.2::gentoo
+# required by gnome-extra/yelp-xsl-3.30.1::gentoo
+# required by app-text/yelp-tools-3.28.0::gentoo
+# required by app-office/gnumeric-1.12.39::gentoo
+# required by gnumeric (argument)
+>=dev-libs/libxml2-2.9.9-r1 python

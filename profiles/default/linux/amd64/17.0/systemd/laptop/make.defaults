@@ -1,0 +1,6 @@
+COMMON_FLAGS="${COMMON_FLAGS} -falign-functions=32"
+MAKEOPTS="-j5"
+NTHREADS="4"
+EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --load-average=${NTHREADS}"
+VIDEO_CARDS="intel i965"
+#LIBS="-Wl,-no-as-needed -ljemalloc -Wl,-as-needed"

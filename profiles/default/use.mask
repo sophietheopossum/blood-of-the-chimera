@@ -7,9 +7,7 @@ input_devices_vmmouse
 input_devices_void
 input_devices_wacom
 pie
-python_single_target_python3_6
 python_targets_python3_5
-python_targets_python3_6
 sane_backends_abaton
 sane_backends_agfafocus
 sane_backends_apple
@@ -88,7 +86,7 @@ video_cards_amdgpu
 video_cards_ast
 video_cards_dummy
 video_cards_glint
-video_cards_i965
+video_cards_i915
 video_cards_mga
 video_cards_nouveau
 video_cards_nv

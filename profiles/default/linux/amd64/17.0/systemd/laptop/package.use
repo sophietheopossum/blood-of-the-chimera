@@ -1,0 +1,6 @@
+lxqt-base/lxqt-meta powermanagement
+# required by net-print/cups-filters-1.21.6::gentoo[postscript]
+# required by net-print/cups-2.2.11::gentoo
+# required by net-im/discord-bin-0.0.9::gentoo
+# required by discord-bin (argument)
+>=app-text/ghostscript-gpl-9.26 cups

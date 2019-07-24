@@ -1,6 +1,0 @@
-NTHREADS="4"
-#LIBS="-Wl,-no-as-needed -ljemalloc -Wl,-as-needed"
-MAKEOPTS="-j5"
-VIDEO_CARDS="intel i915"
-EMERGE_DEFAULT_OPTS="${EMERGE_DEFAULT_OPTS} --load-average=${NTHREADS}"
-MAKEOPTS="-l${NTHREADS}"
