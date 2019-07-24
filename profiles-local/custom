@@ -26,6 +26,7 @@
 =dev-qt/qtnetwork-5.12.3::libressl							#libressl patch not behind use flag
 =dev-util/boost-build-1.65.0::gnux32						#x32 specific patch
 =dev-util/boost-build-1.70.0::gnux32						#better in other overlay
+=gnome-base/librsvg-2.45.8::gnome-next				#better in other overlay
 =kde-apps/dolphin-18.12.3::gentoo							#better in other overlay
 =mail-client/thunderbird-60.6.1::gentoo					#better in other overlay
 =kde-plasma/plasma-meta-5.14.5::gentoo				#better in other overlay

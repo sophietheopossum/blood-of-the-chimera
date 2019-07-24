@@ -90,8 +90,7 @@ ARCHIVED
 an attempt to add a new use flag. development halted as steam for linux actually uses system libraries if they are newer.
 
 ### `gnome-base/librsvg`
-ARCHIVED
-includes optional gtk3 patch from ::gentoo, expands on ::gnome-next's depend designed to prevent incompatible rust-bin configurations
+includes optional gtk3 patch from ::gentoo, expands on ::gnome-next's depend designed to prevent incompatible rust-bin configurations, includes debug options from ::gnome
 
 ### `kde-apps/dolphin`
 a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to. credits to https://forum.kde.org/viewtopic.php?f=224&t=141836&start=30 for the patch in 18.08.3+. it also has an audiocd useflag enabling you to manage the dependencies for opening cds as a directory with a simple useflag.
