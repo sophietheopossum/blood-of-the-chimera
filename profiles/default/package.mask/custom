@@ -28,5 +28,5 @@ sys-apps/modutils									#conflicts with systemd
 =virtual/rust-1.35.0-r666							#bad versioning
 =www-client/firefox-66.0.5						#old
 =www-client/firefox-68.0_beta6				#bad versioning
-=x11-libs/gtk+-2.24.32-r666						#bad versioning
 =x11-libs/libfontenc-9999							#bad versioning
+=x11-libs/gtk+-2.24.32-r666						#bad versioning
