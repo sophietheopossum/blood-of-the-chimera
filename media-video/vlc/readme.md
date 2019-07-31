@@ -1,3 +1,8 @@
+#3.0.6-r3
+::prototype99
+-make it clear newer x264 is needed for 10bit use flag
+
+#3.0.6-r2
 ::ag-ops
 -required media-libs/fdk-aac version
 -compatibility with newer versions of libav
