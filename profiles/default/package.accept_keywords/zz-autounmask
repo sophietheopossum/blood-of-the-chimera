@@ -13,11 +13,15 @@
 =dev-qt/qtwebchannel-5.12.3
 =dev-qt/qtwidgets-5.12.3
 =dev-qt/qtxmlpatterns-5.12.3
+=games-util/steam-launcher-1.0.0.59-r3
 =kde-frameworks/kio-5.58.0
 =kde-frameworks/qqc2-desktop-style-5.58.000
+=net-misc/anydesk-5.0.0 ~amd64
 =sys-apps/dbus-broker-18 ~amd64
 =sys-config/ltoize-0.9.3-r2
 =sys-kernel/gentoo-sources-5.1.11 ~amd64
+=virtual/linux-sources-3-r2
+=virtual/linux-sources-5
 =virtual/rust-1.35.0
 =www-client/firefox-67.0.2
 =x11-misc/compton-6.2

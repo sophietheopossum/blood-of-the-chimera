@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sophietheopossum@yandex.com</email>
+		<name>Seirra Blake</name>
+	</maintainer>
+	<use>
+		<flag name="index">install mlocate to allow indexing which helps make file searches faster</flag>
+	</use>
+</pkgmetadata>

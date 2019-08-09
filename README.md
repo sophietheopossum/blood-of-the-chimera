@@ -96,7 +96,7 @@ includes optional gtk3 patch from ::gentoo, expands on ::gnome-next's depend des
 a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to. credits to https://forum.kde.org/viewtopic.php?f=224&t=141836&start=30 for the patch in 18.08.3+. it also has an audiocd useflag enabling you to manage the dependencies for opening cds as a directory with a simple useflag.
 
 ### `kde-plasma/plasma-meta`
-a modified version of the official ebuild with the ability to disable or enable powerdevil as needed with an aptly named use flag. on a desktop pc power management software does not always make sense.
+a modified version of the official ebuild with the ability to disable or enable powerdevil as needed with an aptly named use flag. on a desktop pc power management software does not always make sense. newer versions also have a minimal use flag to allow using the plasma-meta package for just certain components including the new kate and ksysguard related use flags.
 
 ### `mail-client/thunderbird`
 based on the ::bobwya ebuild. contains some debian and mozilla/freebsd patches from ::pg-overlay, notably disabling some tests and adding more arm64 support (renamed to make more sense, all fixed in mozilla 61), based on use flags. also contains a patch to hide gtk2 behind nsplugin/NPAPI, the only thing that uses it.
@@ -156,6 +156,9 @@ older builds of gentoo sources. 4.16.0 is one of the few versions not to exhibit
 
 ### `virtual/linux-sources`
 virtual package designed to accomodate almost all kernel ebuilds present in overlays
+
+### `virtual/meta`
+a large metapackage designed to aid in choosing the correct packages
 
 ### `virtual/wine`
 virtual package modified to accomodate those who may want steam's proton to provide their wine
