@@ -6,6 +6,16 @@ input_devices_synaptics
 input_devices_vmmouse
 input_devices_void
 input_devices_wacom
+llvm_targets_AArch64
+llvm_targets_AMDGPU
+llvm_targets_ARM
+llvm_targets_Lanai
+llvm_targets_Mips
+llvm_targets_MSP430
+llvm_targets_PowerPC
+llvm_targets_Sparc
+llvm_targets_SystemZ
+llvm_targets_XCore
 pie
 python_targets_python3_5
 sane_backends_abaton
