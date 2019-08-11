@@ -32,7 +32,7 @@
 =kde-plasma/plasma-meta-5.14.5::gentoo				#better in other overlay
 =media-fonts/alegreya-sans-2.008::gentoo				#less use flags so less customisability
 =media-libs/alsa-lib-1.1.8::gnux32							#missing use flag
-=media-libs/libepoxy-1.5.3::gnux32							#x32 specific patch
+=media-libs/libepoxy-1.5.3-r1::gnux32					#x32 specific patch
 =media-libs/libid3tag-0.15.1b-r5::rinaldus-overlay	#use flag not defined in ebuild
 =media-libs/mesa-18.3.6::musl								#musl specific patches
 =media-libs/x264-0.0.20170701::lanodanOverlay	#old
@@ -49,6 +49,7 @@
 =net-misc/aria2-1.34.0-r1::libressl							#applies libressl specific patch
 =perl-core/File-Temp-0.230.400-r1::argent-main	#better in other overlay
 =sys-apps/attr-2.4.47-r2::musl									#musl specific patches
+=sys-apps/tcp-wrappers-7.6.22-r1::musl					#musl specific patch
 =sys-block/parted-3.2-r2::musl								#musl specific
 =sys-devel/binutils-2.31.1-r6::gentoo						#better in other overlay
 =sys-devel/gcc-8.3.0-r1::musl									#musl specific patches
