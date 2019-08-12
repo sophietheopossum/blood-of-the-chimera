@@ -6,12 +6,13 @@ EAPI=6
 DESCRIPTION="Meta file to pull in packages to help keep the world file clean"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="+composite-gui +browser +composite dev discord +efi +fat flash +fluxbox fslint +index irc +network-tray openbox overlay +processviewer remote-desktop spreadsheet steam +sudo text-editor +xfs"
+IUSE="+composite-gui +browser +composite dev discord +efi +fat flash +fluxbox fslint +index irc +network-tray openbox overlay +processviewer remote-desktop spreadsheet steam +sudo terminal +terminal-fast text-editor +xfs"
 
 REQUIRED_USE="
 composite-gui? ( composite )
 efi? ( fat )
 || ( fluxbox openbox )
+|| ( terminal terminal-fast )
 "
 
 RDEPEND="
@@ -34,6 +35,8 @@ RDEPEND="
 	spreadsheet? ( app-office/gnumeric )
 	steam? ( games-util/steam-launcher )
 	sudo? ( app-admin/sudo )
+	terminal? ( lxqt-base/lxqt-meta[terminal] )
+	terminal-fast? ( x11-terms/kitty )
 	text-editor? ( kde-plasma/plasma-meta[text-editor] )
 	xfs? ( sys-fs/xfsprogs )
 	virtual/linux-sources[fat?]

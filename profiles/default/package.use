@@ -3,7 +3,7 @@ dev-libs/gobject-introspection -python_single_target_python2_7
 dev-libs/libical -vala
 dev-util/gdbus-codegen -python_single_target_python2_7
 kde-plasma/plasma-meta -minimal -sddm -pulseaudio
-lxqt-base/lxqt-meta minimal sddm sudo terminal
+lxqt-base/lxqt-meta minimal sddm sudo
 sys-apps/dbus X
 sys-apps/portage -xattr
 sys-devel/gcc -jit

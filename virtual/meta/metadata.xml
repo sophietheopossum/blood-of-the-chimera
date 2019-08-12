@@ -26,6 +26,8 @@
 		<flag name="spreadsheet">install <pkg>app-office/gnumeric</pkg> to handle spreadsheets</flag>
 		<flag name="steam">install <pkg>games-util/steam-launcher</pkg>, a software distribution platform with one of the largest game catalogues and proton, a built in version of wine</flag>
 		<flag name="sudo">install <pkg>app-admin/sudo</pkg> in order to run software as root (admin)</flag>
+		<flag name="terminal">Install <pkg>x11-terms/qterminal</pkg>, a simple terminal emulator often bundled with lxqt</flag>
+		<flag name="terminal-fast">install <pkg>x11-terms/kitty</pkg>, a terminal emulator that utilises hardware acceleration to run fast while using theoretically less resources</flag>
 		<flag name="text-editor">install <pkg>kde-apps/kate</pkg>, a full gui text-editor featuring a unique graphical scrollbar</flag>
 		<flag name="xfs">ensure xfs filesystem support is built, xfs has some of the best performance on kernel 5+ for SSDs</flag>
 	</use>
