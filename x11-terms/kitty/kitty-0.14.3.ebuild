@@ -46,7 +46,6 @@ DEPEND="${RDEPEND}
 	sys-libs/ncurses
 	virtual/pkgconfig
 "
-[[ ${PV} == *9999 ]] && DEPEND+=" >=dev-python/sphinx-1.7[${PYTHON_USEDEP}]"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-flags.patch
