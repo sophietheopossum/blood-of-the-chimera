@@ -98,4 +98,4 @@
 # required by net-irc/kvirc-5.0_pre20181205184837::gentoo[phonon]
 =media-libs/x264-0.0.20190214 ~amd64
 # required by virtual/meta-6::prototype99[terminal-fast]
-=x11-terms/kitty-0.14.2 ~amd64
+=x11-terms/kitty-0.14.3 ~amd64

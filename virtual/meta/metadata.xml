@@ -6,6 +6,7 @@
 		<name>Seirra Blake</name>
 	</maintainer>
 	<use>
+		<flag name="archive">install <pkg>app-arch/xarchiver</pkg> in order to access archives with a gui</flag>
 		<flag name="browser">install firefox in order to browse the internet</flag>
 		<flag name="composite">install <pkg>x11-misc/compton</pkg> to enable compositing, a way to render extra effects and transparency in windows</flag>
 		<flag name="composite-gui">install <pkg>lxqt-base/compton-conf</pkg>, a gui to configure compton</flag>
