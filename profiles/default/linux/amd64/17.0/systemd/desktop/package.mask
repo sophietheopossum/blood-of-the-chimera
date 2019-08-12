@@ -1,0 +1,1 @@
+<sys-apps/kmod-26-r1		#no python3_7 support

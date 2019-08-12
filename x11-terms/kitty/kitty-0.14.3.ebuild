@@ -50,7 +50,7 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${P}-flags.patch
-	"${FILESDIR}"/${PN}-0.11.0-svg-icon.patch
+	"${FILESDIR}"/${P}-svg-icon.patch
 )
 
 src_prepare() {
