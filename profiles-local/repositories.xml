@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>redcore-desktop</name>
+		<description lang="en">official redcore repository</description>
+		<homepage>https://redcorelinux.org/</homepage>
+		<owner type="person">
+			<email>venerix@redcorelinux.org</email>
+			<name>venerix</name>
+		</owner>
+		<source type="git">https://gitlab.com/redcore/redcore-desktop.git</source>
+	</repo>
+</repositories>
