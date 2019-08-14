@@ -99,3 +99,8 @@
 =media-libs/x264-0.0.20190214 ~amd64
 # required by virtual/meta-6::prototype99[terminal-fast]
 =x11-terms/kitty-0.14.3 ~amd64
+# required by dev-libs/glib-2.61.1::lanodanOverlay
+# required by gnome-extra/zenity-3.30.0::gentoo
+# required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay
+# required by virtual/meta-7::prototype99[steam]
+=dev-util/gdbus-codegen-2.61.1 ~amd64

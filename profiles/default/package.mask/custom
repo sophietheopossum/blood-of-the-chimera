@@ -6,7 +6,10 @@
 =dev-lang/rust-1.35.0-r666						#bad versioning
 =dev-lang/python-exec-9999					#bad versioning
 #<=dev-lang/rust-bin-9999						#temporarily unmasked due to build issues
+=dev-libs/fribidi-1.0.5-r1337						#bad versioning
 =dev-libs/glib-9999									#bad versioning
+=dev-libs/mpc-1.0.3-r1337						#eapi 4, bad dependencies
+=dev-libs/mpfr-3.1.6-r1337						#bad versioning
 =dev-qt/qtcore-5.9999								#bad versioning
 =dev-qt/qtdbus-5.9999							#bad versioning
 =dev-qt/qtdeclarative-5.9999					#bad versioning
@@ -21,12 +24,16 @@
 =media-sound/pulseaudio-9999				#bad versioning
 =media-video/vlc-3.0.9999						#bad versioning
 =media-video/vlc-9999							#bad versioning
-sys-apps/modutils									#conflicts with systemd
+=sys-boot/grub-2.02-r1337						#bad versioning
 =sys-fs/udev-9999									#bad versioning
+=virtual/cargo-1337-r1								#bad versioning, less package support
+=virtual/notification-daemon-1337			#dummy ebuild
 =virtual/rust-1.34.1-r666							#bad versioning
 =virtual/rust-1.34.2-r666							#bad versioning
 =virtual/rust-1.35.0-r666							#bad versioning
+=virtual/rust-1337										#bad versioning, less package support
 =www-client/firefox-66.0.5						#old
 =www-client/firefox-68.0_beta6				#bad versioning
 =x11-libs/libfontenc-9999							#bad versioning
 =x11-libs/gtk+-2.24.32-r666						#bad versioning
+=x11-libs/gtk+-2.24.32-r1337					#bad versioning

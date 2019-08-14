@@ -71,6 +71,7 @@
 =virtual/modutils-0-r1::calculate								#eapi 2, less architecture support
 =virtual/tmpfiles-0::srcshelton									#pointless modification, just mask the whole package?
 <=www-client/firefox-67.0::pg_overlay					#better in other overlay, old
+=x11-base/xorg-drivers-1.20::redcore						#dummy ebuild
 =x11-base/xorg-server-1.20.3::musl						#arm only
 =x11-libs/libdrm-2.4.97::musl									#musl specific patch
 =x11-libs/libpciaccess-0.14::musl							#musl specific patches
