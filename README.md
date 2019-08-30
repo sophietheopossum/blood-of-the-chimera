@@ -61,6 +61,9 @@ work in progress. software that allows the manipulation of pdf files.
 ### `dev-libs/glib`
 The GLib library of C routines
 
+### `dev-libs/libcroco`
+features a fixed dependency (gtk-doc pulls in gtk-doc-am and is also required it seems) and a more up to date homepage url
+
 ### `dev-libs/properties-cpp`
 elementary overlay's ebuild with a build error fixed and some improvements in ebuild writing
 
