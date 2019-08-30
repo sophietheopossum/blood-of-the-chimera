@@ -240,6 +240,16 @@
 		<source type="git">git+ssh://git@github.com/mrueg/mrueg-overlay.git</source>
 		<feed>https://github.com/mrueg/mrueg-overlay/commits/master.atom</feed>
 	</repo>
+	<repo quality="stable" status="unofficial">
+		<name>n8x0</name>
+		<description lang="en">Packages to support Nokia Internet Tablets (N8x0)</description>
+		<homepage>http://github.com/slonopotamus/n8x0-overlay</homepage>
+		<owner type="person">
+			<email>luke_n8x0_overlay@dashjr.org</email>
+			<name>Luke-Jr</name>
+		</owner>
+		<source type="git">https://github.com/slonopotamus/n8x0-overlay.git</source>
+	</repo>
 	<repo priority="50" quality="experimental" status="unofficial">
 		<name>necromancy</name>
 		<description>This repository contains the ebuild from Necrose99 (some are works in progress) </description>
