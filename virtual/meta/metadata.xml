@@ -22,6 +22,7 @@
 		<flag name="network-tray">install <pkg>gnome-extra/nm-applet</pkg>, a universal system tray that helps with </flag>
 		<flag name="openbox">use openbox as the window manager of choice. openbox is more widely supported including having its own configuration gui</flag>
 		<flag name="overlay">install <pkg>app-portage/layman</pkg> to handle overlays, not using overlays is generally not supported</flag>
+		<flag name="pdf">install <pkg>app-text/mupdf</pkg> to handle pdfs</flag>
 		<flag name="processviewer">install <pkg>kde-plasma/ksysguard</pkg>, a full gui task manager</flag>
 		<flag name="remote-desktop">install <pkg>net-misc/anydesk</pkg> to enable remote desktop functionality</flag>
 		<flag name="spreadsheet">install <pkg>app-office/gnumeric</pkg> to handle spreadsheets</flag>

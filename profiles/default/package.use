@@ -1,9 +1,11 @@
 app-text/asciidoc -python_single_target_python2_7
+app-text/mupdf X opengl
 dev-libs/gobject-introspection -python_single_target_python2_7
 dev-libs/libical -vala
 dev-util/gdbus-codegen -python_single_target_python2_7
 kde-plasma/plasma-meta -minimal -sddm -pulseaudio
 lxqt-base/lxqt-meta minimal sddm sudo
+net-misc/networkmanager -vanilla
 sys-apps/dbus X
 sys-apps/portage -xattr
 sys-devel/gcc -jit
@@ -295,3 +297,11 @@ app-text/poppler cairo qt5
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
 # required by steam-launcher (argument)
 >=dev-libs/libffi-3.2.1 abi_x86_32
+# required by media-libs/libcanberra-0.30-r5::gentoo[gtk3]
+# required by kde-frameworks/knotifications-5.60.0::gentoo[-phonon]
+# required by kde-plasma/ksysguard-5.15.5::gentoo
+# required by kde-plasma/plasma-meta-5.15.5-r2::prototype99[processviewer]
+# required by virtual/meta-7::prototype99[processviewer]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/gtk+-3.24.9-r1 X

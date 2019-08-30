@@ -104,3 +104,9 @@
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay
 # required by virtual/meta-7::prototype99[steam]
 =dev-util/gdbus-codegen-2.61.1 ~amd64
+# required by dev-libs/gobject-introspection-1.60.2::dantrell-gnome-3-32
+# required by x11-libs/gtk+-3.24.5-r1337::redcore[introspection]
+# required by gnome-extra/zenity-3.28.1::dantrell-gnome-3-28
+# required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay
+# required by virtual/meta-7::prototype99[steam]
+=dev-libs/gobject-introspection-common-1.60.2 ~amd64
