@@ -44,3 +44,4 @@
 =x11-libs/libfontenc-9999								#bad versioning
 =x11-libs/gtk+-2.24.32-r666							#bad versioning
 =x11-libs/gtk+-2.24.32-r1337						#bad versioning
+>=x11-terms/xterm-0										#not needed at all

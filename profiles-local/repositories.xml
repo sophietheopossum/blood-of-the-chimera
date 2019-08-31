@@ -197,7 +197,7 @@
 		<feed>https://github.com/Heather/lucy-overlay/commits/master.atom</feed>
 	</repo>
 	<repo priority="50" quality="experimental" status="unofficial">
-		<name>MasterLay</name>
+		<name>masterlay</name>
 		<description lang="en">Gentoo overlay</description>
 		<homepage>https://bitbucket.org/thankjura/gentoo-masterlay</homepage>
 		<owner type="person">
