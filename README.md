@@ -155,7 +155,7 @@ Low Level Virtual Machine (LLVM) is:
 Has additional clang use flag that adds the lld patch seen at https://gcc.gnu.org/ml/gcc-patches/2018-10/msg01240.html
 
 ### `sys-kernel/gentoo-sources`
-older builds of gentoo sources. 4.16.0 is one of the few versions not to exhibit the following bug that affects certain btrfs systems without initramfs: https://bugzilla.kernel.org/show_bug.cgi?id=89721
+see readme in folder
 
 ### `virtual/linux-sources`
 virtual package designed to accomodate almost all kernel ebuilds present in overlays
