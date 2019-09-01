@@ -20,6 +20,7 @@
 =sys-apps/dbus-broker-18 ~amd64
 =sys-config/ltoize-0.9.3-r2
 =sys-kernel/gentoo-sources-5.1.11 ~amd64
+=sys-kernel/gentoo-sources-5.2.5 ~amd64
 =virtual/linux-sources-3-r2
 =virtual/linux-sources-5
 =virtual/rust-1.35.0
