@@ -297,6 +297,18 @@
     		<source type="git">git@github.com:necrose99/necromancy-overlay.git</source>
 		 <feed>https://github.com/necrose99/necromancy-overlay/commits/master.atom</feed>
 	</repo>
+	<repo quality="experimental" status="unofficial">
+		<name>odroidc1-overlay</name>
+		<description>Odroid-C1 Overlay</description>
+		<homepage>https://github.com/nemunaire/odroidc1-overlay</homepage>
+		<owner>
+			<email>nemunaire@nemunai.re</email>
+			<name>nemunaire</name>
+		</owner>
+		<source type="git">https://github.com/nemunaire/odroidc1-overlay.git</source>
+		<source type="git">git://github.com:nemunaire/odroidc1-overlay.git</source>
+		<source type="git">git@github.com:nemunaire/odroidc1-overlay.git</source>
+	</repo>
 	<repo priority="50" quality="experimental" status="unofficial">
 		<name>oiledmachine-overlay</name>
 		<description lang="en">Another Gentoo Portage Overlay ebuild repository containing enhancements, C# bindings, game developer libraries. </description>
