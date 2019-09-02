@@ -80,6 +80,7 @@
 =sys-apps/acl-2.2.52-r1::argent-main														#old
 =sys-apps/attr-2.4.47-r2::musl																	#musl specific patches
 =sys-apps/dbus-broker-18::dantrell-gnome											#patch doesn't work
+=sys-apps/shadow-4.6::muslx32																#missing split-usr use flag
 =sys-apps/tcp-wrappers-7.6.22-r1::argent-main										#old
 =sys-apps/tcp-wrappers-7.6.22-r1::musl													#musl specific patch
 =sys-apps/attr-2.4.47-r2::argent-main														#old
@@ -90,7 +91,9 @@
 =sys-devel/gettext-0.19.8.1::dantrell-gnome											#bad keywording, unnecessary quotes
 =sys-fs/e2fsprogs-1.44.5::gnux32															#x32 specific patch
 =sys-libs/libunwind-1.3_rc1:7::ineluctable-overlay									#old
+=sys-apps/findutils-4.6.0-r1::muslx32														#old, no supported python, missing patch
 =sys-auth/polkit-0.115-r4::musl																#musl specific patch
+=sys-devel/gettext-0.19.8.1::muslx32														#old, missing patch
 =sys-fs/e2fsprogs-1.45.2::gnux32															#x32 specific patch
 =sys-kernel/linux-headers-4.14-r1::musl													#musl specific patches
 =sys-libs/libutempter-1.1.6-r2::musl														#musl specific patch
@@ -114,27 +117,3 @@
 =x11-themes/adwaita-icon-theme-3.30.1::dantrell-gnome-3-30				#bad keywording
 =x11-themes/adwaita-icon-theme-3.32.0::dantrell-gnome-3-32				#bad keywording, unnecessary quotes
 =x11-themes/gtk-engines-adwaita-3.28::dantrell-gnome						#bad keywording, unnecessary quotes
-<dev-libs/libgpg-error-1.36
-<dev-libs/libassuan-2.5.1
-<dev-util/meson-0.50.1
-<net-libs/libpsl-0.21.0
-<dev-libs/libgcrypt-1.8.3
-<dev-lang/spidermonkey-60.5.2_p0-r2
-<dev-util/glib-utils-2.58.3
-<sys-apps/dbus-1.12.16
-<gnome-base/gnome-common-3.18.0-r1
-<x11-libs/gdk-pixbuf-2.38.1
-<net-misc/modemmanager-1.8.2-r1
-<dev-util/gtk-update-icon-cache-3.24.8
-<net-wireless/bluez-5.50-r3
-<app-text/poppler-0.79.0
-<net-print/cups-filters-1.21.6
-<x11-libs/gtk+-3.24.8
-<x11-themes/adwaita-icon-theme-3.30.1
-<gnome-extra/zenity-3.30.0
-<x11-themes/gtk-engines-adwaita-3.28
-<app-crypt/gnupg-2.2.17
-<sys-auth/pambase-20150213-r2
-<sys-fs/udisks-2.8.2
-<gnome-extra/nm-applet-1.8.20
-<sys-apps/dbus-broker-18
