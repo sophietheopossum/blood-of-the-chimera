@@ -1,3 +1,4 @@
+app-portage/layman subversion
 app-text/asciidoc -python_single_target_python2_7
 app-text/mupdf X opengl
 dev-libs/gobject-introspection -python_single_target_python2_7

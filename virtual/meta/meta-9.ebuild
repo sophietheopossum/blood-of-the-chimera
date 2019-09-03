@@ -20,7 +20,7 @@ RDEPEND="
 	browser? ( www-client/firefox-bin )
 	composite? ( x11-misc/compton )
 	composite-gui? ( lxqt-base/compton-conf )
-	dev? ( app-portage/repoman )
+	dev? ( app-portage/repoman dev-util/repo-gen )
 	discord? ( net-im/discord-bin )
 	fat? ( sys-fs/dosfstools )
 	flash? ( www-plugins/adobe-flash )

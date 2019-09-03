@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sophietheopossum@yandex.com</email>
+		<name>Seirra Blake</name>
+	</maintainer>
+	<use>
+		<flag name="archive">install <pkg>app-arch/xarchiver</pkg> in order to access archives with a gui</flag>
+		<flag name="browser">install firefox in order to browse the internet</flag>
+		<flag name="composite">install <pkg>x11-misc/compton</pkg> to enable compositing, a way to render extra effects and transparency in windows</flag>
+		<flag name="composite-gui">install <pkg>lxqt-base/compton-conf</pkg>, a gui to configure compton</flag>
+		<flag name="dev">install <pkg>app-portage/repoman</pkg>, a tool designed to aid in managing overlays</flag>
+		<flag name="discord">install discord, an online messenger and games store</flag>
+		<flag name="efi">ensure efi support is built, most modern systems need this</flag>
+		<flag name="fat">ensure fat filesystem support is built, in many cases this should not be the only filesystem</flag>
+		<flag name="flash">ensure the <pkg>www-plugins/adobe-flash</pkg> plugin is installed. flash is a dying platform, however there are historic games and animations made with it</flag>
+		<flag name="fluxbox">use <pkg>x11-wm/fluxbox</pkg> as the window manager of choice. typically this has better performance and can  even be used as a full desktop solution if so desired</flag>
+		<flag name="fslint">install <pkg>app-misc/fslint</pkg>, this is a useful tool for finding duplicate files, empty directories and other such things to help keep a system clean</flag>
+		<flag name="index">install mlocate to allow indexing which helps make file searches faster</flag>
+		<flag name="irc">install <pkg>net-irc/kvirc</pkg> in order to use irc. this is often a preferred way to get volunteer support with issues or make quick queries</flag>
+		<flag name="network-tray">install <pkg>gnome-extra/nm-applet</pkg>, a universal system tray that helps with </flag>
+		<flag name="openbox">use openbox as the window manager of choice. openbox is more widely supported including having its own configuration gui</flag>
+		<flag name="overlay">install <pkg>app-portage/layman</pkg> to handle overlays, not using overlays is generally not supported</flag>
+		<flag name="pdf">install <pkg>app-text/mupdf</pkg> to handle pdfs</flag>
+		<flag name="processviewer">install <pkg>kde-plasma/ksysguard</pkg>, a full gui task manager</flag>
+		<flag name="remote-desktop">install <pkg>net-misc/anydesk</pkg> to enable remote desktop functionality</flag>
+		<flag name="spreadsheet">install <pkg>app-office/gnumeric</pkg> to handle spreadsheets</flag>
+		<flag name="steam">install <pkg>games-util/steam-launcher</pkg>, a software distribution platform with one of the largest game catalogues and proton, a built in version of wine</flag>
+		<flag name="sudo">install <pkg>app-admin/sudo</pkg> in order to run software as root (admin)</flag>
+		<flag name="terminal">Install <pkg>x11-terms/qterminal</pkg>, a simple terminal emulator often bundled with lxqt</flag>
+		<flag name="terminal-fast">install <pkg>x11-terms/kitty</pkg>, a terminal emulator that utilises hardware acceleration to run fast while using theoretically less resources</flag>
+		<flag name="text-editor">install <pkg>kde-apps/kate</pkg>, a full gui text-editor featuring a unique graphical scrollbar</flag>
+		<flag name="xfs">ensure xfs filesystem support is built, xfs has some of the best performance on kernel 5+ for SSDs</flag>
+	</use>
+</pkgmetadata>
