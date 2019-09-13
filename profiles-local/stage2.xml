@@ -1456,7 +1456,7 @@
       <email>me@junc.org</email>
       <name>Benny Pedersen</name>
     </owner>
-	<source type="git">https://github.com/gentoo-mirror/fidonet.git</source>
+       <source type="git">https://github.com/gentoo-mirror/fidonet.git</source>
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>FireBurn</name>
@@ -3388,6 +3388,18 @@
     <source type="git">git://github.com/jcpetkovich/overlay-petkovich.git</source>
     <source type="git">git@github.com:jcpetkovich/overlay-petkovich.git</source>
     <feed>https://github.com/jcpetkovich/overlay-petkovich/commits/master.atom</feed>
+  </repo>
+  <repo quality="experimental" status="unofficial">
+    <name>pf4public</name>
+    <description lang="en">Personal overlay</description>
+    <homepage>https://github.com/PF4Public/gentoo-overlay</homepage>
+    <owner type="person">
+      <email>PF4Public@mail.ru</email>
+      <name>PF4Public</name>
+    </owner>
+    <source type="git">https://github.com/PF4Public/gentoo-overlay.git</source>
+    <source type="git">git+ssh://git@github.com/PF4Public/gentoo-overlay.git</source>
+    <feed>https://github.com/PF4Public/gentoo-overlay/commits/master.atom</feed>
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>pg_overlay</name>

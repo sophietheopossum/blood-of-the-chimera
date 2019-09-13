@@ -1,0 +1,217 @@
+--- stage1.xml  2019-09-03 11:30:39.545343648 +0100
++++ stage2.xml  2019-09-03 16:25:51.739948559 +0100
+@@ -1,63 +1,6 @@
+ <?xml version='1.0' encoding='utf-8'?>
+ <!DOCTYPE repositories SYSTEM "http://www.gentoo.org/dtd/repositories.dtd">
+ <repositories xmlns="" version="1.0">
+-  <!--
+-  SYN
+-  When adding repositories, please keep this file ordered by repository name.
+-  * TEMPLATE TO COPY'N'PASTE UNOFFICIAL REPOSITORIES
+-    <repo quality="experimental" status="unofficial">
+-      <name>XXXXXX</name>
+-      <description lang="en">XXXXXX</description>
+-      <homepage>XXXXXX</homepage>
+-      <owner type="person">
+-        <email>XXXXXX</email>
+-        <name>XXXXXX</name>
+-      </owner>
+-      <source type="git">XXXXXX</source>
+-      <feed>XXXXXXXXX</feed>
+-    </repo>
+-  * GENTOO TEMPLATE
+-    <repo quality="experimental" status="unofficial">
+-      <name>XXXXX</name>
+-      <description lang="en">XXXXXX</description>
+-      <homepage>https://cgit.gentoo.org/XXXX/xxxx</homepage>
+-      <owner type="person">
+-        <email>XXXXX</email>
+-        <name>XXXXX</name>
+-      </owner>
+-      <source type="git">https://anongit.gentoo.org/git/XXXX/xxxx.git</source>
+-      <source type="git">git+ssh://git@git.gentoo.org/XXXX/xxxx.git</source>
+-      <feed>https://cgit.gentoo.org/XXXX/xxxx/atom/</feed>
+-    </repo>
+-  * GITHUB TEMPLATE
+-    <repo quality="experimental" status="unofficial">
+-      <name>XXXXX</name>
+-      <description lang="en">XXXXXX</description>
+-      <homepage>https://github.com/XXXX/xxxx</homepage>
+-      <owner type="person">
+-        <email>XXXXX</email>
+-        <name>XXXXX</name>
+-      </owner>
+-      <source type="git">https://github.com/XXXX/xxxx.git</source>
+-      <source type="git">git+ssh://git@github.com/XXXX/xxxx.git</source>
+-      <feed>https://github.com/XXXX/xxxx/commits/master.atom</feed>
+-    </repo>
+-  * BITBUCKET TEMPLATE
+-    <repo quality="experimental" status="unofficial">
+-      <name>XXXX</name>
+-      <description lang="en">XXXXXX</description>
+-      <homepage>https://bitbucket.org/XXXX/xxxx</homepage>
+-      <owner type="person">
+-        <email>XXXXX</email>
+-        <name>XXXXX</name>
+-      </owner>
+-      <source type="mercurial">https://bitbucket.org/XXXX/xxxx</source>
+-      <source type="mercurial">ssh://hg@bitbucket.org/XXXX/xxxx</source>
+-      <feed>https://bitbucket.org/XXXX/xxxx/atom</feed>
+-      <feed>https://bitbucket.org/XXXX/xxxx/rss</feed>
+-    </repo>
+-  FIN
+-  -->
+   <repo quality="experimental" status="unofficial">
+     <name>0bs1d1an</name>
+     <description lang="en">Personal overlay</description>
+@@ -924,7 +867,6 @@
+     <source type="git">git://anongit.gentoo.org/dev/chutzpah</source>
+     <source type="git">git+ssh://git@git.gentoo.org/dev/chutzpah.git</source>
+     <feed>https://cgit.gentoo.org/dev/chutzpah.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/dev/chutzpah.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="official">
+     <name>cj-overlay</name>
+@@ -1399,7 +1341,6 @@
+     <source type="git">git://anongit.gentoo.org/repo/proj/emacs.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/repo/proj/emacs.git</source>
+     <feed>https://cgit.gentoo.org/repo/proj/emacs.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/repo/proj/emacs.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>enlightenment-live</name>
+@@ -1483,7 +1424,7 @@
+       <email>ext@sidvind.com</email>
+       <name>David Sveningsson</name>
+     </owner>
+-    <source type="svn">svn://sidvind.com/overlays/ext-devlibs</source>
++   <source type="git">https://github.com/gentoo-mirror/ext-devlibs.git</source>
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>farmboy0</name>
+@@ -1515,7 +1456,7 @@
+       <email>me@junc.org</email>
+       <name>Benny Pedersen</name>
+     </owner>
+-    <source type="rsync">rsync://fidonet.overlay.junc.org/fidonet/</source>
++       <source type="git">https://github.com/gentoo-mirror/fidonet.git</source>
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>FireBurn</name>
+@@ -1798,7 +1739,6 @@
+     <source type="git">git://anongit.gentoo.org/proj/gamerlay.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/proj/gamerlay.git</source>
+     <feed>https://cgit.gentoo.org/proj/gamerlay.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/proj/gamerlay.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>genthree</name>
+@@ -1818,7 +1758,6 @@
+     <owner type="project">
+       <email>bug-wranglers@gentoo.org</email>
+     </owner>
+-    <source type="rsync">rsync://rsync.gentoo.org/gentoo-portage</source>
+     <source type="git">https://anongit.gentoo.org/git/repo/gentoo.git</source>
+     <source type="git">git://anongit.gentoo.org/repo/gentoo.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/repo/gentoo.git</source>
+@@ -1945,7 +1884,6 @@
+     <source type="git">git://anongit.gentoo.org/proj/gnome.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/proj/gnome.git</source>
+     <feed>https://cgit.gentoo.org/proj/gnome.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/proj/gnome.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>gnome-next</name>
+@@ -2758,7 +2696,6 @@
+     <source type="git">git://anongit.gentoo.org/proj/lisp.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/proj/lisp.git</source>
+     <feed>https://cgit.gentoo.org/proj/lisp.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/proj/lisp.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>lmiphay</name>
+@@ -2782,7 +2719,6 @@
+     <source type="git">https://anongit.gentoo.org/git/dev/lordvan.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/dev/lordvan.git</source>
+     <feed>https://cgit.gentoo.org/dev/lordvan.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/dev/lordvan.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>lto-overlay</name>
+@@ -2808,7 +2744,6 @@
+     <source type="git">git://anongit.gentoo.org/proj/lua.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/proj/lua.git</source>
+     <feed>https://cgit.gentoo.org/proj/lua.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/proj/lua.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>luke-jr</name>
+@@ -2831,7 +2766,6 @@
+     <source type="git">git://anongit.gentoo.org/user/luman.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/user/luman.git</source>
+     <feed>https://cgit.gentoo.org/user/luman.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/user/luman.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>luxifer</name>
+@@ -2869,7 +2803,6 @@
+     <source type="git">git://anongit.gentoo.org/dev/maekke.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/dev/maekke.git</source>
+     <feed>https://cgit.gentoo.org/dev/maekke.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/dev/maekke.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>maggu2810-overlay</name>
+@@ -3573,7 +3506,7 @@
+       <email>polynomial-c@gentoo.org</email>
+       <name>Lars Wendler</name>
+     </owner>
+-    <source type="rsync">rsync://rsync.gentoofan.org/poly-c</source>
++    <source type="git">https://github.com/gentoo-mirror/poly-c.git</source>
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>portage-backup</name>
+@@ -3787,7 +3720,7 @@
+       <email>heroxbd@gentoo.org</email>
+       <name>Benda Xu</name>
+     </owner>
+-    <source type="rsync">rsync://roverlay.dev.gentoo.org/roverlay</source>
++    <source type="git">https://github.com/gentoo-mirror/R_Overlay.git</source>
+   </repo>
+   <repo quality="experimental" status="official">
+     <name>rafaelmartins</name>
+@@ -4551,7 +4484,6 @@
+     <source type="git">git://anongit.gentoo.org/repo/user/superposition.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/repo/user/superposition.git</source>
+     <feed>https://cgit.gentoo.org/repo/user/superposition.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/repo/user/superposition.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="official">
+     <name>swegener</name>
+@@ -4563,7 +4495,7 @@
+     <owner type="person">
+       <email>swegener@gentoo.org</email>
+     </owner>
+-    <source type="rsync">rsync://rsync.gentoo.stealer.net/swegener-overlay/</source>
++    <source type="git">https://github.com/gentoo-mirror/swegener.git</source>
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>SwordArMor</name>
+@@ -5245,7 +5177,7 @@
+     <owner type="person">
+       <email>casta@xwing.info</email>
+     </owner>
+-    <source type="rsync">rsync://gentoo.xwing.info/xwing-overlay</source>
++    <source type="git">https://github.com/gentoo-mirror/xwing.git</source>
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>yandex</name>
+@@ -5368,7 +5300,7 @@
+     <owner type="person">
+       <email>ycarus@zugaina.org</email>
+     </owner>
+-    <source type="rsync">rsync://gentoo.zugaina.org/zugaina-portage</source>
++    <source type="git">https://github.com/gentoo-mirror/zugaina.git</source>
+   </repo>
+   <repo quality="experimental" status="official">
+     <name>zx2c4</name>

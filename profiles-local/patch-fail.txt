@@ -1,0 +1,4 @@
+To: sophietheopossum@yandex.ru
+From: sophietheopossum@yandex.ru
+Subject: patch failed
+patch can't apply, try regenerating the patch

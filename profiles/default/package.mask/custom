@@ -9,15 +9,17 @@
 #<=dev-lang/rust-bin-9999							#temporarily unmasked due to build issues
 <dev-lang/spidermonkey-60.5.2_p0-r2		#old
 <dev-lang/vala-0.42.7									#bad keywording, unnecessary quotes, missing valadoc flag, old
+<dev-libs/appstream-glib-0.7.15					#old
 =dev-libs/fribidi-1.0.5-r1337							#bad versioning
 =dev-libs/glib-9999										#bad versioning
-<dev-util/glib-utils-2.58.3								#old
 <dev-libs/libassuan-2.5.1								#old
 <dev-libs/libgcrypt-1.8.3								#old
 <dev-libs/libgpg-error-1.36							#old
 <dev-libs/libunistring-0.9.10							#old
 =dev-libs/mpc-1.0.3-r1337							#eapi 4, bad dependencies
 =dev-libs/mpfr-3.1.6-r1337							#bad versioning
+<dev-python/ply-3.9										#old
+<dev-python/setuptools-40.6.3					#old
 =dev-qt/qtcore-5.9999									#bad versioning
 =dev-qt/qtdbus-5.9999								#bad versioning
 =dev-qt/qtdeclarative-5.9999						#bad versioning
@@ -26,6 +28,7 @@
 =dev-qt/qttest-5.9999									#bad versioning
 =dev-qt/qtwidgets-5.9999							#bad versioning
 =dev-util/gdbus-codegen-666						#pulls in undesirable glib version
+<dev-util/glib-utils-2.58.3								#old
 <dev-util/gtk-update-icon-cache-3.24.8		#old
 <dev-util/meson-0.50.1								#old
 <gnome-base/gnome-common-3.18.0-r1	#old
@@ -48,6 +51,7 @@
 <sys-apps/dbus-broker-18							#old
 <sys-auth/pambase-20150213-r2				#old
 =sys-boot/grub-2.02-r1337							#bad versioning
+<sys-devel/gettext-0.19.8.1							#old
 =sys-fs/udev-9999										#bad versioning
 <sys-fs/udisks-2.8.2										#old
 =sys-power/upower-0.99.10.20181114		#that's a lot of patches, bad versioning

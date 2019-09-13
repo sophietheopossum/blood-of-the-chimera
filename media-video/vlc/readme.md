@@ -1,4 +1,5 @@
 #3.0.6-r3
+includes previous improvements
 ::prototype99
 -make it clear newer x264 is needed for 10bit use flag
 
@@ -15,6 +16,7 @@
 -patch renamed to make it clearer where bugs are located, obseletes need to put bug number in comment
 -move x264 if statement to the required_use
 -add spatialaudio dependency
+-remove unneeded quote marks
 
 ::rindeal
 -arm optimisation

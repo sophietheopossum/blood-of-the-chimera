@@ -1,3 +1,5 @@
+=app-arch/gcab-1.2::dantrell-gnome														#seems dated
+=app-crypt/gcr-3.28.1::dantrell-gnome													#dependencies seem dated
 =app-crypt/gnupg-2.2.17::dantrell-gnome												#bad keywording, unnecessary quotes
 =app-emulation/snapd-2.38::fol4																#better in other overlay
 =app-emulation/snapd-2.38::JamesB192												#better in other overlay
@@ -12,11 +14,14 @@
 =dev-lang/swig-4.0.0::gentoo-zh																#old eapi
 =dev-lang/vala-0.42.7::dantrell-gnome													#bad keywording, unnecessary quotes, missing valadoc flag
 =dev-lang/vala-0.44.7::dantrell-gnome													#bad keywording, unnecessary quotes, missing valadoc flag
+=dev-libs/appstream-glib-0.7.9::musl														#musl specific patch
 =dev-libs/boost-1.65.0::gnux32																#x32 specific patch
 =dev-libs/boost-1.70.0::gnux32																#better in other overlay
 =dev-libs/glib-2.61.1::gnome-next															#less python compatibility, less use flags, no separate packages
 =dev-libs/gmp-6.1.2::srcshelton																#no musl support
+=dev-libs/gmp-6.1.2-r1::gentoo																#no pgo
 =dev-libs/gobject-introspection-common-1.60.2::dantrell-gnome-3-32	#bad keywording, unnecessary quotes
+=dev-libs/json-glib-1.2.8::dantrell-gnome												#seems dated
 =dev-libs/json-glib-1.4.4::gnome-next														#disables optimisation
 =dev-libs/libassuan-2.5.1-r1::dantrell-gnome											#bad keywording, unnecessary quotes
 =dev-libs/libcroco-0.6.13::dantrell-gnome												#bad keywording, unnecessary quotes, bad dependency, old patches
@@ -36,6 +41,7 @@
 =dev-perl/HTML-Tagset-3.200.0-r1::argent-main									#better in other overlay
 =dev-perl/HTTP-Date-6.20.0-r1::argent-main											#better in other overlay
 =dev-perl/TimeDate-2.300.0::argent-main												#better in other overlay
+=dev-python/pycparser-2.14-r1000::progress											#odd use flag configuration
 =dev-python/pygtk-2.24.0-r4::dantrell-gnome											#bad keywording, unnecessary quotes, no numpy use flag
 =dev-python/PySocks-1.6.8::pentoo														#better in other overlay
 =dev-qt/qtgui-5.12.3-r1::poly-c																#disables avx2
@@ -76,6 +82,7 @@
 =net-libs/glib-networking-2.61.1::gnome-next											#depends on undesirable glib
 =net-libs/gnutls-3.6.7::gnux32																	#missing use flag
 =net-libs/libsoup-2.64.2:2.4::unity-gentoo												#missing use flags
+=net-mail/mailbase-1.1::argent-main														#old
 =net-misc/aria2-1.34.0-r1::libressl															#applies libressl specific patch
 =net-print/cups-filters-1.21.6::dantrell-gnome											#bad keywording, unnecessary quotes
 =perl-core/File-Temp-0.230.400-r1::argent-main									#better in other overlay
@@ -104,6 +111,7 @@
 =sys-process/procps-3.3.15-r1::poly-c													#behind on patches?
 =virtual/linux-sources-3-r9::calculate														#no firmware use flag
 =virtual/modutils-0-r1::calculate																#eapi 2, less architecture support
+=virtual/mta-1::argent-main																		#old
 =virtual/tmpfiles-0::srcshelton																	#pointless modification, just mask the whole package?
 =www-client/firefox-67.0::pg_overlay														#better in other overlay, old
 =x11-base/xorg-drivers-1.20::redcore														#dummy ebuild

@@ -112,3 +112,8 @@
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay
 # required by virtual/meta-7::prototype99[steam]
 =dev-libs/gobject-introspection-common-1.60.2 ~amd64
+# required by dev-libs/appstream-glib-0.7.15::dantrell-gnome
+# required by app-crypt/seahorse-3.32.2::dantrell-gnome-3-32
+=app-arch/gcab-1.1-r1 ~amd64
+# required by app-crypt/seahorse-3.32.2::dantrell-gnome-3-32
+=dev-libs/appstream-glib-0.7.15 **
