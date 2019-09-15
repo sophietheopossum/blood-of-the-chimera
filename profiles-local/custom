@@ -1,3 +1,4 @@
+=app-crypt/seahorse-3.32.2::dantrell-gnome-3-32									#missing dependency
 =app-arch/gcab-1.2::dantrell-gnome														#seems dated
 =app-crypt/gcr-3.28.1::dantrell-gnome													#dependencies seem dated
 =app-crypt/gnupg-2.2.17::dantrell-gnome												#bad keywording, unnecessary quotes
@@ -35,6 +36,7 @@
 =dev-libs/nspr-4.21::mozilla																		#less architecture support
 =dev-libs/openssl-1.0.2r::poly-c																#removes use flags, odd slotting
 =dev-libs/popt-1.16-r2::srcshelton															#use flag not defined in ebuild/missing use flag
+=dev-libs/libpwquality-1.4.0::pg_overlay													#less python compatibility
 =dev-perl/Authen-SASL-2.160.0-r1::argent-main									#better in other overlay
 =dev-perl/Digest-HMAC-1.30.0-r1::argent-main										#better in other overlay
 =dev-perl/File-Listing-6.40.0-r1::argent-main											#better in other overlay

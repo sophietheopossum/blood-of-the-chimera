@@ -49,6 +49,9 @@ Based off of Docker being available within this portage category, snapd is there
 ### `app-admin/system-config-printer`
 includes extra python3_7 compatibility
 
+### `app-crypt/seahorse`
+includes missing build time dependency, removed unnecessary speech marks, improved keywording. based on ::dantrell-gnome-3-32
+
 ### `app-emulation/wine-staging`
 Based off of the bobwya ebuild. Includes a patch to make the steam browser work without any extra effort on the user's end.
 
