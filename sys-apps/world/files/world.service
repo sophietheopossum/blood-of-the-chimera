@@ -2,7 +2,7 @@
 Description=service to generate repositories list
 
 [Service]
-ExecStart=repogen
+ExecStart=repo-gen
 
 [Install]
 WantedBy=multi-user.target
