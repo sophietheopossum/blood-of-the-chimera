@@ -321,6 +321,13 @@
 		<source type="git">git+ssh://git@github.com/orsonteodoro/oiledmachine-overlay.git</source>
 		<feed>https://github.com/orsonteodoro/oiledmachine-overlay/commits/master.atom</feed>
 	</repo>
+		<name>pgxn_overlay</name>
+		<description>Collection of ebuilds for PostgreSQL extensions</description>
+		<owner>
+			<email>ronan@dunklau.fr</email>
+		</owner>
+		<source type="git">git://github.com/rdunklau/pgxn_overlay.git</source>
+	</repo>
 	<repo priority="50" quality="experimental" status="unofficial">
 		<name>redcore</name>
 		<description lang="en">official redcore repository</description>

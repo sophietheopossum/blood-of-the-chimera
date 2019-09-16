@@ -1,0 +1,8 @@
+[Unit]
+Description=service to generate repositories list
+
+[Service]
+ExecStart=repogen
+
+[Install]
+WantedBy=multi-user.target

@@ -1,6 +1,0 @@
-To: sophietheopossum@yandex.ru
-From: sophietheopossum@yandex.ru
-Subject: new repositories available!
-run 
-sudo layman -f && sudo layman -a ALL
-to see them

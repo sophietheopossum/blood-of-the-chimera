@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
+inherit systemd
 
 DESCRIPTION="Meta file to pull in packages and scripts to help keep the world file clean"
 HOMEPAGE="https://prototype99.github.io"
@@ -46,5 +47,7 @@ RDEPEND="
 "
 
 src_install() {
-	use dev && newbin ${FILESDIR}/repo-gen.sh ${PN}
+	use dev && newbin ${FILESDIR}/repo-gen.sh repo-gen
+	use dev && systemd_dounit "${FILESDIR}/${PN}.service"
+	use dev && systemd_dounit "${FILESDIR}/${PN}.timer"
 }
