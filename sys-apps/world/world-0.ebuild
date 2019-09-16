@@ -9,6 +9,7 @@ HOMEPAGE="https://prototype99.github.io"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="archive +browser +composite +composite-gui dev discord +efi +fat flash +fluxbox fslint +index irc +network-tray openbox overlay pdf +processviewer remote-desktop spreadsheet steam +sudo terminal +terminal-fast text-editor +xfs"
+S="${WORKDIR}"
 
 REQUIRED_USE="
 composite-gui? ( composite )
