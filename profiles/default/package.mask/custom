@@ -40,8 +40,10 @@
 =media-fonts/urw-fonts-9.9.9-r120809		#bad versioning
 =media-libs/x264-9999								#bad versioning
 =media-sound/pulseaudio-9999					#bad versioning
+<media-video/vlc-3.0.8								#old
 =media-video/vlc-3.0.9999							#bad versioning
 =media-video/vlc-9999								#bad versioning
+<net-libs/glib-networking-2.61.90				#old
 <net-libs/libpsl-0.21.0									#old
 <net-misc/modemmanager-1.8.2-r1			#old
 =net-misc/rsync-9999									#bad versioning
