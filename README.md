@@ -12,34 +12,6 @@ Sync overlay:
 
     # layman -S
 
-## Add the Overlay Manually ##
-
-Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` package installed. please note this is a more complex process that many may view as having no true benefit.
-
-Next, create a custom `/etc/portage/repos.conf` entry for the **prototype99** overlay, so Portage knows what to do. Make sure that `/etc/portage/repos.conf` exists, and is a directory. Then, use your text editor without line wrapping:
-
-    # nano -w /etc/portage/repos.conf/prototype99.conf
-
-and put the following text in the file:
-
-```
-[gentoo-snappy]
-
-# An unofficial overlay that supports the installation of the "Snappy" backbone.
-# Maintainer: Seirra Blake (sophietheopossum@yandex.com)
-# Upstream Maintainer: Clayton "kefnab" Dobbs (clayton.dobbs@gosecur.us)/Zygmunt "zyga" Krynicki (me@zygoon.pl)
-
-location = /usr/local/portage/prototype99
-sync-type = git
-sync-uri = https://github.com/prototype99/prototype99.git
-priority = 50
-auto-sync = yes
-```
-
-Then run:
-
-    # emaint sync --repo prototype99
-
 ## Packages
 ### `app-emulation/snapd`
 BROKEN
@@ -109,6 +81,9 @@ a modified version of the official ebuild with the ability to run as admin throu
 
 ### `kde-plasma/plasma-meta`
 a modified version of the official ebuild with the ability to disable or enable powerdevil as needed with an aptly named use flag. on a desktop pc power management software does not always make sense. newer versions also have a minimal use flag to allow using the plasma-meta package for just certain components including the new kate and ksysguard related use flags.
+
+### `mail-client/mailspring-bin`
+newer version than available elsewhere. mailspring is a partially closed source mail client with a large number of features
 
 ### `mail-client/thunderbird`
 based on the ::bobwya ebuild. contains some debian and mozilla/freebsd patches from ::pg-overlay, notably disabling some tests and adding more arm64 support (renamed to make more sense, all fixed in mozilla 61), based on use flags. also contains a patch to hide gtk2 behind nsplugin/NPAPI, the only thing that uses it.

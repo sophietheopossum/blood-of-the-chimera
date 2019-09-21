@@ -1,2 +1,5 @@
 #!/bin/bash
-git add *;git commit -m "${MSG}";git push origin master
+git add *
+read -p "commit message: " MSG
+git commit -m "${MSG}"
+git push origin master
