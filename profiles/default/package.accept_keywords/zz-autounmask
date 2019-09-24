@@ -1,3 +1,4 @@
+=app-arch/brotli-1.0.7
 =dev-lang/rust-1.35.0
 =dev-qt/designer-5.12.3
 =dev-qt/qtdeclarative-5.12.3
@@ -19,6 +20,13 @@
 =kde-frameworks/qqc2-desktop-style-5.58.000
 =mail-client/mailspring-bin-1.5.6
 =mail-client/mailspring-bin-1.6.3
+=mail-client/mailspring-bin-1.6.3-r1
+=mail-client/mailspring-bin-1.6.3-r2
+=mail-client/mailspring-bin-1.6.3-r3
+=mail-client/mailspring-bin-1.6.3-r4
+=mail-client/mailspring-bin-1.6.3-r5
+=mail-client/mailspring-bin-1.6.3-r6
+=net-libs/nodejs-8.15.1-r1
 =net-misc/anydesk-5.0.0 ~amd64
 =sys-apps/dbus-broker-18 ~amd64
 =sys-config/ltoize-0.9.3-r2
@@ -123,3 +131,581 @@
 # required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo[trash]
 # required by sys-apps/world-0::prototype99[fluxbox]
 =gnome-base/gsettings-desktop-schemas-3.34.0 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/kind-of-3.0.4 ~amd64
+# required by dev-nodejs/kind-of-3.0.4::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-buffer-1.1.4 ~amd64
+# required by dev-nodejs/chalk-1.1.3::jm-overlay
+# required by dev-nodejs/grunt-legacy-log-utils-2.0.1::ssnb
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/supports-color-2.0.0 ~amd64
+# required by dev-nodejs/for-own-0.1.4::jm-overlay
+# required by dev-nodejs/object-omit-2.0.0-r1::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/for-in-0.1.8 ~amd64
+# required by dev-nodejs/parse-glob-3.0.4::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-glob-2.0.1 ~amd64
+# required by dev-nodejs/grunt-legacy-util-1.1.1::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/underscore-string-3.3.4 ~amd64
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/minimatch-3.0.4 ~amd64
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/detect-file-1.0.0 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/glob-7.1.2 ~amd64
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/path-is-absolute-1.0.1 ~amd64
+# required by dev-nodejs/grunt-legacy-log-utils-2.0.1::ssnb
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/chalk-1.1.3 ~amd64
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/expand-range-1.8.2 ~amd64
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/fs-realpath-1.0.0 ~amd64
+# required by dev-nodejs/randomatic-1.1.5::jm-overlay
+# required by dev-nodejs/fill-range-2.2.3::jm-overlay
+# required by dev-nodejs/expand-range-1.8.2::jm-overlay
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/kind-of-3.0.3 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/coffeescript-2.3.1 ~amd64
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/nopt-3.0.6-r1 ~amd64
+=mail-client/mailspring-1.6.3 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/arr-diff-2.0.0 ~amd64
+# required by dev-nodejs/fill-range-2.2.3::jm-overlay
+# required by dev-nodejs/expand-range-1.8.2::jm-overlay
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/repeat-element-1.1.2 ~amd64
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/inflight-1.0.6 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/js-yaml-3.10.0 ~amd64
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/grunt-legacy-log-utils-2.0.1 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/iconv-lite-0.4.19 ~amd64
+# required by dev-nodejs/nopt-3.0.6-r1::jm-overlay
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/abbrev-1.0.7 ~amd64
+# required by dev-nodejs/resolve-dir-1.0.1::ssnb
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/expand-tilde-2.0.2 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/regex-cache-0.4.3 ~amd64
+# required by dev-nodejs/inflight-1.0.6::jm-overlay
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/once-1.4.0 ~amd64
+# required by dev-nodejs/grunt-legacy-util-1.1.1::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/which-1.3.0 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/extglob-0.3.2 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/filename-regex-2.0.0 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/object-omit-2.0.0-r1 ~amd64
+# required by dev-nodejs/resolve-dir-1.0.1::ssnb
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/global-modules-1.0.0 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/array-unique-0.2.1 ~amd64
+# required by dev-nodejs/grunt-legacy-util-1.1.1::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/getobject-0.1.0 ~amd64
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/resolve-dir-1.0.1 ~amd64
+# required by dev-util/uglifyjs-2.4.10::jm-overlay
+# required by dev-nodejs/path-parse-1.0.5::jm-overlay
+# required by dev-nodejs/resolve-1.4.0::jm-overlay
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/async-0.2.10 ~amd64
+# required by dev-nodejs/minimatch-3.0.4::jm-overlay
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/brace-expansion-1.1.8 ~amd64
+# required by dev-nodejs/fill-range-2.2.3::jm-overlay
+# required by dev-nodejs/expand-range-1.8.2::jm-overlay
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/repeat-string-1.5.4 ~amd64
+# required by dev-nodejs/object-omit-2.0.0-r1::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-extendable-0.1.1 ~amd64
+# required by dev-nodejs/randomatic-1.1.5::jm-overlay
+# required by dev-nodejs/fill-range-2.2.3::jm-overlay
+# required by dev-nodejs/expand-range-1.8.2::jm-overlay
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-number-2.1.0 ~amd64
+# required by dev-nodejs/brace-expansion-1.1.8::jm-overlay
+# required by dev-nodejs/minimatch-3.0.4::jm-overlay
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/balanced-match-1.0.0 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/expand-brackets-0.1.5 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/grunt-cli-1.2.0 ~amd64
+# required by dev-nodejs/which-1.3.0::jm-overlay
+# required by dev-nodejs/grunt-legacy-util-1.1.1::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/isexe-2.0.0 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/grunt-legacy-util-1.1.1 ~amd64
+# required by dev-util/uglifyjs-2.4.10::jm-overlay
+# required by dev-nodejs/path-parse-1.0.5::jm-overlay
+# required by dev-nodejs/resolve-1.4.0::jm-overlay
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/uglify-to-browserify-1.0.2 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/normalize-path-2.0.1 ~amd64
+# required by dev-nodejs/regex-cache-0.4.3::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-primitive-2.0.0 ~amd64
+# required by dev-nodejs/object-omit-2.0.0-r1::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/for-own-0.1.4 ~amd64
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/findup-sync-2.0.0 ~amd64
+# required by dev-nodejs/isobject-2.1.0::jm-overlay
+# required by dev-nodejs/fill-range-2.2.3::jm-overlay
+# required by dev-nodejs/expand-range-1.8.2::jm-overlay
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/isarray-1.0.0 ~amd64
+# required by dev-nodejs/source-map-0.1.34::jm-overlay
+# required by dev-util/uglifyjs-2.4.10::jm-overlay
+# required by dev-nodejs/path-parse-1.0.5::jm-overlay
+# required by dev-nodejs/resolve-1.4.0::jm-overlay
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/amdefine-1.0.0 ~amd64
+# required by dev-nodejs/underscore-string-3.3.4::ssnb
+# required by dev-nodejs/grunt-legacy-util-1.1.1::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/sprintf-js-1.1.1 ~amd64
+# required by dev-nodejs/expand-brackets-0.1.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-posix-bracket-0.1.1 ~amd64
+# required by dev-nodejs/extglob-0.3.2::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-extglob-1.0.0 ~amd64
+# required by dev-nodejs/expand-tilde-2.0.2::ssnb
+# required by dev-nodejs/resolve-dir-1.0.1::ssnb
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/homedir-polyfill-1.0.1 ~amd64
+# required by dev-nodejs/parse-glob-3.0.4::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+#
+=dev-nodejs/glob-base-0.3.0 ~amd64
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+#
+=dev-nodejs/micromatch-2.3.11 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/eventemitter2-5.0.1 ~amd64
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/resolve-1.4.0 ~amd64
+# required by dev-util/uglifyjs-2.4.10::jm-overlay
+# required by dev-nodejs/path-parse-1.0.5::jm-overlay
+# required by dev-nodejs/resolve-1.4.0::jm-overlay
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/yargs-1.3.3 ~amd64
+# required by dev-nodejs/inflight-1.0.6::jm-overlay
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/wrappy-1.0.2 ~amd64
+# required by dev-nodejs/expand-range-1.8.2::jm-overlay
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/fill-range-2.2.3 ~amd64
+# required by dev-nodejs/regex-cache-0.4.3::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-equal-shallow-0.1.3 ~amd64
+# required by dev-nodejs/js-yaml-3.10.0::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/esprima-4.0.0 ~amd64
+# required by dev-nodejs/path-parse-1.0.5::jm-overlay
+# required by dev-nodejs/resolve-1.4.0::jm-overlay
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-util/uglifyjs-2.4.10 ~amd64
+# required by dev-nodejs/chalk-1.1.3::jm-overlay
+# required by dev-nodejs/grunt-legacy-log-utils-2.0.1::ssnb
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/ansi-styles-2.2.1 ~amd64
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/hooker-0.2.3 ~amd64
+# required by dev-nodejs/brace-expansion-1.1.8::jm-overlay
+# required by dev-nodejs/minimatch-3.0.4::jm-overlay
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/concat-map-0.0.1 ~amd64
+# required by dev-nodejs/arr-diff-2.0.0::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/arr-flatten-1.0.1 ~amd64
+# required by dev-nodejs/has-ansi-2.0.0::jm-overlay
+# required by dev-nodejs/chalk-1.1.3::jm-overlay
+# required by dev-nodejs/grunt-legacy-log-utils-2.0.1::ssnb
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/ansi-regex-2.0.0 ~amd64
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/colors-1.3.0 ~amd64
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/preserve-0.2.0 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/grunt-legacy-log-2.0.0 ~amd64
+# required by dev-nodejs/kind-of-3.0.3::jm-overlay
+# required by dev-nodejs/is-number-2.1.0::jm-overlay
+# required by dev-nodejs/randomatic-1.1.5::jm-overlay
+# required by dev-nodejs/fill-range-2.2.3::jm-overlay
+# required by dev-nodejs/expand-range-1.8.2::jm-overlay
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-buffer-1.1.3 ~amd64
+# required by dev-nodejs/grunt-legacy-util-1.1.1::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/async-1.5.2 ~amd64
+# required by dev-nodejs/glob-base-0.3.0::jm-overlay
+# required by dev-nodejs/parse-glob-3.0.4::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/glob-parent-2.0.0 ~amd64
+# required by dev-nodejs/once-1.4.0::jm-overlay
+# required by dev-nodejs/inflight-1.0.6::jm-overlay
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/wrappy-1.0.1 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/mkdirp-0.5.1 ~amd64
+# required by dev-nodejs/global-modules-1.0.0::ssnb
+# required by dev-nodejs/resolve-dir-1.0.1::ssnb
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-windows-1.0.2 ~amd64
+# required by dev-nodejs/parse-glob-3.0.4::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/is-dotfile-1.0.2 ~amd64
+# required by dev-nodejs/fill-range-2.2.3::jm-overlay
+# required by dev-nodejs/expand-range-1.8.2::jm-overlay
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/isobject-2.1.0 ~amd64
+# required by dev-nodejs/chalk-1.1.3::jm-overlay
+# required by dev-nodejs/grunt-legacy-log-utils-2.0.1::ssnb
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/strip-ansi-3.0.1 ~amd64
+# required by dev-nodejs/global-modules-1.0.0::ssnb
+# required by dev-nodejs/resolve-dir-1.0.1::ssnb
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/global-prefix-1.0.2 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/parse-glob-3.0.4 ~amd64
+# required by dev-util/uglifyjs-2.4.10::jm-overlay
+# required by dev-nodejs/path-parse-1.0.5::jm-overlay
+# required by dev-nodejs/resolve-1.4.0::jm-overlay
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/source-map-0.1.34 ~amd64
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/grunt-known-options-1.1.0 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/exit-0.1.2 ~amd64
+# required by dev-nodejs/homedir-polyfill-1.0.1::ssnb
+# required by dev-nodejs/expand-tilde-2.0.2::ssnb
+# required by dev-nodejs/resolve-dir-1.0.1::ssnb
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/parse-passwd-1.0.0 ~amd64
+# required by dev-nodejs/underscore-string-3.3.4::ssnb
+# required by dev-nodejs/grunt-legacy-util-1.1.1::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/util-deprecate-1.0.2 ~amd64
+# required by dev-nodejs/glob-7.1.2::jm-overlay
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/inherits-2.0.3 ~amd64
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/braces-1.8.5 ~amd64
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/dateformat-3.0.3 ~amd64
+# required by dev-nodejs/grunt-legacy-util-1.1.1::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/lodash-4.17.10 ~amd64
+# required by dev-nodejs/chalk-1.1.3::jm-overlay
+# required by dev-nodejs/grunt-legacy-log-utils-2.0.1::ssnb
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/escape-string-regexp-1.0.5 ~amd64
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/grunt-1.0.2 ~amd64
+# required by dev-nodejs/resolve-1.4.0::jm-overlay
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/path-parse-1.0.5 ~amd64
+# required by dev-nodejs/chalk-1.1.3::jm-overlay
+# required by dev-nodejs/grunt-legacy-log-utils-2.0.1::ssnb
+# required by dev-nodejs/grunt-legacy-log-2.0.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/has-ansi-2.0.0 ~amd64
+# required by dev-nodejs/fill-range-2.2.3::jm-overlay
+# required by dev-nodejs/expand-range-1.8.2::jm-overlay
+# required by dev-nodejs/braces-1.8.5::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=dev-nodejs/randomatic-1.1.5 ~amd64
+# required by net-libs/nodejs-8.15.1-r1::prototype99
+# required by dev-nodejs/is-glob-2.0.1::jm-overlay
+# required by dev-nodejs/glob-parent-2.0.0::jm-overlay
+# required by dev-nodejs/glob-base-0.3.0::jm-overlay
+# required by dev-nodejs/parse-glob-3.0.4::jm-overlay
+# required by dev-nodejs/micromatch-2.3.11::jm-overlay
+# required by dev-nodejs/findup-sync-2.0.0::ssnb
+# required by dev-nodejs/grunt-cli-1.2.0::ssnb
+# required by dev-nodejs/grunt-1.0.2::ssnb
+# required by mail-client/mailspring-1.6.3::prototype99
+=net-libs/http-parser-2.9.2 ~amd64

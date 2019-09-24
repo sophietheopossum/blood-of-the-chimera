@@ -1,5 +1,6 @@
 *app-portage/gentoolkit
 *sys-apps/dbus-broker
+*sys-apps/world
 *sys-boot/grub
 *sys-config/ltoize
 *sys-kernel/genkernel-next

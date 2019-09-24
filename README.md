@@ -108,7 +108,7 @@ includes a required dependency that is missing from the official ebuild.
 includes extra python3_7 compatibility and more detailed dependencies
 
 ### `net-libs/nodejs`
-fixed ssl configure logic, based off of ::chaoslab
+see readme
 
 ### `net-libs/serf`
 includes the ubuntu patch that adds openssl-1.1 compatibility
