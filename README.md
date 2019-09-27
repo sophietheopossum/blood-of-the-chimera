@@ -85,6 +85,9 @@ a modified version of the official ebuild with the ability to disable or enable 
 ### `mail-client/mailspring-bin`
 newer version than available elsewhere. mailspring is a partially closed source mail client with a large number of features
 
+### `mail-client/mailspring`
+attempt at creating a non binary version to reduce headaches caused by the binary. mailspring is a partially closed source mail client with a large number of features
+
 ### `mail-client/thunderbird`
 based on the ::bobwya ebuild. contains some debian and mozilla/freebsd patches from ::pg-overlay, notably disabling some tests and adding more arm64 support (renamed to make more sense, all fixed in mozilla 61), based on use flags. also contains a patch to hide gtk2 behind nsplugin/NPAPI, the only thing that uses it.
 
@@ -112,6 +115,10 @@ see readme
 
 ### `net-libs/serf`
 includes the ubuntu patch that adds openssl-1.1 compatibility
+
+### `sci-electronics/logisim-evolution-holy-cross`
+IN PROGRESS
+fork of logisim-evolution with improved performance based on ebuilds from ::logisim-overlay
 
 ### `sci-geosciences/josm`
 BROKEN
