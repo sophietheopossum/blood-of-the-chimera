@@ -1,8 +1,9 @@
-=app-crypt/seahorse-3.32.2::dantrell-gnome-3-32									#missing dependency
 =app-arch/gcab-1.2::dantrell-gnome														#seems dated
+#=app-arch/xz-utils-5.2.4-r2::poly-c															#appears broken, perhaps 17.0 incompatible
 =app-crypt/gcr-3.28.1::dantrell-gnome													#dependencies seem dated
 =app-crypt/gcr-3.33.4::my-gnome															#odd dependencies
 =app-crypt/gnupg-2.2.17::dantrell-gnome												#bad keywording, unnecessary quotes
+=app-crypt/seahorse-3.32.2::dantrell-gnome-3-32									#missing dependency
 =app-emulation/snapd-2.38::fol4																#better in other overlay
 =app-emulation/snapd-2.38::JamesB192												#better in other overlay
 =app-emulation/snapd-2.38::ROKO__													#better in other overlay
@@ -14,7 +15,8 @@
 =app-text/iso-codes-3.76::pg_overlay														#better in other overlay
 =app-text/yelp-tools-3.32.2::dantrell-gnome-3-32									#bad keywording, unnecessary quotes
 =app-text/yelp-tools-3.32.0::gnome-next													#old eapi
-=dev-java/java-config-2.2.0-r1000::progress											#bad python use flags
+=dev-java/java-config-2.2.0-r1000::progress											#nonstandard python use flags
+=dev-java/javatoolkit-0.3.0-r9::progress													#nonstandard python use flags
 =dev-lang/swig-4.0.0::gentoo-zh																#old eapi
 =dev-lang/vala-0.42.7::dantrell-gnome													#bad keywording, unnecessary quotes, missing valadoc flag
 =dev-lang/vala-0.44.7::dantrell-gnome													#bad keywording, unnecessary quotes, missing valadoc flag

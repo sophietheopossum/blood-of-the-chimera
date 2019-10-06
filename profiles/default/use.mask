@@ -116,6 +116,7 @@ video_cards_virtualbox
 video_cards_vmware
 -abi_x86_32
 -cpu_flags_x86_sse2
+-gentoo-vm
 -jemalloc
 -jit
 -python_targets_pypy

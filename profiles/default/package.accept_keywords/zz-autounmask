@@ -1,5 +1,8 @@
 =app-arch/brotli-1.0.7
-=dev-lang/rust-1.35.0
+=dev-java/openjdk-11.0.4_p11 ~amd64
+=dev-java/openjdk-bin-11.0.4_p11 ~amd64
+#=dev-lang/rust-1.35.0
+#=dev-lang/rust-1.36.0
 =dev-qt/designer-5.12.3
 =dev-qt/qtdeclarative-5.12.3
 =dev-qt/qtgraphicaleffects-5.12.3
@@ -34,7 +37,8 @@
 =sys-kernel/gentoo-sources-5.2.5 ~amd64
 =virtual/linux-sources-3-r2
 =virtual/linux-sources-5
-=virtual/rust-1.35.0
+#=virtual/rust-1.35.0
+#=virtual/rust-1.36.0
 =www-client/firefox-67.0.2
 =x11-misc/compton-7.3
 # required by dev-python/certifi-2018.4.16::gentoo
@@ -709,3 +713,7 @@
 # required by dev-nodejs/grunt-1.0.2::ssnb
 # required by mail-client/mailspring-1.6.3::prototype99
 =net-libs/http-parser-2.9.2 ~amd64
+# required by sci-electronics/logisim-evolution-holy-cross-4.0.1::prototype99
+=virtual/jdk-11 ~amd64
+# required by sci-electronics/logisim-evolution-holy-cross-4.0.1::prototype99
+=virtual/jre-11-r1 ~amd64

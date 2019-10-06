@@ -71,10 +71,8 @@ an attempt to add a new use flag. development halted as steam for linux actually
 includes optional gtk3 patch from ::gentoo, expands on ::gnome-next's depend designed to prevent incompatible rust-bin configurations, includes debug options from ::gnome
 
 ### `gnome-base/gsettings-desktop-schemas`
-see readme
 
 ### `gnome-base/gvfs`
-see readme
 
 ### `kde-apps/dolphin`
 a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to. credits to https://forum.kde.org/viewtopic.php?f=224&t=141836&start=30 for the patch in 18.08.3+. it also has an audiocd useflag enabling you to manage the dependencies for opening cds as a directory with a simple useflag.
@@ -111,18 +109,16 @@ includes a required dependency that is missing from the official ebuild.
 includes extra python3_7 compatibility and more detailed dependencies
 
 ### `net-libs/nodejs`
-see readme
 
 ### `net-libs/serf`
 includes the ubuntu patch that adds openssl-1.1 compatibility
 
 ### `sci-electronics/logisim-evolution-holy-cross`
-IN PROGRESS
 fork of logisim-evolution with improved performance based on ebuilds from ::logisim-overlay
 
 ### `sci-geosciences/josm`
-BROKEN
-mirror of the rindeal ebuild, version is bumped.
+ARCHIVED
+mirror of the rindeal ebuild, version is bumped. archived until further notice due to issues
 
 ### `sys-apps/kmod`
 ::libressl ebuild modified to only apply patch if you enable the use flag
@@ -136,17 +132,11 @@ Has additional patch to fix problems with gold
 
 ### `sys-devel/llvm`
 Built with gcc8 compatibility patches.
-Low Level Virtual Machine (LLVM) is:
-	1. A compilation strategy designed to enable effective program optimization across the entire lifetime of a program. LLVM supports effective optimization at compile time, link-time (particularly interprocedural), run-time and offline (i.e., after software is installed), while remaining transparent to developers and maintaining compatibility with existing build scripts.
-	2. A virtual instruction set - LLVM is a low-level object code representation that uses simple RISC-like instructions, but provides rich, language-independent, type information and dataflow (SSA) information about operands. This combination enables sophisticated transformations on object code, while remaining light-weight enough to be attached to the executable. This combination is key to allowing link-time, run-time, and offline transformations.
-	3. A compiler infrastructure - LLVM is also a collection of source code that implements the language and compilation strategy. The primary components of the LLVM infrastructure are a GCC-based C and C++ front-end, a link-time optimization framework with a growing set of global and interprocedural analyses and transformations, static back-ends for many popular (and some obscure) architectures, a back-end which emits portable C code, and a Just-In-Time compilers for several architectures.
-4. LLVM does not imply things that you would expect from a high-level virtual machine. It does not require garbage collection or run-time code generation (In fact, LLVM makes a great static compiler!). Note that optional LLVM components can be used to build high-level virtual machines and other systems that need these services.
 
 ### `sys-devel/gcc`
 Has additional clang use flag that adds the lld patch seen at https://gcc.gnu.org/ml/gcc-patches/2018-10/msg01240.html
 
 ### `sys-kernel/gentoo-sources`
-see readme in folder
 
 ### `virtual/linux-sources`
 virtual package designed to accomodate almost all kernel ebuilds present in overlays

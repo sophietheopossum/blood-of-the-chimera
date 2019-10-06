@@ -6,3 +6,5 @@ sudo ln -sf /var/db/repos/prototype99/profiles-local/make.conf /etc/portage/make
 sudo ln -sf /var/db/repos/prototype99/profiles-local/jemalloc.conf /etc/portage/make.conf/jemalloc.conf
 ln -sf /var/db/repos/prototype99/profiles-local/kitty.conf ~/.config/kitty/kitty.conf
 sudo ln -sf /var/db/repos/prototype99/profiles-local/genkernel.conf /etc/genkernel.conf
+sudo ln -sf /var/db/repos/prototype99/profiles-local/env /etc/portage/env
+sudo ln -sf /var/db/repos/prototype99/profiles-local/package.env /etc/portage/package.env

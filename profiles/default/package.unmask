@@ -1,2 +1,18 @@
 =dev-libs/boost-1.70.0
 =dev-util/boost-build-1.70.0
+# required by sci-electronics/logisim-evolution-holy-cross-4.0.1::prototype99
+# /var/db/repos/gentoo/profiles/package.mask:
+# James Le Cuirot <chewi@gentoo.org> (2017-12-17)
+# Java 9+ is not yet fully supported on Gentoo. Packages cannot depend
+# on it so these virtuals are not yet required. If you wish to use
+# Java 9+ then install oracle-(jdk|jre)-bin or openjdk(-bin) directly.
+=virtual/jdk-11
+=dev-java/openjdk-11.0.4_p11
+=dev-java/openjdk-bin-11.0.4_p11
+# required by sci-electronics/logisim-evolution-holy-cross-4.0.1::prototype99
+# /var/db/repos/gentoo/profiles/package.mask:
+# James Le Cuirot <chewi@gentoo.org> (2017-12-17)
+# Java 9+ is not yet fully supported on Gentoo. Packages cannot depend
+# on it so these virtuals are not yet required. If you wish to use
+# Java 9+ then install oracle-(jdk|jre)-bin or openjdk(-bin) directly.
+=virtual/jre-11-r1

@@ -285,3 +285,5 @@ app-text/poppler cairo qt5
 >=app-crypt/gcr-3.28.1 vala
 # required by app-crypt/seahorse-3.32.2::dantrell-gnome-3-32
 >=app-crypt/libsecret-0.18.8 vala
+# required by www-client/chromium-77.0.3865.75::gentoo
+>=net-libs/nodejs-8.15.1-r1 icu inspector

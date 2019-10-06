@@ -8,7 +8,6 @@ EMERGE_DEFAULT_OPTS="-AaDNUuv --ask-enter-invalid --backtrack=30  --color y --co
 FEATURES="candy ccache compress-build-logs metadata-transfer news noclean parallel-fetch parallel-install"
 GRUB_PLATFORMS="efi-64"
 L10N="en en-GB"
-LDFLAGS="-Wl,--hash-style=gnu"
 PORTAGE_COMPRESS_FLAGS="-9"
 PORTAGE_BZIP2_COMMAND="bzip2 ${PORTAGE_COMPRESS_FLAGS}"
 PORT_LOGDIR="/var/log/portage"

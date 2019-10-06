@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>dev.rindeal+gentoo-overlay@gmail.com</email>
+		<name>Jan Chren (rindeal)</name>
+	</maintainer>
+	<use>
+		<flag name="l10n_ca-ES">add valencian support</flag>
+		<flag name="l10n_ht">add haitian creole support</flag>
+		<flag name="l10n_nds">add low german/saxon support</flag>
+		<flag name="l10n_wae">add walser german support</flag>
+		<flag name="noto">use the noto font family</flag>
+		</use>
+</pkgmetadata>
