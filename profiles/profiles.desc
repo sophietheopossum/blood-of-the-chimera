@@ -1,4 +1,3 @@
-amd64-fbsd		default/bsd/fbsd/amd64/11.1												stable
 alpha			default/linux/alpha/17.0												stable
 alpha			default/linux/alpha/17.0/desktop										stable
 alpha			default/linux/alpha/17.0/desktop/gnome									stable

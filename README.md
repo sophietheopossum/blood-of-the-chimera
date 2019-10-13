@@ -20,136 +20,92 @@ Based off of Docker being available within this portage category, snapd is there
 
 ### `app-admin/system-config-printer`
 includes extra python3_7 compatibility
-
 ### `app-crypt/seahorse`
-includes missing build time dependency, removed unnecessary speech marks, improved keywording. based on ::dantrell-gnome-3-32
-
 ### `app-emulation/wine-staging`
 Based off of the bobwya ebuild. Includes a patch to make the steam browser work without any extra effort on the user's end.
-
 ### `app-text/pdfsam`
 ARCHIVED
 work in progress. software that allows the manipulation of pdf files.
-
 ### `dev-lang/rust`
-
 ### `dev-libs/glib`
 The GLib library of C routines
-
 ### `dev-libs/libcroco`
 features a fixed dependency (gtk-doc pulls in gtk-doc-am and is also required it seems) and a more up to date homepage url
-
 ### `dev-libs/properties-cpp`
 elementary overlay's ebuild with a build error fixed and some improvements in ebuild writing
-
 ### `dev-python/pycups`
 ARCHIVED
 includes extra python3_7 compatibility
-
 ### `dev-python/pyGPG`
 includes extra python3_7 compatibility
-
 ### `dev-qt/qtnetwork`
 ARCHIVED
 fixed dependency version of the libressl ebuild. archived due to presence in upstream overlay
-
 ### `dev-qt/qtwayland`
 includes a patch designed to remove an error
-
 ### `dev-vcs/gitkraken-bin`
 WORK IN PROGRESS
 gitkraken ebuild based off of the anomen and chaoslab overlay ebuilds. anomen is used as the base as it was closer to the layout of an official ebuild. added in from the chaoslab ebuild: newer copyright date, runtime dependencies, metadata.xml (with updated authors). personal edits: copied most up to date description from website, got rid of electron slot variable as it is unneeded.
-
 ### `games-simulation/firestorm-bin`
 firestorm ebuilds with a functional url and better depends
-
 ### `games-util/steam-launcher`
 ARCHIVED
 an attempt to add a new use flag. development halted as steam for linux actually uses system libraries if they are newer.
-
 ### `gnome-base/librsvg`
 includes optional gtk3 patch from ::gentoo, expands on ::gnome-next's depend designed to prevent incompatible rust-bin configurations, includes debug options from ::gnome
-
 ### `gnome-base/gsettings-desktop-schemas`
-
 ### `gnome-base/gvfs`
-
 ### `kde-apps/dolphin`
 a modified version of the official ebuild with the ability to run as admin through sudo using the opensuse patch. This is supposedly less secure but functions closer to how a user would expect it to. credits to https://forum.kde.org/viewtopic.php?f=224&t=141836&start=30 for the patch in 18.08.3+. it also has an audiocd useflag enabling you to manage the dependencies for opening cds as a directory with a simple useflag.
-
 ### `kde-plasma/plasma-meta`
 a modified version of the official ebuild with the ability to disable or enable powerdevil as needed with an aptly named use flag. on a desktop pc power management software does not always make sense. newer versions also have a minimal use flag to allow using the plasma-meta package for just certain components including the new kate and ksysguard related use flags.
-
 ### `mail-client/mailspring-bin`
 newer version than available elsewhere. mailspring is a partially closed source mail client with a large number of features
-
 ### `mail-client/mailspring`
 attempt at creating a non binary version to reduce headaches caused by the binary. mailspring is a partially closed source mail client with a large number of features
-
 ### `mail-client/thunderbird`
 based on the ::bobwya ebuild. contains some debian and mozilla/freebsd patches from ::pg-overlay, notably disabling some tests and adding more arm64 support (renamed to make more sense, all fixed in mozilla 61), based on use flags. also contains a patch to hide gtk2 behind nsplugin/NPAPI, the only thing that uses it.
-
 ### `media-gfx/inkscape`
 doesn't depend on gtkspell because it gets removed from upstream inkscape
-
 ### `media-gfx/scour`
 includes a patch designed to remove an error
-
 ### `media-libs/gexiv2`
 ARCHIVED
 includes extra python3_7 compatibility
-
 ### `media-libs/x264`
 includes a patch to allow lto, credits to gentoolto
-
 ### `media-video/obs-studio`
 includes a required dependency that is missing from the official ebuild.
-
 ### `net-libs/libtorrent-rasterbar`
 includes extra python3_7 compatibility and more detailed dependencies
-
 ### `net-libs/nodejs`
-
 ### `net-libs/serf`
 includes the ubuntu patch that adds openssl-1.1 compatibility
-
 ### `sci-electronics/logisim-evolution-holy-cross`
 fork of logisim-evolution with improved performance based on ebuilds from ::logisim-overlay
-
 ### `sci-geosciences/josm`
 ARCHIVED
 mirror of the rindeal ebuild, version is bumped. archived until further notice due to issues
-
 ### `sys-apps/kmod`
 ::libressl ebuild modified to only apply patch if you enable the use flag
-
 ### `sys-apps/snap-confine`
 BROKEN
 Provides sandbox type isolation of individual snap packages.  This is a dependency of `snapd` proper. Although newer versions seem to no longer require snap-confine due to a merge, it is still required for the older versions which i see no real reason to remove, gentoo is about choice after all, if you want an older version feel free.
-
 ### `sys-devel/binutils`
 Has additional patch to fix problems with gold
-
 ### `sys-devel/llvm`
 Built with gcc8 compatibility patches.
-
 ### `sys-devel/gcc`
 Has additional clang use flag that adds the lld patch seen at https://gcc.gnu.org/ml/gcc-patches/2018-10/msg01240.html
-
 ### `sys-kernel/gentoo-sources`
-
 ### `virtual/linux-sources`
 virtual package designed to accomodate almost all kernel ebuilds present in overlays
-
 ### `virtual/meta`
 a large metapackage designed to aid in choosing the correct packages
-
 ### `virtual/wine`
 virtual package modified to accomodate those who may want steam's proton to provide their wine
-
 ### `www-client/firefox`
 firefox ebuild created using the bobwya and pg_overlay ebuilds. this ebuild contains various extra use flags and extra patches designed to improve performance and give greater choice. please refer to the readme.md kept with the ebuilds for more specific detail.
-
 ## FAQ
 ### why isn't there snapd without systemd?
 good question, with openrc being the more popular init system, you  would think it would be an available option. sadly this is not a mistake, snappy is designed in such a way that systemd is required. obviously much like funtoo has proven with their solution with gnome, it is theoretically possible. so possible in fact, that early ubuntu (which used upstart) even used a modified version of systemd to run snappy. however to the best of my knowledge there is no updated version of that, hence no openrc compatible ebuilds. feel free to contribute and make this otherwise however i have no interest myself in doing so (i personally use systemd). that being said, elogind may or may not help

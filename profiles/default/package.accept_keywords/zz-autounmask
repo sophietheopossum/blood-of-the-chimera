@@ -1,9 +1,9 @@
 =app-arch/brotli-1.0.7
+=app-lyx/elyxer-1.2.5
 =dev-java/openjdk-11.0.4_p11 ~amd64
 =dev-java/openjdk-bin-11.0.4_p11 ~amd64
 #=dev-lang/rust-1.35.0
 #=dev-lang/rust-1.36.0
-=app-lyx/elyxer-1.2.5
 =dev-qt/designer-5.12.3
 =dev-qt/qtdeclarative-5.12.3
 =dev-qt/qtgraphicaleffects-5.12.3

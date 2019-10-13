@@ -1,9 +1,10 @@
+=acct-group/plugdev-0::tatsh-overlay														#poor description
 =app-arch/gcab-1.2::dantrell-gnome														#seems dated
-#=app-arch/xz-utils-5.2.4-r2::poly-c															#appears broken, perhaps 17.0 incompatible
 =app-crypt/gcr-3.28.1::dantrell-gnome													#dependencies seem dated
 =app-crypt/gcr-3.33.4::my-gnome															#odd dependencies
 =app-crypt/gnupg-2.2.17::dantrell-gnome												#bad keywording, unnecessary quotes
 =app-crypt/seahorse-3.32.2::dantrell-gnome-3-32									#missing dependency
+=app-crypt/seahorse-3.34::my-gnome													#old
 =app-emulation/snapd-2.38::fol4																#better in other overlay
 =app-emulation/snapd-2.38::JamesB192												#better in other overlay
 =app-emulation/snapd-2.38::ROKO__													#better in other overlay
@@ -20,6 +21,7 @@
 =dev-lang/swig-4.0.0::gentoo-zh																#old eapi
 =dev-lang/vala-0.42.7::dantrell-gnome													#bad keywording, unnecessary quotes, missing valadoc flag
 =dev-lang/vala-0.44.7::dantrell-gnome													#bad keywording, unnecessary quotes, missing valadoc flag
+=dev-lang/vala-0.44.9::dantrell-gnome													#bad keywording, unnecessary quotes, missing valadoc flag
 =dev-libs/appstream-glib-0.7.9::musl														#musl specific patch
 =dev-libs/boost-1.65.0::gnux32																#x32 specific patch
 =dev-libs/boost-1.70.0::gnux32																#better in other overlay
@@ -31,6 +33,7 @@
 =dev-libs/json-glib-1.2.8::dantrell-gnome												#seems dated
 =dev-libs/json-glib-1.4.4::gnome-next														#disables optimisation
 =dev-libs/libassuan-2.5.1-r1::dantrell-gnome											#bad keywording, unnecessary quotes
+=dev-libs/libassuan-2.5.3::dantrell-gnome												#bad keywording, unnecessary quotes
 =dev-libs/libcroco-0.6.13::dantrell-gnome												#bad keywording, unnecessary quotes, bad dependency, old patches
 =dev-libs/libgcrypt-1.8.4::dantrell-gnome												#bad keywording, unnecessary quotes
 =dev-libs/libgcrypt-1.8.5::dantrell-gnome												#bad keywording, unnecessary quotes
@@ -94,15 +97,20 @@
 =dev-qt/qtnetwork-5.12.3::libressl															#libressl patch not behind use flag
 =dev-util/boost-build-1.65.0::gnux32														#x32 specific patch
 =dev-util/boost-build-1.70.0::gnux32														#better in other overlay
+=dev-util/gdbus-codegen-2.62.1::dantrell-gnome									#dummy package
 =dev-util/gdbus-codegen-2.99::rindeal													#dummy package
 =dev-util/glib-utils-2.58.3::dantrell-gnome												#dummy package
 =dev-util/glib-utils-2.60.6::dantrell-gnome												#dummy package
+=dev-util/glib-utils-2.99.99::rindeal															#dummy package
 =dev-util/gtk-update-icon-cache-3.24.8::dantrell-gnome							#bad keywording, unnecessary quotes
 =dev-util/gtk-update-icon-cache-3.24.11::dantrell-gnome						#bad keywording, unnecessary quotes
 =gnome-base/gnome-common-3.18.0-r1::dantrell-gnome						#bad keywording, unnecessary quotes
+=gnome-base/gnome-keyring-3.34.0::pentoo											#python2, less keywords, odd depends
+=gnome-base/gvfs-1.42.1::my-gnome													#no sftp use flag, less keywords, missing dependencies
 =gnome-base/librsvg-2.45.8::gnome-next												#better in other overlay
 =gnome-extra/libgsf-1.14.46::dantrell-gnome											#bad keywording, unnecessary quotes
 =gnome-extra/zenity-3.30.0::dantrell-gnome-3-30									#bad keywording, unnecessary quotes
+=gnome-extra/zenity-3.32.0::dantrell-gnome											#bad keywording, unnecessary quotes
 =gnome-extra/zenity-3.32.0::dantrell-gnome-3-32									#bad keywording, unnecessary quotes
 =kde-apps/dolphin-18.12.3::gentoo															#better in other overlay
 =kde-plasma/plasma-meta-5.14.5::gentoo												#better in other overlay
@@ -131,6 +139,7 @@
 =net-misc/anydesk-5.1.2::adrien-overlay												#old
 =net-nds/openldap-2.4.47::defiance														#older eapi
 =net-libs/glib-networking-2.62.0::my-gnome											#no smartcard support
+=net-libs/glib-networking-2.62.1::my-gnome											#no smartcard support
 =net-libs/gnutls-3.6.7::gnux32																	#missing use flag
 =net-libs/libsoup-2.64.2:2.4::unity-gentoo												#missing use flags
 =net-libs/libtirpc-1.1.4-r1::musl																#musl specific patch
@@ -161,6 +170,7 @@
 =sys-libs/libutempter-1.1.6-r2::musl														#musl specific patch
 =sys-libs/pam-1.3.0-r2::musl																	#better in other overlay
 =sys-libs/zlib-1.2.11-r3::clx																		#old
+=sys-power/upower-0.99.12.20190903::dantrell-gnome							#bad keywording, unnecessary quotes, eapi 6, unexplained use flags
 =sys-process/procps-3.3.15-r1::poly-c													#behind on patches?
 =virtual/linux-sources-3-r9::calculate														#no firmware use flag
 =virtual/modutils-0-r1::calculate																#eapi 2, less architecture support
@@ -170,7 +180,8 @@
 =x11-base/xorg-drivers-1.20::redcore														#dummy ebuild
 =x11-base/xorg-server-1.20.3::musl														#arm only
 =x11-libs/cairo-1.16.0-r3::dantrell-gnome												#bad keywording, unnecessary quotes
-=x11-libs/gdk-pixbuf-2.39.2:2::my-gnome												#eapi 6
+=x11-libs/gdk-pixbuf-2.39.2::my-gnome													#eapi 6
+=x11-libs/gdk-pixbuf-2.40.0::my-gnome													#eapi 6
 =x11-libs/gtk+-3.24.8::dantrell-gnome														#old workaround
 =x11-libs/gtk+-3.24.9::dantrell-gnome														#old workaround
 =x11-libs/gtk+-3.24.9-r1::dantrell-gnome													#old workaround
