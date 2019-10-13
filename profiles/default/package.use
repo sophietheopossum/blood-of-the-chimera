@@ -1,14 +1,17 @@
+app-lyx/elyxer -python_single_target_python2_7
 app-portage/layman subversion
 app-text/asciidoc -python_single_target_python2_7
 app-text/mupdf X opengl
 dev-libs/gobject-introspection -python_single_target_python2_7
 dev-libs/libical -vala
+dev-tex/tex4ht java
 dev-util/gdbus-codegen -python_single_target_python2_7
 kde-frameworks/ki18n -python_single_target_python2_7
 kde-plasma/plasma-meta -minimal -sddm -pulseaudio
 lxqt-base/lxqt-meta minimal sddm sudo
 mail-mta/msmtp gnome-keyring
 mail-mta/postfix sasl
+media-gfx/fontforge -python_single_target_python2_7
 net-irc/kvirc -python_single_target_python2_7
 net-misc/networkmanager -vanilla
 sys-apps/dbus X
@@ -17,6 +20,7 @@ sys-apps/world archive
 sys-devel/gcc -jit
 sys-libs/libblockdev -python_single_target_python2_7
 sys-libs/pam cracklib
+www-client/chromium -custom-cflags
 x11-wm/fluxbox -toolbar -systray
 # required by net-misc/curl[threads]
 net-misc/curl -adns
@@ -287,3 +291,11 @@ app-text/poppler cairo qt5
 >=app-crypt/libsecret-0.18.8 vala
 # required by www-client/chromium-77.0.3865.75::gentoo
 >=net-libs/nodejs-8.15.1-r1 icu inspector
+# required by app-text/dvipng-1.15-r1::gentoo
+# required by app-office/lyx-2.3.3::gentoo[latex]
+>=media-libs/gd-2.2.5-r2 png jpeg
+# required by app-office/lyx-2.3.3::gentoo
+>=virtual/imagemagick-tools-0 png
+# required by virtual/imagemagick-tools-0::gentoo
+# required by app-office/lyx-2.3.3::gentoo
+>=media-gfx/imagemagick-7.0.8.60 png

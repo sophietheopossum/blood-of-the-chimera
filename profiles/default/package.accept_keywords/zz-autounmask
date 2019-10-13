@@ -3,6 +3,7 @@
 =dev-java/openjdk-bin-11.0.4_p11 ~amd64
 #=dev-lang/rust-1.35.0
 #=dev-lang/rust-1.36.0
+=app-lyx/elyxer-1.2.5
 =dev-qt/designer-5.12.3
 =dev-qt/qtdeclarative-5.12.3
 =dev-qt/qtgraphicaleffects-5.12.3
@@ -29,8 +30,12 @@
 =mail-client/mailspring-bin-1.6.3-r4
 =mail-client/mailspring-bin-1.6.3-r5
 =mail-client/mailspring-bin-1.6.3-r6
+=media-gfx/fontforge-20190801-r1
+=media-libs/libuninameslist-20190701
 =net-libs/nodejs-8.15.1-r1
 =net-misc/anydesk-5.0.0 ~amd64
+=sci-libs/colamd-2.9.6
+=sci-libs/suitesparseconfig-5.4.0
 =sys-apps/dbus-broker-18 ~amd64
 =sys-config/ltoize-0.9.3-r2
 =sys-kernel/gentoo-sources-5.1.11 ~amd64

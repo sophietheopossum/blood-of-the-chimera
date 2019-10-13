@@ -27,6 +27,7 @@
 =dev-libs/gmp-6.1.2::srcshelton																#no musl support
 =dev-libs/gmp-6.1.2-r1::gentoo																#no pgo
 =dev-libs/gobject-introspection-common-1.60.2::dantrell-gnome-3-32	#bad keywording, unnecessary quotes
+=dev-libs/hyphen-2.8.8::muslx32															#eapi 4, old
 =dev-libs/json-glib-1.2.8::dantrell-gnome												#seems dated
 =dev-libs/json-glib-1.4.4::gnome-next														#disables optimisation
 =dev-libs/libassuan-2.5.1-r1::dantrell-gnome											#bad keywording, unnecessary quotes
@@ -110,6 +111,7 @@
 =media-fonts/croscorefonts-1.31.0::c2p-overlay										#eapi 5
 =media-gfx/graphviz-2.40.1-r1::gnux32													#x32 specific patch
 =media-libs/alsa-lib-1.1.8::gnux32															#missing use flag
+=media-libs/glm-0.9.9.2::gnux32																#x32 specific patch
 =media-libs/libepoxy-1.5.3-r1::gnux32													#x32 specific patch
 =media-libs/libid3tag-0.15.1b-r5::rinaldus-overlay									#use flag not defined in ebuild
 =media-libs/mesa-18.3.6::musl																#musl specific patches
