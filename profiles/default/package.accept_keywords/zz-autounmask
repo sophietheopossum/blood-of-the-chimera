@@ -4,6 +4,8 @@
 =dev-java/openjdk-bin-11.0.4_p11 ~amd64
 #=dev-lang/rust-1.35.0
 #=dev-lang/rust-1.36.0
+=dev-python/fonttools-3.44.0
+=dev-python/setproctitle-1.1.10 ~amd64
 =dev-qt/designer-5.12.3
 =dev-qt/qtdeclarative-5.12.3
 =dev-qt/qtgraphicaleffects-5.12.3
@@ -18,6 +20,7 @@
 =dev-qt/qtwebchannel-5.12.3
 =dev-qt/qtwidgets-5.12.3
 =dev-qt/qtxmlpatterns-5.12.3
+=dev-util/gn-0.1616
 =dev-vcs/mercurial-5.0.2
 =games-util/steam-launcher-1.0.0.59-r3
 =kde-frameworks/kio-5.58.0
@@ -30,14 +33,17 @@
 =mail-client/mailspring-bin-1.6.3-r4
 =mail-client/mailspring-bin-1.6.3-r5
 =mail-client/mailspring-bin-1.6.3-r6
+=media-fonts/liberation-fonts-2.00.5
 =media-gfx/fontforge-20190801-r1
 =media-libs/libuninameslist-20190701
 =net-libs/nodejs-8.15.1-r1
 =net-misc/anydesk-5.0.0 ~amd64
+=net-misc/persepolis-3.1.0
 =sci-libs/colamd-2.9.6
 =sci-libs/suitesparseconfig-5.4.0
 =sys-apps/dbus-broker-18 ~amd64
 =sys-config/ltoize-0.9.3-r2
+=sys-devel/llvm-9.0.0
 =sys-kernel/gentoo-sources-5.1.11 ~amd64
 =sys-kernel/gentoo-sources-5.2.5 ~amd64
 =virtual/linux-sources-3-r2
@@ -722,3 +728,18 @@
 =virtual/jdk-11 ~amd64
 # required by sci-electronics/logisim-evolution-holy-cross-4.0.1::prototype99
 =virtual/jre-11-r1 ~amd64
+# required by net-misc/networkmanager-1.18.4::dantrell-gnome[wifi,iwd]
+# required by gnome-extra/nm-applet-1.8.20::gentoo
+# required by sys-apps/world-1::prototype99[network-tray]
+=net-wireless/iwd-0.22
+# required by sys-devel/llvm-9.0.0::gentoo[gold]
+# required by media-libs/mesa-19.1.7::gentoo[-opencl,llvm]
+# required by x11-libs/gtk+-3.24.12::my-gnome[X]
+# required by www-client/google-chrome-77.0.3865.90::gentoo
+# required by sys-apps/world-2::prototype99[chrome]
+=sys-devel/llvmgold-9
+# required by net-wireless/iwd-0.22::gentoo
+# required by net-misc/networkmanager-1.18.4::dantrell-gnome[wifi,iwd]
+# required by gnome-extra/nm-applet-1.8.20::gentoo
+# required by sys-apps/world-2::prototype99[network-tray]
+=dev-libs/ell-0.24

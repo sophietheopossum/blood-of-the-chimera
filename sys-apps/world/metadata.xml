@@ -7,19 +7,27 @@
 	</maintainer>
 	<use>
 		<flag name="archive">install <pkg>app-arch/xarchiver</pkg> in order to access archives with a gui</flag>
-		<flag name="browser">install firefox in order to browse the internet</flag>
+		<flag name="browser">install a graphical web bowser</flag>
+		<flag name="chrome">install chromium/chrome of some variety</flag>
 		<flag name="composite">install <pkg>x11-misc/compton</pkg> to enable compositing, a way to render extra effects and transparency in windows</flag>
 		<flag name="composite-gui">install <pkg>lxqt-base/compton-conf</pkg>, a gui to configure compton</flag>
 		<flag name="dev">install <pkg>app-portage/repoman</pkg>, a tool designed to aid in managing overlays</flag>
 		<flag name="discord">install discord, an online messenger and games store</flag>
 		<flag name="efi">ensure efi support is built, most modern systems need this</flag>
 		<flag name="fat">ensure fat filesystem support is built, in many cases this should not be the only filesystem</flag>
+		<flag name="firefox">install <pkg>www-client/firefox</pkg>, this is quicker to compile from source, and has better privacy options</flag>
 		<flag name="flash">ensure the <pkg>www-plugins/adobe-flash</pkg> plugin is installed. flash is a dying platform, however there are historic games and animations made with it</flag>
 		<flag name="fluxbox">use <pkg>x11-wm/fluxbox</pkg> as the window manager of choice. typically this has better performance and can  even be used as a full desktop solution if so desired</flag>
 		<flag name="fslint">install <pkg>app-misc/fslint</pkg>, this is a useful tool for finding duplicate files, empty directories and other such things to help keep a system clean</flag>
+		<flag name="ftp">install <pkg>net-ftp/filezilla</pkg> as the ftp client</flag>
 		<flag name="index">install mlocate to allow indexing which helps make file searches faster</flag>
 		<flag name="irc">install <pkg>net-irc/kvirc</pkg> in order to use irc. this is often a preferred way to get volunteer support with issues or make quick queries</flag>
-		<flag name="network-tray">install <pkg>gnome-extra/nm-applet</pkg>, a universal system tray that helps with </flag>
+		<flag name="latex">install <pkg>app-office/lyx</pkg>, an editor for latex that's great for beginners</flag>
+		<flag name="logisim">install <pkg>sci-electronics/logisim-evolution-holy-cross</pkg>, a fork of a fork of logisom that performs well</flag>
+		<flag name="mail-client">install <pkg>mail-client/mailspring</pkg>, a partially open source mail client</flag>
+		<flag name="network-tray">install <pkg>gnome-extra/nm-applet</pkg>, a universal system tray that helps with wireless networks</flag>
+		<flag name="odt">install <pkg>app-office/libreoffice</pkg> to handle odt files and convert between them</flag>
+		<flag name="odt-convert">install <pkg>dev-tex/tex4ht</pkg> to convert latex files to odt, which can subsequently be reviewed and converted to docx with libreoffice</flag>
 		<flag name="openbox">use openbox as the window manager of choice. openbox is more widely supported including having its own configuration gui</flag>
 		<flag name="overlay">install <pkg>app-portage/layman</pkg> to handle overlays, not using overlays is generally not supported</flag>
 		<flag name="pdf">install <pkg>app-text/mupdf</pkg> to handle pdfs</flag>

@@ -1,6 +1,6 @@
 =acct-group/plugdev-0::tatsh-overlay														#poor description
 =app-arch/gcab-1.2::dantrell-gnome														#seems dated
-=app-crypt/gcr-3.28.1::dantrell-gnome													#dependencies seem dated
+#=app-crypt/gcr-3.28.1::dantrell-gnome													#dependencies seem dated
 =app-crypt/gcr-3.33.4::my-gnome															#odd dependencies
 =app-crypt/gnupg-2.2.17::dantrell-gnome												#bad keywording, unnecessary quotes
 =app-crypt/seahorse-3.32.2::dantrell-gnome-3-32									#missing dependency
@@ -26,6 +26,7 @@
 =dev-libs/boost-1.65.0::gnux32																#x32 specific patch
 =dev-libs/boost-1.70.0::gnux32																#better in other overlay
 =dev-libs/glib-2.61.1::gnome-next															#less python compatibility, less use flags, no separate packages
+=dev-libs/glib-2.62.1::dantrell-gnome														#less use flags, no separate packages
 =dev-libs/gmp-6.1.2::srcshelton																#no musl support
 =dev-libs/gmp-6.1.2-r1::gentoo																#no pgo
 =dev-libs/gobject-introspection-common-1.60.2::dantrell-gnome-3-32	#bad keywording, unnecessary quotes
@@ -99,8 +100,8 @@
 =dev-util/boost-build-1.70.0::gnux32														#better in other overlay
 =dev-util/gdbus-codegen-2.62.1::dantrell-gnome									#dummy package
 =dev-util/gdbus-codegen-2.99::rindeal													#dummy package
-=dev-util/glib-utils-2.58.3::dantrell-gnome												#dummy package
-=dev-util/glib-utils-2.60.6::dantrell-gnome												#dummy package
+<=dev-util/glib-utils-2.60.6::dantrell-gnome												#dummy package
+=dev-util/glib-utils-2.62.1::dantrell-gnome												#dummy package
 =dev-util/glib-utils-2.99.99::rindeal															#dummy package
 =dev-util/gtk-update-icon-cache-3.24.8::dantrell-gnome							#bad keywording, unnecessary quotes
 =dev-util/gtk-update-icon-cache-3.24.11::dantrell-gnome						#bad keywording, unnecessary quotes

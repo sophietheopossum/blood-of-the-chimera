@@ -11,12 +11,13 @@ kde-plasma/plasma-meta -minimal -sddm -pulseaudio
 lxqt-base/lxqt-meta minimal sddm sudo
 mail-mta/msmtp gnome-keyring
 mail-mta/postfix sasl
+media-fonts/liberation-fonts fontforge
 media-gfx/fontforge -python_single_target_python2_7
 net-irc/kvirc -python_single_target_python2_7
 net-misc/networkmanager -vanilla
 sys-apps/dbus X
 sys-apps/portage -xattr
-sys-apps/world archive
+sys-apps/world archive ftp latex
 sys-devel/gcc -jit
 sys-libs/libblockdev -python_single_target_python2_7
 sys-libs/pam cracklib
@@ -299,3 +300,5 @@ app-text/poppler cairo qt5
 # required by virtual/imagemagick-tools-0::gentoo
 # required by app-office/lyx-2.3.3::gentoo
 >=media-gfx/imagemagick-7.0.8.60 png
+# required by net-misc/persepolis-3.1.0::jorgicio
+>=dev-python/PyQt5-5.12.2 gui network svg widgets

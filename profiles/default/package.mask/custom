@@ -4,6 +4,7 @@
 =app-office/lyx-2.3.99											#bad versioning
 =app-pda/libplist-9999											#bad versioning
 =app-pda/libusbmuxd-9999									#bad versioning
+<app-text/docbook-xsl-stylesheets-1.79.2-r1		#old
 <app-text/poppler-0.79.0										#old
 <=dev-java/icedtea-bin-3.13.0								#for java 8 performance is better with oracle
 =dev-lang/rust-1.34.2-r666									#bad versioning

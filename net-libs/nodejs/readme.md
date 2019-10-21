@@ -1,3 +1,6 @@
+*8.15.1-r2*
+::prototype99
+-pypy
 *8.15.1-r1*
 ::gentoo
 -python-any

@@ -2,6 +2,7 @@
 # detailed example.
 #source /usr/share/fetchcommandwrapper/make.conf
 ACCEPT_LICENSE="*"
+ALSA_CARDS="-ali5451 -als4000 -atiixp -atiixp-modem -bt87x -ca0106 -cmipci -emu10k1x -ens1370 -ens1371 -es1938 -es1968 -fm801 -intel8x0 -intel8x0m -maestro3 -trident -usb-audio -via82xx -via82xx-modem -ymfpci"
 COMMON_FLAGS="-march=native -pipe"
 CPU_FLAGS_X86="aes avx f16c pclmul popcnt sse3 sse4_1 sse4_2 ssse3"
 EMERGE_DEFAULT_OPTS="-AaDNUuv --ask-enter-invalid --backtrack=30  --color y --columns --changed-deps y --changed-deps-report y --changed-slot y --fail-clean y --keep-going y --changed-use --with-bdeps y --jobs"
@@ -15,7 +16,7 @@ PORTAGE_RSYNC_EXTRA_OPTS="-l --new-compress --progress"
 PORTAGE_SYNC_STALE="1"
 PYTHON_SINGLE_TARGET="python2_7 pypy3 pypy"
 PYTHON_TARGETS="python2_7 pypy3 pypy"
-USE="7zip adns adwaita-icon-theme alsa aria2 asm brotli browser_firefox capi cjk clang custom-cflags custom-optimization default-gold dev dhcpcd discord discover dns_threaded dos faad fat firmware flash fluidsynth freecad_modules_assembly fslint gentoo-sources graphite grub hddtemp htmlthumbs hwaccel inkjar irc ithreads iwd jemalloc jit jumbo-build l10n_en_GB long-arg lto mercurial monolithic-build musicbrainz natspec netapi ntfs ocamlopt offensive office offload openmp orc overlay pch pcre-jit pdf pipelight pgo plymouth protocol_http2 proton pulseaudio rar remote-desktop rust servicetools smp spreadsheet staging steam sync-plugin-portage system-bz2 system-cairo system-ffi system-harfbuzz system-icu system-jpeg system-jsoncpp system-graphite2 system-heimdal system-icu system-lcms system-ldb system-libevent system-libvpx system-llvm system-mitkrb5 system-nspr system-nss system-pixman system-png system-sqlite system-webp system-zlib text-editor threads thumbnail toolkit-scroll-bars uvm visio vmware-tools-linux vmware-tools-windows woff2 yandex-disk zsh-completion"
+USE="7zip adns adwaita-icon-theme alsa aria2 asm brotli browser_firefox capi cjk clang custom-cflags custom-optimization default-gold dev dhcpcd discord discover dns_threaded dos faad fat firmware flash fluidsynth freecad_modules_assembly fslint gentoo-sources graphite grub hddtemp htmlthumbs hwaccel inkjar irc ithreads iwd jemalloc jit jumbo-build l10n_en_GB logisim long-arg lto mail-client mercurial monolithic-build musicbrainz natspec netapi ntfs ocamlopt odt odt-convert offensive office offload openmp orc overlay pch pcre-jit pdf pipelight pgo plymouth protocol_http2 proton pulseaudio rar remote-desktop rust servicetools smp spreadsheet staging steam sync-plugin-portage system-bz2 system-cairo system-ffi system-harfbuzz system-icu system-jpeg system-jsoncpp system-graphite2 system-heimdal system-icu system-lcms system-ldb system-libevent system-libvpx system-llvm system-mitkrb5 system-nspr system-nss system-pixman system-png system-sqlite system-webp system-zlib tcmalloc text-editor threads thumbnail toolkit-scroll-bars uvm visio vmware-tools-linux vmware-tools-windows woff2 yandex-disk zsh-completion"
 #CCACHE_DIR="/gentoo/ccache"
 #CCACHE_RECACHE="yes"
 #CCACHE_SIZE="0"
