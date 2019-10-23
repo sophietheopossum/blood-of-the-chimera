@@ -35,19 +35,23 @@
 =mail-client/mailspring-bin-1.6.3-r6
 =media-fonts/liberation-fonts-2.00.5
 =media-gfx/fontforge-20190801-r1
+=media-gfx/inkscape-0.92.4-r1
 =media-libs/libuninameslist-20190701
 =net-libs/nodejs-8.15.1-r1
 =net-misc/anydesk-5.0.0 ~amd64
 =net-misc/persepolis-3.1.0
 =sci-libs/colamd-2.9.6
+=sci-libs/openblas-0.3.7
 =sci-libs/suitesparseconfig-5.4.0
 =sys-apps/dbus-broker-18 ~amd64
 =sys-config/ltoize-0.9.3-r2
 =sys-devel/llvm-9.0.0
 =sys-kernel/gentoo-sources-5.1.11 ~amd64
 =sys-kernel/gentoo-sources-5.2.5 ~amd64
+=virtual/cblas-2.0-r4
 =virtual/linux-sources-3-r2
 =virtual/linux-sources-5
+=virtual/linux-sources-7
 #=virtual/rust-1.35.0
 #=virtual/rust-1.36.0
 =www-client/firefox-67.0.2
@@ -743,3 +747,6 @@
 # required by gnome-extra/nm-applet-1.8.20::gentoo
 # required by sys-apps/world-2::prototype99[network-tray]
 =dev-libs/ell-0.24
+# required by sci-libs/openblas-0.3.7::gentoo[eselect-ldso]
+=app-eselect/eselect-lapack-0.2 ~amd64
+=app-eselect/eselect-blas-0.2 ~amd64

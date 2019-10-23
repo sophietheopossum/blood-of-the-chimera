@@ -4,7 +4,6 @@
 EAPI=6
 
 PYTHON_COMPAT=( py{thon2_7,py} )
-PYTHON_REQ_USE="xml"
 inherit autotools flag-o-matic gnome2-utils xdg toolchain-funcs python-single-r1
 
 MY_P="${P/_/}"
@@ -22,6 +21,7 @@ IUSE+=" lcms nls spell static-libs visio wpg"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="${PYTHON_DEPS}
+	|| ( dev-lang/python[xml] virtual/pypy )
 	>=app-text/poppler-0.26.0:=[cairo]
 	>=dev-cpp/glibmm-2.54.1
 	>=dev-cpp/gtkmm-2.18.0:2.4

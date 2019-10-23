@@ -35,6 +35,7 @@ features a fixed dependency (gtk-doc pulls in gtk-doc-am and is also required it
 elementary overlay's ebuild with a build error fixed and some improvements in ebuild writing
 ### `dev-libs/zziplib`
 ebuild to try pypy
+### `dev-python/numpy`
 ### `dev-python/pycups`
 ARCHIVED
 includes extra python3_7 compatibility
@@ -69,7 +70,7 @@ attempt at creating a non binary version to reduce headaches caused by the binar
 based on the ::bobwya ebuild. contains some debian and mozilla/freebsd patches from ::pg-overlay, notably disabling some tests and adding more arm64 support (renamed to make more sense, all fixed in mozilla 61), based on use flags. also contains a patch to hide gtk2 behind nsplugin/NPAPI, the only thing that uses it.
 ### `media-gfx/inkscape`
 ### `media-gfx/scour`
-includes a patch designed to remove an error
+includes extra python compatibility
 ### `media-libs/gexiv2`
 ARCHIVED
 includes extra python3_7 compatibility

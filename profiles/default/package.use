@@ -2,6 +2,7 @@ app-lyx/elyxer -python_single_target_python2_7
 app-portage/layman subversion
 app-text/asciidoc -python_single_target_python2_7
 app-text/mupdf X opengl
+dev-cpp/cairomm X
 dev-libs/gobject-introspection -python_single_target_python2_7
 dev-libs/libical -vala
 dev-tex/tex4ht java
@@ -13,8 +14,10 @@ mail-mta/msmtp gnome-keyring
 mail-mta/postfix sasl
 media-fonts/liberation-fonts fontforge
 media-gfx/fontforge -python_single_target_python2_7
+media-gfx/inkscape -python_single_target_python2_7
 net-irc/kvirc -python_single_target_python2_7
 net-misc/networkmanager -vanilla
+sci-libs/openblas -openmp
 sys-apps/dbus X
 sys-apps/portage -xattr
 sys-apps/world archive ftp latex

@@ -16,6 +16,11 @@
 =app-text/iso-codes-3.76::pg_overlay														#better in other overlay
 =app-text/yelp-tools-3.32.2::dantrell-gnome-3-32									#bad keywording, unnecessary quotes
 =app-text/yelp-tools-3.32.0::gnome-next													#old eapi
+=dev-cpp/atkmm-2.28.0::dantrell-gnome												#bad keywording, unnecessary quotes, duplicate dependency
+=dev-cpp/cairomm-1.12.2::dantrell-gnome												#bad keywording, unnecessary quotes, duplicate dependency
+=dev-cpp/glibmm-2.60.1::dantrell-gnome												#bad keywording, unnecessary quotes, duplicate dependency
+=dev-cpp/gtkmm-2.24.5::dantrell-gnome												#bad keywording, unnecessary quotes, duplicate dependency, no docs
+=dev-cpp/pangomm-2.40.2::dantrell-gnome											#bad keywording, unnecessary quotes, duplicate dependency
 =dev-java/java-config-2.2.0-r1000::progress											#nonstandard python use flags
 =dev-java/javatoolkit-0.3.0-r9::progress													#nonstandard python use flags
 =dev-lang/swig-4.0.0::gentoo-zh																#old eapi
@@ -49,6 +54,7 @@
 =dev-libs/popt-1.16-r2::srcshelton															#use flag not defined in ebuild/missing use flag
 =dev-libs/libpwquality-1.4.0::gentoo														#less python compatibility
 =dev-libs/libpwquality-1.4.0::pg_overlay													#less python compatibility
+=dev-libs/libsigc++-2.10.2::dantrell-gnome												#bad keywording, unnecessary quotes
 =dev-nodejs/abbrev-1.1.1::ssnb																#broken description and homepage, missing depend
 =dev-nodejs/ansi-styles-3.2.1::ssnb														#broken description and homepage, missing depend
 =dev-nodejs/arr-diff-4.0.0::ssnb																#broken description and homepage, missing depend
@@ -91,6 +97,7 @@
 =dev-perl/HTML-Tagset-3.200.0-r1::argent-main									#better in other overlay
 =dev-perl/HTTP-Date-6.20.0-r1::argent-main											#better in other overlay
 =dev-perl/TimeDate-2.300.0::argent-main												#better in other overlay
+=dev-python/pillow-6.1.0::stefantalpalaru												#no clear benefits
 =dev-python/pycparser-2.14-r1000::progress											#odd use flag configuration
 =dev-python/pygtk-2.24.0-r4::dantrell-gnome											#bad keywording, unnecessary quotes, no numpy use flag
 =dev-python/PySocks-1.6.8::pentoo														#better in other overlay

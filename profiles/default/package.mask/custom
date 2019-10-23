@@ -22,6 +22,7 @@
 <dev-libs/libunistring-0.9.10									#old
 =dev-libs/mpc-1.0.3-r1337									#eapi 4, bad dependencies
 =dev-libs/mpfr-3.1.6-r1337									#bad versioning
+=dev-python/pillow-1000										#bad versioning
 <dev-python/ply-3.9												#old
 <dev-python/setuptools-40.6.3							#old
 =dev-qt/qtcore-5.9999											#bad versioning
@@ -75,6 +76,7 @@
 =virtual/rust-1337													#bad versioning, less package support
 =www-client/firefox-66.0.5									#old
 =www-client/firefox-68.0_beta6							#bad versioning
+<x11-libs/cairo-1.16.0-r3										#old
 =x11-libs/libfontenc-9999										#bad versioning
 <x11-libs/gdk-pixbuf-2.38.1									#old
 =x11-libs/gtk+-2.24.32-r666									#bad versioning
