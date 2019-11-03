@@ -8,6 +8,7 @@
 	<use>
 		<flag name="archive">install <pkg>app-arch/xarchiver</pkg> in order to access archives with a gui</flag>
 		<flag name="browser">install a graphical web bowser</flag>
+		<flag name="btrfs">install <pkg>sys-fs/btrfs-progs</pkg> for btrfs, a recently matured snapshotting copy-on-write database</flag>
 		<flag name="chrome">install chromium/chrome of some variety</flag>
 		<flag name="composite">install <pkg>x11-misc/compton</pkg> to enable compositing, a way to render extra effects and transparency in windows</flag>
 		<flag name="composite-gui">install <pkg>lxqt-base/compton-conf</pkg>, a gui to configure compton</flag>
@@ -20,6 +21,7 @@
 		<flag name="fluxbox">use <pkg>x11-wm/fluxbox</pkg> as the window manager of choice. typically this has better performance and can  even be used as a full desktop solution if so desired</flag>
 		<flag name="fslint">install <pkg>app-misc/fslint</pkg>, this is a useful tool for finding duplicate files, empty directories and other such things to help keep a system clean</flag>
 		<flag name="ftp">install <pkg>net-ftp/filezilla</pkg> as the ftp client</flag>
+		<flag name="gnomekeyring-admin">install <pkg>app-crypt/seahorse</pkg> in order to manage gnome keyring with a gui</flag>
 		<flag name="index">install mlocate to allow indexing which helps make file searches faster</flag>
 		<flag name="irc">install <pkg>net-irc/kvirc</pkg> in order to use irc. this is often a preferred way to get volunteer support with issues or make quick queries</flag>
 		<flag name="latex">install <pkg>app-office/lyx</pkg>, an editor for latex that's great for beginners</flag>
@@ -30,15 +32,20 @@
 		<flag name="odt-convert">install <pkg>dev-tex/tex4ht</pkg> to convert latex files to odt, which can subsequently be reviewed and converted to docx with libreoffice</flag>
 		<flag name="openbox">use openbox as the window manager of choice. openbox is more widely supported including having its own configuration gui</flag>
 		<flag name="overlay">install <pkg>app-portage/layman</pkg> to handle overlays, not using overlays is generally not supported</flag>
+		<flag name="parted">install <pkg>sys-block/gparted</pkg> to handle partitions</flag>
 		<flag name="pdf">install <pkg>app-text/mupdf</pkg> to handle pdfs</flag>
 		<flag name="processviewer">install <pkg>kde-plasma/ksysguard</pkg>, a full gui task manager</flag>
 		<flag name="remote-desktop">install <pkg>net-misc/anydesk</pkg> to enable remote desktop functionality</flag>
+		<flag name="screenshot">install <pkg>media-gfx/flameshot</pkg> to handle screenshots</flag>
 		<flag name="spreadsheet">install <pkg>app-office/gnumeric</pkg> to handle spreadsheets</flag>
 		<flag name="steam">install <pkg>games-util/steam-launcher</pkg>, a software distribution platform with one of the largest game catalogues and proton, a built in version of wine</flag>
 		<flag name="sudo">install <pkg>app-admin/sudo</pkg> in order to run software as root (admin)</flag>
 		<flag name="terminal">Install <pkg>x11-terms/qterminal</pkg>, a simple terminal emulator often bundled with lxqt</flag>
 		<flag name="terminal-fast">install <pkg>x11-terms/kitty</pkg>, a terminal emulator that utilises hardware acceleration to run fast while using theoretically less resources</flag>
 		<flag name="text-editor">install <pkg>kde-apps/kate</pkg>, a full gui text-editor featuring a unique graphical scrollbar</flag>
+		<flag name="text-editor-color-highlight">require that your text editor has colour highlighting and thus install <pkg>app-editors/sublime-text</pkg> to satisfy that (which has that feature through plugins)</flag>
+		<flag name="viewfont">use the gui of <pkg>media-gfx/fontforge</pkg> to view all the glyphs a font offers</flag>
 		<flag name="xfs">ensure xfs filesystem support is built, xfs has some of the best performance on kernel 5+ for SSDs</flag>
+		<flag name="yandex-disk">Install <pkg>net-misc/yandex-disk</pkg>, the official yandex disk client</flag>
 	</use>
 </pkgmetadata>

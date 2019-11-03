@@ -3,6 +3,7 @@ app-portage/layman subversion
 app-text/asciidoc -python_single_target_python2_7
 app-text/mupdf X opengl
 dev-cpp/cairomm X
+dev-cpp/gtkmm X
 dev-libs/gobject-introspection -python_single_target_python2_7
 dev-libs/libical -vala
 dev-tex/tex4ht java
@@ -20,7 +21,7 @@ net-misc/networkmanager -vanilla
 sci-libs/openblas -openmp
 sys-apps/dbus X
 sys-apps/portage -xattr
-sys-apps/world archive ftp latex
+sys-apps/world archive ftp latex screenshot
 sys-devel/gcc -jit
 sys-libs/libblockdev -python_single_target_python2_7
 sys-libs/pam cracklib
@@ -305,3 +306,5 @@ app-text/poppler cairo qt5
 >=media-gfx/imagemagick-7.0.8.60 png
 # required by net-misc/persepolis-3.1.0::jorgicio
 >=dev-python/PyQt5-5.12.2 gui network svg widgets
+# required by sys-apps/world-8::prototype99[viewfont]
+>=media-gfx/fontforge-20190801-r1 X

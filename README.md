@@ -17,7 +17,6 @@ Sync overlay:
 BROKEN
 2.31.1+ installs correctly, however it does not function. newer builds are thanks to https://github.com/JamesB192/JamesB192-overlay
 Based off of Docker being available within this portage category, snapd is there as well.  Installation of older versions will draw in `sys-apps/snap-confine` as a dependency. post installation make sure to run the command `systemctl enable --now snapd.service`. note that you must have apparmor
-
 ### `app-admin/system-config-printer`
 includes extra python3_7 compatibility
 ### `app-crypt/seahorse`
@@ -108,6 +107,8 @@ a large metapackage designed to aid in choosing the correct packages
 virtual package modified to accomodate those who may want steam's proton to provide their wine
 ### `www-client/firefox`
 firefox ebuild created using the bobwya and pg_overlay ebuilds. this ebuild contains various extra use flags and extra patches designed to improve performance and give greater choice. please refer to the readme.md kept with the ebuilds for more specific detail.
+### `www-client/google-chrome`
+just a simple version bump, I was impatient.
 ## FAQ
 ### why isn't there snapd without systemd?
 good question, with openrc being the more popular init system, you  would think it would be an available option. sadly this is not a mistake, snappy is designed in such a way that systemd is required. obviously much like funtoo has proven with their solution with gnome, it is theoretically possible. so possible in fact, that early ubuntu (which used upstart) even used a modified version of systemd to run snappy. however to the best of my knowledge there is no updated version of that, hence no openrc compatible ebuilds. feel free to contribute and make this otherwise however i have no interest myself in doing so (i personally use systemd). that being said, elogind may or may not help
