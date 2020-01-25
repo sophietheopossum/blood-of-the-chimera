@@ -8,4 +8,5 @@ ln -sf /var/db/repos/prototype99/profiles-local/kitty.conf ~/.config/kitty/kitty
 sudo ln -sf /var/db/repos/prototype99/profiles-local/genkernel.conf /etc/genkernel.conf
 sudo ln -sf /var/db/repos/prototype99/profiles-local/env /etc/portage/env
 sudo ln -sf /var/db/repos/prototype99/profiles-local/package.env /etc/portage/package.env
-sudo ln -sf /var/db/repos/gentoo /var/db/repos/gentoo_prefix
+sudo ln -sf /var/db/repos/prototype99/profiles-local/lld.conf /etc/portage/package.cflags/lld.conf
+sudo ln -sf /var/db/repos/prototype99/profiles-local/ltoworkaroundoverrides.conf /etc/portage/package.cflags/zltoworkaroundoverrides.conf

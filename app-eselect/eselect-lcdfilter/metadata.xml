@@ -8,7 +8,7 @@
   <upstream>
     <remote-id type="github">yngwin/eselect-lcdfilter</remote-id>
   </upstream>
-  	<use>
-		<flag name="vanilla">don't patch presets to make them easier to compare</flag>
-	</use>
+    <use>
+    <flag name="vanilla">don't patch presets to make them easier to compare</flag>
+  </use>
 </pkgmetadata>

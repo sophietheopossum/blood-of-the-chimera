@@ -1,0 +1,13 @@
+*ant-core-1.10.7
+
+	10.12.2019;	::gentoo		merge relevant gentoo changes
+	-bump to eapi 7
+	-simpler patching
+	-update depend logic
+	-remake patch
+
+*ant-core-1.10.5-r2
+
+	??????????;	::prototype99	compatibility fixes
+	-updated patches to fix libreoffice compilation (by adapting tools.jar warning to a simple dependency check)
+	-allow jdk 10.

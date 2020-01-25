@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <use>
+	<flag name="arm64">build with arm64 specific optimisation</flag>
 	<flag name="bindist">Disable official Thunderbird branding (icons, name) which
 		are not binary-redistributable according to upstream.</flag>
 	<flag name="clang">Use Clang compiler instead of GCC</flag>

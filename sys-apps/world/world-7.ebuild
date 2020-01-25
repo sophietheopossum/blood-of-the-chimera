@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -64,7 +64,7 @@ RDEPEND="
 "
 
 src_install() {
-	use dev && newbin ${FILESDIR}/repo-gen.sh repo-gen
+	use dev && newbin "${FILESDIR}"/repo-gen.sh repo-gen
 	use dev && systemd_dounit "${FILESDIR}/${PN}.service"
 	use dev && systemd_dounit "${FILESDIR}/${PN}.timer"
 }

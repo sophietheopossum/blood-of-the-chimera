@@ -1,0 +1,12 @@
+*2
+
+	6.12.2019;	<sophietheopossum@yandex.ru>		::prototype99	merge latest changes from gentoo and bump:
+	-documentation is now generated in /usr/share/docs/
+	-removed empty depend line
+
+*1
+
+	8.12.2019;	<sophietheopossum@yandex.ru>		::prototype99	fix patch locations
+	25.11.2019;	<sophietheopossum@yandex.ru>		::prototype99	tabulate metadata, switch from epatch to eapply, quote variable
+	??????????;	<sophietheopossum@yandex.ru>		::prototype99	add custom patch
+	??????????;										::gentoo		base ebuild

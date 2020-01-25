@@ -7,7 +7,7 @@ MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 OGG=">=media-libs/libogg-1"
 SRC_URI="https://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.xz"
-KEYWORDS="amd64 ~arm ~arm64 ppc ppc64 -sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~arm64 ppc ppc64 -sparc x86"
 inherit autotools flag-o-matic virtualx xdg
 
 DESCRIPTION="Media player and framework with support for most multimedia files and streaming"

@@ -1,0 +1,11 @@
+*0.4.8_pre20141005
+
+	11.1.2020	::prototype99	bump and add fixes
+	-remove vala
+	-remove 9999 code
+	-implement MY_PN to reduce duplication
+	-see if parallel build works again
+
+*0.3.1
+
+	??????????	::jorgicio		base ebuild

@@ -1,0 +1,11 @@
+--- a/configure	2017-08-10 12:19:45.000000000 +0100
++++ b/configure	2019-11-07 13:16:46.634350150 +0000
+@@ -3130,7 +3130,7 @@
+ $as_echo "$as_me:${as_lineno-$LINENO}: checking for C compiler version" >&5
+ set X $ac_compile
+ ac_compiler=$2
+-for ac_option in --version -v -V -qversion; do
++for ac_option in --version -v -V; do
+   { { ac_try="$ac_compiler $ac_option >&5"
+ case "(($ac_try" in
+   *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;

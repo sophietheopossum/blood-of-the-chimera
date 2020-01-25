@@ -10,7 +10,9 @@
 		<name>Gentoo Kernel Project</name>
 	</maintainer>
 	<use>
-		<flag name="ath9k">Install the ath9k driver for 802.11n qualcomm/atheros NICs</flag>
 		<flag name="firmware">Install linux kernel firmware</flag>
+		<flag name="gentoo-patches">use the official gentoo patchset</flag>
+		<flag name="gentoo-sources">use the official gentoo kernel sources</flag>
+		<flag name="pf-sources">use the pf kernel sources</flag>
 	</use>
 </pkgmetadata>

@@ -1,20 +1,9 @@
-diff -ur a/env.d/custom b/env.d/custom
---- /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff/env.d/custom	2012-07-29 15:59:12.000000000 +0100
-+++ /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff-patched/env.d/custom	2019-10-29 23:26:33.354099468 +0000
-@@ -21,5 +21,4 @@
- INFINALITY_FT_GLOBAL_EMBOLDEN_X_VALUE=0
- INFINALITY_FT_GLOBAL_EMBOLDEN_Y_VALUE=0
- INFINALITY_FT_BOLD_EMBOLDEN_X_VALUE=0
--INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE=0
--
-+INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE=0
-\ No newline at end of file
-diff -ur /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff/env.d/default /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff-patched/env.d/default
---- /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff/env.d/default	2012-07-29 15:59:12.000000000 +0100
-+++ /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff-patched/env.d/default	2019-10-29 23:27:39.748304415 +0000
-@@ -1,25 +1,24 @@
+diff -ur a/env.d/default b/env.d/default
+--- a/env.d/default	2013-04-05 09:42:26.000000000 +0100
++++ b/env.d/default	2019-12-10 11:18:07.913409731 +0000
+@@ -1,22 +1,22 @@
  ######## DEFAULT STYLE ########
- 
+
  INFINALITY_FT_FILTER_PARAMS="11 22 38 22 11"
 +INFINALITY_FT_GRAYSCALE_FILTER_STRENGTH=0
 +INFINALITY_FT_FRINGE_FILTER_STRENGTH=0
@@ -42,29 +31,13 @@ diff -ur /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff/env.d/default /home/seirr
 +INFINALITY_FT_AUTOHINT_SNAP_STEM_HEIGHT=100
 +INFINALITY_FT_STEM_SNAPPING_SLIDING_SCALE=40
 +INFINALITY_FT_USE_KNOWN_SETTINGS_ON_SELECTED_FONTS=true
- 
+
  INFINALITY_FT_GLOBAL_EMBOLDEN_X_VALUE=0
  INFINALITY_FT_GLOBAL_EMBOLDEN_Y_VALUE=0
- INFINALITY_FT_BOLD_EMBOLDEN_X_VALUE=0
--INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE=0
--
-+INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE=0
-\ No newline at end of file
-diff -ur /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff/env.d/infinality /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff-patched/env.d/infinality
---- /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff/env.d/infinality	2012-07-29 15:59:12.000000000 +0100
-+++ /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff-patched/env.d/infinality	2019-10-29 23:14:04.985510309 +0000
-@@ -21,5 +21,4 @@
- INFINALITY_FT_GLOBAL_EMBOLDEN_X_VALUE=0
- INFINALITY_FT_GLOBAL_EMBOLDEN_Y_VALUE=0
- INFINALITY_FT_BOLD_EMBOLDEN_X_VALUE=0
--INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE=0
--
-+INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE=0
-\ No newline at end of file
-diff -ur /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff/env.d/nyx /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff-patched/env.d/nyx
---- /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff/env.d/nyx	2012-07-29 15:59:12.000000000 +0100
-+++ /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff-patched/env.d/nyx	2019-10-31 04:13:35.066275685 +0000
-@@ -1,21 +1,24 @@
+diff -ur a/env.d/nyx b/env.d/nyx
+--- a/env.d/nyx	2013-04-05 09:42:26.000000000 +0100
++++ b/env.d/nyx	2019-12-10 11:32:13.384626941 +0000
+@@ -1,21 +1,25 @@
 +######## NYX STYLE ########
 +
  INFINALITY_FT_FILTER_PARAMS="15 21 34 21 15"
@@ -98,6 +71,16 @@ diff -ur /home/seirra/yngwin-eselect-lcdfilter-ebbe4ff/env.d/nyx /home/seirra/yn
  INFINALITY_FT_GLOBAL_EMBOLDEN_X_VALUE=0
  INFINALITY_FT_GLOBAL_EMBOLDEN_Y_VALUE=0
  INFINALITY_FT_BOLD_EMBOLDEN_X_VALUE=0
--INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE=0
-+INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE=0
-\ No newline at end of file
+ INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE=0
++
+diff -ur a/env.d/osx b/env.d/osx
+--- a/env.d/osx	2013-04-05 09:42:26.000000000 +0100
++++ b/env.d/osx	2019-12-10 11:32:56.587323685 +0000
+@@ -17,6 +17,7 @@
+ INFINALITY_FT_AUTOHINT_SNAP_STEM_HEIGHT=0
+ INFINALITY_FT_STEM_SNAPPING_SLIDING_SCALE=0
+ INFINALITY_FT_USE_KNOWN_SETTINGS_ON_SELECTED_FONTS=false
++
+ INFINALITY_FT_GLOBAL_EMBOLDEN_X_VALUE=0
+ INFINALITY_FT_GLOBAL_EMBOLDEN_Y_VALUE=8
+ INFINALITY_FT_BOLD_EMBOLDEN_X_VALUE=0

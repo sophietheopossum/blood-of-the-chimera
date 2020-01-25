@@ -1,0 +1,10 @@
+*gcr-3.34.0-r1
+
+::dantrell-gnome-3-34
+-add python 3.5 support
+
+::my-gnome
+-extra safeguard for old gnome-keyring versions
+
+::gentoo
+-base ebuild

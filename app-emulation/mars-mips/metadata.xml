@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sophietheopossum@yandex.ru</email>
+		<name>Seirra Blake</name>
+	</maintainer>
+<longdescription lang="en">
+MARS is a lightweight interactive development environment for programming in MIPS assembly language
+</longdescription>
+</pkgmetadata>

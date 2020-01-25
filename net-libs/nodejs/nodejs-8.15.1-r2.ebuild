@@ -31,10 +31,10 @@ RDEPEND="
 	>=net-libs/nghttp2-1.33.0
 	sys-libs/zlib
 	icu? ( >=dev-libs/icu-60.1:= )
-	ssl? ( 
-		!bundled-ssl? ( 
+	ssl? (
+		!bundled-ssl? (
 			!libressl? ( >=dev-libs/openssl-1.0.2n:0=[-bindist] )
-			libressl?	( dev-libs/libressl:= ) 
+			libressl?	( dev-libs/libressl:= )
 		)
 	)
 "

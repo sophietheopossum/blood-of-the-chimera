@@ -1,3 +1,6 @@
+# Copyright 1999-2019 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
 EAPI=6
 
 inherit eutils java-pkg-2 java-ant-2
@@ -7,7 +10,7 @@ DESCRIPTION="Digital logic designer and simulator."
 HOMEPAGE="https://github.com/kevinawalsh/logisim-evolution"
 SRC_URI="https://github.com/kevinawalsh/logisim-evolution/archive/${NUM}.zip -> ${P}.zip"
 
-LICENSE="GPL-3.0"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="java nls"

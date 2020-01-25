@@ -1,0 +1,1 @@
+/var/db/repos/science/eclass/intel-sdp-r1.eclass

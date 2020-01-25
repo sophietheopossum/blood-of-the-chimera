@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>fonts@gentoo.org</email>
+		<name>Fonts</name>
+	</maintainer>
+	<use>
+		<flag name="fontforge">Use <pkg>media-gfx/fontforge</pkg> to build fonts from source</flag>
+		<flag name="vanilla">Don't fix errors in character mapping</flag>
+	</use>
+	<longdescription lang="en">
+		A GPL-2 Helvetica/Times/Courier replacement TrueType font set, courtesy of Red Hat. vishal-vvr fork adds unicode characters 25d0-25d7 which relate to circles. I have patched in even more glyphs which are by no means works of art, but try to utilise existing glyphs as much as possible to look authentic
+	</longdescription>
+</pkgmetadata>

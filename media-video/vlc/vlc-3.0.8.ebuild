@@ -7,7 +7,7 @@ MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 OGG=">=media-libs/libogg-1"
 SRC_URI="https://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.xz"
-KEYWORDS="amd64 ~arm ~arm64 ppc ppc64 -sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~arm64 ppc ppc64 -sparc x86"
 inherit autotools flag-o-matic virtualx xdg
 
 DESCRIPTION="Media player and framework with support for most multimedia files and streaming"
@@ -211,7 +211,7 @@ RDEPEND="
 		>=x11-libs/xcb-util-0.3.4
 		>=x11-libs/xcb-util-keysyms-0.3.4
 	)
-	x264? ( 
+	x264? (
 		10bit? ( >=media-libs/x264-0.0.20190214:0=[10bit] )
 		!10bit? ( >=media-libs/x264-0.0.20160712:0= )
 	)
@@ -421,7 +421,7 @@ src_configure() {
 		--disable-wasapi
 	)
 	# ^ We don't have these disabled libraries in the Portage tree yet.
-	
+
 	# Compatibility fix for Samba 4.
 	use samba && append-cppflags "-I/usr/include/samba-4.0"
 

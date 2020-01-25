@@ -1,0 +1,13 @@
+*71.0
+
+	11.12.2019	::bobwya
+	-remove unnecessary quotes
+	-add egl use flag
+	-add kde use flag
+	-remove unnecessary spaces
+	11.12.2019	::pg_overlay
+	-bump to python 3.8
+	-add dbus use flag
+	11.12.2019	::prototype99
+	-remove unnecessary spaces
+	11.12.2019	::gentoo		base ebuild

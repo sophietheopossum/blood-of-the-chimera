@@ -1,8 +1,8 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=4
-inherit vcs-snapshot epatch
+EAPI=6
+inherit vcs-snapshot
 
 DESCRIPTION="Eselect module to choose Freetype infinality-enhanced LCD filtering settings"
 HOMEPAGE="https://github.com/yngwin/eselect-lcdfilter"
@@ -18,7 +18,7 @@ RDEPEND="app-admin/eselect"
 PDEPEND="media-libs/freetype[infinality]"
 
 src_prepare() {
-	use !vanilla && epatch ${FILESDIR}/normalise.patch
+	use !vanilla && eapply "${FILESDIR}"/normalise.patch
 	default
 }
 

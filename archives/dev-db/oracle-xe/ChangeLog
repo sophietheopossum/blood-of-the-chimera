@@ -1,0 +1,29 @@
+*oracle-xe-18.4.0.0.0
+
+	25.11.2019;	<sophietheopossum@yandex.ru>		::prototype99	update
+
+*oracle-xe-10.2.0.1_p1-r2
+
+	2.10.2009;	<ptriller@soapwars.de>				::gentoo123663
+		-remove non-existent wtk-enterprise.eclass
+		-remove non-existent overlay_pkg_setup
+		-add patch for high memory machines
+
+	14.10.2007;	<ostefano@gmail.com>				::gentoo123663	Fixed env dirs as suggested in comment #38
+
+*oracle-xe-10.2.0.1_p1-r1
+
+	28.2.2007;	<toffanin.mauro@gmail.com>			::gentoo123663
+		-fix wrong IUSE, making the ebuild portage compliant by using USE "unicode" instead of "latin1"; also fix problem reported at comment #34 where you need both versions downloaded
+		-check ~arch before install
+		-check minimun requirements before install
+		-use elog functions
+		-fix "missing dir/files" during installation process
+
+*oracle-xe-10.2.0.1_p1
+
+	23.7.2006;	<dertobi123@gentoo.org>				::gentoo123663	update
+
+*oracle-xe-10.2.0.1
+
+	30.4.2006;	<e-spark@etherlink.ch>				::gentoo123663	first

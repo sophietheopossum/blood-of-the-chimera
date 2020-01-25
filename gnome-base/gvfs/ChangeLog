@@ -1,0 +1,16 @@
+*1.42.2
+
+::my-gnome
+-update ebuild dependencies
+
+*1.42.0
+
+::gnome-next
+-extra keywords
+-sftp use flag
+-metadata
+-test dependencies
+::my-gnome
+-base ebuild
+::prototype99
+-add missing dependency

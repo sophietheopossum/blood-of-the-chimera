@@ -35,3 +35,4 @@ ln -sf /var/db/repos/prototype99/profiles-local/genkernel.conf /etc/genkernel.co
 ln -sf /var/db/repos/prototype99/profiles-local/kitty.conf ~/.config/kitty/kitty.conf
 ln -sf /proc/self/mounts /etc/mtab
 genkernel kernel
+sudo eselect lcdfilter set custom

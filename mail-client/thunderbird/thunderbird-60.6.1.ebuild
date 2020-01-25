@@ -46,7 +46,7 @@ DESCRIPTION="Thunderbird Mail Client, with SUSE patchset, to provide better KDE 
 HOMEPAGE="https://www.mozilla.org/thunderbir
 	https://www.rosenauer.org/hg/mozilla"
 
-KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="arm64 bindist clang dbus debug hardened jack kde lightning kernel_linux neon nsplugin pulseaudio

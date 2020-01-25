@@ -18,7 +18,7 @@ DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
 
 src_prepare() {
-	use long-arg && eapply ${FILESDIR}/long-arg.patch
+	use long-arg && eapply "${FILESDIR}"/long-arg.patch
 	default
 }
 

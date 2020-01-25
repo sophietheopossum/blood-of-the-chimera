@@ -1,31 +1,41 @@
 app-lyx/elyxer -python_single_target_python2_7
+app-office/libreoffice java -python_single_target_python2_7
 app-portage/layman subversion
 app-text/asciidoc -python_single_target_python2_7
 app-text/mupdf X opengl
 dev-cpp/cairomm X
 dev-cpp/gtkmm X
+dev-db/oracle-instantclient odbc
 dev-libs/gobject-introspection -python_single_target_python2_7
 dev-libs/libical -vala
 dev-tex/tex4ht java
 dev-util/gdbus-codegen -python_single_target_python2_7
 kde-frameworks/ki18n -python_single_target_python2_7
-kde-plasma/plasma-meta -minimal -sddm -pulseaudio
+kde-plasma/plasma-meta -crypt -minimal -sddm -pulseaudio
 lxqt-base/lxqt-meta minimal sddm sudo
 mail-mta/msmtp gnome-keyring
 mail-mta/postfix sasl
 media-fonts/liberation-fonts fontforge
+media-fonts/noto cjk
 media-gfx/fontforge -python_single_target_python2_7
-media-gfx/inkscape -python_single_target_python2_7
+media-gfx/inkscape python_single_target_python2_7
+media-libs/clutter X
+net-fs/samba -nls
 net-irc/kvirc -python_single_target_python2_7
 net-misc/networkmanager -vanilla
+sci-libs/hdf5 -cxx -threads
 sci-libs/openblas -openmp
+#sci-libs/vtk -tbb
 sys-apps/dbus X
 sys-apps/portage -xattr
-sys-apps/world archive ftp latex screenshot
+sys-apps/world anaconda archive ftp latex mips-emulate screenshot sublime sublimelinter system-flake8 system-pylint text-editor-color-highlight text-editor-js-lint text-editor-php-lint text-editor-py-complete text-editor-py-lint
+sys-devel/clang -python_single_target_python2_7
 sys-devel/gcc -jit
 sys-libs/libblockdev -python_single_target_python2_7
 sys-libs/pam cracklib
+virtual/linux-sources debug
 www-client/chromium -custom-cflags
+x11-wm/fvwm png
 x11-wm/fluxbox -toolbar -systray
 # required by net-misc/curl[threads]
 net-misc/curl -adns
@@ -308,3 +318,65 @@ app-text/poppler cairo qt5
 >=dev-python/PyQt5-5.12.2 gui network svg widgets
 # required by sys-apps/world-8::prototype99[viewfont]
 >=media-gfx/fontforge-20190801-r1 X
+# required by media-gfx/freecad-0.18.3::waebbl
+>=dev-libs/OpenNI2-2.2_beta2 opengl
+# required by media-gfx/freecad-0.18.3::waebbl
+>=dev-libs/boost-1.71.0 python
+# required by media-gfx/freecad-0.18.3::waebbl
+>=dev-python/pyside-5.11.1 gui svg widgets
+# required by media-gfx/freecad-0.18.3::waebbl
+>=media-libs/coin-3.1.3-r2 simage
+# required by media-gfx/freecad-0.18.3::waebbl[fem]
+>=sci-libs/vtk-8.2.0 rendering qt5 python boost
+# required by media-gfx/freecad-0.18.3::waebbl[mesh]
+>=dev-util/pybind11-2.3.0 -python_single_target_python2_7
+# required by media-gfx/freecad-0.18.3::waebbl
+>=dev-python/matplotlib-3.0.3 -python_targets_pypy3
+# required by media-gfx/freecad-0.18.3::waebbl
+>=sci-libs/med-4.0.0-r1 python
+# required by sci-libs/vtk-8.2.0::tafsm[mpi]
+# required by sci-libs/opencascade-7.3.0::waebbl[vtk]
+# required by media-gfx/freecad-0.18.3::waebbl
+>=virtual/mpi-2.0-r4 romio
+# required by virtual/mpi-2.0-r4::gentoo
+# required by sci-libs/med-4.0.0-r1::gentoo
+# required by media-gfx/freecad-0.18.3::waebbl
+>=sys-cluster/openmpi-2.0.2 romio
+# required by media-gfx/freecad-0.18.3::prototype99
+>=dev-libs/libspnav-0.2.3 X
+# required by dev-libs/libspnav-0.2.3::gentoo
+# required by media-gfx/freecad-0.18.3::prototype99
+>=app-misc/spacenavd-0.6 X
+# required by gnome-extra/budgie-desktop-10.5::reagentoo
+# required by budgie-desktop (argument)
+>=app-i18n/ibus-1.5.19-r1 vala
+# required by budgie-desktop (argument)
+>=app-i18n/ibus-1.5.18 vala
+# required by media-gfx/graphviz-2.42.3::gentoo
+# required by dev-lang/vala-0.40.17::dantrell-gnome
+# required by app-crypt/libsecret-0.18.8::dantrell-gnome[vala]
+# required by gnome-extra/evolution-data-server-3.34.1::dantrell-gnome-3-34
+# required by gnome-base/gnome-shell-3.34.1::dantrell-gnome-3-34
+# required by gnome-base/gdm-3.34.1-r1::dantrell-gnome-3-34
+# required by gnome-extra/budgie-desktop-10.5::reagentoo
+# required by budgie-desktop (argument)
+>=media-libs/gd-2.2.5-r2 truetype fontconfig
+# required by gnome-base/gnome-control-center-3.34.1::dantrell-gnome-3-34[cups]
+# required by gnome-base/gnome-shell-3.34.1::dantrell-gnome-3-34
+# required by gnome-base/gdm-3.34.1-r1::dantrell-gnome-3-34
+# required by gnome-extra/budgie-desktop-10.5::reagentoo
+# required by budgie-desktop (argument)
+>=net-fs/samba-4.9.0 client
+# required by sys-libs/ldb-1.3.6::musl
+# required by net-fs/samba-4.9.0::raw[system-ldb]
+# required by net-fs/cifs-utils-6.9-r1::gentoo[acl]
+>=sys-libs/tdb-1.3.16 python
+# required by sys-libs/ldb-1.3.6::musl
+# required by net-fs/samba-4.9.0::raw[system-ldb]
+# required by net-fs/cifs-utils-6.9-r1::gentoo[acl]
+>=sys-libs/tevent-0.9.37 python
+# required by gnome-base/gnome-shell-3.34.1::dantrell-gnome-3-34
+# required by gnome-base/gdm-3.34.1-r1::dantrell-gnome-3-34
+# required by gnome-extra/budgie-desktop-10.5::reagentoo
+# required by budgie-desktop (argument)
+>=gnome-base/gnome-control-center-3.34.1 networkmanager

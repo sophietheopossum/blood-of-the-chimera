@@ -3,4 +3,5 @@
 *sys-apps/world
 *sys-boot/grub
 *sys-config/ltoize
+*sys-devel/clang
 *sys-kernel/genkernel-next

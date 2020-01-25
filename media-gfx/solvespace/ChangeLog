@@ -1,0 +1,18 @@
+*3.0_pre20191126
+
+	21.12.2019	::booboo		add extra tweaks and fixes
+	-switch to gtk3 build
+	-remove old code
+	-add new dependencies
+	-use git eclass
+	-import submodules
+
+	21.12.2019	::prototype99	bump and add fixes
+	-make use of ${PN}
+	-add new dependencies
+	-spacenav use flag
+	-patch it so system flatbuffers is used
+
+*2.3
+
+	??????????	::gentoo		base ebuild
