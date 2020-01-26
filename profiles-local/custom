@@ -136,6 +136,7 @@
 =dev-python/pygtk-2.24.0-r4::dantrell-gnome							#bad keywording, unnecessary quotes, no numpy use flag
 =dev-python/PySocks-1.6.8::pentoo									#better in other overlay
 =dev-python/pytz-2019.2::HomeAssistantRepository					#no pypy support
+=dev-python/typing-3.6.4-r1::HomeAssistantRepository				#no pypy support
 =dev-python/typing-3.6.6::HomeAssistantRepository					#no pypy support
 =dev-qt/qtgui-5.12.3-r1::poly-c										#disables avx2
 =dev-qt/qtgui-5.12.5::poly-c										#no avx2 patch
@@ -218,7 +219,7 @@
 =net-nds/openldap-2.4.47::defiance									#older eapi
 =net-libs/glib-networking-2.62.0::my-gnome							#no smartcard support
 =net-libs/glib-networking-2.62.3::dantrell-gnome-3-34				#bad keywording, unnecessary quotes, no smartcard support
-=net-libs/glib-networking-2.62.1::my-gnome							#no smartcard support
+=net-libs/glib-networking-2.62.2::my-gnome							#no smartcard support
 =net-libs/gnutls-3.6.7::gnux32										#missing use flag
 =net-libs/libsoup-2.64.2:2.4::unity-gentoo							#missing use flags
 =net-libs/libtirpc-1.1.4-r1::musl									#musl specific patch
