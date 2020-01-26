@@ -16,6 +16,7 @@
 =dev-java/openjdk-bin-11.0.4_p11 ~amd64
 =dev-lang/ifc-19.0.4.243
 =dev-lang/orc-0.4.31
+=dev-lang/python-3.6.9-r1
 #=dev-lang/rust-1.35.0
 #=dev-lang/rust-1.36.0
 =dev-lang/spidermonkey-1.8.5-r7 ~amd64
@@ -122,6 +123,7 @@
 =x11-misc/cairo-compmgr-0.4.8_pre20141005
 =x11-misc/compton-7.3
 =x11-misc/ftmenu-0.4.0-r1
+=x11-misc/picom-7.5-r1
 =x11-themes/fvwm-crystal-3.4.1-r2
 =x11-wm/fvwm-2.6.8-r2
 # required by dev-python/certifi-2018.4.16::gentoo

@@ -18,7 +18,7 @@
 		<flag name="bzip2">compress the kernel with bzip2</flag>
 		<flag name="cad">install <pkg>media-gfx/solvespace</pkg> for fully parametric 2d and 3d cad that's simple, easy to use and exports to a wide variety of formats</flag>
 		<flag name="chrome">install chromium/chrome of some variety</flag>
-		<flag name="composite">install <pkg>x11-misc/compton</pkg> to enable compositing, a way to render extra effects and transparency in windows</flag>
+		<flag name="composite">install <pkg>x11-misc/picom</pkg> to enable compositing, a way to render extra effects and transparency in windows</flag>
 		<flag name="composite-gui">install <pkg>lxqt-base/compton-conf</pkg>, a gui to configure compton</flag>
 		<flag name="dev">install <pkg>app-portage/repoman</pkg>, a tool designed to aid in managing overlays</flag>
 		<flag name="dev-java">install <pkg>dev-util/eclipse-sdk-bin</pkg>, an ide designed for java</flag>

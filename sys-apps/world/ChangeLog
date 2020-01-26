@@ -1,6 +1,11 @@
+*world-18
+
+	26.1.2020	migrate to picom support
+
 *world-17
 
 	25.1.2020	choose a better name for eclipse use flag and add a description, add use flag for phpstorm
+
 *world-16
 
 	24.1.2020	add svg-edit use flag, revamp pdf software logic
