@@ -1,5 +1,9 @@
 *flameshot-0.6.0
 
+::riru
+-dbus use flag
+-locale use flags
+
 ::gig
 -check toolchain earlier to save time
 

@@ -1,6 +1,6 @@
 *world-18
 
-	26.1.2020	migrate to picom support
+	26.1.2020	migrate to picom support, remove broken compton-conf
 
 *world-17
 

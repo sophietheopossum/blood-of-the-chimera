@@ -8,7 +8,7 @@ DESCRIPTION="Meta file to pull in packages and scripts to help keep the world fi
 HOMEPAGE="https://prototype99.github.io"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="amd anaconda archive ath9k +bfq bmq broadcom +browser btrfs bzip2 cad +chrome +composite +composite-gui debug dev discord +efi ext2 exfat +extended-glyphs f2fs +fat firefox flash +fluxbox fslint ftp fvwm gentoo-patches gentoo-sources +gnomekeyring-admin gzip hygon +index inkscape intel irc ivybridge java-ide kate kyber latex logisim lz4 lzma +lzo mail-client mips-emulate +network-tray odt openbox openrc overlay pdf-edit parted pdf-view pdf-view-accurate +pf-sources php-ide +processviewer remote-desktop screenshot secondlife secure spreadsheet sql steam sublime sublimelinter +sudo svg-edit system-flake8 system-pylint +systemd terminal +terminal-fast test +text-editor text-editor-color-highlight text-editor-js-complete text-editor-js-lint text-editor-php-lint text-editor-py-complete text-editor-py-lint threads-4 threads-16 threads-512 +uefi viewfont xeon +xfs xz yandex-disk zhaoxin"
+IUSE="amd anaconda archive ath9k +bfq bmq broadcom +browser btrfs bzip2 cad +chrome +composite debug dev discord +efi ext2 exfat +extended-glyphs f2fs +fat firefox flash +fluxbox fslint ftp fvwm gentoo-patches gentoo-sources +gnomekeyring-admin gzip hygon +index inkscape intel irc ivybridge java-ide kate kyber latex logisim lz4 lzma +lzo mail-client mips-emulate +network-tray odt openbox openrc overlay pdf-edit parted pdf-view pdf-view-accurate +pf-sources php-ide +processviewer remote-desktop screenshot secondlife secure spreadsheet sql steam sublime sublimelinter +sudo svg-edit system-flake8 system-pylint +systemd terminal +terminal-fast test +text-editor text-editor-color-highlight text-editor-js-complete text-editor-js-lint text-editor-php-lint text-editor-py-complete text-editor-py-lint threads-4 threads-16 threads-512 +uefi viewfont xeon +xfs xz yandex-disk zhaoxin"
 S="${WORKDIR}"
 
 REQUIRED_USE="
@@ -22,7 +22,6 @@ REQUIRED_USE="
 anaconda? ( sublime )
 bmq? ( pf-sources )
 browser? ( || ( chrome firefox ) )
-composite-gui? ( composite )
 efi? ( fat )
 gentoo-patches? ( || ( openrc systemd ) )
 gentoo-sources? ( gentoo-patches )
@@ -50,7 +49,6 @@ RDEPEND="
 	cad? ( media-gfx/solvespace )
 	chrome? ( || ( >=www-client/chromium-78 www-client/google-chrome-beta www-client/google-chrome-unstable >=www-client/google-chrome-78 ) )
 	composite? ( x11-misc/picom )
-	composite-gui? ( lxqt-base/compton-conf )
 	dev? ( app-portage/repoman mail-mta/msmtp media-libs/fontconfig-ultimate dev-python/beautifulsoup )
 	discord? ( net-im/discord-bin )
 	extended-glyphs? ( media-fonts/noto )

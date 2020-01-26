@@ -9,7 +9,7 @@
 =app-crypt/gcr-3.34.0-r1::dantrell-gnome-3-34						#bad keywording, unnecessary quotes, no support for old gnome-keyring
 =app-crypt/gnupg-2.2.17::dantrell-gnome								#bad keywording, unnecessary quotes
 =app-crypt/seahorse-3.32.2::dantrell-gnome-3-32						#missing dependency
-=app-crypt/seahorse-3.34::dantrell-gnome-3-34						#bad keywording, unnecessary quotes, no help use flag
+=app-crypt/seahorse-3.34.1::dantrell-gnome-3-34						#bad keywording, unnecessary quotes, no help use flag
 =app-crypt/seahorse-3.34::my-gnome									#old
 =app-emulation/snapd-2.38::fol4										#better in other overlay
 =app-emulation/snapd-2.38::JamesB192								#better in other overlay
@@ -73,6 +73,7 @@
 =dev-libs/libgweather-3.33.92::dantrell-gnome-3-34					#bad keywording, unnecessary quotes
 =dev-libs/libnl-3.4.0:3::musl										#adds musl specific patch, no python3_7 compatibility
 =dev-libs/libpcre2-10.32::dantrell-gnome							#bad keywording, unnecessary quotes
+=dev-libs/libpcre2-10.33::dantrell-gnome							#bad keywording, unnecessary quotes
 =dev-libs/libpcre2-10.33-r1::dantrell-gnome							#bad keywording, unnecessary quotes
 =dev-libs/libpwquality-1.4.0::gentoo								#less python compatibility
 =dev-libs/libpwquality-1.4.0::pg_overlay							#less python compatibility
@@ -285,6 +286,7 @@
 =x11-libs/gtk+-3.24.8::dantrell-gnome								#old workaround
 =x11-libs/gtk+-3.24.9::dantrell-gnome								#old workaround
 =x11-libs/gtk+-3.24.9-r1::dantrell-gnome							#old workaround
+=x11-libs/gtk+-3.24.13::gnome-next									#removes a lot of things with no explanation
 =x11-libs/libdrm-2.4.97::musl										#musl specific patch
 =x11-libs/libpciaccess-0.14::musl									#musl specific patches
 =x11-libs/libxklavier-5.4::dantrell-gnome							##bad keywording, unnecessary quotes, non-standard dependencies

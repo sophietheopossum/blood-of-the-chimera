@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -8,22 +8,36 @@ inherit qmake-utils toolchain-funcs xdg-utils
 DESCRIPTION="Powerful yet simple to use screenshot software for GNU/Linux"
 HOMEPAGE="https://flameshot.js.org"
 SRC_URI="https://github.com/lupoDharkael/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
-
-IUSE="+dbus l10n_ca l10n_es l10n_fr l10n_hu l10n_ka l10n_pl l10n_ru l10n_tr l10n_zh-CN l10n_zh-TW"
 
 LICENSE="FreeArt GPL-3+ Apache-2.0"
 SLOT="0"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
-DEPEND="
+IUSE="+dbus"
+
+FS_LINGUAS="
+	ca es fr hu ka pl ru tr zh_CN zh_TW
+"
+
+for lingua in ${FS_LINGUAS}; do
+	IUSE="${IUSE} l10n_${lingua/_/-}"
+done
+
+RDEPEND="
 	>=dev-qt/qtsvg-5.3.0:5
 	>=dev-qt/qtcore-5.3.0:5
-	>=dev-qt/qtdbus-5.3.0:5
 	>=dev-qt/qtnetwork-5.3.0:5
 	>=dev-qt/qtwidgets-5.3.0:5
+	dbus? (
+		>=dev-qt/qtdbus-5.3.0:5
+		sys-apps/dbus
+	)
+"
+
+BDEPEND="
+	${RDEPEND}
 	>=dev-qt/linguist-tools-5.3.0:5
 "
-RDEPEND="${DEPEND}"
 
 pkg_pretend(){
 	if tc-is-gcc && ver_test "$(gcc-version)" -lt 4.9.2 ;then
@@ -38,6 +52,24 @@ src_prepare(){
 		"snap/gui/${PN}.desktop" \
 		"snap/gui/${PN}-init.desktop"
 	default
+
+	# QA check in case linguas are added or removed
+	enum() {
+		echo ${#}
+	}
+
+	[[ $(enum ${FS_LINGUAS}) -eq $(enum $(echo translations/*.ts)) ]] \
+		|| die "Numbers of recorded and actual linguas do not match"
+	unset enum
+
+	# Remove localisations
+	local lingua
+	for lingua in ${FS_LINGUAS}; do
+		if ! use l10n_${lingua/_/-}; then
+			sed -i ${PN}.pro -e "/\.*Internationalization_${lingua}\.ts.*/d" || die
+			rm translations/Internationalization_${lingua}.ts || die
+		fi
+	done
 }
 
 src_configure(){
