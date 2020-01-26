@@ -1,0 +1,7 @@
+*flameshot-0.6.0
+
+::gig
+-check toolchain earlier to save time
+
+::jorgicio
+-base ebuild
