@@ -136,6 +136,7 @@
 =dev-python/pygtk-2.24.0-r4::dantrell-gnome							#bad keywording, unnecessary quotes, no numpy use flag
 =dev-python/PySocks-1.6.8::pentoo									#better in other overlay
 =dev-python/pytz-2019.2::HomeAssistantRepository					#no pypy support
+=dev-python/pyyaml-5.3::HomeAssistantRepository						#missing patch
 =dev-python/typing-3.6.4-r1::HomeAssistantRepository				#no pypy support
 =dev-python/typing-3.6.6::HomeAssistantRepository					#no pypy support
 =dev-qt/qtgui-5.12.3-r1::poly-c										#disables avx2
@@ -182,10 +183,12 @@
 =media-fonts/alegreya-sans-2.008::gentoo							#less use flags so less customisability
 =media-fonts/cantarell-0.111::dantrell-gnome						#bad keywording, unnecessary quotes
 =media-fonts/croscorefonts-1.31.0::c2p-overlay						#eapi 5
+=media-fonts/croscorefonts-20190524::dantrell-gnome					#bad versioning
 =media-fonts/noto-20190524::dantrell-gnome							#relies on badly versioned packages
-=media-gfx/flameshot-0.6.0::masterlay								#incorrect home page, no kde use flag, missing dependencies
-=media-gfx/flameshot-0.6.0::supertux88								#incorrect home page, no kde use flag
-=media-gfx/flameshot-0.6.0-r1::adrien-overlay						#incorrect home page, no kde use flag
+=media-gfx/flameshot-0.6.0::masterlay								#incorrect home page, missing dependencies
+=media-gfx/flameshot-0.6.0::riru									#better elsewhere
+=media-gfx/flameshot-0.6.0::supertux88								#incorrect home page
+=media-gfx/flameshot-0.6.0-r1::adrien-overlay						#incorrect home page
 =media-gfx/freecad-0.18.3::waebbl									#missing dependency
 =media-gfx/graphviz-2.40.1-r1::gnux32								#x32 specific patch
 =media-gfx/imagemagick-7.0.8.68::stowe-verlay						#broken url
@@ -229,6 +232,9 @@
 =net-misc/aria2-1.34.0-r1::libressl									#applies libressl specific patch
 =net-misc/curl-7.66.0::gentoo										#less use flags
 =net-print/cups-filters-1.21.6::dantrell-gnome						#bad keywording, unnecessary quotes
+=net-print/cups-filters-1.22.6::dantrell-gnome						#bad keywording, unnecessary quotes
+=net-print/cups-filters-1.23.0::dantrell-gnome						#bad keywording, unnecessary quotes
+=net-print/cups-filters-1.24.0::dantrell-gnome						#bad keywording, unnecessary quotes
 =net-print/cups-filters-1.25.13::dantrell-gnome						#bad keywording, unnecessary quotes
 =net-wireless/gnome-bluetooth-3.34.0::dantrell-gnome-3-34			#bad keywording, unnecessary quotes, bad dependencies
 =perl-core/File-Temp-0.230.400-r1::argent-main						#better in other overlay

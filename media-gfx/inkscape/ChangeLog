@@ -1,6 +1,19 @@
+*inkscape-0.92.4-r2*
+::gentoo
+-update-copyright year
+-stabilise a lot of architectures
+-improve dependencies#
+-improve support for binary package users
+-add support for newer poppler versions
+-improve parallel make support
+::prototype99
+-use python3 for translations with opensuse patch
+-add python 3 for dxf and other extensions
+
 *inkscape-0.92.4-r1*
 ::prototype99
 -add experimental pypy compatibility
+
 *inkscape-0.92.4*
 ::gentoo
 -poppler patch

@@ -13,6 +13,7 @@
 =dev-db/oracle-instantclient-18.5.0.0
 =dev-db/sqldeveloper-19.2.1.247.2212
 =dev-java/openjdk-11.0.4_p11 ~amd64
+=dev-java/openjdk-11.0.5_p10
 =dev-java/openjdk-bin-11.0.4_p11 ~amd64
 =dev-lang/ifc-19.0.4.243
 =dev-lang/orc-0.4.31
