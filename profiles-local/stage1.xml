@@ -611,6 +611,19 @@
     <feed>https://cgit.gentoo.org/user/bibletime.git/atom/</feed>
     <!-- <feed>https://cgit.gentoo.org/user/bibletime.git/rss/</feed> -->
   </repo>
+  <repo quality="experimental" status="unofficial">
+    <name>binaryden</name>
+    <description lang="en">Overlay for Cinnamon and other Gentoo packages</description>
+    <homepage>https://github.com/tkemmer/binaryden</homepage>
+    <owner type="person">
+      <email>thomas@binaryden.de</email>
+      <name>Thomas Kemmer</name>
+    </owner>
+    <source type="git">https://github.com/tkemmer/binaryden.git</source>
+    <source type="git">git://github.com/tkemmer/binaryden.git</source>
+    <source type="git">git+ssh://git@github.com/tkemmer/binaryden.git</source>
+    <feed>https://github.com/tkemmer/binaryden/commits/master.atom</feed>
+  </repo>
   <repo quality="experimental" status="official">
     <name>bircoph</name>
     <description lang="en">Developer overlay</description>
@@ -1328,6 +1341,18 @@
       <name>Gioacchino Mazzurco</name>
     </owner>
     <source type="git">https://gitlab.com/eigennet/eigenlay.git</source>
+  </repo>
+  <repo quality="experimental" status="unofficial">
+    <name>einflay</name>
+      <description lang="en">Personal overlay</description>
+      <homepage>https://github.com/EinstokFair/einflay</homepage>
+      <owner type="person">
+        <email>einfair@zoho.eu</email>
+        <name>Einstok Fair</name>
+      </owner>
+      <source type="git">https://github.com/EinstokFair/einflay.git</source>
+      <source type="git">git+ssh://git@github.com/EinstokFair/einflay.git</source>
+    <feed>https://github.com/EinstokFair/einflay/commits/master.atom</feed>
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>ejabberd</name>
@@ -3555,6 +3580,18 @@
     <source type="git">git://github.com/qgp/gentoo-qgp.git</source>
     <source type="git">git+ssh://git@github.com:qgp/gentoo-qgp.git</source>
     <feed>https://github.com/qgp/gentoo-qgp/commits/master.atom</feed>
+  </repo>
+  <repo quality="experimental" status="unofficial">
+    <name>qsx</name>
+    <description lang="en">qsx’ ebuilds</description>
+    <homepage>https://github.com/qsuscs/gentoo-overlay</homepage>
+    <owner type="person">
+      <email>qsx@chaotikum.eu</email>
+      <name>Thomas Schneider</name>
+    </owner>
+    <source type="git">https://github.com/qsuscs/gentoo-overlay.git</source>
+    <source type="git">git+ssh://git@github.com/qsuscs/gentoo-overlay.git</source>
+    <feed>https://github.com/qsuscs/gentoo-overlay/commits/main.atom</feed>
   </repo>
   <repo quality="experimental" status="official">
     <name>qt</name>

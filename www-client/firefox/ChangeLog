@@ -1,5 +1,31 @@
-*71.0
+*firefox-72.0.2
 
+THIS EBUILD MAY NOT WORK
+
+	3.2.2019	::bobwya
+	-remove unnecessary quotes and spaces
+	-update kde patch revision
+	-improved patch logic
+	-die messages
+	-simplify ebuild through substitution
+	-remove unnecessary empty lines
+	-improved error handling
+	3.2.2019	::gentoo		update year, update deps, fixes and patches
+	3.2.2019	::pg_overlay
+	-add lto use flags
+	-privacy patchset
+	-fix session restore (from debian)
+	-no gtest patch (from debian)
+	-MOZILA_DISABLE_PLUGIN patch (from debian)
+	-add wayland, lto and pgo patches (from fedora)
+	-no accessibility patch
+	3.2.2019	::prototype99
+	-use system harfbuzz/graphite2 patches from arch aur (firefox-kde-opensuse)
+	-remove unnecessary moz_esr, and exotic version logic
+	-remove unnecessary extra patches concatenation
+	-put privacy patchset behind a useflag and expand it so users can see what is being applied
+	-accesibility use flag
+	#-check ram for pgo and set parallelism as required using modified check-reqs.eclass code (based on https://forums.gentoo.org/viewtopic-t-1104214-postdays-0-postorder-asc-start-0.html) - seems to make no difference
 	11.12.2019	::bobwya
 	-remove unnecessary quotes
 	-add egl use flag

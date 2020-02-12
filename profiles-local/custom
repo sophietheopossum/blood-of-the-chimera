@@ -202,6 +202,7 @@
 =media-libs/libid3tag-0.15.1b-r5::rinaldus-overlay					#use flag not defined in ebuild
 =media-libs/libmypaint-1.4.0::rindeal								#conflicting code
 =media-libs/libuninameslist-20190701::gentoo-zh						#no python use flag
+=media-libs/libvpx-1.7.0-r1:0/5::gnux32								#x32 specific patches
 =media-libs/mesa-19.2.8::musl										#musl specific patches
 =media-libs/x264-0.0.20170701::lanodanOverlay						#old
 =media-libs/x264-0.0.20170701::gnux32								#x32 specific patch
@@ -283,6 +284,7 @@
 =virtual/pam-0-r1::argent-main										#old, eapi 5
 =virtual/tmpfiles-0::srcshelton										#pointless modification, just mask the whole package?
 =www-client/firefox-67.0::pg_overlay								#better in other overlay, old
+=www-client/firefox-72.0.2::gallifrey								#less use flags
 =x11-base/xorg-drivers-1.20::redcore								#dummy ebuild
 =x11-base/xorg-server-1.20.3::musl									#arm only
 =x11-base/xorg-server-1.20.5-r1::vifino-overlay						#patches break build

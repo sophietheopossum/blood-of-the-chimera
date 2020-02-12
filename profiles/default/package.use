@@ -36,6 +36,7 @@ sys-libs/libblockdev -python_single_target_python2_7
 sys-libs/pam cracklib
 virtual/linux-sources debug
 www-client/chromium -custom-cflags
+www-client/firefox clang
 x11-wm/fvwm png
 x11-wm/fluxbox -toolbar -systray
 # required by net-misc/curl[threads]
@@ -381,3 +382,7 @@ app-text/poppler cairo qt5
 # required by gnome-extra/budgie-desktop-10.5::reagentoo
 # required by budgie-desktop (argument)
 >=gnome-base/gnome-control-center-3.34.1 networkmanager
+# required by www-client/firefox-72.0.2::prototype99[system-libvpx]
+=media-libs/libvpx-1.7.0-r1 postproc
+# required by www-client/firefox-72.0.2::prototype99[system-sqlite]
+>=dev-db/sqlite-3.31.0 secure-delete
