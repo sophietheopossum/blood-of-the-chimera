@@ -330,16 +330,16 @@
 		<source type="git">https://bitbucket.org/thankjura/gentoo-masterlay.git</source>
 	</repo>
 	<repo quality="experimental" status="unofficial">
-    <name>microcai-overlay</name>
-    <description>hack ebuilds of misc packages</description>
-    <homepage>http://github.com/microcai/myoverlay</homepage>
-    <owner type="project">
-      <email>microcaicai@gmail.com</email>
-      <name>microcaioverlay</name>
-    </owner>
-    <source type="git">git://github.com/microcai/myoverlay.git</source>
-  </repo>
-  <repo quality="experimental" status="unofficial">
+		<name>microcai-overlay</name>
+		<description>hack ebuilds of misc packages</description>
+		<homepage>http://github.com/microcai/myoverlay</homepage>
+		<owner type="project">
+			<email>microcaicai@gmail.com</email>
+			<name>microcaioverlay</name>
+		</owner>
+		<source type="git">git://github.com/microcai/myoverlay.git</source>
+	</repo>
+	<repo quality="experimental" status="unofficial">
 		<name>miniBill</name>
 		<description>experimental ebuilds from miniBill</description>
 		<homepage>http://github.com/miniBill/overlay</homepage>
@@ -402,11 +402,24 @@
 		<owner type="person"><name>Michael Lawrenceit</name>
 			 <email>mike@michaellawrenceit.com</email>
 			 <email>necrose99@protonmail.ch</email>
-		</owner>    
+		</owner>
 		<source type="git">https://github.com/necrose99/necromancy-overlay</source>
 		<source type="git">git://github.com/necrose99/necromancy-overlay.git</source>
-    		<source type="git">git@github.com:necrose99/necromancy-overlay.git</source>
-		 <feed>https://github.com/necrose99/necromancy-overlay/commits/master.atom</feed>
+		<source type="git">git@github.com:necrose99/necromancy-overlay.git</source>
+		<feed>https://github.com/necrose99/necromancy-overlay/commits/master.atom</feed>
+	</repo>
+	<repo quality="experimental" status="unofficial">
+		<name>nirvana</name>
+		<description lang="en">Ebuilds not good enough to make it to Sabayon's for-gentoo.</description>
+		<homepage>https://bitbucket.org/danysk/nirvana-overlay</homepage>
+		<owner type="person">
+			<email>danilo.pianini@gmail.com</email>
+			<name>Danilo Pianini</name>
+		</owner>
+		<source type="mercurial">https://bitbucket.org/danysk/nirvana-overlay</source>
+		<source type="mercurial">ssh://hg@bitbucket.org/danysk/nirvana-overlay</source>
+		<feed>https://bitbucket.org/danysk/nirvana-overlay/atom</feed>
+		<feed>https://bitbucket.org/danysk/nirvana-overlay/rss</feed>
 	</repo>
 	<repo quality="experimental" status="unofficial">
 		<name>odroidc1-overlay</name>

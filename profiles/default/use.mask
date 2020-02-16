@@ -124,6 +124,7 @@ video_cards_vmware
 -python_targets_pypy3
 -python_targets_python3_7
 -python_single_target_pypy
+-python_single_target_pypy3
 -python_single_target_python3_7
 -system-cairo
 -systemd

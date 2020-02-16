@@ -2,7 +2,7 @@
 
 THIS EBUILD MAY NOT WORK
 
-	3.2.2019	::bobwya
+	3.2.2020	::bobwya
 	-remove unnecessary quotes and spaces
 	-update kde patch revision
 	-improved patch logic
@@ -10,8 +10,8 @@ THIS EBUILD MAY NOT WORK
 	-simplify ebuild through substitution
 	-remove unnecessary empty lines
 	-improved error handling
-	3.2.2019	::gentoo		update year, update deps, fixes and patches
-	3.2.2019	::pg_overlay
+	3.2.2020	::gentoo		update year, update deps, fixes and patches
+	3.2.2020	::pg_overlay
 	-add lto use flags
 	-privacy patchset
 	-fix session restore (from debian)
@@ -19,7 +19,7 @@ THIS EBUILD MAY NOT WORK
 	-MOZILA_DISABLE_PLUGIN patch (from debian)
 	-add wayland, lto and pgo patches (from fedora)
 	-no accessibility patch
-	3.2.2019	::prototype99
+	3.2.2020	::prototype99
 	-use system harfbuzz/graphite2 patches from arch aur (firefox-kde-opensuse)
 	-remove unnecessary moz_esr, and exotic version logic
 	-remove unnecessary extra patches concatenation
@@ -37,3 +37,9 @@ THIS EBUILD MAY NOT WORK
 	11.12.2019	::prototype99
 	-remove unnecessary spaces
 	11.12.2019	::gentoo		base ebuild
+
+	*firefox-70.0.1
+
+	12.2.2020	::gentoo		makeopts workaround, delete empty line
+	12.2.2020	::pg_overlay	remove thin lto/cross lto stuff
+	12.2.2020	::prototype99	base ebuild off 72 ebuild, do not apply 72 system harfbuzz patch, do not apply no accesibility patch

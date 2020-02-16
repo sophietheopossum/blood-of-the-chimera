@@ -1362,15 +1362,15 @@
   <repo quality="experimental" status="unofficial">
     <name>erayd</name>
     <description lang="en">Various personal ebuilds</description>
-    <homepage>https://github.com/erayd/overlay</homepage>
+    <homepage>https://github.com/prototype99/erayd</homepage>
     <owner type="person">
       <email>steve@erayd.net</email>
       <name>Steve Gilberd</name>
     </owner>
-    <source type="git">https://github.com/erayd/overlay.git</source>
-    <source type="git">git://github.com/erayd/overlay.git</source>
-    <source type="git">git@github.com:erayd/overlay.git</source>
-    <feed>https://github.com/erayd/overlay/commits/master.atom</feed>
+    <source type="git">https://github.com/prototype99/erayd.git</source>
+    <source type="git">git://github.com/prototype99/erayd.git</source>
+    <source type="git">git@github.com:prototype99/erayd.git</source>
+    <feed>https://github.com/prototype99/erayd/commits/master.atom</feed>
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>ethereum</name>
@@ -3039,20 +3039,6 @@
     <source type="git">git://anongit.gentoo.org/user/nico.git</source>
     <source type="git">git+ssh://git@git.gentoo.org/user/nico.git</source>
     <feed>https://cgit.gentoo.org/user/nico.git/atom/</feed>
-    <!-- <feed>https://cgit.gentoo.org/user/nico.git/rss/</feed> -->
-  </repo>
-  <repo quality="experimental" status="unofficial">
-    <name>nirvana</name>
-    <description lang="en">Ebuilds not good enough to make it to Sabayon's for-gentoo.</description>
-    <homepage>https://bitbucket.org/danysk/nirvana-overlay</homepage>
-    <owner type="person">
-      <email>danilo.pianini@gmail.com</email>
-      <name>Danilo Pianini</name>
-    </owner>
-    <source type="mercurial">https://bitbucket.org/danysk/nirvana-overlay</source>
-    <source type="mercurial">ssh://hg@bitbucket.org/danysk/nirvana-overlay</source>
-    <feed>https://bitbucket.org/danysk/nirvana-overlay/atom</feed>
-    <feed>https://bitbucket.org/danysk/nirvana-overlay/rss</feed>
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>np-hardass-overlay</name>
@@ -3075,7 +3061,6 @@
     <source type="git">git://anongit.gentoo.org/proj/nx.git</source>
     <source type="git">git+ssh://git@git.gentoo.org/proj/nx.git</source>
     <feed>https://cgit.gentoo.org/proj/nx.git/atom/</feed>
-    <!-- <feed>https://cgit.gentoo.org/proj/nx.git/rss/</feed> -->
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>oboeverlay</name>
@@ -4491,6 +4476,17 @@
     <source type="git">git://github.com/timboudreau/gentoo.git</source>
     <source type="git">git@github.com:timboudreau/gentoo.git</source>
     <feed>https://github.com/timboudreau/gentoo/commits/master.atom</feed>
+  </repo>
+    <repo quality="experimental" status="unofficial">
+    <name>tmacedo</name>
+    <description>User Overlay</description>
+    <homepage>https://github.com/tmacedo/portage</homepage>
+    <owner type="person">
+      <email>tftfmacedo@gmail.com</email>
+      <name>Tiago Macedo</name>
+    </owner>
+    <source type="git">git://github.com/tmacedo/portage.git</source>
+    <feed>https://github.com/tmacedo/portage/commits/master.atom</feed>
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>tocaro</name>

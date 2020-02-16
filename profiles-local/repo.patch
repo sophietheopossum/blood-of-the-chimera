@@ -1,5 +1,5 @@
---- stage1.xml  2019-09-03 11:30:39.545343648 +0100
-+++ stage2.xml  2019-09-03 16:25:51.739948559 +0100
+--- /var/db/repos/prototype99/profiles-local/stage1.xml	2020-02-13 11:17:54.502706168 +0000
++++ /var/db/repos/prototype99/profiles-local/stage2.xml	2020-02-16 12:12:29.281768171 +0000
 @@ -1,63 +1,6 @@
  <?xml version='1.0' encoding='utf-8'?>
  <!DOCTYPE repositories SYSTEM "http://www.gentoo.org/dtd/repositories.dtd">
@@ -64,7 +64,7 @@
    <repo quality="experimental" status="unofficial">
      <name>0bs1d1an</name>
      <description lang="en">Personal overlay</description>
-@@ -924,7 +867,6 @@
+@@ -943,7 +886,6 @@
      <source type="git">git://anongit.gentoo.org/dev/chutzpah</source>
      <source type="git">git+ssh://git@git.gentoo.org/dev/chutzpah.git</source>
      <feed>https://cgit.gentoo.org/dev/chutzpah.git/atom/</feed>
@@ -72,7 +72,7 @@
    </repo>
    <repo quality="experimental" status="official">
      <name>cj-overlay</name>
-@@ -1399,7 +1341,6 @@
+@@ -1392,7 +1334,6 @@
      <source type="git">git://anongit.gentoo.org/repo/proj/emacs.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/repo/proj/emacs.git</source>
      <feed>https://cgit.gentoo.org/repo/proj/emacs.git/atom/</feed>
@@ -80,7 +80,28 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>enlightenment-live</name>
-@@ -1483,7 +1424,7 @@
+@@ -1421,15 +1362,15 @@
+   <repo quality="experimental" status="unofficial">
+     <name>erayd</name>
+     <description lang="en">Various personal ebuilds</description>
+-    <homepage>https://github.com/erayd/overlay</homepage>
++    <homepage>https://github.com/prototype99/erayd</homepage>
+     <owner type="person">
+       <email>steve@erayd.net</email>
+       <name>Steve Gilberd</name>
+     </owner>
+-    <source type="git">https://github.com/erayd/overlay.git</source>
+-    <source type="git">git://github.com/erayd/overlay.git</source>
+-    <source type="git">git@github.com:erayd/overlay.git</source>
+-    <feed>https://github.com/erayd/overlay/commits/master.atom</feed>
++    <source type="git">https://github.com/prototype99/erayd.git</source>
++    <source type="git">git://github.com/prototype99/erayd.git</source>
++    <source type="git">git@github.com:prototype99/erayd.git</source>
++    <feed>https://github.com/prototype99/erayd/commits/master.atom</feed>
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>ethereum</name>
+@@ -1463,7 +1404,7 @@
        <email>ext@sidvind.com</email>
        <name>David Sveningsson</name>
      </owner>
@@ -89,7 +110,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>farmboy0</name>
-@@ -1515,7 +1456,7 @@
+@@ -1507,7 +1448,7 @@
        <email>me@junc.org</email>
        <name>Benny Pedersen</name>
      </owner>
@@ -98,7 +119,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>FireBurn</name>
-@@ -1798,7 +1739,6 @@
+@@ -1783,7 +1724,6 @@
      <source type="git">git://anongit.gentoo.org/proj/gamerlay.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/proj/gamerlay.git</source>
      <feed>https://cgit.gentoo.org/proj/gamerlay.git/atom/</feed>
@@ -106,7 +127,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>genthree</name>
-@@ -1818,7 +1758,6 @@
+@@ -1803,7 +1743,6 @@
      <owner type="project">
        <email>bug-wranglers@gentoo.org</email>
      </owner>
@@ -114,7 +135,7 @@
      <source type="git">https://anongit.gentoo.org/git/repo/gentoo.git</source>
      <source type="git">git://anongit.gentoo.org/repo/gentoo.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/repo/gentoo.git</source>
-@@ -1945,7 +1884,6 @@
+@@ -1917,7 +1856,6 @@
      <source type="git">git://anongit.gentoo.org/proj/gnome.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/proj/gnome.git</source>
      <feed>https://cgit.gentoo.org/proj/gnome.git/atom/</feed>
@@ -122,7 +143,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>gnome-next</name>
-@@ -2758,7 +2696,6 @@
+@@ -2664,7 +2602,6 @@
      <source type="git">git://anongit.gentoo.org/proj/lisp.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/proj/lisp.git</source>
      <feed>https://cgit.gentoo.org/proj/lisp.git/atom/</feed>
@@ -130,7 +151,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>lmiphay</name>
-@@ -2782,7 +2719,6 @@
+@@ -2688,7 +2625,6 @@
      <source type="git">https://anongit.gentoo.org/git/dev/lordvan.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/dev/lordvan.git</source>
      <feed>https://cgit.gentoo.org/dev/lordvan.git/atom/</feed>
@@ -138,7 +159,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>lto-overlay</name>
-@@ -2808,7 +2744,6 @@
+@@ -2714,7 +2650,6 @@
      <source type="git">git://anongit.gentoo.org/proj/lua.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/proj/lua.git</source>
      <feed>https://cgit.gentoo.org/proj/lua.git/atom/</feed>
@@ -146,7 +167,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>luke-jr</name>
-@@ -2831,7 +2766,6 @@
+@@ -2737,7 +2672,6 @@
      <source type="git">git://anongit.gentoo.org/user/luman.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/user/luman.git</source>
      <feed>https://cgit.gentoo.org/user/luman.git/atom/</feed>
@@ -154,7 +175,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>luxifer</name>
-@@ -2869,7 +2803,6 @@
+@@ -2775,7 +2709,6 @@
      <source type="git">git://anongit.gentoo.org/dev/maekke.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/dev/maekke.git</source>
      <feed>https://cgit.gentoo.org/dev/maekke.git/atom/</feed>
@@ -162,7 +183,23 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>maggu2810-overlay</name>
-@@ -3573,7 +3506,7 @@
+@@ -3106,7 +3039,6 @@
+     <source type="git">git://anongit.gentoo.org/user/nico.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/user/nico.git</source>
+     <feed>https://cgit.gentoo.org/user/nico.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/user/nico.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>np-hardass-overlay</name>
+@@ -3129,7 +3061,6 @@
+     <source type="git">git://anongit.gentoo.org/proj/nx.git</source>
+     <source type="git">git+ssh://git@git.gentoo.org/proj/nx.git</source>
+     <feed>https://cgit.gentoo.org/proj/nx.git/atom/</feed>
+-    <!-- <feed>https://cgit.gentoo.org/proj/nx.git/rss/</feed> -->
+   </repo>
+   <repo quality="experimental" status="unofficial">
+     <name>oboeverlay</name>
+@@ -3458,7 +3389,7 @@
        <email>polynomial-c@gentoo.org</email>
        <name>Lars Wendler</name>
      </owner>
@@ -170,8 +207,8 @@
 +    <source type="git">https://github.com/gentoo-mirror/poly-c.git</source>
    </repo>
    <repo quality="experimental" status="unofficial">
-     <name>portage-backup</name>
-@@ -3787,7 +3720,7 @@
+     <name>posativ</name>
+@@ -3623,7 +3554,7 @@
        <email>heroxbd@gentoo.org</email>
        <name>Benda Xu</name>
      </owner>
@@ -180,7 +217,7 @@
    </repo>
    <repo quality="experimental" status="official">
      <name>rafaelmartins</name>
-@@ -4551,7 +4484,6 @@
+@@ -4406,7 +4337,6 @@
      <source type="git">git://anongit.gentoo.org/repo/user/superposition.git</source>
      <source type="git">git+ssh://git@git.gentoo.org/repo/user/superposition.git</source>
      <feed>https://cgit.gentoo.org/repo/user/superposition.git/atom/</feed>
@@ -188,7 +225,7 @@
    </repo>
    <repo quality="experimental" status="official">
      <name>swegener</name>
-@@ -4563,7 +4495,7 @@
+@@ -4418,7 +4348,7 @@
      <owner type="person">
        <email>swegener@gentoo.org</email>
      </owner>
@@ -197,7 +234,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>SwordArMor</name>
-@@ -5245,7 +5177,7 @@
+@@ -5045,7 +4964,7 @@
      <owner type="person">
        <email>casta@xwing.info</email>
      </owner>
@@ -206,7 +243,7 @@
    </repo>
    <repo quality="experimental" status="unofficial">
      <name>yandex</name>
-@@ -5368,7 +5300,7 @@
+@@ -5167,7 +5086,7 @@
      <owner type="person">
        <email>ycarus@zugaina.org</email>
      </owner>

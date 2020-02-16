@@ -1,0 +1,5 @@
+*asciidoc-9.0.0_rc1
+::pg_overlay
+-base ebuild
+::prototype99
+-remove python usedep

@@ -10,7 +10,7 @@ Based on https://github.com/rust-lang/rust/issues/64710
 +++ b/third_party/rust/bindgen/src/ir/analysis/has_vtable.rs
 @@ -9,37 +9,22 @@ use std::ops;
  use {HashMap, Entry};
-
+ 
  /// The result of the `HasVtableAnalysis` for an individual item.
 -#[derive(Copy, Clone, Debug, PartialEq, Eq, Ord)]
 +#[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
@@ -20,17 +20,17 @@ Based on https://github.com/rust-lang/rust/issues/64710
 -    BaseHasVtable,
 +    /// The item does not have a vtable pointer.
 +    No,
-
+ 
      /// The item has a vtable and the actual vtable pointer is within this item.
      SelfHasVtable,
-
+ 
 -    /// The item does not have a vtable pointer.
 -    No
 +    /// The item has a vtable, but the actual vtable pointer is in a base
 +    /// member.
 +    BaseHasVtable,
  }
-
+ 
  impl Default for HasVtableResult {
      fn default() -> Self {
          HasVtableResult::No
@@ -51,7 +51,7 @@ Based on https://github.com/rust-lang/rust/issues/64710
 -        }
      }
  }
-
+ 
 --- a/third_party/rust/bindgen/src/ir/analysis/sizedness.rs.orig
 +++ b/third_party/rust/bindgen/src/ir/analysis/sizedness.rs
 @@ -22,13 +22,14 @@ use {HashMap, Entry};
@@ -72,13 +72,13 @@ Based on https://github.com/rust-lang/rust/issues/64710
 +    /// member, then we must add an `_address` byte to enforce the
 +    /// unique-address-per-distinct-object-instance rule.
 +    ZeroSized,
-
+ 
      /// Whether this type is zero-sized or not depends on whether a type
      /// parameter is zero-sized or not.
 @@ -52,32 +53,16 @@ pub enum SizednessResult {
      /// https://github.com/rust-lang/rust-bindgen/issues/586
      DependsOnTypeParam,
-
+ 
 -    /// The type is zero-sized.
 -    ///
 -    /// This means that if it is a C++ type, and is not being used as a base
@@ -91,7 +91,7 @@ Based on https://github.com/rust-lang/rust/issues/64710
 +    /// type.
 +    NonZeroSized,
  }
-
+ 
  impl Default for SizednessResult {
      fn default() -> Self {
          SizednessResult::ZeroSized
@@ -112,7 +112,7 @@ Based on https://github.com/rust-lang/rust/issues/64710
 -        }
      }
  }
-
+ 
 --- a/third_party/rust/bindgen/src/ir/derive.rs.orig
 +++ b/third_party/rust/bindgen/src/ir/derive.rs
 @@ -92,10 +92,10 @@ pub trait CanDeriveOrd {
@@ -126,19 +126,19 @@ Based on https://github.com/rust-lang/rust/issues/64710
 -    No,
 +    /// Yes, we can derive automatically.
 +    Yes,
-
+ 
      /// The only thing that stops us from automatically deriving is that
      /// array with more than maximum number of elements is used.
 @@ -103,29 +103,13 @@ pub enum CanDerive {
      /// This means we probably can "manually" implement such trait.
      Manually,
-
+ 
 -    /// Yes, we can derive automatically.
 -    Yes,
 +    /// No, we cannot.
 +    No,
  }
-
+ 
  impl Default for CanDerive {
      fn default() -> CanDerive {
          CanDerive::Yes
@@ -160,3 +160,4 @@ Based on https://github.com/rust-lang/rust/issues/64710
 -        Some(ordering)
      }
  }
+ 

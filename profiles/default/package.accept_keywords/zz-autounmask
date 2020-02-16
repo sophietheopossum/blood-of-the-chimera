@@ -103,6 +103,7 @@
 =sci-libs/vtk-8.2.0
 =sys-apps/accountsservice-0.6.54_pre
 =sys-apps/dbus-broker-18 ~amd64
+=sys-apps/paludis-9999
 =sys-block/gparted-1.0.0 ~amd64
 =sys-block/gparted-1.1.0
 =sys-cluster/openmpi-2.0.4
@@ -120,7 +121,7 @@
 #=virtual/rust-1.35.0
 #=virtual/rust-1.36.0
 =www-client/chromium-78.0.3904.63
-=www-client/firefox-72.0.2
+=www-client/firefox-73.0
 =x11-libs/gtk+-3.24.13
 =x11-libs/pango-1.44.7_pre
 =x11-misc/cairo-compmgr-0.4.8_pre20141005
@@ -908,3 +909,6 @@
 =dev-libs/nspr-4.24 ~amd64
 # required by www-client/firefox-72.0.2::prototype99
 =dev-util/cbindgen-0.12.2 ~amd64
+# required by app-text/asciidoc-8.6.9-r1::argent-main[python_single_target_pypy]
+# required by sys-apps/paludis-9999::prototype99
+=virtual/pypy-7.3.0 ~amd64

@@ -4,6 +4,7 @@
 =app-office/lyx-2.3.99						#bad versioning
 =app-pda/libplist-9999						#bad versioning
 =app-pda/libusbmuxd-9999					#bad versioning
+=app-text/asciidoc-8.6.10_p20181016-r1		#old
 <app-text/docbook-xsl-stylesheets-1.79.2-r1	#old
 <app-text/poppler-0.79.0					#old
 <dev-db/sqlite-3.30.1						#old
@@ -89,6 +90,7 @@
 =x11-libs/gtk+-2.24.32-r666					#bad versioning
 =x11-libs/gtk+-2.24.32-r1337				#bad versioning
 <x11-libs/gtk+-3.24.8						#old
+=x11-libs/pango-1.42.4-r2					#old
 >=x11-terms/xterm-0							#not needed at all
 <x11-themes/adwaita-icon-theme-3.30.1		#old
 <x11-themes/gtk-engines-adwaita-3.28		#old
