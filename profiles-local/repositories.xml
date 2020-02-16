@@ -386,12 +386,12 @@
 	<repo priority="50" quality="experimental" status="unofficial">
 		<name>masterlay</name>
 		<description lang="en">Gentoo overlay</description>
-		<homepage>https://bitbucket.org/thankjura/gentoo-masterlay</homepage>
+		<homepage>https://bitbucket.org/prototype99/gentoo-masterlay</homepage>
 		<owner type="person">
 			<email>me@slie.ru</email>
 			<name>Yury</name>
 		</owner>
-		<source type="git">https://bitbucket.org/thankjura/gentoo-masterlay.git</source>
+		<source type="git">https://bitbucket.org/prototype99/gentoo-masterlay.git</source>
 	</repo>
 	<repo quality="experimental" status="unofficial">
 		<name>microcai-overlay</name>
