@@ -71,13 +71,24 @@
 	<repo priority="50" quality="experimental" status="unofficial">
 		<name>BWGentooPrefix</name>
 		<description lang="en"> Gentoo Prefix overlay for Python stack on Blue Waters</description>
-		<homepage>https://github.com/camaclean/bw-python-gentoo-prefix-overlay</homepage>
+		<homepage>https://github.com/prototype99/bw-python-gentoo-prefix-overlay</homepage>
 		<owner type="person">
 			<name>camaclean</name>
 		</owner>
-		<source type="git">https://github.com/camaclean/bw-python-gentoo-prefix-overlay.git</source>
-		<source type="git">git+ssh://git@github.com/camaclean/bw-python-gentoo-prefix-overlay.git</source>
-		<feed>https://github.com/camaclean/bw-python-gentoo-prefix-overlay/commits/master.atom</feed>
+		<source type="git">https://github.com/prototype99/bw-python-gentoo-prefix-overlay.git</source>
+		<source type="git">git+ssh://git@github.com/prototype99/bw-python-gentoo-prefix-overlay.git</source>
+		<feed>https://github.com/prototype99/bw-python-gentoo-prefix-overlay/commits/master.atom</feed>
+	</repo>
+	<repo quality="experimental" status="unofficial">
+		<name>chef-gentoo-bootstrap-overlay</name>
+		<description>chef bootstrapping</description>
+		<homepage>https://github.com/prototype99/chef-gentoo-bootstrap-overlay</homepage>
+		<owner type="project">
+			<email>sophietheopossum@yandex.com</email>
+			<name>seirra blake</name>
+		</owner>
+		<source type="git">https://github.com/prototype99/chef-gentoo-bootstrap-overlay.git</source>
+		<source type="git">git://github.com/prototype99/chef-gentoo-bootstrap-overlay.git</source>
 	</repo>
 	<repo priority="50" quality="experimental" status="unofficial">
 		<name>chymeric</name>
@@ -127,6 +138,41 @@
 		<source type="git">git://anongit.gentoo.org/user/dmol.git</source>
 		<source type="git">git+ssh://git@git.gentoo.org/user/dmol.git</source>
 		<feed>https://cgit.gentoo.org/user/dmol.git/atom/</feed>
+	</repo>
+	<repo quality="experimental" status="unofficial">
+		<name>dmp</name>
+		<description lang="en">dmp's portage overlay</description>
+		<homepage>https://github.com/prototype99/dmp</homepage>
+		<owner type="person">
+			<email>sophietheopossum@yandex.com</email>
+			<name>seirra blake</name>
+		</owner>
+		<source type="git">https://github.com/prototype99/dmp.git</source>
+		<source type="git">git://github.com/prototype99/dmp.git</source>
+	</repo>
+	<repo quality="experimental" status="unofficial">
+		<name>drcrallen</name>
+		<description>Kamil Domański's overlay as modified by Charles Allen</description>
+		<homepage>https://github.com/drcrallen/drcrallen-overlay</homepage>
+		<owner>
+			<email>charles@allen-net.com</email>
+			<name>Charles Allen</name>
+		</owner>
+		<source type="git">https://github.com/prototype99/mesos-gentoo-overlay.git</source>
+		<source type="git">git@github.com:prototype99/mesos-gentoo-overlay.git</source>
+		<feed>https://github.com/prototype99/mesos-gentoo-overlay/commits/master.atom</feed>
+	</repo>
+	<repo quality="experimental" status="unoffficial">
+		<name>el-overlay</name>
+		<homepage>http://github.com/lamskoy/el-overlay</homepage>
+		<description>Personal ebuilds</description>
+		<source type="git">https://github.com/prototype99/el-overlay.git</source>
+		<source type="git">git://github.com/prototype99/el-overlay.git</source>
+		<feed>http://github.com/feeds/prototype99/commits/el-overlay/master</feed>
+		<owner>
+			<email>sophietheopossum@yandex.com</email>
+			<name>seirra blake</name>
+		</owner>
 	</repo>
 	<repo quality="experimental" status="unofficial">
 		<name>emc</name>
@@ -218,6 +264,12 @@
 		</owner>
 		<source type="git">git://github.com/James-TR/gentoo.overlay.git</source>
 	</repo>
+	<repo quality="experimental" status="unofficial">
+		<name>jauhien</name>
+		<description>experimental ebuilds</description>
+		<homepage>https://github.com/prototype99/jauhien-overlay</homepage>
+		<source type="git">git://github.com/prototype99/jauhien-overlay.git</source>
+	</repo>
 	<repo priority="50" quality="experimental" status="unofficial">
 		<name>jmd-gentoo-main</name>
 		<description lang="en">gentoo overlay</description>
@@ -266,6 +318,18 @@
 		<source type="git">git://anongit.gentoo.org/user/jranvier.git</source>
 		<source type="git">git+ssh://git@git.gentoo.org/user/jranvier.git</source>
 		<feed>https://cgit.gentoo.org/user/jranvier.git/atom/</feed>
+	</repo>
+	<repo quality="experimental" status="unofficial">
+		<name>kniolet</name>
+		<description>Katrina Niolet's Gentoo/Sabayon Overlay</description>
+		<homepage>https://github.com/prototype99/kniolet</homepage>
+		<owner>
+			<email>sophietheopossum@yandex.com</email>
+			<name>seirra blake</name>
+		</owner>
+		<source type="git">https://github.com/prototype99/kniolet.git</source>
+		<source type="git">git://github.com/prototype99/kniolet.git</source>
+		<feed>https://github.com/prototype99/kniolet/commits/master.atom</feed>
 	</repo>
 	<repo quality="experimental" status="official">
 		<name>kveer</name>
@@ -509,6 +573,17 @@
 			<name>Rinaldus</name>
 		</owner>
 		<source type="git">https://github.com/rinaldus/rinaldus-overlay.git</source>
+	</repo>
+	<repo quality="experimental" status="unofficial">
+		<name>rogento</name>
+		<description>Romanian enterprise oriented overlay of ebuilds</description>
+		<homepage>https://github.com/prototype99/Rogento</homepage>
+		<owner type="project">
+			<email>stefan.cristian@rogentos.ro</email>
+			<name>Steven Cristian</name>
+		</owner>
+		<source type="git">git://github.com/prototype99/Rogento.git</source>
+		<feed>https://github.com/prototype99/Rogento/commits/master.atom</feed>
 	</repo>
 	<repo priority="50" quality="experimental" status="unofficial">
 		<name>ros</name>
