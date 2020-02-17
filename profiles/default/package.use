@@ -46,19 +46,19 @@ net-misc/curl -adns
 # required by media-libs/phonon-vlc-0.10.2::gentoo
 # required by media-libs/phonon-4.10.2::gentoo[vlc]
 # required by net-irc/kvirc-5.0_pre20181205184837::gentoo[phonon]
->=dev-libs/libpcre2-10.32 pcre16
+dev-libs/libpcre2 pcre16
 # required by media-libs/phonon-vlc-0.10.2::gentoo
 # required by media-libs/phonon-4.10.2::gentoo[vlc]
 # required by net-irc/kvirc-5.0_pre20181205184837::gentoo[phonon]
 # required by media-video/vlc-3.0.6-r2::prototype99[10bit]
->=media-video/vlc-3.0.6-r2 ogg vorbis dbus x264
+media-video/vlc ogg vorbis dbus x264
 # required by x11-libs/gtk+-3.24.8::gentoo
 # required by x11-themes/adwaita-icon-theme-3.30.1::gentoo
->=x11-libs/cairo-1.16.0-r3 X
+x11-libs/cairo X
 # required by media-video/vlc-3.0.6-r2::prototype99[x264]
 # required by media-libs/phonon-vlc-0.10.2::gentoo
 # required by media-libs/phonon-4.10.2::gentoo[vlc]
->=media-libs/x264-0.0.20170701 10bit
+media-libs/x264 10bit
 # required by dev-qt/qtgui-5.12.3-r1::poly-c[xcb]
 # required by dev-qt/qtmultimedia-5.12.3::gentoo
 # required by dev-qt/qtwayland-5.12.3::gentoo
@@ -66,13 +66,13 @@ net-misc/curl -adns
 # required by kde-plasma/libkscreen-5.15.5::gentoo
 # required by lxqt-base/lxqt-config-0.14.1::gentoo[monitor]
 # required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo
->=x11-libs/libxkbcommon-0.8.4 X
+x11-libs/libxkbcommon X
 # required by sys-auth/polkit-0.115-r3::musl[systemd]
 # required by sys-fs/udisks-2.8.1::gentoo
 # required by kde-frameworks/solid-5.57.0-r1::gentoo
 # required by lxqt-base/lxqt-panel-0.14.1::gentoo[mount]
 # required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo
->=sys-apps/systemd-241-r1 policykit
+sys-apps/systemd policykit
 # required by dev-lang/spidermonkey-52.9.1_pre1::musl
 # required by sys-auth/polkit-0.115-r3::musl
 # required by sys-apps/systemd-241-r1::gentoo[policykit]
@@ -81,280 +81,276 @@ net-misc/curl -adns
 # required by kde-frameworks/solid-5.57.0-r1::gentoo
 # required by lxqt-base/lxqt-panel-0.14.1::gentoo[mount]
 # required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo
->=dev-lang/python-2.7.16-r101 sqlite
+dev-lang/python sqlite
 # required by www-client/firefox-67.0.2::gentoo
->=media-libs/libpng-1.6.37 apng
+media-libs/libpng apng
 # required by www-client/firefox-67.0.2::gentoo[system-libvpx]
->=media-libs/libvpx-1.8.0-r1 postproc
+media-libs/libvpx postproc
 # required by www-client/firefox-67.0.2::gentoo[system-sqlite]
->=dev-db/sqlite-3.28.0 secure-delete
+dev-db/sqlite secure-delete
 # required by www-client/firefox-67.0.2::gentoo[pgo]
->=x11-base/xorg-server-1.20.4 xvfb
+x11-base/xorg-server xvfb
 # required by app-office/libreoffice-6.2.4.2::gentoo
->=dev-libs/xmlsec-1.2.28 nss
+dev-libs/xmlsec nss
 # required by www-client/firefox-67.0.2::gentoo[clang]
->=sys-devel/llvm-7.1.0 gold
+sys-devel/llvm gold
 # required by app-office/libreoffice-6.2.4.2::gentoo
->=media-libs/harfbuzz-2.5.1 icu
+media-libs/harfbuzz icu
 # required by dev-qt/qtwebengine-5.12.3::gentoo
->=dev-qt/qtwebchannel-5.12.3 qml
+dev-qt/qtwebchannel qml
 # required by dev-qt/qtwebengine-5.12.3::gentoo
->=dev-libs/libxml2-2.9.9-r1 icu
+dev-libs/libxml2 icu
 # required by dev-qt/qtwebengine-5.12.3::gentoo
->=media-libs/libvpx-1.8.0-r1 svc
+media-libs/libvpx svc
 # required by dev-qt/qtwebengine-5.12.3::gentoo
 sys-libs/zlib minizip
 # required by dev-qt/qtgui-5.12.3-r1:5/5.12::gentoo
 # required by x11-libs/libxkbcommon-0.8.4:0/0::gentoo
 x11-libs/libxcb xkb
 # required by net-wireless/blueman-2.1::gentoo[pulseaudio]
->=media-sound/pulseaudio-12.2-r1 bluetooth dbus
+media-sound/pulseaudio bluetooth dbus
 # required by lxqt-base/lxqt-session-0.13.0::gentoo
 # required by lxqt-base/liblxqt-0.14.1::gentoo
 # required by lxqt-base/lxqt-config-0.14.1::gentoo
 # required by lxqt-base/lxqt-meta-0.13.0::gentoo
->=kde-frameworks/kwindowsystem-5.57.0 X
+kde-frameworks/kwindowsystem X
 # required by app-admin/system-config-printer-1.5.11-r1::prototype99
->=net-print/cups-2.2.11 dbus
-# required by www-client/firefox-67.0.2::gentoo[system-libvpx]
-=media-libs/libvpx-1.5.0 postproc
+net-print/cups dbus
 # required by media-gfx/nomacs-3.12::gentoo
->=dev-qt/qtgui-5.12.3-r1 jpeg
+dev-qt/qtgui jpeg
 # required by dev-qt/qtwayland-5.12.3::gentoo
 # required by kde-frameworks/kwayland-5.57.0::gentoo
 # required by kde-plasma/libkscreen-5.15.5::gentoo
 # required by lxqt-base/lxqt-config-0.14.1::gentoo[monitor]
 # required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo
->=dev-qt/qtgui-5.12.3-r1 egl
+dev-qt/qtgui egl
 dev-libs/glib dbus
 app-text/poppler cairo qt5
 # required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo[-minimal]
->=x11-libs/pango-1.42.4-r1 X
+x11-libs/pango X
 # required by app-office/libreoffice-6.2.4.2::gentoo
->=media-libs/harfbuzz-2.3.1 icu
+media-libs/harfbuzz icu
 # required by www-client/firefox-67.0.2::gentoo[system-libvpx]
-=media-libs/libvpx-1.7.0 postproc svc
+media-libs/libvpx postproc svc
 # required by sys-boot/plymouth-0.9.4-r1::gentoo[libkms]
 # required by sys-kernel/genkernel-next-69::gentoo[plymouth]
 # required by genkernel-next (argument)
->=x11-libs/libdrm-2.4.97 libkms
+x11-libs/libdrm libkms
 # required by x11-misc/xdg-utils-1.1.3-r1::gentoo
 # required by x11-misc/pcmanfm-qt-0.14.1-r1::gentoo
 # required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo[filemanager]
->=app-text/xmlto-0.0.28-r1 text
+app-text/xmlto text
 # required by dev-qt/qtgui-5.12.3-r1::gentoo[xcb]
 # required by dev-qt/qtwayland-5.12.3::gentoo
 # required by kde-frameworks/kwayland-5.57.0::gentoo
 # required by kde-plasma/libkscreen-5.15.5::gentoo
 # required by lxqt-base/lxqt-config-0.14.1::gentoo[monitor]
 # required by lxqt-base/lxqt-meta-0.14.1-r1::gentoo
->=x11-libs/libxcb-1.13.1 xkb
+x11-libs/libxcb xkb
 # required by gnome-extra/nm-applet-1.8.20::gentoo
->=dev-libs/glib-2.58.3 dbus
+dev-libs/glib dbus
 # required by gnome-base/gnome-keyring-3.28.2::gentoo
 # required by app-crypt/libsecret-0.18.8::gentoo
 # required by app-crypt/pinentry-1.1.0-r2::gentoo[gnome-keyring]
 # required by app-crypt/gnupg-2.2.15::gentoo
->=app-crypt/gcr-3.28.1 gtk
+app-crypt/gcr gtk
 # required by net-misc/networkmanager-1.16.0::gentoo[wifi]
 # required by gnome-extra/nm-applet-1.8.20::gentoo
->=net-wireless/wpa_supplicant-2.6-r10 dbus
+net-wireless/wpa_supplicant dbus
 # required by gnome-base/gnome-keyring-3.28.2::gentoo
 # required by app-crypt/libsecret-0.18.8::gentoo
 # required by gnome-extra/nm-applet-1.8.20::gentoo
 # required by nm-applet (argument)
->=app-crypt/pinentry-1.1.0-r2 gnome-keyring
+app-crypt/pinentry gnome-keyring
 # required by kde-frameworks/kcoreaddons-5.57.0::gentoo
 # required by kde-plasma/kactivitymanagerd-5.15.5::gentoo
 # required by kde-frameworks/kactivities-5.57.0::gentoo
 # required by kde-frameworks/plasma-5.57.0::gentoo
 # required by kde-apps/kate-18.12.3::gentoo[addons]
->=dev-qt/qtcore-5.12.3 icu
+dev-qt/qtcore icu
 # required by media-video/vlc-3.0.6-r1::gentoo
 # required by media-libs/phonon-vlc-0.10.2::gentoo
 # required by media-libs/phonon-4.10.2::gentoo[vlc]
 # required by kde-frameworks/khtml-5.57.0::gentoo
 # required by kde-apps/kio-extras-18.12.3::gentoo[man]
->=sys-libs/zlib-1.2.11-r2 minizip
+sys-libs/zlib minizip
 # required by dev-util/itstool-2.0.2::gentoo
 # required by gnome-extra/yelp-xsl-3.30.1::gentoo
 # required by app-text/yelp-tools-3.28.0::gentoo
 # required by app-office/gnumeric-1.12.39::gentoo
->=dev-libs/libxml2-2.9.9-r1 python
+dev-libs/libxml2 python
 # required by x11-libs/libXfixes-5.0.3-r1::gentoo
 # required by x11-libs/libXdamage-1.1.5::gentoo
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libX11-1.6.7 abi_x86_32
+x11-libs/libX11 abi_x86_32
 # required by x11-libs/libxcb-1.13.1::gentoo
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libXau-1.0.9 abi_x86_32
+x11-libs/libXau abi_x86_32
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libxcb-1.13.1 abi_x86_32
+x11-libs/libxcb abi_x86_32
 # required by x11-libs/libxcb-1.13.1::gentoo
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libXdmcp-1.1.3 abi_x86_32
+x11-libs/libXdmcp abi_x86_32
 # required by x11-libs/libxcb-1.13.1::gentoo
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=dev-libs/libpthread-stubs-0.4-r1 abi_x86_32
+dev-libs/libpthread-stubs abi_x86_32
 # required by x11-base/xcb-proto-1.13::gentoo
 # required by x11-libs/libxcb-1.13.1::gentoo
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=virtual/pkgconfig-1 abi_x86_32
+virtual/pkgconfig abi_x86_32
 # required by virtual/pkgconfig-1::gentoo
 # required by x11-libs/libXrandr-1.5.2::gentoo
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=dev-util/pkgconf-1.5.4 abi_x86_32
+dev-util/pkgconf abi_x86_32
 # required by x11-libs/libxcb-1.13.1::gentoo
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-base/xcb-proto-1.13 abi_x86_32
+x11-base/xcb-proto abi_x86_32
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=virtual/opengl-7.0-r2 abi_x86_32
+virtual/opengl abi_x86_32
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=media-libs/mesa-18.3.6 abi_x86_32
+media-libs/mesa abi_x86_32
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=dev-libs/expat-2.2.6 abi_x86_32
+dev-libs/expat abi_x86_32
 # required by x11-libs/libpciaccess-0.14::gentoo[zlib]
 # required by x11-libs/libdrm-2.4.97::gentoo[video_cards_intel]
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=sys-libs/zlib-1.2.11-r2 abi_x86_32
+sys-libs/zlib abi_x86_32
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libxshmfence-1.3-r1 abi_x86_32
+x11-libs/libxshmfence abi_x86_32
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libXdamage-1.1.5 abi_x86_32
+x11-libs/libXdamage abi_x86_32
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libXext-1.3.4 abi_x86_32
+x11-libs/libXext abi_x86_32
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libXxf86vm-1.1.4-r1 abi_x86_32
+x11-libs/libXxf86vm abi_x86_32
 # required by x11-libs/libXdamage-1.1.5::gentoo
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libXfixes-5.0.3-r1 abi_x86_32
+x11-libs/libXfixes abi_x86_32
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libdrm-2.4.97 abi_x86_32
+x11-libs/libdrm abi_x86_32
 # required by media-libs/mesa-18.3.6::gentoo[llvm,-opencl]
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=sys-devel/llvm-7.1.0 abi_x86_32
+sys-devel/llvm abi_x86_32
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libXrandr-1.5.2 abi_x86_32
+x11-libs/libXrandr abi_x86_32
 # required by x11-libs/libXrandr-1.5.2::gentoo
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libXrender-0.9.10-r1 abi_x86_32
+x11-libs/libXrender abi_x86_32
 # required by sys-devel/llvm-7.1.0::gentoo[ncurses]
 # required by media-libs/mesa-18.3.6::gentoo[llvm,-opencl]
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=sys-libs/ncurses-6.1-r2 abi_x86_32
+sys-libs/ncurses abi_x86_32
 # required by x11-libs/libdrm-2.4.97::gentoo[video_cards_intel]
 # required by media-libs/mesa-18.3.6::gentoo
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=x11-libs/libpciaccess-0.14 abi_x86_32
+x11-libs/libpciaccess abi_x86_32
 # required by sys-devel/llvm-7.1.0::gentoo[libffi]
 # required by media-libs/mesa-18.3.6::gentoo[llvm,-opencl]
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=virtual/libffi-3.0.13-r1 abi_x86_32
+virtual/libffi abi_x86_32
 # required by virtual/libffi-3.0.13-r1::gentoo
 # required by sys-devel/llvm-7.1.0::gentoo[libffi]
 # required by media-libs/mesa-18.3.6::gentoo[llvm,-opencl]
 # required by virtual/opengl-7.0-r2::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay[steamruntime]
->=dev-libs/libffi-3.2.1 abi_x86_32
+dev-libs/libffi abi_x86_32
 # required by media-libs/libcanberra-0.30-r5::gentoo[gtk3]
 # required by kde-frameworks/knotifications-5.60.0::gentoo[-phonon]
 # required by kde-plasma/ksysguard-5.15.5::gentoo
 # required by kde-plasma/plasma-meta-5.15.5-r2::prototype99[processviewer]
 # required by virtual/meta-7::prototype99[processviewer]
->=x11-libs/gtk+-3.24.9-r1 X
+x11-libs/gtk+ X
 # required by app-crypt/seahorse-3.32.2::dantrell-gnome-3-32
->=app-crypt/gcr-3.28.1 vala
+app-crypt/gcr vala
 # required by app-crypt/seahorse-3.32.2::dantrell-gnome-3-32
->=app-crypt/libsecret-0.18.8 vala
-# required by www-client/chromium-77.0.3865.75::gentoo
->=net-libs/nodejs-8.15.1-r1 icu inspector
+app-crypt/libsecret vala
 # required by app-text/dvipng-1.15-r1::gentoo
 # required by app-office/lyx-2.3.3::gentoo[latex]
->=media-libs/gd-2.2.5-r2 png jpeg
+media-libs/gd png jpeg
 # required by app-office/lyx-2.3.3::gentoo
->=virtual/imagemagick-tools-0 png
+virtual/imagemagick-tools png
 # required by virtual/imagemagick-tools-0::gentoo
 # required by app-office/lyx-2.3.3::gentoo
->=media-gfx/imagemagick-7.0.8.60 png
+media-gfx/imagemagick png
 # required by net-misc/persepolis-3.1.0::jorgicio
->=dev-python/PyQt5-5.12.2 gui network svg widgets
+dev-python/PyQt5 gui network svg widgets
 # required by sys-apps/world-8::prototype99[viewfont]
->=media-gfx/fontforge-20190801-r1 X
+media-gfx/fontforge X
 # required by media-gfx/freecad-0.18.3::waebbl
->=dev-libs/OpenNI2-2.2_beta2 opengl
+dev-libs/OpenNI2 opengl
 # required by media-gfx/freecad-0.18.3::waebbl
->=dev-libs/boost-1.71.0 python
+dev-libs/boost python
 # required by media-gfx/freecad-0.18.3::waebbl
->=dev-python/pyside-5.11.1 gui svg widgets
+dev-python/pyside gui svg widgets
 # required by media-gfx/freecad-0.18.3::waebbl
->=media-libs/coin-3.1.3-r2 simage
+media-libs/coin simage
 # required by media-gfx/freecad-0.18.3::waebbl[fem]
->=sci-libs/vtk-8.2.0 rendering qt5 python boost
+sci-libs/vtk rendering qt5 python boost
 # required by media-gfx/freecad-0.18.3::waebbl[mesh]
->=dev-util/pybind11-2.3.0 -python_single_target_python2_7
+dev-util/pybind11 -python_single_target_python2_7
 # required by media-gfx/freecad-0.18.3::waebbl
->=dev-python/matplotlib-3.0.3 -python_targets_pypy3
+dev-python/matplotlib -python_targets_pypy3
 # required by media-gfx/freecad-0.18.3::waebbl
->=sci-libs/med-4.0.0-r1 python
+sci-libs/med python
 # required by sci-libs/vtk-8.2.0::tafsm[mpi]
 # required by sci-libs/opencascade-7.3.0::waebbl[vtk]
 # required by media-gfx/freecad-0.18.3::waebbl
->=virtual/mpi-2.0-r4 romio
+virtual/mpi romio
 # required by virtual/mpi-2.0-r4::gentoo
 # required by sci-libs/med-4.0.0-r1::gentoo
 # required by media-gfx/freecad-0.18.3::waebbl
->=sys-cluster/openmpi-2.0.2 romio
+sys-cluster/openmpi romio
 # required by media-gfx/freecad-0.18.3::prototype99
->=dev-libs/libspnav-0.2.3 X
+dev-libs/libspnav X
 # required by dev-libs/libspnav-0.2.3::gentoo
 # required by media-gfx/freecad-0.18.3::prototype99
->=app-misc/spacenavd-0.6 X
+app-misc/spacenavd X
 # required by gnome-extra/budgie-desktop-10.5::reagentoo
 # required by budgie-desktop (argument)
->=app-i18n/ibus-1.5.19-r1 vala
+app-i18n/ibus vala
 # required by budgie-desktop (argument)
->=app-i18n/ibus-1.5.18 vala
+app-i18n/ibus vala
 # required by media-gfx/graphviz-2.42.3::gentoo
 # required by dev-lang/vala-0.40.17::dantrell-gnome
 # required by app-crypt/libsecret-0.18.8::dantrell-gnome[vala]
@@ -363,27 +359,27 @@ app-text/poppler cairo qt5
 # required by gnome-base/gdm-3.34.1-r1::dantrell-gnome-3-34
 # required by gnome-extra/budgie-desktop-10.5::reagentoo
 # required by budgie-desktop (argument)
->=media-libs/gd-2.2.5-r2 truetype fontconfig
+media-libs/gd truetype fontconfig
 # required by gnome-base/gnome-control-center-3.34.1::dantrell-gnome-3-34[cups]
 # required by gnome-base/gnome-shell-3.34.1::dantrell-gnome-3-34
 # required by gnome-base/gdm-3.34.1-r1::dantrell-gnome-3-34
 # required by gnome-extra/budgie-desktop-10.5::reagentoo
 # required by budgie-desktop (argument)
->=net-fs/samba-4.9.0 client
+net-fs/samba client
 # required by sys-libs/ldb-1.3.6::musl
 # required by net-fs/samba-4.9.0::raw[system-ldb]
 # required by net-fs/cifs-utils-6.9-r1::gentoo[acl]
->=sys-libs/tdb-1.3.16 python
+sys-libs/tdb python
 # required by sys-libs/ldb-1.3.6::musl
 # required by net-fs/samba-4.9.0::raw[system-ldb]
 # required by net-fs/cifs-utils-6.9-r1::gentoo[acl]
->=sys-libs/tevent-0.9.37 python
+sys-libs/tevent python
 # required by gnome-base/gnome-shell-3.34.1::dantrell-gnome-3-34
 # required by gnome-base/gdm-3.34.1-r1::dantrell-gnome-3-34
 # required by gnome-extra/budgie-desktop-10.5::reagentoo
 # required by budgie-desktop (argument)
->=gnome-base/gnome-control-center-3.34.1 networkmanager
+gnome-base/gnome-control-center networkmanager
 # required by www-client/firefox-72.0.2::prototype99[system-libvpx]
-=media-libs/libvpx-1.7.0-r1 postproc
+media-libs/libvpx postproc
 # required by www-client/firefox-72.0.2::prototype99[system-sqlite]
->=dev-db/sqlite-3.31.0 secure-delete
+dev-db/sqlite secure-delete

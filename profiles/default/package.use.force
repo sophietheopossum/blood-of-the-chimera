@@ -1,1 +1,1 @@
->=sys-apps/portage-2.3.66-r1 python_targets_pypy3
+sys-apps/portage python_targets_pypy3
