@@ -912,3 +912,6 @@
 # required by app-text/asciidoc-8.6.9-r1::argent-main[python_single_target_pypy]
 # required by sys-apps/paludis-9999::prototype99
 =virtual/pypy-7.3.0 ~amd64
+# required by sys-apps/sydbox-1.0.7::gentoo
+=sys-libs/pinktrace-0.9.3 ~amd64
+=sys-apps/sydbox-1.0.7 ~amd64

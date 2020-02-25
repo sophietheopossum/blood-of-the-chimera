@@ -4140,6 +4140,17 @@
     <source type="git">git@github.com:scriptkitties/overlay.git</source>
     <feed>https://github.com/scriptkitties/overlay/commits/master.atom</feed>
   </repo>
+  <repo quality="experimental" status="unofficial">
+    <name>slonko</name>
+    <description lang="en">Personal portage overlay</description>
+    <homepage>https://slonko.net/portage</homepage>
+    <owner type="person">
+      <email>marcin.deranek@slonko.net</email>
+      <name>Marcin Deranek</name>
+    </owner>
+    <source type="git">https://slonko.net/git/portage</source>
+    <feed>https://slonko.net/git/portage/atom/</feed>
+  </repo>
   <repo quality="experimental" status="official">
     <name>slyfox</name>
     <description lang="en">slyfox's ebuild den</description>
@@ -4849,8 +4860,8 @@
     <description lang="en">gentoo, wayland overlay for wayfire ebuilds and other wayfire apps</description>
     <homepage>https://github.com/epsilon-0/wayfire-desktop</homepage>
     <owner type="person">
-      <email>mathgeniusabhinav@gmail.com</email>
-      <name>Abhinav Tamaskar</name>
+      <email>gentoo@aisha.cc</email>
+      <name>Aisha Tammy</name>
     </owner>
     <source type="git">https://github.com/epsilon-0/wayfire-desktop.git</source>
     <source type="git">git+ssh://git@github.com/epsilon-0/wayfire-desktop.git</source>
@@ -5152,8 +5163,8 @@
     <description>Zscheile Overlay</description>
     <homepage>https://github.com/zserik/portage-zscheile</homepage>
     <owner type="person">
-      <email>erik.zscheile.ytrizja@gmail.com</email>
-      <name>Erik Kai Alain Zscheile</name>
+      <email>zseri@ytrizja.de</email>
+      <name>Erik Zscheile</name>
     </owner>
     <source type="git">https://github.com/zserik/portage-zscheile.git</source>
     <source type="git">git://github.com/zserik/portage-zscheile.git</source>

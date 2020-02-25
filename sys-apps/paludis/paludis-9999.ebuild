@@ -45,7 +45,7 @@ DEPEND="${COMMON_DEPEND}
 	test? ( >=dev-cpp/gtest-1.6.0-r1 )"
 
 RDEPEND="${COMMON_DEPEND}
-	sys-apps/sandbox"
+	sys-apps/sydbox"
 
 PDEPEND="app-eselect/eselect-package-manager"
 
