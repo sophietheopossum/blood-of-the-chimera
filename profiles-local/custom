@@ -53,7 +53,7 @@
 =dev-libs/boost-1.65.0::gnux32										#x32 specific patch
 =dev-libs/boost-1.70.0::gnux32										#better in other overlay
 =dev-libs/glib-2.61.1::gnome-next									#less python compatibility, less use flags, no separate packages
-=dev-libs/glib-2.62.4::dantrell-gnome								#less use flags, no separate packages
+=dev-libs/glib-2.62.5::dantrell-gnome								#less use flags, no separate packages
 =dev-libs/gmp-6.1.2::srcshelton										#no musl support
 =dev-libs/gmp-6.1.2-r1::gentoo										#no pgo
 =dev-libs/gobject-introspection-common-1.60.2::dantrell-gnome-3-32	#bad keywording, unnecessary quotes
@@ -70,6 +70,7 @@
 =dev-libs/libgcrypt-1.8.5::gentoo-clang								#clang specific patch
 =dev-libs/libgdata-0.17.10::gnome-next								#very different to ::gentoo
 =dev-libs/libgpg-error-1.36::dantrell-gnome							#bad keywording, unnecessary quotes, old
+=dev-libs/libgpg-error-1.37::dantrell-gnome							#bad keywording, unnecessary quotes
 =dev-libs/libgpg-error-1.36::gnux32									#x32 specific patch, old
 =dev-libs/libgusb-0.2.11::dantrell-gnome							#bad keywording, unnecessary quotes
 =dev-libs/libgweather-3.33.92::dantrell-gnome-3-34					#bad keywording, unnecessary quotes
@@ -148,14 +149,16 @@
 =dev-util/boost-build-1.65.0::gnux32								#x32 specific patch
 =dev-util/boost-build-1.70.0::gnux32								#better in other overlay
 #=dev-util/eclipse-sdk-bin-4.13.0::ssnb								#uses bundled libraries
-=dev-util/gdbus-codegen-2.62.4::dantrell-gnome						#dummy package
+=dev-util/gdbus-codegen-2.62.5::dantrell-gnome						#dummy package
 =dev-util/gdbus-codegen-2.99::rindeal								#dummy package
 <=dev-util/glib-utils-2.60.6::dantrell-gnome						#dummy package
 =dev-util/glib-utils-2.62.4::dantrell-gnome							#dummy package
+=dev-util/glib-utils-2.63.4::gnome-next								#less python compatibility
 =dev-util/glib-utils-2.99.99::rindeal								#dummy package
 =dev-util/gtk-update-icon-cache-3.24.8::dantrell-gnome				#bad keywording, unnecessary quotes
 =dev-util/gtk-update-icon-cache-3.24.11::dantrell-gnome				#bad keywording, unnecessary quotes
 =dev-util/gtk-update-icon-cache-3.24.13::dantrell-gnome				#bad keywording, unnecessary quotes
+=dev-util/meson-0.52.1::dantrell-gnome								#bad keywording, unnecessary quotes, verbose python targets
 =dev-util/sysprof-3.35.2::gnome-next								#eapi6
 =dev-vcs/mercurial-5.0.2::sorrow									#no pypy support
 =games-simulation/firestorm-bin-6.3.2-r1::lmiphay					#missing dependency

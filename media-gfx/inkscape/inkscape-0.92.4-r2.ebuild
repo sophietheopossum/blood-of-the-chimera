@@ -32,9 +32,9 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	>=dev-libs/libxml2-2.6.20
 	>=dev-libs/libxslt-1.0.15
 	dev-libs/popt
-	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/lxml
 	media-gfx/potrace
-	media-gfx/scour[${PYTHON_USEDEP}]
+	media-gfx/scour
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/libpng:0=
@@ -69,7 +69,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 # install these so we could of course just not depend on those and rely
 # on that.
 RDEPEND="${COMMON_DEPEND}
-	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/numpy
 	media-gfx/uniconvertor
 	dia? ( app-office/dia )
 	latex? (

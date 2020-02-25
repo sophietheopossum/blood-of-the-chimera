@@ -9,6 +9,7 @@
 ::prototype99
 -use python3 for translations with opensuse patch
 -add python 3 for dxf and other extensions
+-remove deprecated python usedep
 
 *inkscape-0.92.4-r1*
 ::prototype99

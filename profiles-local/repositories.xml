@@ -113,6 +113,149 @@
 		<source type="git">git+ssh://git@github.com/ksa242/gentoo-cubieboard-overlay.git</source>
 		<feed>https://github.com/ksa242/gentoo-cubieboard-overlay/commits/master.atom</feed>
 	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome14</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.14)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-14.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-14.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-14.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-14/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome16</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.16)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-16.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-16.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-16.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-16/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome18</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.18)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-18.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-18.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-18.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-18/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome20</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.20)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-20.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-20.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-20.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-20/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome22</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.22)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-22.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-22.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-22.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-22/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome24</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.24)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-24.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-24.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-24.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-24/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome26</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.26)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-26.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-26.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-26.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-26/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome28</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.28)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-28.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-28.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-28.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-28/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome30</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.30)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-30.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-30.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-30.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-30/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome32</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.32)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-32.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-32.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-32.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-32/commits/master.atom</feed>
+	</repo>
+	<repo priority="100" quality="experimental" status="unofficial">
+		<name>dantrell-gnome34</name>
+		<description lang="en">Dantrell B.'s Gentoo Overlay for GNOME (3.34)</description>
+		<homepage>https://github.com/dantrell/gentoo-project-gnome-without-systemd</homepage>
+		<owner>
+			<name>Dantrell B.</name>
+			<email>dantrell@mirthil.org</email>
+		</owner>
+		<source type="git">https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-34.git</source>
+		<source type="git">git://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-34.git</source>
+		<source type="git">git@github.com:dantrell/gentoo-overlay-dantrell-gnome-3-34.git</source>
+		<feed>https://github.com/dantrell/gentoo-overlay-dantrell-gnome-3-34/commits/master.atom</feed>
+	</repo>
 	<repo quality="experimental" status="unofficial">
 		<name>discworld</name>
 		<description lang="en">Various VoIP-related ebuils</description>
