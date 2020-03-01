@@ -3,3 +3,4 @@
 -base ebuild
 ::prototype99
 -eapi7 enabled by default
+-add sydbox dependency
