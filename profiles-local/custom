@@ -57,6 +57,7 @@
 =dev-libs/gmp-6.1.2::srcshelton										#no musl support
 =dev-libs/gmp-6.1.2-r1::gentoo										#no pgo
 =dev-libs/gobject-introspection-common-1.60.2::dantrell-gnome-3-32	#bad keywording, unnecessary quotes
+=dev-libs/gobject-introspection-common-1.62.0::my-gnome				#no gtk-doc use flag
 =dev-libs/hyphen-2.8.8::muslx32										#eapi 4, old
 =dev-libs/intel-common-19.0.4.243::science							#no good for cluster edition
 =dev-libs/json-glib-1.2.8::dantrell-gnome							#seems dated
@@ -136,6 +137,7 @@
 =dev-python/pivy-0.6.4::cg											#seems to disregard known bugs
 =dev-python/pycparser-2.14-r1000::progress							#odd use flag configuration
 =dev-python/pycups-1.9.73-r2::dantrell-gnome						#bad keywording, unnecessary quotes
+=dev-python/pygments-2.4.2-r1::buzden								#patch is not hidden behind a use flag
 =dev-python/pygtk-2.24.0-r4::dantrell-gnome							#bad keywording, unnecessary quotes, no numpy use flag
 =dev-python/PySocks-1.6.8::pentoo									#better in other overlay
 =dev-python/pytz-2019.2::HomeAssistantRepository					#no pypy support
@@ -155,9 +157,10 @@
 =dev-util/glib-utils-2.62.4::dantrell-gnome							#dummy package
 =dev-util/glib-utils-2.63.4::gnome-next								#less python compatibility
 =dev-util/glib-utils-2.99.99::rindeal								#dummy package
+=dev-util/gtk-doc-1.32-r1::dantrell-gnome							#no test or pdf use flag, bad keywording, unnecessary quotes
 =dev-util/gtk-update-icon-cache-3.24.8::dantrell-gnome				#bad keywording, unnecessary quotes
 =dev-util/gtk-update-icon-cache-3.24.11::dantrell-gnome				#bad keywording, unnecessary quotes
-=dev-util/gtk-update-icon-cache-3.24.13::dantrell-gnome				#bad keywording, unnecessary quotes
+=dev-util/gtk-update-icon-cache-3.24.14::dantrell-gnome				#bad keywording, unnecessary quotes
 =dev-util/meson-0.52.1::dantrell-gnome								#bad keywording, unnecessary quotes, verbose python targets
 =dev-util/sysprof-3.35.2::gnome-next								#eapi6
 =dev-vcs/mercurial-5.0.2::sorrow									#no pypy support
@@ -260,6 +263,7 @@
 =sys-apps/dbus-broker-18::dantrell-gnome							#patch doesn't work
 =sys-apps/findutils-4.6.0-r1::muslx32								#old, no supported python, missing patch
 =sys-apps/portage-2.3.84-r1::poly-c									#removes useful error reporting
+=sys-apps/portage-2.3.89::poly-c									#removes useful error reporting
 =sys-apps/shadow-4.6::muslx32										#missing split-usr use flag
 =sys-apps/tcp-wrappers-7.6.22-r1::argent-main						#old
 =sys-apps/tcp-wrappers-7.6.22-r1::musl								#musl specific patch
@@ -273,6 +277,7 @@
 =sys-devel/gcc-9.1.0::musl											#better in other overlay
 =sys-devel/gettext-0.19.8.1::dantrell-gnome							#bad keywording, unnecessary quotes
 =sys-devel/gettext-0.19.8.1::muslx32								#old, missing patch
+=sys-devel/gettext-0.20.1::dantrell-gnome							#bad keywording, unnecessary quotes
 =sys-fs/e2fsprogs-1.44.5::gnux32									#x32 specific patch
 =sys-fs/e2fsprogs-1.45.2::gnux32									#x32 specific patch
 =sys-kernel/linux-headers-4.14-r1::musl								#musl specific patches
@@ -303,6 +308,7 @@
 =x11-libs/gtk+-3.24.8::dantrell-gnome								#old workaround
 =x11-libs/gtk+-3.24.9::dantrell-gnome								#old workaround
 =x11-libs/gtk+-3.24.9-r1::dantrell-gnome							#old workaround
+=x11-libs/gtk+-3.24.13:3::flussence									#no adwaita use flag
 =x11-libs/gtk+-3.24.13::gnome-next									#removes a lot of things with no explanation
 =x11-libs/libdrm-2.4.97::musl										#musl specific patch
 =x11-libs/libpciaccess-0.14::musl									#musl specific patches
