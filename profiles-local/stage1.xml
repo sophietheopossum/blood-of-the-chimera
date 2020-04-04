@@ -1333,6 +1333,18 @@
     <feed>https://github.com/gentoo/eclipse-overlay/commits/master.atom</feed>
   </repo>
   <repo quality="experimental" status="unofficial">
+    <name>edgets</name>
+    <description lang="en">Gentoo overlay that brings you the newest versions of modern software.</description>
+    <homepage>https://github.com/BlueManCZ/edgets</homepage>
+    <owner type="person">
+      <email>ivo97@centrum.cz</email>
+      <name>Ivo Šmerek</name>
+    </owner>
+    <source type="git">https://github.com/BlueManCZ/edgets.git</source>
+    <source type="git">git+ssh://git@github.com/BlueManCZ/edgets.git</source>
+    <feed>https://github.com/BlueManCZ/edgets/commits/master.atom</feed>
+  </repo>
+  <repo quality="experimental" status="unofficial">
     <name>eigenlay</name>
     <description lang="en">Eigenlab Gentoo overlay</description>
     <homepage>https://gitlab.com/eigennet/eigenlay</homepage>
@@ -1571,14 +1583,12 @@
   <repo quality="experimental" status="unofficial">
     <name>floppym</name>
     <description>floppym's personal overlay</description>
-    <homepage>http://bitbucket.org/floppym/floppym-overlay</homepage>
+    <homepage>https://github.com/floppym/floppym</homepage>
     <owner type="person">
       <email>floppym@gentoo.org</email>
       <name>Mike Gilbert</name>
     </owner>
-    <source type="git">https://bitbucket.org/floppym/floppym-overlay</source>
-    <feed>http://bitbucket.org/floppym/floppym-overlay/atom</feed>
-    <feed>http://bitbucket.org/floppym/floppym-overlay/rss</feed>
+    <source type="git">https://github.com/floppym/floppym</source>
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>flow</name>
@@ -5300,6 +5310,18 @@
     <source type="git">git+ssh://git@github.com/heindsight/gentoo_overlay.git</source>
     <feed>https://github.com/heindsight/gentoo_overlay/commits/master.atom</feed>
   </repo>
+  <repo quality="experimental" status="unofficial">
+    <name>chymeric</name>
+    <description lang="en">Overlay for scientific software and other utilities</description>
+    <homepage>https://github.com/TheChymera/overlay</homepage>
+    <owner type="person">
+      <email>chr@chymera.eu</email>
+      <name>Horea Christian</name>
+    </owner>
+    <source type="git">https://github.com/TheChymera/overlay.git</source>
+    <source type="git">git://github.com/TheChymera/overlay.git</source>
+    <source type="git">git+ssh://git@github.com/TheChymera/overlay.git</source>
+    <feed>https://github.com/TheChymera/overlay/commits/master.atom</feed>
+  </repo>
   <!-- vim:se et sw=2 ts=2 sts=2 :-->
 </repositories>
-
