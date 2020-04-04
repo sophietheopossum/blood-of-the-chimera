@@ -1,11 +1,9 @@
-# notice
-please note this repository may slowly get less active as focus shifts to a brand new "project chimera" which will focus on the idea of a paludis&exherbo based system theoretically capable of reading both gentoo and paludis repositories. this should eventually spawn its own exheres based overlay called "blood of the chimera"
 # prototype99
 An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone as well as other packages. if you use other overlays consider running first-install.sh or first-install-legacy.sh to add extra overlay specific configuration files as symlinks. profiles are designed to add to gentoo and keep repoman (a lil bit) happier. that being said, the main two profiles are default/linux/amd64/17.0/systemd (personal laptop) and default/linux/amd64/17.0/desktop/plasma/systemd (personal desktop). in the profiles preference is made for masking packages with no clear versioning. the profile mask handles old dependencies, binaries and bad versioning. the mask/* handles overlay specific stuff so the best ebuilds from each overlay are hopefully used.
 
 note that you may need to set dev-python/pypy low-memory and dev-util/cmake -system-jsoncpp in your package.use to avoid circular dependencies upon initial profile migration.
 
-ebuilds from ::whiledev have been added in order to preserve them as the overlay has since been deleted
+ebuilds from ::whiledev and ::nginx-overlay have been added in order to preserve them as the overlay has since been deleted
 
 ##Current defaults
 
@@ -36,6 +34,9 @@ Add the overlay:
 Sync overlay:
 
 	# layman -S
+
+# Notice
+This overlay is being worked on less due to a switch to the paludis package manager. If this would interest you please look at the newer fork: blood-of-the-chimera!
 
 ## Packages
 ### `app-admin/system-config-printer`
