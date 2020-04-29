@@ -1,6 +1,7 @@
 =app-accessibility/at-spi2-atk-2.34.1
 =app-accessibility/at-spi2-core-2.34.0
 =app-admin/eselect-1.4.15
+=app-admin/eselect-1.4.16 ~amd64
 =app-arch/brotli-1.0.7
 =app-crypt/gcr-3.34.0-r1
 =app-editors/sublime-text-3_p3211-r1
@@ -12,20 +13,25 @@
 =dev-cpp/gtkmm-3.24.2 ~amd64
 =dev-db/oracle-instantclient-18.5.0.0
 =dev-db/sqldeveloper-19.2.1.247.2212
+=dev-java/idea-community-2020.1.0.201.6668.121
 =dev-java/openjdk-11.0.4_p11 ~amd64
 =dev-java/openjdk-11.0.5_p10
 =dev-java/openjdk-bin-11.0.4_p11 ~amd64
 =dev-lang/ifc-19.0.4.243
 =dev-lang/orc-0.4.31
 =dev-lang/python-3.6.9-r1
+=dev-lang/python-3.7.7-r2
+=dev-lang/python-3.8.2-r2
 #=dev-lang/rust-1.35.0
 #=dev-lang/rust-1.36.0
 =dev-lang/spidermonkey-1.8.5-r7 ~amd64
 =dev-libs/atk-2.35.1
+=dev-libs/icu-66.1
 =dev-libs/intel-common-19.0.4.243
 =dev-libs/OpenNI2-2.2_beta2
 =dev-php/phpstorm-2019.2.4
 =dev-python/fonttools-3.44.0
+=dev-python/mako-1.1.1 ~amd64
 =dev-python/numpy-1.14.5 ~amd64
 =dev-python/numpy-1.17.4
 =dev-python/pivy-0.6.4
@@ -51,7 +57,8 @@
 =dev-util/eclipse-sdk-bin-4.13.0
 =dev-util/gn-0.1616
 =dev-util/gtk-doc-1.32-r1
-=dev-util/meson-0.53.1_pre
+=dev-util/gtk-doc-am-1.32 ~amd64
+=dev-util/meson-0.53.2_pre
 =dev-util/pybind11-2.3.0
 =dev-vcs/mercurial-5.0.2
 =games-simulation/firestorm-bin-6.3.2-r1
@@ -74,7 +81,9 @@
 =media-fonts/noto-20190524 ~amd64
 =media-gfx/flameshot-0.6.0
 =media-gfx/fontforge-20190801-r1
+=media-gfx/fontforge-20200314
 =media-gfx/freecad-0.18.3
+=media-gfx/gimp-2.10.18-r1
 =media-gfx/glimpse-0.1.0
 =media-gfx/inkscape-0.92.4-r1
 =media-gfx/opencsg-1.4.2
@@ -84,7 +93,7 @@
 =media-libs/coin-4.0.0a_pre20181221
 =media-libs/fmod-4.44.50
 =media-libs/fontconfig-ultimate-2016.04.23
-=media-libs/libuninameslist-20190701
+=media-libs/libuninameslist-20200313
 =media-libs/SoQt-1.6.0a_pre20181221
 =media-video/pipewire-0.2.7
 =net-fs/samba-4.9.0
@@ -123,7 +132,7 @@
 #=virtual/rust-1.36.0
 =www-client/chromium-78.0.3904.63
 =www-client/firefox-73.0
-=x11-libs/gtk+-3.24.13
+=x11-libs/gtk+-3.24.18
 =x11-libs/pango-1.44.7_pre
 =x11-misc/cairo-compmgr-0.4.8_pre20141005
 =x11-misc/compton-7.3
@@ -928,3 +937,45 @@
 # required by kde-plasma/plasma-meta-5.15.5-r2::prototype99[pam]
 # required by sys-apps/world-18::prototype99[processviewer]
 =dev-util/gtk-doc-am-1.32 ~amd64
+# required by dev-python/cffi-1.14.0::gentoo[-doc,python_targets_python3_6]
+# required by dev-python/zstandard-0.12.0::gentoo
+# required by dev-vcs/mercurial-5.2.2-r1::gentoo
+# required by app-portage/layman-2.4.2-r1::gentoo[mercurial]
+# required by sys-apps/world-18::prototype99[overlay]
+=dev-lang/python-3.6.10-r2 ~amd64
+# required by virtual/rust-1.42.0::pg_overlay
+# required by gnome-base/librsvg-2.46.3::prototype99
+# required by x11-libs/gtk+-3.24.18::pg_overlay[adwaita-icon-theme]
+# required by app-crypt/gcr-3.34.0-r1::prototype99[gtk]
+# required by gnome-base/gnome-keyring-3.36.0::my-gnome
+# required by app-crypt/libsecret-0.20.2::my-gnome
+# required by mail-mta/msmtp-1.8.3::gentoo
+# required by virtual/mta-1-r1::gentoo
+# required by dev-lang/php-7.3.14::gentoo
+# required by sys-apps/world-18::prototype99[text-editor-php-lint]
+=dev-lang/rust-1.42.0 ~amd64
+# required by dev-lang/rust-1.42.0::pg_overlay[system-llvm]
+# required by virtual/rust-1.42.0::pg_overlay
+# required by gnome-base/librsvg-2.46.3::prototype99
+# required by x11-libs/gtk+-3.24.18::pg_overlay[adwaita-icon-theme]
+# required by app-crypt/gcr-3.34.0-r1::prototype99[gtk]
+# required by gnome-base/gnome-keyring-3.36.0::my-gnome
+# required by app-crypt/libsecret-0.20.2::my-gnome
+# required by mail-mta/msmtp-1.8.3::gentoo
+# required by virtual/mta-1-r1::gentoo
+# required by dev-lang/php-7.3.14::gentoo
+# required by sys-apps/world-18::prototype99[text-editor-php-lint]
+=sys-devel/llvm-10.0.0 ~amd64
+# required by sys-devel/llvm-10.0.0::gentoo[gold]
+# required by dev-lang/rust-1.42.0::pg_overlay[system-llvm]
+# required by virtual/rust-1.42.0::pg_overlay
+# required by gnome-base/librsvg-2.46.3::prototype99
+# required by x11-libs/gtk+-3.24.18::pg_overlay[adwaita-icon-theme]
+# required by app-crypt/gcr-3.34.0-r1::prototype99[gtk]
+# required by gnome-base/gnome-keyring-3.36.0::my-gnome
+# required by app-crypt/libsecret-0.20.2::my-gnome
+# required by mail-mta/msmtp-1.8.3::gentoo
+# required by virtual/mta-1-r1::gentoo
+# required by dev-lang/php-7.3.14::gentoo
+# required by sys-apps/world-18::prototype99[text-editor-php-lint]
+=sys-devel/llvmgold-10 ~amd64

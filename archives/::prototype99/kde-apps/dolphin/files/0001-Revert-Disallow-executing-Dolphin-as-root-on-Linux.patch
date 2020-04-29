@@ -1,0 +1,40 @@
+From ba74d639178916221c748b0d5d89f7ac4f5ed669 Mon Sep 17 00:00:00 2001
+From: Fabian Vogt <fabian@ritter-vogt.de>
+Date: Sat, 22 Apr 2017 14:00:33 +0200
+Subject: [PATCH] Revert "Disallow executing Dolphin as root on Linux"
+
+This reverts commit 0bdd8e0b0516555c6233fdc7901e9b417cf89791.
+We ship a desktop file to open dolphin as root and we allow YaST on the
+desktop. So this patch is absolutely pointless for us.
+---
+ src/main.cpp | 13 -------------
+ 1 file changed, 13 deletions(-)
+
+diff --git a/src/main.cpp b/src/main.cpp
+index 789a52996..acba8daed 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -35,21 +35,8 @@
+ #include <KLocalizedString>
+ #include <Kdelibs4ConfigMigrator>
+ 
+-#ifndef Q_OS_WIN
+-#include <unistd.h>
+-#endif
+-#include <iostream>
+-
+ extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
+ {
+-#ifndef Q_OS_WIN
+-    // Check whether we are running as root
+-    if (getuid() == 0) {
+-        std::cout << "Executing Dolphin as root is not possible." << std::endl;
+-        return EXIT_FAILURE;
+-    }
+-#endif
+-
+     QApplication app(argc, argv);
+     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("system-file-manager"), app.windowIcon()));
+-- 
+2.12.0
