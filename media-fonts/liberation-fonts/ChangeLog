@@ -1,3 +1,8 @@
+*2.1.0
+
+	25.4.2020	::gentoo		update copyright, switch back to official repository, update keywording, new dependency logic, sync changes
+	25.4.2020	::prototype99	make better use of ${PN}
+
 *2.00.6_pre20190923-r1
 
 	25.11.2019	::prototype99
@@ -26,4 +31,4 @@
 		-remove reference to non-existent liberation sans narrow
 		-replace excessive spaces in conf files with tab characters
 		-add unmentioned arial replacement to description
-	??????????	::gentoo	base ebuild
+	??????????	::gentoo		base ebuild

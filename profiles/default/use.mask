@@ -120,6 +120,7 @@ video_cards_vmware
 -iwd
 -jemalloc
 -jit
+-mariadb
 -python_targets_pypy
 -python_targets_pypy3
 -python_targets_python3_7
