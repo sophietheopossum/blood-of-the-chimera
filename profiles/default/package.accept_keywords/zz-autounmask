@@ -123,6 +123,7 @@
 =sys-devel/llvm-9.0.1
 =sys-kernel/gentoo-sources-5.1.11 ~amd64
 =sys-kernel/gentoo-sources-5.2.5 ~amd64
+=sys-libs/compiler-rt-sanitizers-9.0.1
 =virtual/cblas-2.0-r4
 =virtual/linux-sources-3-r2
 =virtual/linux-sources-5
