@@ -1,2 +1,2 @@
-:default/linux/x86*
-:default/linux
+../x86*
+..
