@@ -54,6 +54,7 @@
 =dev-lang/python-2.7.17::gentoo										#no optimisation
 =dev-lang/python-3.6.10-r1::gentoo									#no pgo
 =dev-lang/python-3.6.10-r1::mv										#no pgo use flag
+=dev-lang/rust-1.42.0::pg_overlay									#broken? mask so we can test this theory
 =dev-lang/rust-1.42.0-r666::rust									#seems very outdated
 =dev-lang/spidermonkey-1.8.5-r7::gnux32								#x32 specific patches
 =dev-lang/spidermonkey-60.5.2_p0-r4::dantrell-gnome					#bad keywording, unnecessary quotes
