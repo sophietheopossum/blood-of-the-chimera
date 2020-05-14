@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+hook_run_sync_post() {
+
+	if [[ $TARGET == 'x-rindeal' || $TARGET == 'rindeal' ]]; then
+		ln -f /var/db/repos/rindeal/eclass/rindeal.eclass /var/db/repos/blood-of-the-chimera/eclass/rindeal.eclass
+		ln -f /var/db/repos/rindeal/eclass/rindeal.eclass /var/db/repos/prototype99/eclass/rindeal.eclass
+	fi
+
+}
