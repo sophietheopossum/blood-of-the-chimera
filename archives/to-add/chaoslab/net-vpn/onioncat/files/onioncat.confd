@@ -1,0 +1,11 @@
+# config file for /etc/init.d/onioncat
+
+# log file destination
+OCAT_LOGDIR="/var/log/onioncat"
+OCAT_LOG="${OCAT_LOGDIR}/ocat.log"
+
+# onioncat hidden service hostname file
+OCAT_HOSTNAME_FILE="/var/lib/tor/onioncat/hostname"
+
+# options
+OCAT_OPTS="-C -4 -L \"${OCAT_LOG}\" $(cat ${OCAT_HOSTNAME_FILE})"

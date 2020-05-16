@@ -1,0 +1,19 @@
+#!/sbin/openrc-run
+# Copyright 1999-2018 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+FB_CONFIG="${FB_CONFIG:-/etc/filebrowser/filebrowser.yaml}"
+FB_OPTS="${FB_OPTS:--c ${FB_CONFIG}}"
+
+command="/usr/bin/filebrowser"
+command_args="${FB_OPTS}"
+command_user="${command_user:-filebrowser:filebrowser}"
+command_background=yes
+pidfile="/run/${RC_SVCNAME}.pid"
+required_files="${FB_CONFIG}"
+retry="${retry:-TERM/30/KILL/5}"
+start_stop_daemon_args="${SSD_OPTS}"
+
+depend() {
+	need net
+}
