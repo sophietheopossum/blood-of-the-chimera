@@ -28,7 +28,9 @@
 =dev-libs/atk-2.35.1
 =dev-libs/icu-66.1
 =dev-libs/intel-common-19.0.4.243
+=dev-libs/libsigc++-2.10.3
 =dev-libs/OpenNI2-2.2_beta2
+=dev-perl/Archive-Zip-1.680.0
 =dev-php/phpstorm-2019.2.4
 =dev-python/fonttools-3.44.0
 =dev-python/mako-1.1.1 ~amd64
@@ -138,6 +140,7 @@
 =virtual/linux-sources-5
 =virtual/linux-sources-7
 =virtual/linux-sources-8
+=virtual/man-9
 =virtual/rust-1.42.0
 =www-client/chromium-78.0.3904.63
 =www-client/firefox-73.0

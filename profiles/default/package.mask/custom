@@ -25,6 +25,7 @@
 =dev-libs/mpc-1.0.3-r1337					#eapi 4, bad dependencies
 =dev-libs/mpfr-3.1.6-r1337					#bad versioning
 =dev-python/pillow-1000						#bad versioning
+<dev-python/pygments-2.6.1					#old
 =dev-libs/zziplib-9999						#bad versioning
 <dev-python/ply-3.9							#old
 <dev-python/setuptools-40.6.3				#old
@@ -70,11 +71,6 @@
 =sys-fs/udev-9999							#bad versioning
 <sys-fs/udisks-2.8.2						#old
 =sys-fs/xfsdump-9999						#bad versioning
-=sys-power/upower-0.99.10.20181114			#that's a lot of patches, bad versioning
-=sys-power/upower-0.99.11.20190405			#that's a lot of patches, bad versioning
-=sys-power/upower-0.99.11.20190507			#that's a lot of patches, bad versioning
-=sys-power/upower-0.99.11.20190509			#that's a lot of patches, bad versioning
-=sys-power/upower-0.99.11.20190604			#that's a lot of patches, bad versioning
 <virtual/cargo-1.37.0						#old
 =virtual/cargo-1337-r1						#bad versioning, less package support
 =virtual/cblas-3.8							#no mkl
