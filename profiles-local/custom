@@ -181,7 +181,6 @@
 =dev-qt/qtnetwork-5.14.1::libressl									#libressl patch not behind use flag
 =dev-util/boost-build-1.65.0::gnux32								#x32 specific patch
 =dev-util/boost-build-1.70.0::gnux32								#better in other overlay
-#=dev-util/eclipse-sdk-bin-4.13.0::ssnb								#uses bundled libraries
 =dev-util/gdbus-codegen-2.62.6::dantrell-gnome						#dummy package
 =dev-util/gdbus-codegen-2.64.2::dantrell-gnome						#dummy package
 =dev-util/gdbus-codegen-2.99::rindeal								#dummy package
