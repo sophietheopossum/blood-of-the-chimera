@@ -99,7 +99,7 @@ RDEPEND="
 	overlay? ( app-portage/layman )
 	pantheon-files? ( pantheon-base/pantheon-files )
 	parted? ( sys-block/gparted )
-	!pcmanfm-qt? ( lxqt-base/lxqt-meta[!filemanager] )
+	!pcmanfm-qt? ( lxqt-base/lxqt-meta[-filemanager] )
 	pdf-view-accurate? ( app-text/mupdf )
 	php-ide? ( dev-php/phpstorm )
 	processviewer? ( kde-plasma/plasma-meta[processviewer] )
