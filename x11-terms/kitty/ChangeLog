@@ -1,0 +1,3 @@
+*0.17.3
+	::gentoo		update copyright, update eapi, add python3_8 support, update dependencies, update formatting, update inherits
+	::prototype99	make use of PN, add the actual homepage

@@ -150,6 +150,7 @@
 =x11-misc/compton-7.3
 =x11-misc/ftmenu-0.4.0-r1
 =x11-misc/picom-7.5-r1
+=x11-terms/kitty-0.17.3 ~amd64
 =x11-themes/fvwm-crystal-3.4.1-r2
 =x11-wm/fvwm-2.6.8-r2
 # required by dev-python/certifi-2018.4.16::gentoo
@@ -224,8 +225,6 @@
 # required by media-libs/phonon-4.10.2::gentoo[vlc]
 # required by net-irc/kvirc-5.0_pre20181205184837::gentoo[phonon]
 =media-libs/x264-0.0.20190214 ~amd64
-# required by virtual/meta-6::prototype99[terminal-fast]
-=x11-terms/kitty-0.14.3 ~amd64
 # required by dev-libs/glib-2.61.1::lanodanOverlay
 # required by gnome-extra/zenity-3.30.0::gentoo
 # required by games-util/steam-launcher-1.0.0.59-r3::steam-overlay
