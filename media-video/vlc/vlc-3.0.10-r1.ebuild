@@ -16,15 +16,14 @@ HOMEPAGE="https://www.videolan.org/vlc/"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5-9" # vlc - vlccore
 
-#bye bye libav?
-IUSE="+10bit a52 alsa aom archive aribsub arm64 bidi bluray cddb chromaprint chromecast
-	dav1d dbus dc1394 debug directx dts +dvbpsi dvd +encode faad fdk +ffmpeg flac
+IUSE="+10bit a52 aa alsa aom archive aribsub bidi bluray cddb chromaprint chromecast
+	dav1d dbus dc1394 debug decklink directx dts +dvbpsi dvd +encode faad fdk +ffmpeg flac
 	fluidsynth fontconfig +gcrypt gme gnome-keyring gstreamer ieee1394 jack jpeg kate
 	libass libav libcaca libnotify libplacebo +libsamplerate libtar libtiger linsys lirc
-	live lua macosx-notifications macosx-qtkit mad matroska modplug mp3 mpeg mtp musepack ncurses
-	nfs ogg omxil opencv optimisememory opus png postproc projectm pulseaudio
-	+qt5 rdp realrtsp rtsp run-as-root samba schroedinger screen sdl-image sftp shine shout sid skins soxr spatialaudio speex srt ssl
-	svg taglib theora tremor truetype twolame udev upnp vaapi v4l vdpau +vlc vnc vorbis vpx
+	live lua macosx-notifications mad matroska mfx modplug mp3 mpeg mtp musepack ncurses
+	nfs ogg omxil opencv optimisememory opus oss png postproc projectm pulseaudio
+	+qt5 rdp realrtsp rtsp run-as-root samba schroedinger screen sdl-image sftp shine shout sid skins sndio soxr spatialaudio speex srt ssl
+	svg taglib theora tremor truetype twolame udev upnp vaapi v4l +vcd vdpau +vlc vnc vorbis vpx
 	wayland wma-fixed +X x264 x265 xml zeroconf zvbi cpu_flags_arm_neon cpu_flags_ppc_altivec cpu_flags_x86_mmx cpu_flags_x86_sse
 "
 REQUIRED_USE="
@@ -54,6 +53,7 @@ RDEPEND="
 	virtual/libintl
 	virtual/opengl
 	a52? ( >=media-libs/a52dec-0.7.4-r3 )
+	aa? ( media-libs/aalib )
 	alsa? ( >=media-libs/alsa-lib-1.0.24 )
 	aom? ( media-libs/libaom:= )
 	archive? ( app-arch/libarchive:= )
@@ -143,6 +143,7 @@ RDEPEND="
 	ogg? ( ${OGG} )
 	opencv? ( >media-libs/opencv-2:= )
 	opus? ( >=media-libs/opus-1.0.3 )
+	oss? ( media-sound/oss )
 	png? ( media-libs/libpng:0= )
 	postproc? ( libav? ( media-libs/libpostproc ) )
 	projectm? (
@@ -173,6 +174,7 @@ RDEPEND="
 		x11-libs/libXinerama
 		x11-libs/libXpm
 	)
+	sndio? ( media-sound/sndio )
 	soxr? ( >=media-libs/soxr-0.1.2 )
 	spatialaudio? ( media-libs/libspatialaudio )
 	speex? (
@@ -272,21 +274,17 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
-		#check this option
-		--disable-aa
-		#check this option
-		--disable-optimizations
+		--enable-optimizations
 		--disable-rpath
 		--disable-update-check
 		--enable-fast-install
-		--enable-vcd
 		$(use_enable 10bit x26410b)
 		$(use_enable a52)
+		$(use_enable aa)
 		$(use_enable alsa)
 		$(use_enable aom)
 		$(use_enable archive)
 		$(use_enable aribsub)
-		#check this option
 		$(use_enable arm64)
 		$(use_enable bidi fribidi)
 		$(use_enable bidi harfbuzz)
@@ -304,6 +302,7 @@ src_configure() {
 		$(use_enable dbus kwallet)
 		$(use_enable dc1394)
 		$(use_enable debug)
+		$(use_enable decklink)
 		$(use_enable directx)
 		$(use_enable directx d3d11va)
 		$(use_enable directx dxva2)
@@ -341,9 +340,9 @@ src_configure() {
 		$(use_enable live live555)
 		$(use_enable lua)
 		$(use_enable macosx-notifications osx-notifications)
-		$(use_enable macosx-qtkit)
 		$(use_enable mad)
 		$(use_enable matroska)
+		$(use_enable mfx)
 		$(use_enable modplug mod)
 		$(use_enable mp3 mpg123)
 		$(use_enable mpeg libmpeg2)
@@ -357,6 +356,7 @@ src_configure() {
 		$(use_enable opencv)
 		$(use_enable optimisememory optimize-memory)
 		$(use_enable opus)
+		$(use_enable oss)
 		$(use_enable png)
 		$(use_enable postproc)
 		$(use_enable projectm)
@@ -373,6 +373,7 @@ src_configure() {
 		$(use_enable shout)
 		$(use_enable sid)
 		$(use_enable skins skins2)
+		$(use_enable sndio)
 		$(use_enable soxr)
 		$(use_enable speex)
 		$(use_enable srt)
@@ -387,6 +388,7 @@ src_configure() {
 		$(use_enable upnp)
 		$(use_enable v4l v4l2)
 		$(use_enable vaapi libva)
+		$(use_enable vcd)
 		$(use_enable vdpau)
 		$(use_enable vlc)
 		$(use_enable vnc)
@@ -408,19 +410,15 @@ src_configure() {
 		--disable-coverage
 		--disable-cprof
 		--disable-crystalhd
-		--disable-decklink
 		--disable-gles2
 		--disable-goom
 		--disable-kai
 		--disable-kva
 		--disable-maintainer-mode
 		--disable-merge-ffmpeg
-		--disable-mfx
 		--disable-mmal
 		--disable-opensles
-		--disable-oss
 		--disable-rpi-omxil
-		--disable-sndio
 		--disable-vsxu
 		--disable-wasapi
 	)

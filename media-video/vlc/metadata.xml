@@ -7,15 +7,16 @@
 	</maintainer>
 	<use>
 		<flag name="10bit">use default behaviour where both 10 and 8 bit support is enabled as opposed to just 8 bit (flag exists for compatibility)</flag>
+		<flag name="aa">Enable ASCII filter</flag>
 		<flag name="aom">Enable experimental support for AV1 codec</flag>
 		<flag name="archive">Enable support for libarchive stream extractor</flag>
 		<flag name="aribsub">Enable support for decoding ARIB STD-B24 subtitles</flag>
-		<flag name="arm64">enable support for 64 bit arm</flag>
 		<flag name="bluray">Enable libbluray for Blu-ray disc support</flag>
 		<flag name="chromaprint">Enable libchromaprint for Chromaprint based audio fingerprinter support</flag>
 		<flag name="chromecast">Enable experimental support for Google Chromecast</flag>
 		<flag name="dav1d">Enable support for <pkg>media-libs/dav1d</pkg> AV1 decoder</flag>
 		<flag name="dc1394">Enable IIDC cameras support</flag>
+		<flag name="decklink">Enable decklink support</flag>
 		<flag name="directx">Enable Win32 DirectX, D3D11va and DxVA2 support</flag>
 		<flag name="dvbpsi">Enable support for Mpeg-TS files (.ts, .m2ts, .mts) via <pkg>media-libs/libdvbpsi</pkg></flag>
 		<flag name="encode">Enable streaming-output support and videolan manager to control multiple streams from within one instance</flag>
@@ -35,12 +36,14 @@
 		<flag name="macosx-notifications">Enable Mac OS X notifications module (formerly growl)</flag>
 		<flag name="macosx-qtkit">Enable Mac OS X qtkit module: qtcapture (video) and qtsound (audio) module</flag>
 		<flag name="matroska">Enable matroska support using reference libraries (fallback on other existing matroska support if disabled, i.e., matroska enabled FFmpeg)</flag>
+		<flag name="mfx">Add mfx (quicksync) support</flag>
 		<flag name="mpeg">Add libmpeg2 support for mpeg-1 and mpeg-2 video streams</flag>
 		<flag name="nfs">Enable support for nfs protocol via <pkg>net-fs/libnfs</pkg></flag>
 		<flag name="omxil">Enable OpenMAX Integration Layer codec module</flag>
 		<flag name="opencv">Enable OpenCV (computer vision) filter module</flag>
 		<flag name="optimisememory">Enable optimisation for memory rather than performance</flag>
 		<flag name="opus">Support opus decoding via libopus</flag>
+		<flag name="oss">Support oss (open source sound system)</flag>
 		<flag name="postproc">Enable image post-processing via libpostproc (part of FFmpeg)</flag>
 		<flag name="projectm">Enable the projectM visualization plugin</flag>
 		<flag name="realrtsp">Enable rtsp support using realrtsp</flag>
@@ -54,12 +57,14 @@
 		<flag name="shout">Enable libshout output</flag>
 		<flag name="sid">Adds support for playing C64 SID files through <pkg>media-libs/libsidplay</pkg>:2</flag>
 		<flag name="skins">Enable support for the skins2 interface</flag>
+		<flag name="sndio">Enable support for sndio</flag>
 		<flag name="spatialaudio">Enable support for the spatialaudio library</flag>
 		<flag name="soxr">Enable SoX Resampler support via <pkg>media-libs/soxr</pkg></flag>
 		<flag name="srt">Enable support for Secure Reliable Transport (SRT) via <pkg>net-libs/srt</pkg></flag>
 		<flag name="tremor">Enable tremor, a fixed-point version of the Ogg Vorbis decoder</flag>
 		<flag name="twolame">Enable twolame support (MPEG Audio Layer 2 encoder)</flag>
 		<flag name="upnp">Enable support for the Intel SDK stack based UPnP discovery module instead of CyberLink</flag>
+		<flag name="vcd">add vcd and cd-da (audio cd) support</flag>
 		<flag name="vlc">build vlc, disabling this builds just a library</flag>
 		<flag name="vpx">Enable the decoder(s) from the WebM VP8 / VP9 Codec SDK</flag>
 		<flag name="wma-fixed">Enable fixed point WMA decoder</flag>
