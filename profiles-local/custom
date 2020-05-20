@@ -12,7 +12,7 @@
 =app-crypt/gnupg-2.2.19::dantrell-gnome								#bad keywording, unnecessary quotes
 =app-crypt/seahorse-3.32.2::dantrell-gnome-3-32						#missing dependency
 =app-crypt/seahorse-3.34.1::dantrell-gnome-3-34						#bad keywording, unnecessary quotes, no help use flag
-=app-crypt/seahorse-3.34::my-gnome									#old
+=app-crypt/seahorse-3.36::my-gnome									#old
 =app-emulation/snapd-2.38::fol4										#better in other overlay
 =app-emulation/snapd-2.38::JamesB192								#better in other overlay
 =app-emulation/snapd-2.38::ROKO__									#better in other overlay
