@@ -312,7 +312,7 @@
 =sys-apps/shadow-4.6::muslx32										#missing split-usr use flag
 =sys-apps/tcp-wrappers-7.6.22-r1::argent-main						#old
 =sys-apps/tcp-wrappers-7.6.22-r1::musl								#musl specific patch
-=sys-apps/tcp-wrappers-7.6.28::musl								#musl specific patch
+=sys-apps/tcp-wrappers-7.6.28::musl									#musl specific patch
 =sys-apps/util-linux-2.34::rindeal									#broken locales
 =sys-auth/polkit-0.115-r4::musl										#musl specific patch
 =sys-auth/polkit-0.116-r1::musl										#musl specific patch
