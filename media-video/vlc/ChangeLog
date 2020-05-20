@@ -7,7 +7,7 @@
 		-update dependencies
 		-add qt-5.15 compatibility patch
 		-remove redundant econf options
-	17.5.2020;	::prototype99	only apply compatibility patches when needed
+	17.5.2020;	::prototype99	only apply compatibility patches when needed,remove redundant patch
 
 *3.0.8
 

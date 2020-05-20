@@ -227,9 +227,6 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.1.0-fix-libtremor-libs.patch # build system
-	"${FILESDIR}"/gentoo593460.patch
-	"${FILESDIR}"/${PN}-2.2.8-freerdp-2.patch # bug 590164
-	"${FILESDIR}"/${PN}-3.0.6-fdk-aac-2.0.0.patch # bug 672290
 )
 
 DOCS=( AUTHORS THANKS NEWS README doc/fortunes.txt )
@@ -249,6 +246,8 @@ src_prepare() {
 		eapply "${FILESDIR}"/${PN}-2.2.8-libupnp-slot-1.8.patch
 	has_version '>=dev-qt/qtcore-5.15' && \
 		eapply "${FILESDIR}"/${PN}-3.0.8-qt-5.15.patch
+	use fdk && eapply "${FILESDIR}"/${PN}-3.0.6-fdk-aac-2.0.0.patch # bug 672290
+	use rdp && eapply "${FILESDIR}"/${PN}-2.2.8-freerdp-2.patch # bug 590164
 
 	# Make it build with libtool 1.5
 	rm m4/lt* m4/libtool.m4 || die
