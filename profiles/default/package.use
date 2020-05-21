@@ -408,3 +408,5 @@ dev-db/sqlite secure-delete
 # required by dev-util/lldb-9.0.1-r1::gentoo
 # required by dev-util/idea-community-2020.1.0.201.6668.121::prototype99
 >=sys-devel/clang-9.0.1 xml
+# required by pantheon-base/pantheon-files-4.4.2::elementary
+>=dev-libs/libcloudproviders-0.3.0 vala
