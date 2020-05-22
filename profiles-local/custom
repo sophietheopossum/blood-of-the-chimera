@@ -379,3 +379,4 @@
 =x11-themes/gtk-engines-adwaita-3.28::dantrell-gnome				#bad keywording, unnecessary quotes
 =x11-wm/mutter-3.34.1::dantrell-gnome-3-34							#eapi6
 =x11-wm/mutter-3.35.2::gnome-next									#broken
+=xfce-extra/tumbler-0.2.8::gentoo									#pulls in thunar for some unholy unexplained reason
