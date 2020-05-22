@@ -1,0 +1,74 @@
+From 4145ef22274deb08a86e78b195cf8eba2d6eb0ee Mon Sep 17 00:00:00 2001
+From: Ondrej Holy <oholy@redhat.com>
+Date: Mon, 27 Jan 2020 13:02:36 +0000
+Subject: [PATCH 5/5] dnssd: Prevent crashes after releasing resolver
+
+The following error often happens when mounting dav+sd share (e.g. created
+over gnome-user-media) and the mount operation fails for some reason:
+
+dbus[47482]: arguments to dbus_connection_unref() were incorrect,
+assertion "connection->generation == _dbus_current_generation" failed
+in file ../../dbus/dbus-connection.c line 2823. This is normally a bug
+in some application using the D-Bus library.
+
+This is because avahi is not thread-safe and our resolver doesn't use
+mutexes. But it seems to me that mutexes are not necessarily needed if
+everything would work as expected. Unfortunately, changes made by commit
+3384af8 causes that start_avahi_resolver is being called multiple times
+by mistake, which also calls avahi_service_resolver_new multiple times.
+Consequently, it may crash when resolver is beeing freed too early as
+there might still be unexpected pending operations using avahi client.
+
+Fixes: GNOME/gvfs#449
+
+
+(cherry picked from commit c8f8f345a0c88e68dd21f6b548ab1cfba56732e9)
+---
+ common/gvfsdnssdresolver.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/common/gvfsdnssdresolver.c b/common/gvfsdnssdresolver.c
+index 0f0f5f60..be062227 100644
+--- a/common/gvfsdnssdresolver.c
++++ b/common/gvfsdnssdresolver.c
+@@ -81,6 +81,7 @@ struct _GVfsDnsSdResolver
+   char **txt_records;
+ 
+   AvahiServiceResolver *avahi_resolver;
++  guint start_avahi_resolver_id;
+ };
+ 
+ 
+@@ -241,6 +242,7 @@ start_avahi_resolver (gpointer user_data)
+                                                          resolver);
+ 
+ out:
++  resolver->start_avahi_resolver_id = 0;
+   g_object_unref (resolver);
+   return FALSE;
+ }
+@@ -248,10 +250,10 @@ out:
+ static void
+ ensure_avahi_resolver (GVfsDnsSdResolver  *resolver)
+ {
+-  if (resolver->avahi_resolver != NULL)
++  if (resolver->avahi_resolver != NULL || resolver->start_avahi_resolver_id != 0)
+     return;
+ 
+-  g_idle_add (start_avahi_resolver, g_object_ref (resolver));
++  resolver->start_avahi_resolver_id = g_idle_add (start_avahi_resolver, g_object_ref (resolver));
+ }
+ 
+ static void
+@@ -373,6 +375,8 @@ g_vfs_dns_sd_resolver_finalize (GObject *object)
+   if (resolver->avahi_resolver != NULL)
+     avahi_service_resolver_free (resolver->avahi_resolver);
+ 
++  if (resolver->start_avahi_resolver_id != 0)
++    g_source_remove (resolver->start_avahi_resolver_id);
+ 
+   resolvers = g_list_remove (resolvers, resolver);
+ 
+-- 
+2.20.1
+

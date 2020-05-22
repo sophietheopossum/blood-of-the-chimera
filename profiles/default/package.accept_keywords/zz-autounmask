@@ -153,6 +153,7 @@
 =x11-terms/kitty-0.17.3 ~amd64
 =x11-themes/fvwm-crystal-3.4.1-r2
 =x11-wm/fvwm-2.6.8-r2
+=xfce-extra/tumbler-0.2.8 ~amd64
 # required by dev-python/certifi-2018.4.16::gentoo
 # required by dev-python/setuptools-40.6.3::gentoo
 # required by dev-util/meson-0.49.2::gentoo
@@ -990,3 +991,5 @@
 # required by dev-lang/php-7.3.14::gentoo
 # required by sys-apps/world-18::prototype99[text-editor-php-lint]
 =sys-devel/llvmgold-10 ~amd64
+# required by pantheon-base/pantheon-files-4.4.2::elementary
+=dev-libs/libcloudproviders-0.3.0 ~amd64

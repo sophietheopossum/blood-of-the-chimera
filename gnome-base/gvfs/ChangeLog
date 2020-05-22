@@ -1,3 +1,22 @@
+*1.44.1
+
+::gentoo
+-add updated taiwanese and malay translation
+-add gentoo patches
+-update keywords
+-update copyright
+
+::gnome-next
+-update dependencies
+
+::prototype99
+-put translation patches behind use flag
+
+*1.42.2-r1
+
+::gentoo
+-add patch
+
 *1.42.2
 
 ::my-gnome

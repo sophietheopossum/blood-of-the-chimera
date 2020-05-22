@@ -1,0 +1,8 @@
+*libcloudproviders-0.3.0
+
+::elementary
+-base ebuild
+
+::prototype99
+-improve default use flags
+-add missing use dependency
