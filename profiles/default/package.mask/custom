@@ -1,5 +1,7 @@
 #adds python dependency
 =net-libs/serf-1.3.9-r1
+#bad keywording, unnecessary quotes, missing valadoc flag, old
+<dev-lang/vala-0.42.7
 #bad versioning
 =app-office/lyx-2.3.99
 =app-pda/libplist-9999
@@ -38,8 +40,6 @@
 #bad versioning, less package support
 =virtual/cargo-1337-r1
 =virtual/rust-1337
-#bad keywording, unnecessary quotes, missing valadoc flag, old
-<dev-lang/vala-0.42.7
 #dummy ebuild
 =virtual/notification-daemon-1337
 #no mkl
@@ -48,7 +48,6 @@
 >=x11-terms/xterm-0
 #old
 <app-crypt/gnupg-2.2.17
-<x11-libs/cairo-1.16.0-r3
 <app-eselect/eselect-pinentry-0.7
 =app-text/asciidoc-8.6.10_p20181016-r1
 <app-text/docbook-xsl-stylesheets-1.79.2-r1
@@ -82,6 +81,7 @@
 <sys-fs/udisks-2.8.2
 <virtual/pam-0-r1
 <x11-base/xorg-server-1.20.7
+<x11-libs/cairo-1.16.0-r3
 <x11-libs/gdk-pixbuf-2.38.1
 <x11-libs/gtk+-3.24.8
 =x11-libs/pango-1.42.4-r2
