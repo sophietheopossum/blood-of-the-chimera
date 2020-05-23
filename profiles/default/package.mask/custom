@@ -1,82 +1,91 @@
-<app-crypt/gnupg-2.2.17						#old
-<=app-emulation/lxc-1.0.8					#old, no supported python
-<app-eselect/eselect-pinentry-0.7			#old
-=app-office/lyx-2.3.99						#bad versioning
-=app-pda/libplist-9999						#bad versioning
-=app-pda/libusbmuxd-9999					#bad versioning
-=app-text/asciidoc-8.6.10_p20181016-r1		#old
-<app-text/docbook-xsl-stylesheets-1.79.2-r1	#old
-<app-text/poppler-0.79.0					#old
-<dev-db/sqlite-3.30.1						#old
-=dev-lang/python-exec-9999					#bad versioning
-<dev-lang/spidermonkey-60.5.2_p0-r2			#old
-<dev-lang/vala-0.42.7						#bad keywording, unnecessary quotes, missing valadoc flag, old
-<dev-libs/appstream-glib-0.7.15				#old
-=dev-libs/fribidi-1.0.5-r1337				#bad versioning
-=dev-libs/glib-9999							#bad versioning
-<dev-libs/libassuan-2.5.1					#old
-<dev-libs/libgcrypt-1.8.3					#old
-<dev-libs/libgpg-error-1.36					#old
-<dev-libs/libunistring-0.9.10				#old
-=dev-python/pillow-1000						#bad versioning
-<dev-python/pygments-2.6.1					#old
-=dev-libs/zziplib-9999						#bad versioning
-<dev-python/ply-3.9							#old
-<dev-python/setuptools-40.6.3				#old
-=dev-qt/qtcore-5.9999						#bad versioning
-=dev-qt/qtdbus-5.9999						#bad versioning
-=dev-qt/qtdeclarative-5.9999				#bad versioning
-=dev-qt/qtgui-5.9999						#bad versioning
-=dev-qt/qtnetwork-5.9999					#bad versioning
-=dev-qt/qttest-5.9999						#bad versioning
-=dev-qt/qtwidgets-5.9999					#bad versioning
-<dev-util/glib-utils-2.58.3					#old
-<dev-util/gtk-update-icon-cache-3.24.8		#old
-<dev-util/meson-0.50.1						#old
-<gnome-base/gnome-common-3.18.0-r1			#old
-<gnome-extra/nm-applet-1.8.20				#old
-<gnome-extra/zenity-3.30.0					#old
-=media-fonts/croscorefonts-20181024-r1		#bad versioning
-=media-fonts/croscorefonts-20190524			#bad versioning
-=media-fonts/dejavu-9.9.9-r120809			#bad versioning
-=media-fonts/urw-fonts-9.9.9-r120809		#bad versioning
-=media-libs/babl-9999						#bad versioning
-=media-libs/x264-9999						#bad versioning
-=media-sound/pulseaudio-9999				#bad versioning
-<media-video/vlc-3.0.8						#old
-=media-video/vlc-3.0.9999					#bad versioning
-=media-video/vlc-9999						#bad versioning
-<net-libs/glib-networking-2.61.90			#old
-<net-libs/libpsl-0.21.0						#old
-=net-libs/serf-1.3.9-r1						#adds python dependency
-=net-misc/megasync-4.3.1.0					#bad versioning
-<net-misc/modemmanager-1.8.2-r1				#old
-=net-misc/rsync-9999						#bad versioning
-<net-print/cups-filters-1.21.6				#old
-<net-wireless/bluez-5.50-r3					#old
-<sys-apps/dbus-1.12.16						#old
-<sys-apps/dbus-broker-18					#old
-<sys-auth/pambase-20150213-r2				#old
-<sys-devel/gettext-0.19.8.1					#old
-=sys-devel/libtool-2.4.6-r314				#bad versioning
-=sys-devel/make-9999						#bad versioning
-=sys-fs/udev-9999							#bad versioning
-<sys-fs/udisks-2.8.2						#old
-=sys-fs/xfsdump-9999						#bad versioning
-=virtual/cargo-1337-r1						#bad versioning, less package support
-=virtual/cblas-3.8							#no mkl
-=virtual/notification-daemon-1337			#dummy ebuild
-<virtual/pam-0-r1							#old
-=virtual/rust-1.43.1-r666					#bad versioning
-=virtual/rust-1337							#bad versioning, less package support
-<x11-base/xorg-server-1.20.7				#old
-<x11-libs/cairo-1.16.0-r3					#old
-=x11-libs/libfontenc-9999					#bad versioning
-<x11-libs/gdk-pixbuf-2.38.1					#old
-=x11-libs/gtk+-2.24.32-r666					#bad versioning
-=x11-libs/gtk+-2.24.32-r1337				#bad versioning
-<x11-libs/gtk+-3.24.8						#old
-=x11-libs/pango-1.42.4-r2					#old
->=x11-terms/xterm-0							#not needed at all
-<x11-themes/adwaita-icon-theme-3.30.1		#old
-<x11-themes/gtk-engines-adwaita-3.28		#old
+#adds python dependency
+=net-libs/serf-1.3.9-r1
+#bad versioning
+=app-office/lyx-2.3.99
+=app-pda/libplist-9999
+=app-pda/libusbmuxd-9999
+=dev-lang/python-exec-9999
+=dev-libs/fribidi-1.0.5-r1337
+=dev-libs/glib-9999
+=dev-python/pillow-1000
+=dev-libs/zziplib-9999
+=dev-qt/qtcore-5.9999
+=dev-qt/qtdbus-5.9999
+=dev-qt/qtdeclarative-5.9999
+=dev-qt/qtgui-5.9999
+=dev-qt/qtnetwork-5.9999
+=dev-qt/qttest-5.9999
+=dev-qt/qtwidgets-5.9999
+=media-fonts/croscorefonts-20181024-r1
+=media-fonts/croscorefonts-20190524
+=media-fonts/dejavu-9.9.9-r120809
+=media-fonts/urw-fonts-9.9.9-r120809
+=media-libs/babl-9999
+=media-libs/x264-9999
+=media-sound/pulseaudio-9999
+=media-video/vlc-3.0.9999
+=media-video/vlc-9999
+=net-misc/megasync-4.3.1.0
+=net-misc/rsync-9999
+=sys-devel/libtool-2.4.6-r314
+=sys-devel/make-9999
+=sys-fs/udev-9999
+=sys-fs/xfsdump-9999
+=virtual/rust-1.43.1-r666
+=x11-libs/libfontenc-9999
+=x11-libs/gtk+-2.24.32-r666
+=x11-libs/gtk+-2.24.32-r1337
+#bad versioning, less package support
+=virtual/cargo-1337-r1
+=virtual/rust-1337
+#bad keywording, unnecessary quotes, missing valadoc flag, old
+<dev-lang/vala-0.42.7
+#dummy ebuild
+=virtual/notification-daemon-1337
+#no mkl
+=virtual/cblas-3.8
+#not needed at all
+>=x11-terms/xterm-0
+#old
+<app-crypt/gnupg-2.2.17
+<x11-libs/cairo-1.16.0-r3
+<app-eselect/eselect-pinentry-0.7
+=app-text/asciidoc-8.6.10_p20181016-r1
+<app-text/docbook-xsl-stylesheets-1.79.2-r1
+<app-text/poppler-0.79.0
+<dev-db/sqlite-3.30.1
+<dev-lang/spidermonkey-60.5.2_p0-r2
+<dev-libs/appstream-glib-0.7.15
+<dev-libs/libassuan-2.5.1
+<dev-libs/libgcrypt-1.8.3
+<dev-libs/libgpg-error-1.36
+<dev-libs/libunistring-0.9.10
+<dev-python/pygments-2.6.1
+<dev-python/ply-3.9
+<dev-python/setuptools-40.6.3
+<dev-util/glib-utils-2.58.3
+<dev-util/gtk-update-icon-cache-3.24.8
+<dev-util/meson-0.50.1
+<gnome-base/gnome-common-3.18.0-r1
+<gnome-extra/nm-applet-1.8.20
+<gnome-extra/zenity-3.30.0
+<media-video/vlc-3.0.8
+<net-libs/glib-networking-2.61.90
+<net-libs/libpsl-0.21.0
+<net-misc/modemmanager-1.8.2-r1
+<net-print/cups-filters-1.21.6
+<net-wireless/bluez-5.50-r3
+<sys-apps/dbus-1.12.16
+<sys-apps/dbus-broker-18
+<sys-auth/pambase-20150213-r2
+<sys-devel/gettext-0.19.8.1
+<sys-fs/udisks-2.8.2
+<virtual/pam-0-r1
+<x11-base/xorg-server-1.20.7
+<x11-libs/gdk-pixbuf-2.38.1
+<x11-libs/gtk+-3.24.8
+=x11-libs/pango-1.42.4-r2
+<x11-themes/adwaita-icon-theme-3.30.1
+<x11-themes/gtk-engines-adwaita-3.28
+#old, no supported python
+<=app-emulation/lxc-1.0.8
