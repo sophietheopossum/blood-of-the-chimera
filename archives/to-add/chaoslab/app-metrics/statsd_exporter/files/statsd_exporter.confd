@@ -1,0 +1,8 @@
+# config file for /etc/init.d/statsd_exporter
+# run /usr/bin/statsd_exporter -h to see available options
+
+STATSD_EXPORTER_OPTS=""
+
+# Logging
+#output_log="/var/log/statsd_exporter/statsd_exporter.log"
+#error_log="/var/log/statsd_exporter/error.log"

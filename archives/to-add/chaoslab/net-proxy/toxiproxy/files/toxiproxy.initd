@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+# Copyright 1999-2018 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+command="/usr/bin/toxiproxy-server"
+command_args="${TOXIPROXY_OPTS}"
+command_user="${command_user:-toxiproxy:toxiproxy}"
+command_background=yes
+pidfile="/run/${RC_SVCNAME}.pid"
+start_stop_daemon_args="${SSD_OPTS}"
+
+depend() {
+	use net
+}

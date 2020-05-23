@@ -1,6 +1,6 @@
 app-lyx/elyxer -python_single_target_python2_7
 app-office/libreoffice java -python_single_target_python2_7
-app-portage/layman subversion
+app-portage/layman subversion -python_targets_python2_7
 app-text/asciidoc -python_single_target_python3_6
 app-text/mupdf X opengl
 dev-cpp/cairomm X
@@ -32,7 +32,7 @@ sci-libs/openblas -openmp
 #sci-libs/vtk -tbb
 sys-apps/dbus X
 sys-apps/portage -xattr
-sys-apps/world anaconda archive ftp latex mips-emulate screenshot sublime sublimelinter system-flake8 system-pylint text-editor-color-highlight text-editor-js-lint text-editor-php-lint text-editor-py-complete text-editor-py-lint
+sys-apps/world archive latex screenshot sublime
 sys-devel/clang -python_single_target_python2_7
 sys-devel/gcc -jit
 sys-libs/libblockdev -python_single_target_python2_7
@@ -408,3 +408,5 @@ dev-db/sqlite secure-delete
 # required by dev-util/lldb-9.0.1-r1::gentoo
 # required by dev-util/idea-community-2020.1.0.201.6668.121::prototype99
 >=sys-devel/clang-9.0.1 xml
+# required by pantheon-base/pantheon-files-4.4.2::elementary
+>=dev-libs/libcloudproviders-0.3.0 vala

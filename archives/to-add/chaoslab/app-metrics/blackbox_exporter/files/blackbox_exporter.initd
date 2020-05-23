@@ -1,0 +1,23 @@
+#!/sbin/openrc-run
+# Copyright 1999-2018 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+output_log="${output_log:-/dev/null}"
+error_log="${error_log:-${BLACKBOX_LOGIDR}/error.log}"
+
+name="${name:-Blackbox Exporter}"
+command="/usr/bin/blackbox_exporter"
+command_args="--config.file=${BLACKBOX_CONFIG} ${BLACKBOX_OPTS}"
+command_user="${command_user:-blackbox_exporter:blackbox_exporter}"
+command_background=true
+pidfile="/run/${RC_SVCNAME}.pid"
+required_files="${BLACKBOX_CONFIG}"
+start_stop_daemon_args="${SSD_OPTS}"
+
+depend() {
+	need net
+}
+
+start_pre() {
+	checkpath -d -m 0750 -o "${command_user}" "${BLACKBOX_LOGIDR}"
+}

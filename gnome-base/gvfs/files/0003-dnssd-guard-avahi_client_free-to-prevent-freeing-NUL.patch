@@ -1,0 +1,35 @@
+From e41e2d0d26f6e9b6824dd98eef98be34d1cb834b Mon Sep 17 00:00:00 2001
+From: Tobias Mueller <muelli@cryptobitch.de>
+Date: Wed, 27 Nov 2019 20:06:42 +0000
+Subject: [PATCH 3/5] dnssd: guard avahi_client_free to prevent freeing NULL
+
+This should not happen, but somehow the global_client ends up
+being NULL.
+In daemon/gvfsbackenddnssd.c the call to avahi_client_free in
+the finalize function is similarly guarded.
+
+
+(cherry picked from commit a36f8846731f07ec7ff38cfa3ff1a233ea929481)
+---
+ common/gvfsdnssdresolver.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/common/gvfsdnssdresolver.c b/common/gvfsdnssdresolver.c
+index 8782f5fc..0f0f5f60 100644
+--- a/common/gvfsdnssdresolver.c
++++ b/common/gvfsdnssdresolver.c
+@@ -172,7 +172,10 @@ free_global_avahi_client (void)
+   g_list_foreach (resolvers, (GFunc) remove_client_from_resolver, NULL);
+ 
+   /* Destroy client */
+-  avahi_client_free (global_client);
++  if (global_client)
++    {
++      avahi_client_free (global_client);
++    }
+   global_client = NULL;
+   avahi_initialized = FALSE;
+ }
+-- 
+2.20.1
+

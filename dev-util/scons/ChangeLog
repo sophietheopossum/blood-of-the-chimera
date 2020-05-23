@@ -1,3 +1,7 @@
+*3.1.2
+
+	8.5.2020	::gentoo	updated workarounds, switch to https, updated keywords
+
 *3.1.1
 
 	12.1.2020	::pg_overlay	add python3_8 support, update year

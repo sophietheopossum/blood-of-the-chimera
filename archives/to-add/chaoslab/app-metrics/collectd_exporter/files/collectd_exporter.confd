@@ -1,0 +1,9 @@
+# config file for /etc/init.d/collectd_exporter
+# run /usr/bin/collectd_exporter -h to see available options
+
+COLLECTD_OPTS=""
+COLLECTD_LOGIDR="/var/log/${RC_SVCNAME}"
+
+# Logging
+#output_log="${COLLECTD_LOGIDR}/collectd_exporter.log"
+#error_log="${COLLECTD_LOGIDR}/error.log"

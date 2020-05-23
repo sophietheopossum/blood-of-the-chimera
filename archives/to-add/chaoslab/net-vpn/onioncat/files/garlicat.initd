@@ -1,0 +1,19 @@
+#!/sbin/openrc-run
+# Copyright 1999-2018 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+name="GaliCat"
+command="/usr/bin/gcat"
+command_args="${GCAT_OPTS}"
+command_user="${command_user:-onioncat:onioncat}"
+command_background=yes
+pidfile="/run/${RC_SVCNAME}.pid"
+
+depend() {
+	use net
+	need i2p i2pd
+}
+
+start_pre() {
+	checkpath -d -m 0750 -o "${command_user}" "${GCAT_LOGDIR}"
+}

@@ -1,0 +1,10 @@
+# config file for /etc/init.d/blackbox_exporter
+# run /usr/bin/blackbox_exporter -h to see available options
+
+BLACKBOX_OPTS=""
+BLACKBOX_CONFIG="/etc/blackbox_exporter/blackbox.yml"
+BLACKBOX_LOGIDR="/var/log/${RC_SVCNAME}"
+
+# Logging
+#output_log="${BLACKBOX_LOGIDR}/blackbox_exporter.log"
+#error_log="${BLACKBOX_LOGIDR}/error.log"

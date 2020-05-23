@@ -1,0 +1,15 @@
+# config file for /etc/init.d/mongodb_exporter
+# run /usr/bin/mongodb_exporter -h to see available options
+
+# Note: If you define any passwords here, keep this file only readable by
+# the user that owns the process, which probably is "mongodb_exporter".
+
+MONGODB_URL="mongodb://localhost:27017"
+MONGODB_AUTH="user:password"
+
+MONGODB_LOGDIR="/var/log/${RC_SVCNAME}"
+MONGODB_OPTS=""
+
+# Logging
+#output_log="${MONGODB_LOGDIR}/mongodb_exporter.log"
+#error_log="${MONGODB_LOGDIR}/error.log"

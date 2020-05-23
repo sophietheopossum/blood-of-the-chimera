@@ -1,3 +1,23 @@
+*3.0.10-r1
+
+	17.5.2020;	::gentoo
+		-update copyright year
+		-convert use flags to their appropriate cpu_flag versions
+		-update required use
+		-update dependencies
+		-add qt-5.15 compatibility patch
+		-remove redundant econf options
+	17.5.2020;	::prototype99
+		-only apply compatibility patches when needed
+		-remove redundant patch
+		-enable compiler optimisation
+		-arm64 flag does not appear to be required in iuse
+		-remove redundant macosx-qtkit use flag
+		-add vcd use flag
+		-add decklink use flag
+		-add mfx use flag
+		-add sndio use flag
+
 *3.0.8
 
 	25.11.2019;	::prototype99	remove trailing whitespace

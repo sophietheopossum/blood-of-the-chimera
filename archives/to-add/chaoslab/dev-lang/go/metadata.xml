@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gentoo@chaoslab.org</email>
+		<name>Ian Moone</name>
+	</maintainer>
+	<longdescription lang="en">
+		Go is a new systems programming language developped at google by
+		Rob Pike. It has garbage collection, coroutines, communication
+		channels and a clean syntax.
+	</longdescription>
+	<use>
+		<flag name="default-buildmode-pie">
+			Use pie as the default '-buildmode' for Go
+		</flag>
+	</use>
+</pkgmetadata>

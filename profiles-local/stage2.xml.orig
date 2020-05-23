@@ -173,17 +173,6 @@
     <source type="git">https://github.com/ahyangyi/ahyangyi-overlay.git</source>
     <feed>https://github.com/ahyangyi/ahyangyi-overlay/commits/master.atom</feed>
   </repo>
-  <repo quality="experimental" status="official">
-    <name>aidecoe</name>
-    <description>aidecoe's experimental overlay</description>
-    <homepage>https://github.com/aidecoe/aidecoe-overlay/tree/master</homepage>
-    <owner type="person">
-      <email>aidecoe@gentoo.org</email>
-      <name>Amadeusz Żołnowski</name>
-    </owner>
-    <source type="git">https://github.com/aidecoe/aidecoe-overlay.git</source>
-    <feed>https://github.com/feeds/aidecoe/commits/aidecoe-overlay/master</feed>
-  </repo>
   <repo quality="experimental" status="unofficial">
     <name>alatar-lay</name>
     <description lang="en">Alatar`s personal ebuilds</description>
@@ -2160,6 +2149,18 @@
     <feed>https://github.com/hamper/hamper-overlay/commits/master.atom</feed>
   </repo>
   <repo quality="experimental" status="unofficial">
+    <name>han</name>
+    <description lang="en">Han's personal ebuild repository</description>
+    <homepage>https://github.com/hanmertens/han-overlay</homepage>
+    <owner type="person">
+      <email>hanmertens@outlook.com</email>
+      <name>Han Mertens</name>
+    </owner>
+    <source type="git">https://github.com/hanmertens/han-overlay.git</source>
+    <source type="git">git+ssh://git@github.com/hanmertens/han-overlay.git</source>
+    <feed>https://github.com/hanmertens/han-overlay/commits/master.atom</feed>
+  </repo>
+  <repo quality="experimental" status="unofficial">
     <name>hangul-typing</name>
     <description lang="en">It contains hangul-typing tutors.</description>
     <homepage>https://gitlab.com/espresso.tiger/hangul-typing</homepage>
@@ -3670,7 +3671,7 @@
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>pross</name>
-    <description lang="en">User overlay</description>
+    <description lang="en">Up to date ck-sources</description>
     <homepage>https://github.com/Pross/pross-overlay</homepage>
     <owner type="person">
       <email>pross@pross.org.uk</email>
@@ -4223,6 +4224,18 @@
     </owner>
     <source type="git">git://github.com/vonavi/seeds.git</source>
     <feed>ttps://github.com/vonavi/seeds/commits/master.atom</feed>
+  </repo>
+  <repo quality="experimental" status="unofficial">
+    <name>setkeh</name>
+    <description lang="en">setkeh maintained ebuilds</description>
+    <homepage>https://github.com/setkeh/Portage-Overlay</homepage>
+    <owner type="person">
+      <email>setkeh@gmail.com</email>
+      <name>James (setkeh) Griffis</name>
+    </owner>
+    <source type="git">https://github.com/setkeh/Portage-Overlay.git</source>
+    <source type="git">git+ssh://git@github.com:setkeh/Portage-Overlay.git</source>
+    <feed>https://github.com/setkeh/Portage-Overlay/commits/master.atom</feed>
   </repo>
   <repo quality="experimental" status="unofficial">
     <name>sevcsik</name>

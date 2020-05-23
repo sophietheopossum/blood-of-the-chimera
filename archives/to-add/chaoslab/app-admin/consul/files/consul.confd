@@ -1,0 +1,14 @@
+# config file for /etc/init.d/consul
+
+# Make sure to use all our CPUs, because Consul can block a scheduler thread
+# upstream strongly recommends > 1
+GOMAXPROCS="2"
+
+CONSUL_OPTS=""
+CONSUL_CONFDIR="/etc/consul.d"
+CONSUL_DATADIR="/var/lib/consul"
+CONSUL_LOGDIR="/var/log/${RC_SVCNAME}"
+
+# Logging
+#output_log="${CONSUL_LOGDIR}/consul.log"
+#error_log="${CONSUL_LOGDIR}/error.log"
