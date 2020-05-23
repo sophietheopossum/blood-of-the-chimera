@@ -39,7 +39,6 @@
 =x11-libs/gtk+-2.24.32-r1337
 #bad versioning, less package support
 =virtual/rust-1337
-#bad versioning, less package support, old
 =virtual/cargo-1337-r1
 #dummy ebuild
 =virtual/notification-daemon-1337
