@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+hook_run_sync_post() {
+
+	if [[ $TARGET == 'x-rindeal' || $TARGET == 'rindeal' ]]; then
+		X="ln -f /var/db/repos/rindeal/eclass/"
+		Y0=" /var/db/repos/blood-of-the-chimera/eclass/"
+		Y1=" /var/db/repos/prototype99/eclass/"
+		Z0="rindeal.eclass"
+		Z1="portage-functions-patched.eclass"
+		${X}${Z0}${Y0}${Z0}
+		${X}${Z0}${Y1}${Z0}
+		${X}${Z1}${Y0}${Z1}
+		${X}${Z1}${Y1}${Z1}
+	fi
+
+}
