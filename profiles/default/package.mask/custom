@@ -49,7 +49,7 @@
 #old
 <app-crypt/gnupg-2.2.17
 <app-eselect/eselect-pinentry-0.7
-=app-text/asciidoc-8.6.10_p20181016-r1
+<=app-text/asciidoc-8.6.10_p20181016-r1
 <app-text/docbook-xsl-stylesheets-1.79.2-r1
 <app-text/poppler-0.79.0
 <dev-db/sqlite-3.30.1
@@ -84,7 +84,7 @@
 <x11-libs/cairo-1.16.0-r3
 <x11-libs/gdk-pixbuf-2.38.1
 <x11-libs/gtk+-3.24.8
-=x11-libs/pango-1.42.4-r2
+<=x11-libs/pango-1.42.4-r2
 <x11-themes/adwaita-icon-theme-3.30.1
 <x11-themes/gtk-engines-adwaita-3.28
 #old, no supported python
