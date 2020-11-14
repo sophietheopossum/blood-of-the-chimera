@@ -48,4 +48,12 @@ hook_run_sync_post() {
     sudo patch /var/db/repos/dantrell-gnome34/profiles/repo_name /var/db/repos/blood-of-the-chimera/forbidden-tomes/34.patch
     sudo rm /var/db/repos/dantrell-gnome34/profiles/package.mask
   fi
+  if [[ $TARGET == 'x-dantrell-gnome36' || $TARGET == 'dantrell-gnome36' ]]; then
+    sudo patch /var/db/repos/dantrell-gnome36/profiles/repo_name /var/db/repos/blood-of-the-chimera/forbidden-tomes/36.patch
+    sudo rm /var/db/repos/dantrell-gnome36/profiles/package.mask
+  fi
+  if [[ $TARGET == 'x-dantrell-gnome38' || $TARGET == 'dantrell-gnome38' ]]; then
+    sudo patch /var/db/repos/dantrell-gnome38/profiles/repo_name /var/db/repos/blood-of-the-chimera/forbidden-tomes/38.patch
+    sudo rm /var/db/repos/dantrell-gnome38/profiles/package.mask
+  fi
 }
